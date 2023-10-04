@@ -1,0 +1,1 @@
+export type Image = { src: string | null; alt?: string; caption?: string } | null;

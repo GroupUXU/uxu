@@ -34,9 +34,12 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: ["node_modules/", "dist/"],
+  ignorePatterns: ["node_modules/", "dist/", "**/*.generated.ts"],
   // add rules configurations here
   rules: {
     "import/no-default-export": "off",
+    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+    'unicorn/filename-case': [ 'error', { case: 'camelCase' }],
+    "@typescript-eslint/array-type": "off",
   },
 };

@@ -1,0 +1,18 @@
+overwrite: true
+schema:
+  - './src/gql/stubs/schema.graphql'
+documents: [ "./src/gql/fragments/**/*.ts" ,"./src/gql/query/**/*.ts" ]
+generates:
+  ./src/gql/types/api-gateway.service.generated.ts:
+    plugins:
+      - typescript
+  ./src/gql/types:
+    preset: near-operation-file
+    presetConfig:
+      folder: ../types
+      baseTypesPath: api-gateway.service.generated.ts
+      extension: .generated.ts
+    plugins:
+      - typescript-operations
+      - typescript-react-apollo
+

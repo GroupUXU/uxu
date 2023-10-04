@@ -1,0 +1,12 @@
+$borders: (
+  active: 0.1rem solid var(--uxu-color-primary-foreground),
+  alpha-active: 0.1rem solid rgba(var(--uxu-color-primary-foreground-rgba), 0.6),
+  default: 0.1rem solid var(--uxu-color-primary-accent3),
+  alpha-default: 0.1rem solid rgba(var(--uxu-color-primary-accent3-rgba), 0.6),
+  error: 0.1rem solid var(--uxu-color-error-default),
+  alpha-error: 0.1rem solid rgba(var(--uxu-color-error-default-rgba), 0.6),
+  success: 0.1rem solid var(--uxu-color-success-default),
+  alpha-success: 0.1rem solid rgba(var(--uxu-color-success-default-rgba), 0.6),
+  alpha-warning: 0.1rem solid rgba(var(--uxu-color-warning-default-rgba), 0.6),
+  warning: 0.1rem solid var(--uxu-color-warning-default),
+);

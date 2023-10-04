@@ -1,0 +1,40 @@
+{
+  "name": "wtrasie",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "codegen": "yarn graphql-code-generator --config ./codegen.yml"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.8.4",
+    "apollo-link-rest": "^0.9.0",
+    "design-system": "*",
+    "next": "^13.4.19",
+    "next-seo": "^6.1.0",
+    "node-fetch": "^3.3.2",
+    "qs": "^6.11.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ui": "*"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/client-preset": "^4.1.0",
+    "@graphql-codegen/near-operation-file-preset": "^3.0.0",
+    "@graphql-codegen/typescript-react-apollo": "^4.0.0",
+    "@graphql-typed-document-node/core": "^3.2.0",
+    "@next/eslint-plugin-next": "^13.4.19",
+    "@types/node": "^17.0.12",
+    "@types/react": "^18.0.22",
+    "@types/react-dom": "^18.0.7",
+    "eslint-config-custom": "*",
+    "graphql": "^16.8.1",
+    "sass": "^1.68.0",
+    "tsconfig": "*",
+    "typescript": "^5.2.2"
+  }
+}
