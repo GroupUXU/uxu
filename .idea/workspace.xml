@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/turbo.json" beforeDir="false" afterPath="$PROJECT_DIR$/turbo.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +96,7 @@
       <workItem from="1696362331005" duration="243000" />
       <workItem from="1696362588881" duration="95000" />
       <workItem from="1696362699907" duration="5508000" />
-      <workItem from="1696446764042" duration="2946000" />
+      <workItem from="1696446764042" duration="3096000" />
     </task>
     <servers />
   </component>

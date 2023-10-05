@@ -11,7 +11,7 @@
     "dev": {
       "cache": false,
       "persistent": true,
-      "dotEnv": [".env.development.local", ".env.local", ".env.development", ".env"]
+      "dotEnv": [".env.development.local", ".env.local", ".env.development", ".env", "NEXT_PUBLIC_API_URL", "SITE_URL", "NEXT_PUBLIC_LINK_API_GRAPHQL", "NEXT_PUBLIC_LINK_API_REST"]
     }
   }
 }
