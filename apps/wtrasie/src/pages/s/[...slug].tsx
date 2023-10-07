@@ -1,0 +1,86 @@
+import type { ReactElement } from "react";
+import type { GetStaticPropsContext, GetStaticPaths, GetStaticProps } from 'next';
+import type { PostViewData } from 'design-system';
+import { createSlug, useSeoConfig, LayoutPostView, PostView, AdPhoneClient } from 'design-system';
+import { connectQueries } from '../../utils/function';
+import { adapterArticleData, adapterArticlesSlugData } from '../../utils/adapters';
+import type { GetArticlesQuery } from '../../gql';
+import {
+  clientGetArticleQuery,
+  clientGetArticlesQuery,
+  clientClientsWithTagsQuery
+} from '../../gql';
+import { useSearch } from "../../hooks";
+import { defaultSuggestions } from "../../config";
+
+type ServiceProps = {
+  clientPhone?: string;
+  articleData?: PostViewData;
+};
+
+export default function Service({ articleData, clientPhone }: ServiceProps): ReactElement {
+  const onSearchQuery = useSearch();
+  const seo = useSeoConfig({ title: articleData?.title, description: articleData?.lead, images: [{ url: articleData?.cover?.src }] });
+ const adsWithPhoneClient = clientPhone && {
+   tel: clientPhone,
+   title: articleData?.title || "",
+ }
+
+  return (
+    <LayoutPostView
+      footer={{ brand: "wTrasie", footerColumns: [] }}
+      searchEngine={{ defaultSuggestions, onSearchQuery }}
+      seo={seo}
+      siteBarLeft={<p>SiteBar left</p>}
+      topElement={<AdPhoneClient {...adsWithPhoneClient} />}
+    >
+      {articleData ? <PostView postViewData={articleData}/> : null}
+    </LayoutPostView>
+  );
+}
+
+export async function getStaticPaths(): Promise<GetStaticPaths> {
+
+  const { data} = await clientGetArticlesQuery({ variables: { pageSize: 25, page: 1, type: ['service']}});
+
+  const connectedArticles: Array<GetArticlesQuery> = await connectQueries({
+    functionQuery: clientGetArticlesQuery,
+    variablesQuery: { variables: { pageSize: 25, type: ['service'] }},
+    pageCount: data.articles?.meta.pagination.pageCount || 1
+  });
+
+  const articlesSlugData: Array<{ id: string, title: string, slug: string }> = connectedArticles.flatMap(adapterArticlesSlugData);
+
+
+  return {
+    // @ts-expect-error -- it is ok
+    paths: articlesSlugData.map(article => ({ params: {slug: [article.id, createSlug( article.title )]} })),
+    fallback: true,
+  };
+}
+
+export async function getStaticProps (context: GetStaticPropsContext): Promise<GetStaticProps> {
+  const { params } = context;
+
+  if (!params || !Array.isArray(params.slug) || params.slug.length === 0) {
+    // @ts-expect-error -- it is ok
+    return { notFound: true };
+  }
+
+  const id: number = parseInt(params.slug[0]);
+
+  const { data: getArticleQuery } = await clientGetArticleQuery({ variables: { id }});
+  const articleData: PostViewData = adapterArticleData(getArticleQuery);
+
+  const tagsId: Array<string> = articleData.tags.map(tag => tag.id);
+
+  const { data: clientsData } = await clientClientsWithTagsQuery( { variables: { tagsId } });
+  // @ts-expect-error -- it is ok
+  const clientPhone = clientsData.clients?.data[0]?.attributes?.branches[0]?.phones[0]?.phone || null;
+
+
+  return {
+    // @ts-expect-error -- it is ok
+    props: { articleData, clientPhone },
+  };
+}

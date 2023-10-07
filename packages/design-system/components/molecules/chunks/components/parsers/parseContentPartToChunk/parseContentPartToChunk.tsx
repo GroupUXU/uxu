@@ -9,7 +9,7 @@ export function ParseContentPartToChunk({ children, contentParts }: ParseContent
   const getChunkComponent = (contentPart: ContentPartProps): ChunkComponentWithPropsInObject => {
     return {
       props: contentPart,
-      ChunkComponent: contentPart.type ? (chunksMap.get(contentPart.type) || EmptyChunk) : EmptyChunk,
+      ChunkComponent: chunksMap.get(contentPart.type) || EmptyChunk,
     };
   };
 

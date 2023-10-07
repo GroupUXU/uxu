@@ -1,9 +1,9 @@
 import { createSlug } from "design-system";
 import { createSlugForType } from "../../function/createSlugForType";
 import type { GetArticlesQuery } from '../../../gql';
-import type { GetDataTypes, List, ArticleData } from './types';
+import type { ArticleWithSlug } from './types';
 
-const parseArticleData = (articleData: ArticleData): { id: string, title: string, slug: string } | null => {
+const parseArticleData = (articleData: NonNullable<NonNullable<NonNullable<GetArticlesQuery['articles']>['data']>[number]>): ArticleWithSlug | null => {
   const { id, attributes } = articleData;
   if (!id || !attributes?.title) {
     return null;
@@ -15,17 +15,15 @@ const parseArticleData = (articleData: ArticleData): { id: string, title: string
   };
 };
 
-const parseToList = (getArticlesList: GetArticlesQuery): List => {
+export function adapterArticlesSlugData( getArticlesList: GetArticlesQuery): Array<ArticleWithSlug> {
+
   const data = getArticlesList.articles?.data;
   if (!Array.isArray(data)) {
     return [];
   }
-  return data.reduce((acc: List, articleData) => {
+
+  return data.reduce((acc: Array<ArticleWithSlug>, articleData) => {
     const parsedData = parseArticleData(articleData);
     return parsedData ? [...acc, parsedData] : acc;
   }, []);
-};
-
-export const adapterArticlesSlugData = ( getArticlesList: GetArticlesQuery): GetDataTypes => {
-  return parseToList(getArticlesList);
 };

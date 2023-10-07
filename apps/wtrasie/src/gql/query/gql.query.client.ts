@@ -2,10 +2,10 @@
 import { gql } from '@apollo/client';
 import { FRAGMENT_DATA_ADRESS } from '../fragments';
 
-export const GET_CLIENTS_LIST_WITH_FILTRES_SHORTNAME = gql`
+export const GET_CLIENTS_WITH_TAGS = gql`
   ${FRAGMENT_DATA_ADRESS}
-  query GetClientsListWithFiltresShortName($shortname: [ID]!) {
-    clients(filters: { branches: { shortname: { id: { in: $shortname } } } }) {
+  query getClientsWithTags($tagsId: [ID]!) {
+    clients(filters: { branches: { shortname: { id: { in: $tagsId } } } }) {
       data {
         id
         attributes {

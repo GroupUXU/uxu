@@ -12,7 +12,7 @@ export function adapterArticleData(getArticleData: GetArticleQuery): PostViewDat
     lead: "",
     type: "",
     title: "",
-    createdAt: new Date(),
+    createdAt: null,
     cover: null,
     authors: [],
     tags: [],
@@ -21,13 +21,12 @@ export function adapterArticleData(getArticleData: GetArticleQuery): PostViewDat
   };
 
   const { id, attributes } = getArticleData.article.data;
-
   return {
     id: id ?? '',
     type: attributes?.type ?? '',
     title: attributes?.title ?? '',
     lead: attributes?.lead.lead ?? '',
-    createdAt: attributes?.createdAt ? new Date(attributes.createdAt as string) : new Date(),
+    createdAt: attributes?.createdAt ? attributes.createdAt as string : null,
     cover: adapterImageData( { image: attributes?.cover.data?.attributes, typeImg: 'medium' }),
     authors: attributes?.authors?.data.map(adapterAuthorData) ?? [],
     tags: attributes?.tags?.data.map(adapterTagData) ?? [],

@@ -11,17 +11,9 @@ export type Format = {
 }
 
 export type AdapterSrcImageDataProps = {
-  attributes?: {
+  attributes: {
     url?: string | null;
-    caption?: string | null;
-    alternativeText?: string | null;
-    formats?: {
-      "small": Format;
-      "medium": Format;
-      "thumbnail": Format;
-    }
-  } | null
-  typeImg: 'thumbnail' | 'small' | 'medium' | 'large' | 'url'
+  }
 }
 
 

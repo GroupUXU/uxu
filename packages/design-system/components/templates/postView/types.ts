@@ -7,7 +7,7 @@ export type PostViewData = {
   lead: string;
   type: string;
   title: string;
-  createdAt: Date;
+  createdAt: string | null;
   cover: Image;
   authors: Array<Member>;
   tags: Array<Tag>;

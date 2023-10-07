@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react';
-import type { GetServerSidePropsContext } from 'next';
+import type { GetStaticPropsContext, GetServerSideProps } from 'next';
 import { LayoutPostView, PostView, useSeoConfig } from 'design-system';
 import type { GetAdapterArticleData } from '../../utils/adapters/adapterArticleData/types';
 import { adapterArticleData } from '../../utils/adapters/adapterArticleData';
@@ -28,18 +28,21 @@ export default function Article({ articleData }: ArticleProps): ReactElement {
   );
 }
 
-export async function getServerSideProps(context: GetServerSidePropsContext): Promise<{ props: ArticleProps }> {
-  const slug = context.params?.slug;
-  if (!Array.isArray(slug) || slug.length === 0) {
-    throw new Error("Invalid slug");
+export async function getServerSideProps(context: GetStaticPropsContext): Promise<GetServerSideProps> {
+  const { params } = context;
+
+  if (!params || !Array.isArray(params.slug) || params.slug.length === 0) {
+    // @ts-expect-error -- it is ok
+    return { notFound: true };
   }
 
-  const getId = parseInt(slug[0]);
+  const id: number = parseInt(params.slug[0]);
 
-  const { data: getArticleQuery } = await clientGetArticleQuery({ id: getId });
-  const articleData = getArticleQuery ? adapterArticleData(getArticleQuery) : null;
+  const { data: getArticleQuery } = await clientGetArticleQuery({ variables: { id } });
+  const articleData = adapterArticleData(getArticleQuery);
 
   return {
+    // @ts-expect-error -- it is ok
     props: { articleData },
   };
 }

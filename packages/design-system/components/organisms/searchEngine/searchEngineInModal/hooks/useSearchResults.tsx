@@ -4,7 +4,7 @@ import type { SearchSuggestionContentDetails } from "../types";
 export type OnSearchQueryType = (searchQuery: string) => Promise<{ searchResults: SearchSuggestionContentDetails[] }>;
 
 export const useSearchResults = (
-  searchQuery: string,
+  searchQuery?: string,
   onSearchQuery?: OnSearchQueryType
 ): { isAwaitingApiResponse: boolean; searchResults: SearchSuggestionContentDetails[] } => {
   const [isAwaitingApiResponse, setIsAwaitingApiResponse] = useState<boolean>(false);
@@ -17,7 +17,7 @@ export const useSearchResults = (
       if (onSearchQuery) {
         setIsAwaitingApiResponse(true);
         try {
-          const res = await onSearchQuery(searchQuery);
+          const res = await onSearchQuery(searchQuery || "");
           if (isActive) {
             setIsAwaitingApiResponse(false);
             setSearchResults(res.searchResults);
@@ -30,7 +30,7 @@ export const useSearchResults = (
       }
     };
 
-    if (searchQuery?.length > 1) {
+    if (searchQuery?.length && searchQuery.length > 1) {
       void fetchSearchResults();
     } else {
       setSearchResults([]);

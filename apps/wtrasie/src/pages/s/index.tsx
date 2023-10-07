@@ -1,9 +1,9 @@
 import type { ReactElement } from 'react';
 import { SectionInfiniteScroll, LayoutListingPost, useSeoConfig, PostList } from 'design-system';
-import { defaultSuggestions } from '../config';
-import { useSearch } from '../hooks';
-import { useGetArticlesQuery } from '../gql';
-import { adapterArticlesData } from '../utils/adapters/adapterArticlesData';
+import { defaultSuggestions } from '../../config';
+import { useSearch } from '../../hooks';
+import { useGetArticlesQuery } from '../../gql';
+import { adapterArticlesData } from '../../utils/adapters/adapterArticlesData';
 
 function Index(): ReactElement  {
   const onSearchQuery = useSearch();
@@ -13,7 +13,7 @@ function Index(): ReactElement  {
     variables: {
       pageSize: 12,
       page: 1,
-      type: ['article']
+      type: ['service']
     },
     ssr: true
   });
@@ -24,7 +24,7 @@ function Index(): ReactElement  {
         variables: {
           pageSize: 12,
           page,
-          type: ['article']
+          type: ['service']
         }
       });
       return { page: page + 1 };

@@ -55,7 +55,7 @@ export default function Tag({ tagID , tagName }: TagProps ): ReactElement {
         page={1}
         pageCount={data?.articles?.meta.pagination.pageCount || 1}
       >
-        {data ? adapterArticlesData(data).map((article, index) => {
+        {data ? adapterArticlesData(data, "small").map((article, index) => {
           return (
             <PostList {...article} key={article.id || index} />
           )

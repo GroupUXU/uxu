@@ -1,10 +1,15 @@
+import type { ApolloQueryResult } from "@apollo/client";
 import { APOLLO_CLIENT } from '../../config';
-import { GET_CLIENTS_LIST_WITH_FILTRES_SHORTNAME } from '../query';
-import type { GetClientsListWithFiltresShortNameQuery } from '../types';
+import { GET_CLIENTS_WITH_TAGS } from '../query';
+import type { GetClientsWithTagsQuery } from "../types";
 
-export async function clientClientsListWithFiltresShortNameQuery(
-  baseVariables: { shortname: Array<string> }
-): Promise<ReturnType<typeof APOLLO_CLIENT.query>> {
-  const options = { query: GET_CLIENTS_LIST_WITH_FILTRES_SHORTNAME, variables: baseVariables };
-  return APOLLO_CLIENT.query<GetClientsListWithFiltresShortNameQuery>(options);
+type ClientClientsWithTagsQueryProps = {
+  variables: {
+    tagsId: Array<string>;
+  }
+}
+
+export async function clientClientsWithTagsQuery({ variables: { tagsId }}: ClientClientsWithTagsQueryProps): Promise<ApolloQueryResult<GetClientsWithTagsQuery>> {
+  const options = { query: GET_CLIENTS_WITH_TAGS, variables: { tagsId } };
+  return APOLLO_CLIENT.query<GetClientsWithTagsQuery>(options);
 }

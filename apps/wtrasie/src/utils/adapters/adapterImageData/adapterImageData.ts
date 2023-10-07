@@ -1,19 +1,27 @@
+/* eslint-disable -- Temporarily disabling all rules due to receiving 'any' type from backend, need to refactor once backend provides proper types */
 import type { Image } from 'design-system';
-import type { AdapterSrcImageDataProps, Format, AdapterImageDataProps } from "./types";
+import type { AdapterSrcImageDataProps, AdapterImageDataProps } from "./types";
 
-export function adapterSrcImageData({ attributes, typeImg }: AdapterSrcImageDataProps): string | null {
-  const { formats, url } = attributes || {};
-
-  if (!formats && !url) return null;
-  const formatUrl = formats ? (formats[typeImg] as Format).url : url;
-  return formatUrl || null;
+export function adapterSrcImageData({ attributes }: AdapterSrcImageDataProps): string | null {
+  const { url } = attributes;
+  if (url != null) return url;
+  return null;
 }
 
-export function adapterImageData({ image, typeImg = 'medium'}: AdapterImageDataProps): Image {
+export function adapterImageData({ image, typeImg = 'medium'}: AdapterImageDataProps): Image | null {
   if (!image) return null;
 
   const { caption, alternativeText, formats, url } = image;
-  const src = adapterSrcImageData({ attributes: formats ?? { url }, typeImg });
+
+  if (!formats) {
+    return {
+      src: url ? adapterSrcImageData({ attributes: { url } }) : null,
+      caption: caption ?? undefined,
+      alt: alternativeText ?? undefined,
+    };
+  }
+
+  const src = !formats[typeImg] ? (url ? adapterSrcImageData({ attributes: { url } }) : null) : adapterSrcImageData({ attributes: { url: formats[typeImg].url } });
 
   return {
     src,

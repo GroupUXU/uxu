@@ -3,18 +3,27 @@ import { APOLLO_CLIENT } from '../../config';
 import { GET_ARICLE, GET_ARICLES } from '../query';
 import type { GetArticleQuery, GetArticlesQuery } from '../types';
 
-export async function clientGetArticlesQuery(baseVariables: {
-  pageSize: number;
-  page: number;
-  type: Array<"article" | "service">
-}): Promise<ApolloQueryResult<GetArticleQuery>> {
-  const options = {query: GET_ARICLES, variables: baseVariables};
-
-  return APOLLO_CLIENT.query<GetArticlesQuery>(options);
+type ClientGetArticlesQueryProps = {
+  variables: {
+    pageSize?: number;
+    page?: number;
+    type?: Array<"article" | "service">
+  }
 }
 
-export async function clientGetArticleQuery(baseVariables: { id: number }): Promise<ReturnType<typeof APOLLO_CLIENT.query>> {
-  const options = { query: GET_ARICLE, variables: baseVariables };
+export async function clientGetArticlesQuery({ variables: { pageSize = 10, page = 1, type = ['article', 'service'] }}: ClientGetArticlesQueryProps): Promise<ApolloQueryResult<GetArticlesQuery>> {
+  const options = {query: GET_ARICLES, variables: { pageSize, page, type }};
+  return APOLLO_CLIENT.query<GetArticlesQuery>( options );
+}
 
-  return APOLLO_CLIENT.query<GetArticleQuery>(options);
+
+type ClientGetArticleQueryProps = {
+  variables: {
+    id: number;
+  }
+}
+
+export async function clientGetArticleQuery ({ variables: { id }}: ClientGetArticleQueryProps): Promise<ApolloQueryResult<GetArticleQuery>> {
+  const options = {query: GET_ARICLE, variables: { id }};
+  return APOLLO_CLIENT.query<GetArticleQuery> ( options );
 }

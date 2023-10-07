@@ -13,7 +13,7 @@ export function ArticleMetaWrapper({ authors, createdAt }: ArticleMetaWrapperPro
         <div className={styles.authors}>{authors?.map(( author, index ) => {
           return index > 0 ? (<span>, {author.title}</span>) : (<span>{author.title}</span>)
         })}</div>
-        <div className={styles.wrapperPublicationDate}>{createdAt && <span>{parseFormatDate ( createdAt )}</span>}</div>
+        <div className={styles.wrapperPublicationDate}>{createdAt && <span>{parseFormatDate(createdAt)}</span>}</div>
       </div>
     </div>
   )

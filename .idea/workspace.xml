@@ -5,10 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionInfiniteScroll/hooks/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionInfiniteScroll/hooks/useIsNextPage.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionInfiniteScroll/hooks/useLoadNextPage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/apolloClient/config.links.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/apolloClient/config.links.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/constants/url.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/constants/url.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/turbo.json" beforeDir="false" afterPath="$PROJECT_DIR$/turbo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/apolloClient/config.cache.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/apolloClient/config.cache.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/gql/function/gql.query.client.article.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/gql/function/gql.query.client.article.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/gql/function/gql.query.client.client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/gql/function/gql.query.client.client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/gql/query/gql.query.client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/gql/query/gql.query.client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/gql/types/gql.query.client.generated.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/gql/types/gql.query.client.generated.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/a/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/a/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/t/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/t/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterArticleData/adapterArticleData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterArticleData/adapterArticleData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterArticlesData/adapterArticlesData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterArticlesData/adapterArticlesData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterArticlesSlugData/adapterArticlesSlugData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterArticlesSlugData/adapterArticlesSlugData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterArticlesSlugData/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterArticlesSlugData/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterImageData/adapterImageData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterImageData/adapterImageData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterImageData/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterImageData/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parseContentPartToChunk/parseContentPartToChunk.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parseContentPartToChunk/parseContentPartToChunk.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/hooks/useSearchResults.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/hooks/useSearchResults.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/components/articleMetaWrapper/articleMetaWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/postView/components/articleMetaWrapper/articleMetaWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/components/articleMetaWrapper/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/postView/components/articleMetaWrapper/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/postView/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionInfiniteScroll/sectionInfiniteScroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionInfiniteScroll/sectionInfiniteScroll.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/hooks/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/hooks/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/hooks/usePagination.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/utils/function/parseFormatDate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/utils/function/parseFormatDate.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +62,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/wtrasie",
+    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/wtrasie/src/pages",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -50,11 +77,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/wtrasie/src/pages" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionInfiniteScroll/hooks" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionInfiniteScroll" />
       <recent name="$PROJECT_DIR$/apps/wtrasie" />
       <recent name="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters" />
-      <recent name="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterTagData" />
-      <recent name="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterImage" />
-      <recent name="$PROJECT_DIR$/apps/wtrasie/src/utils/function" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps/wtrasie" />
@@ -99,11 +126,33 @@
       <workItem from="1696362331005" duration="243000" />
       <workItem from="1696362588881" duration="95000" />
       <workItem from="1696362699907" duration="5508000" />
-      <workItem from="1696446764042" duration="3625000" />
+      <workItem from="1696446764042" duration="31307000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/apps/wtrasie/src/providers/provider.apollo.tsx</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
