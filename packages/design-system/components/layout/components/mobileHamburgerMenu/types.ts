@@ -1,7 +1,5 @@
-import type { menuItems } from "../../layoutListingPost/consts";
-
 export type MobileVerticalModalProps = {
   currentSlug: string;
-  menuItems: typeof menuItems;
+  headerMenu: Array<{ slug: string, title: string }>;
   isLinkActive: (slug: string) => boolean;
 };

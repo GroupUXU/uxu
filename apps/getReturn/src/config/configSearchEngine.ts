@@ -1,14 +1,8 @@
-import type { SearchSuggestionContentDetails } from "../../organisms/searchEngine/searchEngineInModal/types";
+import type { DefaultSuggestions } from "design-system/components/organisms/searchEngine/searchEngineInModal/types";
 
-export const menuItems = [
-  { slug: '/', title: 'Wiadomości' },
-  { slug: '/s', title: 'Usługi' },
-];
-
-
-export const defaultSuggestions: Array<SearchSuggestionContentDetails> = [
+export const defaultSuggestions: DefaultSuggestions = [
   {
-    slug: "przewodnik-po-nowych-funkcjach",
+    slug: "Uslugi",
     title: "Przewodnik po nowych funkcjach",
     lead: "Jak zorganizować swoje miejsce pracy",
     type: "post"

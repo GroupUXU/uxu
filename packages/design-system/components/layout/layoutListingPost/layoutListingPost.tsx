@@ -6,23 +6,21 @@ import { NextSeo } from 'next-seo';
 import { SiteBar, Container } from '../../atoms';
 import { Footer, Header } from '../../templates';
 import { MobileVerticalModal, HeaderLeftComponents, HeaderRightComponents } from '../components'
-import { menuItems } from "./consts";
 import type { LayoutListingPostProps } from './types';
 import styles from './layoutListingPost.module.scss';
 
-export function LayoutListingPost({ topElement, siteBarLeft, siteBarRight, footer, seo, children, searchEngine }: LayoutListingPostProps): ReactElement {
-  const router = useRouter ();
+export function LayoutListingPost({ children, footer, headerMenu, searchEngine, seo, siteBarLeft, siteBarRight, topElement }: LayoutListingPostProps): ReactElement {
+  const router = useRouter();
   const currentSlug = router.pathname || '/';
 
   const isLinkActive = useCallback((slug: string) => currentSlug === slug, [currentSlug]);
-
 
   return (
     <>
       <NextSeo {...seo} />
       <Header
-        leftComponents={<HeaderLeftComponents isLinkActive={isLinkActive} menuItems={menuItems} searchEngine={searchEngine} />}
-        mobileHamburgerMenu={<MobileVerticalModal currentSlug={currentSlug} isLinkActive={isLinkActive} menuItems={menuItems} />}
+        leftComponents={<HeaderLeftComponents headerMenu={headerMenu} isLinkActive={isLinkActive} searchEngine={searchEngine} />}
+        mobileHamburgerMenu={<MobileVerticalModal currentSlug={currentSlug} headerMenu={headerMenu} isLinkActive={isLinkActive} />}
         rightComponents={<HeaderRightComponents modalAlignment='right' switchModalButtonText='sugestia' />}
       />
       <div className={styles.menuSpacer} />
