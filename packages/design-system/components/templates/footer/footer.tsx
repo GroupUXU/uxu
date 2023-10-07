@@ -5,7 +5,7 @@ import { useSiteConfig } from "../../../hooks";
 import styles from './footer.module.scss';
 import type { FooterProps } from './types';
 
-export function Footer({ footerColumns, brand }: FooterProps): ReactElement {
+export function Footer({ footerColumns }: FooterProps): ReactElement {
   const { site } = useSiteConfig();
 
   const generateKey = (prefix: string, index: number): string => `${prefix}-${index}`;
@@ -15,7 +15,7 @@ export function Footer({ footerColumns, brand }: FooterProps): ReactElement {
       <div className="container">
         <div className={styles.wrapperBrand}>
           <Link href="/" title={site?.shortname || ""}>
-            <Logo brand={brand} />
+            <Logo brand={site?.brand || "uxu"} />
           </Link>
           <p>
             © 2023

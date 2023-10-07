@@ -6,6 +6,7 @@ import type { SearchEngine } from "../components/headerLeftComponents/types";
 export type LayoutListingPostProps = PropsWithChildren<{
   seo?: NextSeoProps;
   footer: FooterProps;
+  headerMenu: Array<{ slug: string, title: string }>;
   searchEngine?: SearchEngine;
   topElement?: JSX.Element | Array<JSX.Element>;
   siteBarLeft?: JSX.Element | Array<JSX.Element>;

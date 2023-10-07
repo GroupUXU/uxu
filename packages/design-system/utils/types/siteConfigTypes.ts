@@ -1,4 +1,5 @@
 import type { SiteIdEnums } from "../enums";
+import type { VectorBrandsVariant } from "../../assets";
 
 export type AdsConfig = Partial<{
   enabled: boolean;
@@ -61,6 +62,8 @@ type SiteConfig = {
   defaultCover: string;
   authEnabled: boolean;
   switchTheme: boolean;
+  brand: VectorBrandsVariant;
+  shortBrand: VectorBrandsVariant;
   themeDefault: 'dark' | 'light';
   images: Array<{ url: string }>
 };

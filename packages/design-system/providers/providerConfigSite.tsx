@@ -24,6 +24,8 @@ const initialSiteConfigContext: SiteConfigTypes = {
     locale: '',
     domain: '',
     slug: "/",
+    brand: "uxu",
+    shortBrand: "uxu",
     defaultCover: '/defaultCover.png',
     canonicalUrl: ``,
     title: '',

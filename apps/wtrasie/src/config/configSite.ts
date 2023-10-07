@@ -18,6 +18,8 @@ export const SITE_CONFIG = ( clientLocale: string, isMobilePlatform: boolean, ro
     locale,
     domain: 'wtrasie.pl',
     slug:   router.asPath,
+    brand: "wTrasie",
+    shortBrand: "wTrasieShort",
     defaultCover: 'https://wtrasie.pl/defaultCover.png',
     canonicalUrl: `https://wtrasie.pl${router.asPath}`,
     images: [{ url: 'https://wtrasie.pl/ogWTrasie.png' }],

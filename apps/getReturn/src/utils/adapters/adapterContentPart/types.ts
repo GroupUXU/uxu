@@ -1,0 +1,3 @@
+import type { Format } from "../adapterImageData";
+
+export type AdapterContentPartProps = { __typename?: 'ComponentContentPartsMedia', id: string, media: { __typename: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', url: string, caption?: string | null, alternativeText?: string | null, formats?: Format } | null } | null } } | { __typename: 'ComponentContentPartsQuote', id: string, quote: string } | { __typename: 'ComponentContentPartsTxt', id: string, txt: string } | { __typename: 'ComponentContentPartsYoutube', id: string, url: string } | { __typename?: 'Error' } | null

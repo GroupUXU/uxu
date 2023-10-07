@@ -1,5 +1,3 @@
-import type { VectorBrandsVariant } from "../../../assets";
-
 type LinkData = {
   id: string;
   title: string
@@ -15,6 +13,5 @@ type ColumnData = {
 };
 
 export type FooterProps = {
-  brand: VectorBrandsVariant;
   footerColumns: Array<ColumnData>;
 };

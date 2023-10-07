@@ -8,5 +8,5 @@ export type SearchEngine = {
 export type HeaderLeftComponentsProps = {
   searchEngine?: SearchEngine;
   isLinkActive: (slug: string) => boolean;
-  menuItems: { slug: string, title: string }[];
+  headerMenu: Array<{ slug: string, title: string }>;
 };

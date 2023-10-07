@@ -1,10 +1,10 @@
 import type { ReactElement } from 'react';
 import type { GetServerSidePropsContext, GetServerSidePropsResult } from 'next';
-import { LayoutListingPost, SectionInfiniteScroll, PostList, useSeoConfig } from 'design-system';
+import { LayoutListingPost, SectionInfiniteScroll, PostList, useSeoConfig, useSiteConfig } from 'design-system';
 import { useSearch } from "../../hooks";
 import { useGetArticlesWithTagQuery } from '../../gql';
 import { adapterArticlesData } from '../../utils/adapters/adapterArticlesData';
-import { defaultSuggestions } from "../../config";
+import { defaultSuggestions, FOOTER_CONFIG, HEADER_MENU_CONFIG } from "../../config";
 
 type TagProps = {
   tagID: string;
@@ -16,6 +16,10 @@ function isStringArray(value: unknown): boolean {
 }
 export default function Tag({ tagID , tagName }: TagProps ): ReactElement {
   const onSearchQuery = useSearch();
+  const seo = useSeoConfig({ title: tagName });
+  const { client} = useSiteConfig();
+  const isMobile = client?.platform.isMobile || false;
+
   const { data, fetchMore } = useGetArticlesWithTagQuery({
     variables: {
       pageSize: 12,
@@ -25,7 +29,6 @@ export default function Tag({ tagID , tagName }: TagProps ): ReactElement {
     },
     ssr: true
   });
-  const seo = useSeoConfig({ title: tagName });
 
   const handleScrollEnd = async (page: number): Promise<{ page?: number }> => {
     try {
@@ -44,7 +47,8 @@ export default function Tag({ tagID , tagName }: TagProps ): ReactElement {
 
   return (
     <LayoutListingPost
-      footer={{ brand: "wTrasie", footerColumns: [] }}
+      footer={isMobile ? FOOTER_CONFIG.footer.mobile : FOOTER_CONFIG.footer.desktop}
+      headerMenu={isMobile ? HEADER_MENU_CONFIG.mobile.menu : HEADER_MENU_CONFIG.desktop.menu}
       searchEngine={{ defaultSuggestions, onSearchQuery }}
       seo={seo}
       siteBarLeft={<p>left</p>}
