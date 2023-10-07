@@ -5,10 +5,10 @@ export type ContentPartProps = {
   id: string;
   type: ContentPartEnum;
   value?: string;
-  url?: string;
-  src?: string;
-  caption?: string;
-  alternativeText?: string;
+  url?: string | null;
+  src?: string | null;
+  caption?: string | null;
+  alternativeText?: string | null;
 };
 
 export type ChunkComponent = FC<ContentPartProps> | null;

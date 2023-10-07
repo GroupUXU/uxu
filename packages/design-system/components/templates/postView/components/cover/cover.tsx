@@ -13,7 +13,7 @@ export function Cover({ cover, title }: CoverProps ): ReactElement {
     <div className={styles.wrapperCoverWithMeta}>
       <div className={styles.wrapperImg}>
         {src ? (
-          <Image alt={alt} layout="fill" objectFit="cover" src={src} />
+          <Image alt={alt || title} layout="fill" objectFit="cover" src={src} />
         ) : (
           <DummyImg height="30rem" width="100%" />
         )}

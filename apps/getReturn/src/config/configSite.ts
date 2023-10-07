@@ -12,7 +12,7 @@ export const SITE_CONFIG = ( clientLocale: string, isMobilePlatform: boolean, ro
     gtmId: "GTM-MC3DNS7"
   },
   port: 4200,
-  projectName: 'wTrasie',
+  projectName: 'getReturn',
   site: {
     id: SiteIdEnums.WTRASIE,
     locale,

@@ -5,122 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/codegen.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/next.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/public/next.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/public/vercel.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/config/apolloClient/config.apolloClient.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/config/apolloClient/config.cache.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/config/apolloClient/config.links.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/config/apolloClient/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configDefaultSeo.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configFooter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configHeader.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configSite.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/config/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/constants/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/constants/url.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/fragments/gql.fragment.adress.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/fragments/gql.fragment.contentParts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/fragments/gql.fragment.lead.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/fragments/gql.fragment.phone.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/fragments/gql.fragment.views.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/fragments/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/function/gql.query.client.article.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/function/gql.query.client.client.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/function/gql.query.client.tag.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/function/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/query/gql.query.article.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/query/gql.query.client.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/query/gql.query.tag.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/query/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/query/querySearch.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/stubs/schema.graphql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/types/api-gateway.service.generated.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/types/gql.fragment.adress.generated.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/types/gql.fragment.contentParts.generated.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/types/gql.fragment.lead.generated.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/types/gql.fragment.phone.generated.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/types/gql.fragment.views.generated.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/types/gql.query.article.generated.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/types/gql.query.client.generated.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/types/gql.query.tag.generated.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/types/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/types/querySearch.generated.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/hooks/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/hooks/useSearch.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/_app.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/_document.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/a/[...slug].tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/api/search/[query].ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/t/[...slug].tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/providers/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/providers/provider.apollo.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/providers/provider.seo.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/providers/provider.wrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterArticleData/adapterArticleData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterArticleData/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterArticleData/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterArticlesData/adapterArticlesData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterArticlesData/consts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterArticlesData/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterArticlesSlugData/adapterArticlesSlugData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterArticlesSlugData/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterArticlesSlugData/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterAuthorData/adapterAuthorData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterAuthorData/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterAuthorData/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterContentPart/adapterContentPart.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterContentPart/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterContentPart/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterImageData/adapterImageData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterImageData/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterImageData/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterSearchData/adapterSearchData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterSearchData/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterTagData/adapterTagData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterTagData/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterTagData/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterTagsTitleId/adapterTagsTitleId.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterTagsTitleId/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterTagsTitleId/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/function/connectQuerys.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/function/createSlugForType.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/function/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/function/separateArrayAt.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configFooter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configHeader.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configSite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configSite.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/a/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/a/[...slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/t/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/t/[...slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/assets/vectors/vectorBrands.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/assets/vectors/vectorBrands.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/components/headerLeftComponents/headerLeftComponents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/components/headerLeftComponents/headerLeftComponents.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/components/headerLeftComponents/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/components/headerLeftComponents/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/components/mobileHamburgerMenu/mobileHamburgerMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/components/mobileHamburgerMenu/mobileHamburgerMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/components/mobileHamburgerMenu/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/components/mobileHamburgerMenu/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutListingPost/consts.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutListingPost/layoutListingPost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutListingPost/layoutListingPost.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutListingPost/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutListingPost/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/consts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configSearchEngine.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/layoutPostView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/layoutPostView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/footer/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/footer/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/footer/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/footer/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/providers/providerConfigSite.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/providers/providerConfigSite.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/utils/types/siteConfigTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/utils/types/siteConfigTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterImageData/adapterImageData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterImageData/adapterImageData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/components/cover/cover.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/postView/components/cover/cover.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,8 +33,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "add-getreturn.pl",
-    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/wtrasie/src/config",
+    "git-widget-placeholder": "getReturn-add-api",
+    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/getReturn/src/pages",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -162,11 +49,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/getReturn/src/pages" />
       <recent name="$PROJECT_DIR$/apps/wtrasie/src/config" />
       <recent name="$PROJECT_DIR$/apps/getReturn/src/config" />
       <recent name="$PROJECT_DIR$/apps" />
       <recent name="$PROJECT_DIR$/apps/wtrasie/src/pages" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionInfiniteScroll/hooks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps/wtrasie" />
@@ -211,7 +98,7 @@
       <workItem from="1696362331005" duration="243000" />
       <workItem from="1696362588881" duration="95000" />
       <workItem from="1696362699907" duration="5508000" />
-      <workItem from="1696446764042" duration="39801000" />
+      <workItem from="1696446764042" duration="41222000" />
     </task>
     <servers />
   </component>
