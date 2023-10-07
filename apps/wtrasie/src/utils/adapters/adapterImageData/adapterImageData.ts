@@ -16,8 +16,8 @@ export function adapterImageData({ image, typeImg = 'medium'}: AdapterImageDataP
   if (!formats) {
     return {
       src: url ? adapterSrcImageData({ attributes: { url } }) : null,
-      caption: caption ?? undefined,
-      alt: alternativeText ?? undefined,
+      caption: caption ?? null,
+      alt: alternativeText ?? null,
     };
   }
 
@@ -25,7 +25,7 @@ export function adapterImageData({ image, typeImg = 'medium'}: AdapterImageDataP
 
   return {
     src,
-    caption: caption ?? undefined,
-    alt: alternativeText ?? undefined,
+    caption: caption ?? null,
+    alt: alternativeText ?? null,
   };
 }

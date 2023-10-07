@@ -5,26 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/blog/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/config/apolloClient/config.links.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/config/apolloClient/config.links.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/config/configSite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configSite.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/fragments/gql.fragment.adress.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/fragments/gql.fragment.phone.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/fragments/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/fragments/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/function/gql.query.client.client.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/function/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/function/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/query/gql.query.client.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/query/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/query/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/stubs/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/stubs/schema.graphql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/types/api-gateway.service.generated.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/types/api-gateway.service.generated.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/a/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/a/[...slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterContentPart/adapterContentPart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterContentPart/adapterContentPart.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterImageData/adapterImageData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterImageData/adapterImageData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/postView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/postView/postView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/utils/types/image.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/utils/types/image.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterImageData/adapterImageData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterImageData/adapterImageData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/components/cover/cover.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/postView/components/cover/cover.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
