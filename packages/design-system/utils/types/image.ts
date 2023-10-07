@@ -1,1 +1,1 @@
-export type Image = { src: string | null; alt?: string; caption?: string } | null;
+export type Image = { src: string | null; alt: string | null; caption: string | null } | null;

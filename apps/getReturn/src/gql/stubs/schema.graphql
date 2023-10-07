@@ -220,18 +220,6 @@ type ComponentContentPartsLead {
   lead: String!
 }
 
-input ComponentContentPartsMapsFiltersInput {
-  url: StringFilterInput
-  and: [ComponentContentPartsMapsFiltersInput]
-  or: [ComponentContentPartsMapsFiltersInput]
-  not: ComponentContentPartsMapsFiltersInput
-}
-
-input ComponentContentPartsMapsInput {
-  id: ID
-  url: String
-}
-
 type ComponentContentPartsMaps {
   id: ID!
   url: String!
@@ -266,234 +254,15 @@ type ComponentContentPartsYoutube {
   url: String!
 }
 
-type ComponentFooterColumn {
-  id: ID!
-  link(
-    filters: ComponentOthersLinkFiltersInput
-    pagination: PaginationArg = {}
-    sort: [String] = []
-  ): [ComponentOthersLink]
-  header: String
-}
-
-enum ENUM_COMPONENTOTHERSADRESS_TYP {
-  primmary
-  secondary
-}
-
-input ComponentOthersAdressFiltersInput {
-  street: StringFilterInput
-  numberStreet: StringFilterInput
-  apartmentNumber: StringFilterInput
-  postCode: StringFilterInput
-  shortname: TagFiltersInput
-  googleMaps: ComponentContentPartsMapsFiltersInput
-  phones: ComponentOthersPhoneFiltersInput
-  emails: ComponentOthersEmailFiltersInput
-  typ: StringFilterInput
-  and: [ComponentOthersAdressFiltersInput]
-  or: [ComponentOthersAdressFiltersInput]
-  not: ComponentOthersAdressFiltersInput
-}
-
-input ComponentOthersAdressInput {
-  id: ID
-  street: String
-  numberStreet: String
-  apartmentNumber: String
-  postCode: String
-  shortname: ID
-  googleMaps: ComponentContentPartsMapsInput
-  phones: [ComponentOthersPhoneInput]
-  emails: [ComponentOthersEmailInput]
-  typ: ENUM_COMPONENTOTHERSADRESS_TYP
-}
-
-type ComponentOthersAdress {
-  id: ID!
-  street: String!
-  numberStreet: String!
-  apartmentNumber: String
-  postCode: String!
-  shortname: TagEntityResponse
-  googleMaps: ComponentContentPartsMaps
-  phones(
-    filters: ComponentOthersPhoneFiltersInput
-    pagination: PaginationArg = {}
-    sort: [String] = []
-  ): [ComponentOthersPhone]
-  emails(
-    filters: ComponentOthersEmailFiltersInput
-    pagination: PaginationArg = {}
-    sort: [String] = []
-  ): [ComponentOthersEmail]
-  typ: ENUM_COMPONENTOTHERSADRESS_TYP
-}
-
-enum ENUM_COMPONENTOTHERSCOMPANYDATA_TYP {
-  dzialalnosc_gospodarcza
-  spolka_cywilna
-  spolka_z_ograniczona_odpowiedzialnoscia
-  spolka_akcyjna
-}
-
-input ComponentOthersCompanyDataFiltersInput {
-  companyName: StringFilterInput
-  nip: StringFilterInput
-  regon: StringFilterInput
-  krs: StringFilterInput
-  typ: StringFilterInput
-  and: [ComponentOthersCompanyDataFiltersInput]
-  or: [ComponentOthersCompanyDataFiltersInput]
-  not: ComponentOthersCompanyDataFiltersInput
-}
-
-input ComponentOthersCompanyDataInput {
-  id: ID
-  companyName: String
-  nip: String
-  regon: String
-  krs: String
-  typ: ENUM_COMPONENTOTHERSCOMPANYDATA_TYP
-}
-
-type ComponentOthersCompanyData {
-  id: ID!
-  companyName: String!
-  nip: String!
-  regon: String
-  krs: String
-  typ: ENUM_COMPONENTOTHERSCOMPANYDATA_TYP
-}
-
-input ComponentOthersEmailFiltersInput {
-  email: StringFilterInput
-  and: [ComponentOthersEmailFiltersInput]
-  or: [ComponentOthersEmailFiltersInput]
-  not: ComponentOthersEmailFiltersInput
-}
-
-input ComponentOthersEmailInput {
-  id: ID
-  email: String
-}
-
 type ComponentOthersEmail {
   id: ID!
   email: String!
-}
-
-enum ENUM_COMPONENTOTHERSLINK_TARGET {
-  blank
-  self
-  parent
-  top
-}
-
-enum ENUM_COMPONENTOTHERSLINK_REL {
-  alternate
-  author
-  bookmark
-  canonical
-  dns_prefetch
-  external
-  help
-  icon
-  license
-  manifest
-  me
-  modulepreload
-  next
-  nofollow
-  noopener
-  noreferrer
-  opener
-  pingback
-  preconnect
-  prefetch
-  preload
-  prerender
-  prev
-  search
-  stylesheet
-  tag
-}
-
-input ComponentOthersLinkFiltersInput {
-  title: StringFilterInput
-  url: StringFilterInput
-  target: StringFilterInput
-  rel: StringFilterInput
-  and: [ComponentOthersLinkFiltersInput]
-  or: [ComponentOthersLinkFiltersInput]
-  not: ComponentOthersLinkFiltersInput
-}
-
-type ComponentOthersLink {
-  id: ID!
-  title: String
-  url: String
-  target: ENUM_COMPONENTOTHERSLINK_TARGET
-  rel: ENUM_COMPONENTOTHERSLINK_REL
-}
-
-type ComponentOthersLinksList {
-  id: ID!
-  title: String
-  link(
-    filters: ComponentOthersLinkFiltersInput
-    pagination: PaginationArg = {}
-    sort: [String] = []
-  ): [ComponentOthersLink]!
-}
-
-enum ENUM_COMPONENTOTHERSPAGESSOCIALMEDIA_TYP {
-  page
-  shop
-  facebook
-  twitter
-  youtube
-  tiktok
-}
-
-input ComponentOthersPagesSocialMediaFiltersInput {
-  typ: StringFilterInput
-  url: StringFilterInput
-  and: [ComponentOthersPagesSocialMediaFiltersInput]
-  or: [ComponentOthersPagesSocialMediaFiltersInput]
-  not: ComponentOthersPagesSocialMediaFiltersInput
-}
-
-input ComponentOthersPagesSocialMediaInput {
-  id: ID
-  typ: ENUM_COMPONENTOTHERSPAGESSOCIALMEDIA_TYP
-  url: String
-}
-
-type ComponentOthersPagesSocialMedia {
-  id: ID!
-  typ: ENUM_COMPONENTOTHERSPAGESSOCIALMEDIA_TYP
-  url: String!
 }
 
 enum ENUM_COMPONENTOTHERSPHONE_TYP {
   mobile
   home
   fax
-}
-
-input ComponentOthersPhoneFiltersInput {
-  phone: StringFilterInput
-  typ: StringFilterInput
-  and: [ComponentOthersPhoneFiltersInput]
-  or: [ComponentOthersPhoneFiltersInput]
-  not: ComponentOthersPhoneFiltersInput
-}
-
-input ComponentOthersPhoneInput {
-  id: ID
-  phone: String
-  typ: ENUM_COMPONENTOTHERSPHONE_TYP
 }
 
 type ComponentOthersPhone {
@@ -520,66 +289,6 @@ type ComponentOthersSeo {
   id: ID!
   title: String
   description: String
-}
-
-input ComponentOthersSettingPageFiltersInput {
-  page: StringFilterInput
-  seo: ComponentOthersSeoFiltersInput
-  filter: ComponentOthersSiteBarFiltersFiltersInput
-  and: [ComponentOthersSettingPageFiltersInput]
-  or: [ComponentOthersSettingPageFiltersInput]
-  not: ComponentOthersSettingPageFiltersInput
-}
-
-input ComponentOthersSettingPageInput {
-  id: ID
-  page: String
-  seo: ComponentOthersSeoInput
-  filter: [ComponentOthersSiteBarFiltersInput]
-}
-
-type ComponentOthersSettingPage {
-  id: ID!
-  page: String!
-  seo: ComponentOthersSeo!
-  filter(
-    filters: ComponentOthersSiteBarFiltersFiltersInput
-    pagination: PaginationArg = {}
-    sort: [String] = []
-  ): [ComponentOthersSiteBarFilters]!
-}
-
-enum ENUM_COMPONENTOTHERSSITEBARFILTERS_TYP {
-  tags
-  articles
-  clients
-  users
-}
-
-input ComponentOthersSiteBarFiltersFiltersInput {
-  title: StringFilterInput
-  slug: StringFilterInput
-  typ: StringFilterInput
-  key: StringFilterInput
-  and: [ComponentOthersSiteBarFiltersFiltersInput]
-  or: [ComponentOthersSiteBarFiltersFiltersInput]
-  not: ComponentOthersSiteBarFiltersFiltersInput
-}
-
-input ComponentOthersSiteBarFiltersInput {
-  id: ID
-  title: String
-  slug: String
-  typ: ENUM_COMPONENTOTHERSSITEBARFILTERS_TYP
-  key: String
-}
-
-type ComponentOthersSiteBarFilters {
-  id: ID!
-  title: String!
-  slug: String!
-  typ: ENUM_COMPONENTOTHERSSITEBARFILTERS_TYP!
-  key: String
 }
 
 input ComponentStatsViewsFiltersInput {
@@ -686,97 +395,9 @@ type ArticleRelationResponseCollection {
   data: [ArticleEntity!]!
 }
 
-input ClientFiltersInput {
-  id: IDFilterInput
-  branches: ComponentOthersAdressFiltersInput
-  companyData: ComponentOthersCompanyDataFiltersInput
-  pagesAndSocialMedia: ComponentOthersPagesSocialMediaFiltersInput
-  createdAt: DateTimeFilterInput
-  updatedAt: DateTimeFilterInput
-  publishedAt: DateTimeFilterInput
-  and: [ClientFiltersInput]
-  or: [ClientFiltersInput]
-  not: ClientFiltersInput
-}
-
-input ClientInput {
-  branches: [ComponentOthersAdressInput]
-  companyData: ComponentOthersCompanyDataInput
-  pagesAndSocialMedia: [ComponentOthersPagesSocialMediaInput]
-  publishedAt: DateTime
-}
-
-type Client {
-  branches(
-    filters: ComponentOthersAdressFiltersInput
-    pagination: PaginationArg = {}
-    sort: [String] = []
-  ): [ComponentOthersAdress]
-  companyData: ComponentOthersCompanyData
-  pagesAndSocialMedia(
-    filters: ComponentOthersPagesSocialMediaFiltersInput
-    pagination: PaginationArg = {}
-    sort: [String] = []
-  ): [ComponentOthersPagesSocialMedia]
-  createdAt: DateTime
-  updatedAt: DateTime
-  publishedAt: DateTime
-}
-
-type ClientEntity {
-  id: ID
-  attributes: Client
-}
-
-type ClientEntityResponse {
-  data: ClientEntity
-}
-
-type ClientEntityResponseCollection {
-  data: [ClientEntity!]!
-  meta: ResponseCollectionMeta!
-}
-
-union SettingFooterDynamicZone = ComponentFooterColumn | Error
-
-scalar SettingFooterDynamicZoneInput
-
-input SettingInput {
-  socialMedia: [ComponentOthersPagesSocialMediaInput]
-  settingsPages: [ComponentOthersSettingPageInput]
-  footer: [SettingFooterDynamicZoneInput!]
-}
-
-type Setting {
-  socialMedia(
-    filters: ComponentOthersPagesSocialMediaFiltersInput
-    pagination: PaginationArg = {}
-    sort: [String] = []
-  ): [ComponentOthersPagesSocialMedia]!
-  settingsPages(
-    filters: ComponentOthersSettingPageFiltersInput
-    pagination: PaginationArg = {}
-    sort: [String] = []
-  ): [ComponentOthersSettingPage]!
-  footer: [SettingFooterDynamicZone]!
-  createdAt: DateTime
-  updatedAt: DateTime
-}
-
-type SettingEntity {
-  id: ID
-  attributes: Setting
-}
-
-type SettingEntityResponse {
-  data: SettingEntity
-}
-
 enum ENUM_TAG_TYP {
   other
   city
-  countie
-  service
 }
 
 union TagContentpartsDynamicZone = ComponentContentPartsTxt | Error
@@ -1181,21 +802,11 @@ union GenericMorph =
   | ComponentContentPartsTxt
   | ComponentContentPartsYouTube
   | ComponentContentPartsYoutube
-  | ComponentFooterColumn
-  | ComponentOthersAdress
-  | ComponentOthersCompanyData
   | ComponentOthersEmail
-  | ComponentOthersLink
-  | ComponentOthersLinksList
-  | ComponentOthersPagesSocialMedia
   | ComponentOthersPhone
   | ComponentOthersSeo
-  | ComponentOthersSettingPage
-  | ComponentOthersSiteBarFilters
   | ComponentStatsViews
   | Article
-  | Client
-  | Setting
   | Tag
   | UploadFile
   | UploadFolder
@@ -1274,14 +885,6 @@ type Query {
     sort: [String] = []
     publicationState: PublicationState = LIVE
   ): ArticleEntityResponseCollection
-  client(id: ID): ClientEntityResponse
-  clients(
-    filters: ClientFiltersInput
-    pagination: PaginationArg = {}
-    sort: [String] = []
-    publicationState: PublicationState = LIVE
-  ): ClientEntityResponseCollection
-  setting: SettingEntityResponse
   tag(id: ID): TagEntityResponse
   tags(
     filters: TagFiltersInput
@@ -1326,11 +929,6 @@ type Mutation {
   createArticle(data: ArticleInput!): ArticleEntityResponse
   updateArticle(id: ID!, data: ArticleInput!): ArticleEntityResponse
   deleteArticle(id: ID!): ArticleEntityResponse
-  createClient(data: ClientInput!): ClientEntityResponse
-  updateClient(id: ID!, data: ClientInput!): ClientEntityResponse
-  deleteClient(id: ID!): ClientEntityResponse
-  updateSetting(data: SettingInput!): SettingEntityResponse
-  deleteSetting: SettingEntityResponse
   createTag(data: TagInput!): TagEntityResponse
   updateTag(id: ID!, data: TagInput!): TagEntityResponse
   deleteTag(id: ID!): TagEntityResponse

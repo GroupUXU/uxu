@@ -28,8 +28,8 @@ export function adapterContentPart(content?: AdapterContentPartProps): ContentPa
           id: content.id || "",
           type: ContentPartEnum.IMG,
           src: adapterImageData({image: content.media.data.attributes , typeImg: "medium" })?.src || content.media.data.attributes.url,
-          caption: content.media.data.attributes.caption || undefined,
-          alternativeText: content.media.data.attributes.alternativeText || undefined,
+          caption: content.media.data.attributes.caption || null,
+          alternativeText: content.media.data.attributes.alternativeText || null,
         };
       } 
         return defaultData;
