@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from "react";
-import type { KeyboardEvent as ReactKeyboardEvent } from "react";
+import { useEffect, useRef } from "react";
+import type { KeyboardEvent as ReactKeyboardEvent, ReactElement } from "react";
 import classnames from 'classnames';
 import { createPortal } from 'react-dom';
 import styles from './modal.module.scss';
 import type { ModalProps } from "./types";
 
-export function Modal({ open = false, className, children, onClick, renderDirectlyInBody = false, onClose }: ModalProps): JSX.Element | null {
+export function Modal({ open = false, className, children, onClick, renderDirectlyInBody = false, onClose }: ModalProps): ReactElement | null {
   const modalRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {

@@ -1,5 +1,5 @@
-import type { SiteIdEnums } from "../enums";
-import type { VectorBrandsVariant } from "../../assets";
+import type { SiteIdEnums } from "../../enums";
+import type { VectorBrandsVariant } from "../../../assets";
 
 export type AdsConfig = Partial<{
   enabled: boolean;

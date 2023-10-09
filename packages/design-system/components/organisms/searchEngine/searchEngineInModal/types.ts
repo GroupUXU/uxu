@@ -1,16 +1,18 @@
-export type SearchSuggestionContentDetails = {
+import type { SearchEngineConfig } from "../../../../utils";
+
+export type SearchSuggestionEngineInModal = {
   slug: string;
   title: string;
   lead?: string;
   type: "post" | "page";
 };
 
-export type DefaultSuggestions = Array<SearchSuggestionContentDetails>;
+export type SearchSuggestionsArrayEngineInModal = Array<SearchSuggestionEngineInModal>;
 
-export type OnSearchQuery = ( searchQuery: string ) => Promise<{ searchResults: SearchSuggestionContentDetails[] }>
+export type OnSearchQuery = ( searchQuery: string ) => Promise<{ searchResults: SearchSuggestionsArrayEngineInModal }>
 
-export type SearchSuggestionModalProps = {
+export type SearchEngineInModalProps = {
   className?: string;
   onSearchQuery?: OnSearchQuery;
-  defaultSuggestions?: DefaultSuggestions;
+  searchEngineConfig: SearchEngineConfig<SearchSuggestionsArrayEngineInModal>;
 };

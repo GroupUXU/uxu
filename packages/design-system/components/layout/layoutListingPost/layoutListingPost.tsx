@@ -9,7 +9,7 @@ import { MobileVerticalModal, HeaderLeftComponents, HeaderRightComponents } from
 import type { LayoutListingPostProps } from './types';
 import styles from './layoutListingPost.module.scss';
 
-export function LayoutListingPost({ children, footer, headerMenu, searchEngine, seo, siteBarLeft, siteBarRight, topElement }: LayoutListingPostProps): ReactElement {
+export function LayoutListingPost({ children, footer, headerMenu, searchEngineConfig, seo, siteBarLeft, siteBarRight, topElement }: LayoutListingPostProps): ReactElement {
   const router = useRouter();
   const currentSlug = router.pathname || '/';
 
@@ -19,7 +19,7 @@ export function LayoutListingPost({ children, footer, headerMenu, searchEngine, 
     <>
       <NextSeo {...seo} />
       <Header
-        leftComponents={<HeaderLeftComponents headerMenu={headerMenu} isLinkActive={isLinkActive} searchEngine={searchEngine} />}
+        leftComponents={<HeaderLeftComponents headerMenu={headerMenu} isLinkActive={isLinkActive} searchEngineConfig={searchEngineConfig} />}
         mobileHamburgerMenu={<MobileVerticalModal currentSlug={currentSlug} headerMenu={headerMenu} isLinkActive={isLinkActive} />}
         rightComponents={<HeaderRightComponents modalAlignment='right' switchModalButtonText='sugestia' />}
       />

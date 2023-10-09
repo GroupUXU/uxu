@@ -1,12 +1,8 @@
-import type { DefaultSuggestions, OnSearchQuery } from "../../../organisms/searchEngine/searchEngineInModal/types";
-
-export type SearchEngine = {
-  onSearchQuery?: OnSearchQuery;
-  defaultSuggestions?: DefaultSuggestions;
-}
+import type { SearchEngineConfig } from "../../../../utils";
+import type { SearchSuggestionsArrayEngineInModal } from "../../../organisms/searchEngine/searchEngineInModal/types";
 
 export type HeaderLeftComponentsProps = {
-  searchEngine?: SearchEngine;
   isLinkActive: (slug: string) => boolean;
   headerMenu: Array<{ slug: string, title: string }>;
+  searchEngineConfig: SearchEngineConfig<SearchSuggestionsArrayEngineInModal>;
 };
