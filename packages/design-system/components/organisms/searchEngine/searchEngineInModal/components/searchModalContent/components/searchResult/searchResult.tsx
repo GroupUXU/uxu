@@ -8,7 +8,7 @@ import type { SearchResultProps } from "./types";
 export function SearchResult({ onMouseEnter, currentHoveredSuggestionIndex }: SearchResultProps): ReactElement {
   const { hits } = useHits();
 
-  const suggestions = hits.map(hit => adapterSearchData(hit)).filter(Boolean) as SearchSuggestionsArrayEngineInModal;
+  const suggestions = hits.map ( hit => adapterSearchData ( hit ) ).filter ( Boolean ) as unknown as SearchSuggestionsArrayEngineInModal;
 
   return (
     <SuggestionList

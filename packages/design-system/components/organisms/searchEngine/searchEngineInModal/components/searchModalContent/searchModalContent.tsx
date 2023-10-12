@@ -27,7 +27,7 @@ export function SearchModalContent({ modalRef, searchEngineConfig }: SearchModal
             onMouseEnter={setCurrentHoveredSuggestionIndex}
             suggestions={searchEngineConfig.defaultSugestions}
           />
-          <Configure getRankingInfo hitsPerPage={20} />
+          <Configure />
           {query.length >= 2 && (
             <SearchResult
               currentHoveredSuggestionIndex={currentHoveredSuggestionIndex}

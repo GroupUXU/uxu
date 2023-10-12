@@ -1,9 +1,9 @@
 import { createSlug } from 'design-system';
-import type { SearchSuggestionContentDetails } from 'design-system/components/organisms/searchEngine/searchEngineInModal/types';
+import type { SearchSuggestionsArrayEngineInModal, SearchSuggestionEngineInModal } from 'design-system';
 import type { GetSearchQuery } from '../../../gql';
 import { createSlugForType } from '../../function';
 
-export function adapterSearchData(data: GetSearchQuery | undefined): Array<SearchSuggestionContentDetails> {
+export function adapterSearchData(data: GetSearchQuery | undefined): SearchSuggestionsArrayEngineInModal {
   if (!data?.searchResults.hits) return [];
 
   return data.searchResults.hits
@@ -20,9 +20,9 @@ export function adapterSearchData(data: GetSearchQuery | undefined): Array<Searc
         type,
         title,
         lead: lead.lead
-      } as SearchSuggestionContentDetails;
+      } as SearchSuggestionEngineInModal;
     })
-    .filter(function filterValidSuggestions(item): item is SearchSuggestionContentDetails {
+    .filter(function filterValidSuggestions(item): item is SearchSuggestionEngineInModal {
       return Boolean(item.slug) && Boolean(item.type) && Boolean(item.title);
     });
 }
