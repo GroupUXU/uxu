@@ -1,1 +1,1 @@
-export * from './SearchSuggestionsModal'
+export * from './searchSuggestionsModal'

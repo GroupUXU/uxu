@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/SearchSuggestionsModal/components/searchSuggestionList/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/adapters/adapterSearchData/adapterSearchData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/adapters/adapterSearchData/adapterSearchData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/SearchSuggestionsModal/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/searchModalContent.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/SearchSuggestionsModal/searchSuggestionsModal.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/searchModalContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/SearchSuggestionsModal/searchSuggestionsModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/SearchSuggestionsModal/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/suggestionList/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/suggestionList/suggestionList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/SearchSuggestionsModal/components/searchSuggestionList/searchSuggestionList.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/suggestionList/suggestionList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/SearchSuggestionsModal/components/searchSuggestionList/searchSuggestionList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/suggestionList/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/SearchSuggestionsModal/components/searchSuggestionList/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/searchEngineInModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/searchEngineInModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/SearchSuggestionsModal/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/SearchSuggestionsModal/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +105,7 @@
       <workItem from="1697740347237" duration="2200000" />
       <workItem from="1697820750912" duration="11927000" />
       <workItem from="1697903697302" duration="8247000" />
-      <workItem from="1697914444736" duration="18643000" />
+      <workItem from="1697914444736" duration="18766000" />
     </task>
     <servers />
   </component>
