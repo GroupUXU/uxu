@@ -7,7 +7,7 @@ import type { HeaderLeftComponentsProps } from './types';
 import styles from './headerLeftComponents.module.scss';
 
 
-export function HeaderLeftComponents({ headerMenu, isLinkActive, searchEngine }: HeaderLeftComponentsProps): ReactElement {
+export function HeaderLeftComponents({ headerMenu, isLinkActive, searchEngineConfig }: HeaderLeftComponentsProps): ReactElement {
 const { site } = useSiteConfig();
   function createNavLink( slug: string, title: string ): ReactElement {
     return (
@@ -31,8 +31,7 @@ const { site } = useSiteConfig();
         </nav>
       <SearchEngineInModal
         className={styles.wrapperSearch}
-        defaultSuggestions={searchEngine?.defaultSuggestions}
-        onSearchQuery={searchEngine?.onSearchQuery}
+        searchEngineConfig={searchEngineConfig}
       />
     </>
   );

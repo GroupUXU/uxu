@@ -1,9 +1,8 @@
-import { createSlug } from 'design-system';
-import type { SearchSuggestionContentDetails } from 'design-system/components/organisms/searchEngine/searchEngineInModal/types';
-import type { GetSearchQuery } from '../../../gql';
-import { createSlugForType } from '../../function';
+import type { SearchSuggestionContentDetails } from '../../types';
+import type { GetSearchQuery } from "queries";
+import { createSlugForType, createSlug } from '../../../../../../utils';
 
-export function adapterSearchData(data: GetSearchQuery | undefined): Array<SearchSuggestionContentDetails> {
+export function adapterSearchData(data?: GetSearchQuery): Array<SearchSuggestionContentDetails> {
   if (!data?.searchResults.hits) return [];
 
   return data.searchResults.hits
@@ -11,7 +10,7 @@ export function adapterSearchData(data: GetSearchQuery | undefined): Array<Searc
       return Boolean(post);
     })
     .map(function mapPostToSuggestion(post) {
-      const slug = `${createSlugForType(post.type)}/${createSlug(post.title)}`;
+      const slug = `${createSlugForType(post.type)}/${post.id}/${createSlug(post.title)}`;
       const type = "post"
       const { title, lead } = post;
 

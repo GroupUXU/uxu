@@ -10,8 +10,7 @@ import {
   clientGetArticlesQuery,
   clientClientsWithTagsQuery
 } from '../../gql';
-import { useSearch } from "../../hooks";
-import { defaultSuggestions, FOOTER_CONFIG, HEADER_MENU_CONFIG } from "../../config";
+import { FOOTER_CONFIG, HEADER_MENU_CONFIG, CONFIG_SEARCH_ENGINE } from "../../config";
 
 type ServiceProps = {
   clientPhone?: string;
@@ -19,7 +18,6 @@ type ServiceProps = {
 };
 
 export default function Service({ articleData, clientPhone }: ServiceProps): ReactElement {
-  const onSearchQuery = useSearch();
   const seo = useSeoConfig({ title: articleData?.title, description: articleData?.lead, images: [{ url: articleData?.cover?.src }] });
   const { client} = useSiteConfig();
   const isMobile = client?.platform.isMobile || false;
@@ -33,7 +31,7 @@ export default function Service({ articleData, clientPhone }: ServiceProps): Rea
     <LayoutPostView
       footer={isMobile ? FOOTER_CONFIG.footer.mobile : FOOTER_CONFIG.footer.desktop}
       headerMenu={isMobile ? HEADER_MENU_CONFIG.mobile.menu : HEADER_MENU_CONFIG.desktop.menu}
-      searchEngine={{ defaultSuggestions, onSearchQuery }}
+      searchEngineConfig={CONFIG_SEARCH_ENGINE}
       seo={seo}
       siteBarLeft={<p>SiteBar left</p>}
       topElement={<AdPhoneClient {...adsWithPhoneClient} />}

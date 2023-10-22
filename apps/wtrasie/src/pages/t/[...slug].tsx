@@ -1,10 +1,9 @@
 import type { ReactElement } from 'react';
 import type { GetServerSidePropsContext, GetServerSidePropsResult } from 'next';
 import { LayoutListingPost, SectionInfiniteScroll, PostList, useSeoConfig, useSiteConfig } from 'design-system';
-import { useSearch } from "../../hooks";
 import { useGetArticlesWithTagQuery } from '../../gql';
 import { adapterArticlesData } from '../../utils/adapters/adapterArticlesData';
-import { defaultSuggestions, FOOTER_CONFIG, HEADER_MENU_CONFIG } from "../../config";
+import { FOOTER_CONFIG, HEADER_MENU_CONFIG, CONFIG_SEARCH_ENGINE } from "../../config";
 
 type TagProps = {
   tagID: string;
@@ -15,7 +14,6 @@ function isStringArray(value: unknown): boolean {
   return Array.isArray(value) && value.every(item => typeof item === 'string');
 }
 export default function Tag({ tagID , tagName }: TagProps ): ReactElement {
-  const onSearchQuery = useSearch();
   const seo = useSeoConfig({ title: tagName });
   const { client} = useSiteConfig();
   const isMobile = client?.platform.isMobile || false;
@@ -49,7 +47,7 @@ export default function Tag({ tagID , tagName }: TagProps ): ReactElement {
     <LayoutListingPost
       footer={isMobile ? FOOTER_CONFIG.footer.mobile : FOOTER_CONFIG.footer.desktop}
       headerMenu={isMobile ? HEADER_MENU_CONFIG.mobile.menu : HEADER_MENU_CONFIG.desktop.menu}
-      searchEngine={{ defaultSuggestions, onSearchQuery }}
+      searchEngineConfig={CONFIG_SEARCH_ENGINE}
       seo={seo}
       siteBarLeft={<p>left</p>}
       siteBarRight={<p>right</p>}

@@ -1,0 +1,18 @@
+overwrite: true
+schema:
+  - './stubs/schema.searchEngine.graphql'
+documents: [ "**/*.ts"]
+generates:
+  ./types/api-gateway.service.generated.ts:
+    plugins:
+      - typescript
+  ./types:
+    preset: near-operation-file
+    presetConfig:
+      folder: ../types
+      baseTypesPath: api-gateway.service.generated.ts
+      extension: .generated.ts
+    plugins:
+      - typescript-operations
+      - typescript-react-apollo
+

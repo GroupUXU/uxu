@@ -55,7 +55,7 @@ export function KeyboardShortcut({ command, shift, option, ctrl, callback, child
       {shift !== undefined && getModifierSymbol('shift')}
       {option !== undefined && getModifierSymbol('alt')}
       {ctrl !== undefined && getModifierSymbol('ctrl')}
-      {isValidElement(children) && <span>{children}</span>}
+      <span>{children}</span>
     </div>
   );
 }

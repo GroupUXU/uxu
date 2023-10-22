@@ -1,45 +1,32 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
+import { useGetSearchQuery } from 'queries';
+import { adapterSearchData } from "../adapters/adapterSearchData";
 import type { SearchSuggestionContentDetails } from "../types";
 
-export type OnSearchQueryType = (searchQuery: string) => Promise<{ searchResults: SearchSuggestionContentDetails[] }>;
+export const useSearchResults = (): { isWaitingForQuery: boolean, setSearchQuery: (query: string) => void, searchResults: Array<SearchSuggestionContentDetails> } => {
+  const { refetch } = useGetSearchQuery({ skip: true });
+  const [isWaitingForQuery, setIsWaitingForQuery] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<Array<SearchSuggestionContentDetails>>([]);
 
-export const useSearchResults = (
-  searchQuery?: string,
-  onSearchQuery?: OnSearchQueryType
-): { isAwaitingApiResponse: boolean; searchResults: SearchSuggestionContentDetails[] } => {
-  const [isAwaitingApiResponse, setIsAwaitingApiResponse] = useState<boolean>(false);
-  const [searchResults, setSearchResults] = useState<SearchSuggestionContentDetails[]>([]);
-
-  useEffect(() => {
-    let isActive = true;
-
-    const fetchSearchResults = async (): Promise<void> => {  // Added return type here
-      if (onSearchQuery) {
-        setIsAwaitingApiResponse(true);
-        try {
-          const res = await onSearchQuery(searchQuery || "");
-          if (isActive) {
-            setIsAwaitingApiResponse(false);
-            setSearchResults(res.searchResults);
-          }
-        } catch (error) {
-          if (isActive) {
-            setIsAwaitingApiResponse(false);
-          }
-        }
-      }
-    };
-
-    if (searchQuery?.length && searchQuery.length > 1) {
-      void fetchSearchResults();
-    } else {
+  const fetchSearchResults = useCallback(async () => {
+    if (typeof searchQuery !== "string" || searchQuery.length === 0) {
       setSearchResults([]);
+      return;
     }
 
-    return () => {
-      isActive = false;
-    };
-  }, [searchQuery, onSearchQuery]);
+    setIsWaitingForQuery(true);
+    try {
+      const { data} = await refetch({ query: searchQuery });
+      setSearchResults(adapterSearchData(data));
+    } catch (error) { /* empty */ } finally  { setIsWaitingForQuery(false); }
+  }, [searchQuery]);
 
-  return { isAwaitingApiResponse, searchResults };
+
+
+  useEffect(() => {
+    void fetchSearchResults();
+  }, [searchQuery]);
+
+  return { isWaitingForQuery, setSearchQuery, searchResults };
 };

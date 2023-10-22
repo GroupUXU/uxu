@@ -1,12 +1,10 @@
 import type { ReactElement } from 'react';
 import { SectionInfiniteScroll, LayoutListingPost, useSeoConfig, PostList, useSiteConfig } from 'design-system';
-import { defaultSuggestions, FOOTER_CONFIG, HEADER_MENU_CONFIG } from '../config';
-import { useSearch } from '../hooks';
+import { FOOTER_CONFIG, HEADER_MENU_CONFIG, CONFIG_SEARCH_ENGINE } from '../config';
 import { useGetArticlesQuery } from '../gql';
 import { adapterArticlesData } from '../utils/adapters/adapterArticlesData';
 
 function Index(): ReactElement  {
-  const onSearchQuery = useSearch();
   const seo = useSeoConfig({});
   const { client } = useSiteConfig();
   const isMobile = client?.platform.isMobile || false;
@@ -39,7 +37,7 @@ function Index(): ReactElement  {
     <LayoutListingPost
       footer={isMobile ? FOOTER_CONFIG.footer.mobile : FOOTER_CONFIG.footer.desktop}
       headerMenu={isMobile ? HEADER_MENU_CONFIG.mobile.menu : HEADER_MENU_CONFIG.desktop.menu}
-      searchEngine={{ defaultSuggestions, onSearchQuery }}
+      searchEngineConfig={CONFIG_SEARCH_ENGINE}
       seo={seo}
       siteBarLeft={<p>left</p>}
       siteBarRight={<p>right</p>}
