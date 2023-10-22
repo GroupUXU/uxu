@@ -5,6 +5,7 @@ import type { SearchSuggestionContentDetails } from "../../types";
 export type SearchModalContentProps = {
   register: UseFormRegister<{ search: string; }>;
   searchQuery?: string;
+  setIsOpenModal: (open: boolean) => void;
   isAwaitingApiResponse: boolean;
   searchResults: Array<SearchSuggestionContentDetails>;
   defaultSuggestions: Array<SearchSuggestionContentDetails>;

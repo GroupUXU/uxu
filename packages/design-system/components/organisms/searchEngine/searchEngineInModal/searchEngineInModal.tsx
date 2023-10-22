@@ -6,7 +6,7 @@ import { Search } from 'react-feather';
 import { useSiteConfig } from '../../../../hooks';
 import { KeyboardShortcut, Modal } from '../../../atoms';
 import { SearchEngineConfig, Throttle } from '../../../../utils';
-import { SearchModalContent } from './components/searchModalContent';
+import { SearchSuggestionsModal } from './components/SearchSuggestionsModal';
 import { useSearchResults } from './hooks/useSearchResults';
 import styles from './searchEngineInModal.module.scss';
 import { SearchSuggestionContentDetails } from "./types";
@@ -76,7 +76,8 @@ export function SearchEngineInModal({ className, searchEngineConfig }: SearchSug
         open={isOpenModal}
         renderDirectlyInBody
       >
-        <SearchModalContent
+        <SearchSuggestionsModal
+          setIsOpenModal={setIsOpenModal}
           defaultSuggestions={searchEngineConfig.defaultSugestions}
           isAwaitingApiResponse={isWaitingForQuery}
           modalRef={modalRef}

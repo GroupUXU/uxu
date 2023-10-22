@@ -10,7 +10,7 @@ export function adapterSearchData(data?: GetSearchQuery): Array<SearchSuggestion
       return Boolean(post);
     })
     .map(function mapPostToSuggestion(post) {
-      const slug = `${createSlugForType(post.type)}/${createSlug(post.title)}`;
+      const slug = `${createSlugForType(post.type)}/${post.id}/${createSlug(post.title)}`;
       const type = "post"
       const { title, lead } = post;
 
