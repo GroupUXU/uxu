@@ -20,13 +20,13 @@ export const useSearchResults = (): { isWaitingForQuery: boolean, setSearchQuery
       const { data} = await refetch({ query: searchQuery });
       setSearchResults(adapterSearchData(data));
     } catch (error) { /* empty */ } finally  { setIsWaitingForQuery(false); }
-  }, [searchQuery]);
+  }, [searchQuery, refetch]);
 
 
 
   useEffect(() => {
     void fetchSearchResults();
-  }, [searchQuery]);
+  }, [searchQuery, fetchSearchResults]);
 
   return { isWaitingForQuery, setSearchQuery, searchResults };
 };

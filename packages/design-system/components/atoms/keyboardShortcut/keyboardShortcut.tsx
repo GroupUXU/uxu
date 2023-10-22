@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import { useEffect, useCallback, useMemo, useRef, isValidElement } from 'react';
+import { useEffect, useCallback, useMemo, useRef } from 'react';
 import type { ReactElement } from 'react';
 import { useSiteConfig } from '../../../hooks';
 import type { KeyboardShortcutProps } from './types';
