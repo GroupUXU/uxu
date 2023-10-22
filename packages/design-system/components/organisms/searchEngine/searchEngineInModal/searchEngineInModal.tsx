@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-leaked-render -- all ok */
 import { useRef, useState, useCallback, useEffect } from 'react';
 import type { ReactElement, KeyboardEvent, MouseEvent } from 'react';
 import classnames from 'classnames';
@@ -5,11 +6,12 @@ import { useForm } from "react-hook-form";
 import { Search } from 'react-feather';
 import { useSiteConfig } from '../../../../hooks';
 import { KeyboardShortcut, Modal } from '../../../atoms';
-import { SearchEngineConfig, Throttle } from '../../../../utils';
+import { Throttle } from '../../../../utils';
+import type { SearchEngineConfig } from '../../../../utils';
 import { SearchSuggestionsModal } from './components/SearchSuggestionsModal';
 import { useSearchResults } from './hooks/useSearchResults';
 import styles from './searchEngineInModal.module.scss';
-import { SearchSuggestionContentDetails } from "./types";
+import type { SearchSuggestionContentDetails } from "./types";
 
 
 const throttle = new Throttle(150)
@@ -44,9 +46,9 @@ export function SearchEngineInModal({ className, searchEngineConfig }: SearchSug
   }, [toggleModal]);
 
 
-  useEffect ( () => {
+  useEffect(() => {
     throttle.setLastTimeOut(() => { setSearchQuery(searchQuery) })
-  }, [searchQuery] );
+  }, [searchQuery, setSearchQuery]);
 
   return (
     <>
@@ -77,13 +79,13 @@ export function SearchEngineInModal({ className, searchEngineConfig }: SearchSug
         renderDirectlyInBody
       >
         <SearchSuggestionsModal
-          setIsOpenModal={setIsOpenModal}
           defaultSuggestions={searchEngineConfig.defaultSugestions}
           isAwaitingApiResponse={isWaitingForQuery}
           modalRef={modalRef}
           register={register}
           searchQuery={searchQuery}
           searchResults={searchResults}
+          setIsOpenModal={setIsOpenModal}
         />
       </Modal>
     </>

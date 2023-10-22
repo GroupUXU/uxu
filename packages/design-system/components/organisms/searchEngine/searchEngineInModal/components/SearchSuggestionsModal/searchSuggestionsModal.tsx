@@ -26,11 +26,11 @@ export function SearchSuggestionsModal({ defaultSuggestions, isAwaitingApiRespon
       <>
         <span className={styles.info}>{searchResults.length ? `Znaleziono ${searchResults.length} wyników` : `Nic nie znaleziono dla hasła: ${searchQuery}`}</span>
         <SearchSuggestionList
-          suggestions={searchResults}
-          listType="searchResults"
           currentHoveredSuggestionIndex={currentHoveredSuggestionIndex}
+          listType="searchResults"
           onMouseEnter={setCurrentHoveredSuggestionIndex}
           setIsOpenModal={setIsOpenModal}
+          suggestions={searchResults}
         />
       </>
     );
@@ -39,11 +39,11 @@ export function SearchSuggestionsModal({ defaultSuggestions, isAwaitingApiRespon
       <>
         <span className={styles.info}>Polecane dla Ciebie</span>
         <SearchSuggestionList
-          suggestions={defaultSuggestions}
-          listType="defaultSuggestions"
           currentHoveredSuggestionIndex={currentHoveredSuggestionIndex}
+          listType="defaultSuggestions"
           onMouseEnter={setCurrentHoveredSuggestionIndex}
           setIsOpenModal={setIsOpenModal}
+          suggestions={defaultSuggestions}
         />
       </>
     );

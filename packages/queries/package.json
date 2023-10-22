@@ -8,7 +8,6 @@
     "access": "public"
   },
   "scripts": {
-    "lint": "eslint .",
     "codegen": "yarn graphql-code-generator --config ./codegen.yml"
   },
   "dependencies": {

@@ -1,6 +1,7 @@
 import fetch from 'node-fetch';
-import { CONFIG_SEARCH_ENGINE } from '../../../config/configSearchEngine';
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { CONFIG_SEARCH_ENGINE } from '../../../config/configSearchEngine';
+
 
 type Handler = (req: NextApiRequest, res: NextApiResponse) => Promise<void>;
 
