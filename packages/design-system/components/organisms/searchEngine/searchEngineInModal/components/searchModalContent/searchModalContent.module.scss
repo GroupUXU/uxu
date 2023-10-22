@@ -24,17 +24,10 @@
     border-bottom: var(--uxu-border-alpha-default);
 
     .wrapperSearch {
-
-      button {
-        display: none;
-      }
-
       input {
-        width: 100%;
         border: none;
         min-height: 6rem;
         font-size: var(--uxu-font-size-large);
-        color: var(--uxu-color-primary-accent5);
         background-color: var(--uxu-color-background-200);
 
         &:focus {

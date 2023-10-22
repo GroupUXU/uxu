@@ -1,1 +1,0 @@
-export type SearchResultProps = { onMouseEnter: ( index: number ) => void; currentHoveredSuggestionIndex: number }

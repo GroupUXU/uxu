@@ -3,7 +3,7 @@ import type { GetServerSidePropsContext, GetServerSidePropsResult } from 'next';
 import { LayoutListingPost, SectionInfiniteScroll, PostList, useSeoConfig, useSiteConfig } from 'design-system';
 import { useGetArticlesWithTagQuery } from '../../gql';
 import { adapterArticlesData } from '../../utils/adapters/adapterArticlesData';
-import { FOOTER_CONFIG, HEADER_MENU_CONFIG, SEARCH_ENGINE_CONFIG_IN_MODAL } from "../../config";
+import { FOOTER_CONFIG, HEADER_MENU_CONFIG, CONFIG_SEARCH_ENGINE } from "../../config";
 
 type TagProps = {
   tagID: string;
@@ -47,7 +47,7 @@ export default function Tag({ tagID , tagName }: TagProps ): ReactElement {
     <LayoutListingPost
       footer={isMobile ? FOOTER_CONFIG.footer.mobile : FOOTER_CONFIG.footer.desktop}
       headerMenu={isMobile ? HEADER_MENU_CONFIG.mobile.menu : HEADER_MENU_CONFIG.desktop.menu}
-      searchEngineConfig={SEARCH_ENGINE_CONFIG_IN_MODAL}
+      searchEngineConfig={CONFIG_SEARCH_ENGINE}
       seo={seo}
       siteBarLeft={<p>left</p>}
       siteBarRight={<p>right</p>}

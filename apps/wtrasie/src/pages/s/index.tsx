@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react';
 import { SectionInfiniteScroll, LayoutListingPost, useSeoConfig, PostList, useSiteConfig } from 'design-system';
-import { FOOTER_CONFIG, HEADER_MENU_CONFIG, SEARCH_ENGINE_CONFIG_IN_MODAL } from '../../config';
+import { FOOTER_CONFIG, HEADER_MENU_CONFIG, CONFIG_SEARCH_ENGINE } from '../../config';
 import { useGetArticlesQuery } from '../../gql';
 import { adapterArticlesData } from '../../utils/adapters/adapterArticlesData';
 
@@ -36,7 +36,7 @@ function Index(): ReactElement  {
     <LayoutListingPost
       footer={isMobile ? FOOTER_CONFIG.footer.mobile : FOOTER_CONFIG.footer.desktop}
       headerMenu={isMobile ? HEADER_MENU_CONFIG.mobile.menu : HEADER_MENU_CONFIG.desktop.menu}
-      searchEngineConfig={SEARCH_ENGINE_CONFIG_IN_MODAL}
+      searchEngineConfig={CONFIG_SEARCH_ENGINE}
       seo={seo}
       siteBarLeft={<p>left</p>}
       siteBarRight={<p>right</p>}

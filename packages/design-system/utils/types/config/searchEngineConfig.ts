@@ -1,3 +1,10 @@
-import type { InstantMeiliSearchInstance } from '@meilisearch/instant-meilisearch';
-
-export type SearchEngineConfig<T> = { searchClientData: InstantMeiliSearchInstance, indexName: string, defaultSugestions: T }
+export type SearchEngineConfig<T> = {
+  defaultSugestions: T
+  searchClientData: {
+    api: {
+      url: string;
+      auth: string;
+    },
+    indexName: string,
+  },
+}

@@ -5,13 +5,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/queries/codegen.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/queries/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/queries/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/queries/queries/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/queries/stubs/schema.searchEngine.graphql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/queries/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/queries/types/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterSearchData/adapterSearchData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterSearchData/adapterSearchData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterSearchData/adapterSearchData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterSearchData/adapterSearchData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/config/apolloClient/config.links.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/config/apolloClient/config.links.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/config/configSearchEngine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configSearchEngine.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/function/gql.query.client.article.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/function/gql.query.client.article.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/function/gql.query.client.tag.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/function/gql.query.client.tag.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/query/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/query/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/query/querySearch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/queries/queries/search.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/types/querySearch.generated.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/a/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/a/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/api/search/[query].ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/api/search/[query].ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/blog/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/blog/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/t/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/t/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterSearchData/adapterSearchData.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterSearchData/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/apolloClient/config.links.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/apolloClient/config.links.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configSearchEngine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configSearchEngine.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/gql/query/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/gql/query/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/gql/query/querySearch.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/gql/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/gql/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/gql/types/querySearch.generated.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/a/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/a/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/api/search/[query].ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/api/search/[query].ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/t/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/t/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterSearchData/adapterSearchData.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterSearchData/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/keyboardShortcut/keyboardShortcut.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/keyboardShortcut/keyboardShortcut.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/components/headerLeftComponents/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/components/headerLeftComponents/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutListingPost/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutListingPost/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/adapters/adapterSearchData/adapterSearchData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/adapters/adapterSearchData/adapterSearchData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/components/searchResult/searchResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/components/searchResult/searchResult.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/components/customStats/customStats.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/components/customStats/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/components/customStats/types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/components/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/components/searchResult/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/components/searchResult/searchResult.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/components/searchResult/types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/components/suggestionList/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/suggestionList/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/components/suggestionList/suggestionList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/suggestionList/suggestionList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/components/suggestionList/suggestionList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/suggestionList/suggestionList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/components/suggestionList/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/suggestionList/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/searchModalContent.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/searchModalContent.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/searchModalContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/searchModalContent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/hooks/useSearchResults.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/hooks/useSearchResults.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/searchEngineInModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/searchEngineInModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/utils/types/config/searchEngineConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/utils/types/config/searchEngineConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turbo.json" beforeDir="false" afterPath="$PROJECT_DIR$/turbo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +99,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;fixSearch&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/pawelniedzwiecki/localhost/uxu/apps/getReturn/src/providers&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/pawelniedzwiecki/localhost/uxu/packages/graphql&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -46,25 +107,25 @@
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/pawelniedzwiecki/localhost/uxu/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apps/getReturn/src/providers" />
-      <recent name="$PROJECT_DIR$/apps/getReturn/src/config" />
-      <recent name="$PROJECT_DIR$/apps/wtrasie/src/config" />
-      <recent name="$PROJECT_DIR$/packages/design-system/hooks" />
-      <recent name="$PROJECT_DIR$/packages/design-system/utils/types/config" />
+      <recent name="$PROJECT_DIR$/packages/graphql" />
+      <recent name="$PROJECT_DIR$/packages/graphql/queries" />
+      <recent name="$PROJECT_DIR$/packages/graphql/stubs" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/queries" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/adapters" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/components/searchResult/components" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/searchModalContent/components" />
       <recent name="$PROJECT_DIR$/packages/design-system/utils/types/config" />
       <recent name="$PROJECT_DIR$/apps/wtrasie" />
-      <recent name="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters" />
-      <recent name="$PROJECT_DIR$/packages/ui" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -106,7 +167,12 @@
       <workItem from="1696446764042" duration="41222000" />
       <workItem from="1696754940510" duration="513000" />
       <workItem from="1696922205270" duration="598000" />
-      <workItem from="1697134901369" duration="287000" />
+      <workItem from="1697134901369" duration="21986000" />
+      <workItem from="1697644856202" duration="6608000" />
+      <workItem from="1697740347237" duration="2200000" />
+      <workItem from="1697820750912" duration="11927000" />
+      <workItem from="1697903697302" duration="8247000" />
+      <workItem from="1697914444736" duration="8546000" />
     </task>
     <servers />
   </component>

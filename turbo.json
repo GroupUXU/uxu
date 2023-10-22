@@ -1,17 +1,20 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
+  "globalDependencies": ["**/.env"],
   "globalDotEnv": [".env"],
   "pipeline": {
     "build": {
+      "dotEnv": [".env"],
       "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "outputs": [".next/**", "!.next/cache/**"],
+      "env": ["NEXT_PUBLIC_SITE_URL" ,"NEXT_PUBLIC_LINK_API_GRAPHQL", "NEXT_PUBLIC_LINK_API_REST", "NEXT_PUBLIC_LINK_API_SEARCH", "NEXT_PUBLIC_AUTH_API_SEARCH"]
     },
     "lint": {},
     "dev": {
       "cache": false,
       "persistent": true,
-      "dotEnv": [".env.development.local", ".env.local", ".env.development", ".env"]
+      "dotEnv": [".env"],
+      "env": ["NEXT_PUBLIC_SITE_URL" ,"NEXT_PUBLIC_LINK_API_GRAPHQL", "NEXT_PUBLIC_LINK_API_REST", "NEXT_PUBLIC_LINK_API_SEARCH", "NEXT_PUBLIC_AUTH_API_SEARCH"]
     }
   }
 }

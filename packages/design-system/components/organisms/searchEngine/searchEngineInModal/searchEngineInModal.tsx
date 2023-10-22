@@ -1,24 +1,37 @@
-/* eslint-disable react/jsx-no-leaked-render -- I don't have time for this fix */
-import { useRef, useState, useCallback } from 'react';
-import type { ReactElement, KeyboardEvent } from 'react';
+import { useRef, useState, useCallback, useEffect } from 'react';
+import type { ReactElement, KeyboardEvent, MouseEvent } from 'react';
 import classnames from 'classnames';
+import { useForm } from "react-hook-form";
 import { Search } from 'react-feather';
 import { useSiteConfig } from '../../../../hooks';
 import { KeyboardShortcut, Modal } from '../../../atoms';
+import { SearchEngineConfig, Throttle } from '../../../../utils';
 import { SearchModalContent } from './components/searchModalContent';
-import type { SearchEngineInModalProps } from "./types";
+import { useSearchResults } from './hooks/useSearchResults';
 import styles from './searchEngineInModal.module.scss';
+import { SearchSuggestionContentDetails } from "./types";
 
-export function SearchEngineInModal({ className, searchEngineConfig }: SearchEngineInModalProps): ReactElement {
+
+const throttle = new Throttle(150)
+
+export type SearchSuggestionModalProps = {
+  className?: string,
+  searchEngineConfig: SearchEngineConfig<Array<SearchSuggestionContentDetails>>
+}
+
+export function SearchEngineInModal({ className, searchEngineConfig }: SearchSuggestionModalProps): ReactElement {
   const { client } = useSiteConfig();
+  const { register, watch } = useForm<{ search: string }>();
   const [isOpenModal, setIsOpenModal] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
+  const searchQuery: string = watch('search');
+  const {setSearchQuery, searchResults, isWaitingForQuery} = useSearchResults();
 
   const toggleModal = useCallback((): void => {
     setIsOpenModal(prevState => !prevState);
   }, []);
 
-  const handleClickOutside = useCallback((event: React.MouseEvent<HTMLDivElement>) => {
+  const handleClickOutside = useCallback((event: MouseEvent<HTMLDivElement>) => {
     if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
       toggleModal();
     }
@@ -30,6 +43,10 @@ export function SearchEngineInModal({ className, searchEngineConfig }: SearchEng
     }
   }, [toggleModal]);
 
+
+  useEffect ( () => {
+    throttle.setLastTimeOut(() => { setSearchQuery(searchQuery) })
+  }, [searchQuery] );
 
   return (
     <>
@@ -60,8 +77,12 @@ export function SearchEngineInModal({ className, searchEngineConfig }: SearchEng
         renderDirectlyInBody
       >
         <SearchModalContent
+          defaultSuggestions={searchEngineConfig.defaultSugestions}
+          isAwaitingApiResponse={isWaitingForQuery}
           modalRef={modalRef}
-          searchEngineConfig={searchEngineConfig}
+          register={register}
+          searchQuery={searchQuery}
+          searchResults={searchResults}
         />
       </Modal>
     </>

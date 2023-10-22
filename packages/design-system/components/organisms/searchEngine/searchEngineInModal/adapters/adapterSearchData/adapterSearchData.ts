@@ -1,27 +1,17 @@
-import type { SearchSuggestionsArrayEngineInModal, SearchSuggestionEngineInModal } from '../../types';
-import { createSlugForType, createSlug} from '../../../../../../utils';
+import type { SearchSuggestionContentDetails } from '../../types';
+import type { GetSearchQuery } from "queries";
+import { createSlugForType, createSlug } from '../../../../../../utils';
 
-function isArrayOfValidData(data: unknown): data is Array<{ title: string, type: string, lead: { lead: string } }> {
-  return Array.isArray(data) && data.every(item =>
-    typeof item === 'object' &&
-    item !== null &&
-    typeof item.title === 'string' &&
-    typeof item.type === 'string' &&
-    item.lead &&
-    typeof item.lead.lead === 'string'
-  );
-}
+export function adapterSearchData(data?: GetSearchQuery): Array<SearchSuggestionContentDetails> {
+  if (!data?.searchResults.hits) return [];
 
-export function adapterSearchData(data: unknown): SearchSuggestionsArrayEngineInModal {
-  if (!isArrayOfValidData(data)) return [];
-
-  return data
+  return data.searchResults.hits
     .filter(function filterNonNullPosts(post): post is NonNullable<typeof post> {
       return Boolean(post);
     })
     .map(function mapPostToSuggestion(post) {
       const slug = `${createSlugForType(post.type)}/${createSlug(post.title)}`;
-      const type = "post";
+      const type = "post"
       const { title, lead } = post;
 
       return {
@@ -29,9 +19,9 @@ export function adapterSearchData(data: unknown): SearchSuggestionsArrayEngineIn
         type,
         title,
         lead: lead.lead
-      } as SearchSuggestionEngineInModal;
+      } as SearchSuggestionContentDetails;
     })
-    .filter(function filterValidSuggestions(item): item is SearchSuggestionEngineInModal {
+    .filter(function filterValidSuggestions(item): item is SearchSuggestionContentDetails {
       return Boolean(item.slug) && Boolean(item.type) && Boolean(item.title);
     });
 }

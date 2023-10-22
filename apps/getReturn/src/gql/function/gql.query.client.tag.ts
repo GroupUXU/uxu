@@ -1,4 +1,4 @@
-import { APOLLO_CLIENT } from '../../config';
+import { APOLLO_CLIENT } from '../../config/apolloClient/config.apolloClient';
 import { GET_TAG, GET_TAGS_LIST } from '../query';
 import type { GetTagQuery, GetTagsListQuery } from '../types';
 

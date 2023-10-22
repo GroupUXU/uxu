@@ -1,5 +1,5 @@
 import type { ApolloQueryResult } from "@apollo/client";
-import { APOLLO_CLIENT } from '../../config';
+import { APOLLO_CLIENT } from '../../config/apolloClient/config.apolloClient';
 import { GET_ARICLE, GET_ARICLES } from '../query';
 import type { GetArticleQuery, GetArticlesQuery } from '../types';
 
