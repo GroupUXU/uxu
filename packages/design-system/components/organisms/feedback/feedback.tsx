@@ -31,25 +31,29 @@ export function Feedback({ onFeedbackSubmit, activeUserEmail, switchModalButtonT
     setModalOpen(prev => !prev);
   };
 
-  const handleFormSubmit = async (data: FormInputs): Promise<void> => {
-    setIsSubmitting(true);
-    try {
-      const response = await onFeedbackSubmit(data);
-      setSubmitStatus({ success: response.success, message: response.success ? MESSAGE_SUCCESS : MESSAGE_FAILURE });
-      setTimeout(() => {
-        setModalOpen(false);
-      }, 5000);
-    } catch {
-      setSubmitStatus({ success: false, message: MESSAGE_FAILURE });
-    } finally {
-      setIsSubmitting(false);
-    }
+  const handleFormSubmit = (data: FormInputs): void => {
+    const submitAsync = async () => {
+      setIsSubmitting(true);
+      try {
+        const response = await onFeedbackSubmit(data);
+        setSubmitStatus({ success: response.success, message: response.success ? MESSAGE_SUCCESS : MESSAGE_FAILURE });
+        setTimeout(() => {
+          setModalOpen(false);
+        }, 5000);
+      } catch {
+        setSubmitStatus({ success: false, message: MESSAGE_FAILURE });
+      } finally {
+        setIsSubmitting(false);
+      }
+    };
+
+    void submitAsync();
   };
 
-  const handleFeedbackRatingChange = async (value: string) => {
+  const handleFeedbackRatingChange = (value: string) => {
     setActiveFeedbackRating(value);
     if (!switchModalButtonText) {
-      await handleFormSubmit({ email: activeUserEmail, feedbackRating: value, message: undefined });
+      handleFormSubmit({ email: activeUserEmail, feedbackRating: value, message: undefined });
     }
   };
 
@@ -82,9 +86,7 @@ export function Feedback({ onFeedbackSubmit, activeUserEmail, switchModalButtonT
     if (submitStatus.success === undefined) {
       return (
         <form
-          onSubmit={(e: FormEvent<HTMLInputElement>): void => {
-            handleSubmit(handleFormSubmit(e));
-          }}
+          onSubmit={handleSubmit(handleFormSubmit)}
           className={styles.formFeedback}
         >
           {!activeUserEmail && <Input placeholder="Adres email" errorMessage={errors.email?.message} {...register('email', FORM_FIELD.email)} type="email" />}
@@ -115,7 +117,7 @@ export function Feedback({ onFeedbackSubmit, activeUserEmail, switchModalButtonT
           {renderModalContent()}
         </Modal>
       </div>
-      {switchModalButtonText ? <button className="btn" onClick={toggleModal}>{switchModalButtonText}</button> : <FeedbackRatings feedbackRating={feedbackRating} handleFeedbackRatingChange={() => handleFeedbackRatingChange} register={register} />}
+      {switchModalButtonText ? <button className="btn" onClick={toggleModal}>{switchModalButtonText}</button> : <FeedbackRatings feedbackRating={feedbackRating} handleFeedbackRatingChange={handleFeedbackRatingChange} register={register} />}
     </div>
   );
 }

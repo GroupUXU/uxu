@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/components/headerRightComponents/headerRightComponents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/components/headerRightComponents/headerRightComponents.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/feedback/components/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/feedback/components/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/feedback/feedback.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/feedback/feedback.tsx" afterDir="false" />
     </list>
@@ -131,6 +131,12 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/apps/wtrasie/src/providers/provider.apollo.tsx</url>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/packages/design-system/components/organisms/feedback/feedback.tsx</url>
+          <line>90</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

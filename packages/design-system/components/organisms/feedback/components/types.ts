@@ -3,6 +3,6 @@ import type { FormInputs } from "../types";
 
 export type FeedbackRatingsProps = {
   feedbackRating: string;
-  handleFeedbackRatingChange:  Promise<(value: string) => void>;
+  handleFeedbackRatingChange: (value: string) => void;
   register: UseFormRegister<FormInputs>;
 }
