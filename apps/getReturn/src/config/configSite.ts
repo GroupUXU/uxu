@@ -33,6 +33,18 @@ export const SITE_CONFIG = ( clientLocale: string, isMobilePlatform: boolean, ro
   social: {
     facebook: {
       pageId: '100091647886192'
+    },
+    twitter: {
+      accountName: '100091647886192'
+    },
+    youtube: {
+      channelId: '100091647886192'
+    },
+    instagram: {
+      accountName: '100091647886192'
+    },
+    github: {
+      accountName: '100091647886192'
     }
   },
   client: {

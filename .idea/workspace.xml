@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/footer/components/SocialLink/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/footer/components/SocialLink/socialLink.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/footer/components/SocialLink/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/feedback/components/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/feedback/components/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/feedback/feedback.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/feedback/feedback.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/config/configFooter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configFooter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/config/configSite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configSite.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/footer/footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/footer/footer.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/footer/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/footer/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/style/mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/style/mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/utils/types/config/siteConfigTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/utils/types/config/siteConfigTypes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "fix/sugestion",
+    "git-widget-placeholder": "fix/footer",
     "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/packages/graphql",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",

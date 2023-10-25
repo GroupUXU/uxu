@@ -1,32 +1,42 @@
-@import "../../../theme/theme";
+@import "../../../style/mixins";
 
 .footer {
   width: 100%;
   padding: var(--uxu-space-large) 0;
   border-top: var(--uxu-border-default);
   background-color: var(--uxu-color-primary-accent1);
+}
 
-  p {
-    font-weight: bold;
+.grid {
+  display: grid;
+  grid-template-columns: 100%;
 
-    a {
-      padding-left: var(--uxu-space-small);
-    }
+  @include media('m') {
+    grid-template-columns: repeat(3, 1fr);
   }
+
+  @include media('xl') {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.column, .wrapperBrand {
+  display: flex;
+  flex-direction: column;
+}
+
+.column {
+  margin: 0 auto;
 
   ul {
+    min-width: 20rem;
     list-style: none;
     padding-bottom: var(--uxu-space-large);
-
     li {
       text-align: center;
-      padding: var(--uxu-space-small) 0;
-    }
-  }
+      padding: var(--uxu-space-small);
 
-  @media (min-width: map-get($breakpoints, 'm')) {
-    ul {
-      li {
+      @include media('m') {
         text-align: left;
       }
     }
@@ -34,14 +44,56 @@
 }
 
 .wrapperBrand {
-  display: flex;
-  margin: 0 auto;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: var(--uxu-space-large);
+  a {
+    text-align: center;
+    margin: var(--uxu-space-default) auto;
 
-  p {
-    display: none;
+    &.logo {
+      margin-top: 0;
+    }
+
+    @include media('m') {
+      margin-left: 0;
+      text-align: left;
+      &:nth-child(2) {
+        margin-top: 100%;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    margin: 0 auto;
+
+    @include media('m') {
+      margin-left: -2rem;
+    }
+
+    li {
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      @include dimensions(5rem, 3rem);
+      padding-right: var(--uxu-space-small);
+
+      a {
+        margin: 0 auto;
+      }
+
+      &::after {
+        content: "";
+        right: 0;
+        top: 0.1rem;
+        position: absolute;
+        @include dimensions(0.2rem, 2rem);
+        background-color: var(--uxu-color-primary-accent2);
+      }
+
+      &:last-of-type::after {
+        display: none;
+      }
+    }
   }
 }
 
@@ -51,26 +103,7 @@
   text-align: center;
   padding-bottom: var(--uxu-space-default);
 
-  @media (min-width: map-get($breakpoints, 'm')) {
+  @include media('m') {
     text-align: left;
-  }
-}
-
-.container {
-  display: grid;
-  margin: 0 auto;
-  grid-template-columns: 1fr;
-  max-width: var(--uxu-content-maxWidth);
-
-  @media (min-width: map-get($breakpoints, 's')) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media (min-width: map-get($breakpoints, 'l')) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  @media (min-width: map-get($breakpoints, 'xl')) {
-    grid-template-columns: repeat(5, 1fr);
   }
 }
