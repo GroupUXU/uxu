@@ -17,6 +17,7 @@ export default class CustomDocument extends Document {
             src="https://www.googletagmanager.com/gtm.js?id=GTM-MC3DNS7"
             strategy="afterInteractive"
           />
+          <meta name="google-adsense-account" content="ca-pub-4518094843351143" />
         </Head>
         <body>
         <noscript>
