@@ -10,7 +10,7 @@ export function HeaderRightComponents({ switchModalButtonText, modalAlignment }:
         return new Promise(resolve => {
           setTimeout(() => {
             resolve({ success: true });
-          }, 5000);
+          }, 3000);
         });
       }}
       switchModalButtonText={switchModalButtonText}
