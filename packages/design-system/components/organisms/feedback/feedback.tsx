@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-sort-props, react/jsx-no-leaked-render, react/button-has-type -- I don't have time to fix this problem */
 /* eslint-disable react/hook-use-state, @typescript-eslint/explicit-function-return-type -- I don't have time for fix */
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, FormEvent } from "react";
 import type { ReactElement } from "react";
 import classNames from "classnames";
 import { useForm } from "react-hook-form";
@@ -27,7 +27,6 @@ export function Feedback({ onFeedbackSubmit, activeUserEmail, switchModalButtonT
   const modalWrapperRef = useRef<HTMLDivElement>(null);
   const { register, handleSubmit, formState: { errors }, watch, setValue } = useForm<FormInputs>();
   const feedbackRating = watch("feedbackRating");
-
   const toggleModal = () => {
     setModalOpen(prev => !prev);
   };
@@ -77,19 +76,21 @@ export function Feedback({ onFeedbackSubmit, activeUserEmail, switchModalButtonT
 
   const renderModalContent = () => {
     if (isSubmitting) {
-      return <Note type="warning" action={<LoadingWheel size={3} />}>Zapisuję...</Note>;
+      return <Note type="warning" action={<LoadingWheel size={2} />}>Zapisuję...</Note>;
     }
 
     if (submitStatus.success === undefined) {
       return (
         <form
-          onSubmit={() => {handleSubmit ( handleFormSubmit )}}
+          onSubmit={(e: FormEvent<HTMLInputElement>): void => {
+            handleSubmit(handleFormSubmit(e));
+          }}
           className={styles.formFeedback}
         >
           {!activeUserEmail && <Input placeholder="Adres email" errorMessage={errors.email?.message} {...register('email', FORM_FIELD.email)} type="email" />}
           {switchModalButtonText && <Textarea placeholder="Opisz swoje przemyślenia" errorMessage={errors.message?.message} {...register('message', switchModalButtonText ? { ...FORM_FIELD.message, required: 'To pole jest wymagane.' } : FORM_FIELD.message)} />}
           <div className={styles.footerModalFeedback}>
-            <FeedbackRatings feedbackRating={feedbackRating} handleFeedbackRatingChange={() => handleFeedbackRatingChange} register={register} />
+            <FeedbackRatings feedbackRating={feedbackRating} handleFeedbackRatingChange={handleFeedbackRatingChange} register={register} />
             {switchModalButtonText && <button className={classNames("btn", styles.btnSubmitFeedback)} type="submit">Wyślij</button>}
             {errors.feedbackRating?.message && <Note type="warning" className={styles.wrapperRatingNoteFeedback} fill>{errors.feedbackRating.message}</Note>}
           </div>
@@ -110,7 +111,6 @@ export function Feedback({ onFeedbackSubmit, activeUserEmail, switchModalButtonT
             setModalOpen(false);
           }}
           className={styles.modalFeedback}
-          renderDirectlyInBody
         >
           {renderModalContent()}
         </Modal>
