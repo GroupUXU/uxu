@@ -34,6 +34,14 @@ export type InstagramConfig = Partial<{
 }>;
 
 export type YoutubeConfig = Partial<{
+  channelId: string;
+}>;
+
+export type GitHubConfig = Partial<{
+  accountName: string;
+}>;
+
+export type TikTokConfig = Partial<{
   accountName: string;
 }>;
 
@@ -43,6 +51,8 @@ export type SocialConfig = Partial<{
   twitter?: TwitterConfig;
   instagram?: InstagramConfig;
   youtube?: YoutubeConfig;
+  github?: GitHubConfig;
+  tiktok?: TikTokConfig;
 }>;
 
 export type GraphqlConfigTypes = Partial<{
