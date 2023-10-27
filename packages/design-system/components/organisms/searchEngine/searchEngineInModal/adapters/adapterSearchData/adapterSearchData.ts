@@ -1,6 +1,6 @@
 import type { GetSearchQuery } from "queries";
-import type { SearchSuggestionContentDetails } from '../../types';
 import { createSlugForType, createSlug } from 'utils';
+import type { SearchSuggestionContentDetails } from '../../types';
 
 export function adapterSearchData(data?: GetSearchQuery): Array<SearchSuggestionContentDetails> {
   if (!data?.searchResults.hits) return [];

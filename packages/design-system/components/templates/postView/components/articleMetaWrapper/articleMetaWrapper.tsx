@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-leaked-render -- I don't have time for this fix */
 import type { ReactElement } from "react";
-import { AvatarGroup } from "../../../../molecules";
 import { parseFormatDate } from "utils";
+import { AvatarGroup } from "../../../../molecules";
 import styles from "./articleMetaWrapper.module.scss";
 import type { ArticleMetaWrapperProps } from "./types";
 

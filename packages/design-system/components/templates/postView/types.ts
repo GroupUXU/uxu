@@ -1,6 +1,6 @@
-
-import type { ContentPartProps } from '../../molecules/chunks';
 import type { Image, Tag, Member } from 'utils';
+import type { ContentPartProps } from '../../molecules/chunks';
+
 
 export type PostViewData = {
   id: string;

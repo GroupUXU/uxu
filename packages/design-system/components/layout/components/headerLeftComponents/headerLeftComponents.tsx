@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react';
 import classnames from 'classnames';
-import { useSiteConfig } from "../../../../../hooks";
+import { useSiteConfig } from "hooks";
 import { Logo, Link } from '../../../atoms';
 import { SearchEngineInModal } from '../../../organisms';
 import type { HeaderLeftComponentsProps } from './types';

@@ -1,10 +1,10 @@
 import React from 'react';
 import type { ReactElement } from 'react';
+import { Facebook, Twitter, Youtube, Instagram, GitHub } from "react-feather";
+import { useSiteConfig } from "hooks";
+import { Link, Logo } from '../../atoms';
 import type { SocialLinkData } from "./components/SocialLink";
 import { SocialLink } from "./components/SocialLink";
-import { Facebook, Twitter, Youtube, Instagram, GitHub } from "react-feather";
-import { Link, Logo } from '../../atoms';
-import { useSiteConfig } from "../../../../hooks";
 import styles from './footer.module.scss';
 import type { FooterProps } from './types';
 
@@ -19,21 +19,21 @@ export function Footer({ footerColumns }: FooterProps): ReactElement {
     { name: 'GitHub', accountId: social?.github?.accountName, url: 'https://github.com/', Icon: GitHub },
   ];
 
-  function renderSocialLinks() {
+  function renderSocialLinks(): Array<ReactElement> {
     return socialPlatforms.map(platform => {
       return <SocialLink key={platform.name} {...platform} />;
     });
   }
 
-  function renderColumns() {
-    return footerColumns.slice(0, 3).map((column, i) => {
+  function renderColumns(): Array<ReactElement> {
+    return footerColumns.slice(0, 3).map((column) => {
       return (
-        <div key={`column-${i}`} className={styles.column}>
-          {column.header && <strong className={styles.columnHeader}>{column.header}</strong>}
+        <div className={styles.column} key={column.id}>
+           <strong className={styles.columnHeader}>{column.header}</strong>
           <ul>
-            {column.links.map((link, j) => {
+            {column.links.map((link) => {
               return (
-                <li key={`link-${j}`}>
+                <li key={link.id}>
                   <Link href={link.linkPath} title={link.title || ''}>
                     {link.title || ''}
                   </Link>
@@ -52,7 +52,7 @@ export function Footer({ footerColumns }: FooterProps): ReactElement {
         <div className={styles.grid}>
           <div className={styles.column} style={{ justifyContent: "space-between", gridRow: "1/4" }}>
             <div className={styles.wrapperBrand}>
-              <Link href="/" title={site?.shortname || ""} className={styles.logo}>
+              <Link className={styles.logo} href="/" title={site?.shortname || ""}>
                 <Logo brand={site?.brand || "uxu"}/>
               </Link>
               <Link href="https://www.uxu.pl" title="UXU">

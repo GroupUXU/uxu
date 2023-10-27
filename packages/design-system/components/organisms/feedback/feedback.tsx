@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-sort-props, react/jsx-no-leaked-render, react/button-has-type -- I don't have time to fix this problem */
 /* eslint-disable react/hook-use-state, @typescript-eslint/explicit-function-return-type -- I don't have time for fix */
+/* eslint-disable @typescript-eslint/no-misused-promises -- I don't have time for fix */
 import { useState, useEffect, useRef } from "react";
 import type { ReactElement } from "react";
 import classNames from "classnames";
@@ -31,29 +32,25 @@ export function Feedback({ onFeedbackSubmit, activeUserEmail, switchModalButtonT
     setModalOpen(prev => !prev);
   };
 
-  const handleFormSubmit = (data: FormInputs): void => {
-    const submitAsync = async () => {
-      setIsSubmitting(true);
-      try {
-        const response = await onFeedbackSubmit(data);
-        setSubmitStatus({ success: response.success, message: response.success ? MESSAGE_SUCCESS : MESSAGE_FAILURE });
-        setTimeout(() => {
-          setModalOpen(false);
-        }, 5000);
-      } catch {
-        setSubmitStatus({ success: false, message: MESSAGE_FAILURE });
-      } finally {
-        setIsSubmitting(false);
-      }
-    };
-
-    void submitAsync();
+  const handleFormSubmit = async (data: FormInputs): Promise<void> => {
+    setIsSubmitting(true);
+    try {
+      const response = await onFeedbackSubmit(data);
+      setSubmitStatus({ success: response.success, message: response.success ? MESSAGE_SUCCESS : MESSAGE_FAILURE });
+      setTimeout(() => {
+        setModalOpen(false);
+      }, 5000);
+    } catch {
+      setSubmitStatus({ success: false, message: MESSAGE_FAILURE });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  const handleFeedbackRatingChange = (value: string) => {
+  const handleFeedbackRatingChange = (value: string): void => {
     setActiveFeedbackRating(value);
     if (!switchModalButtonText) {
-      handleFormSubmit({ email: activeUserEmail, feedbackRating: value, message: undefined });
+      void (async () => handleFormSubmit({ email: activeUserEmail, feedbackRating: value, message: undefined }))()
     }
   };
 
@@ -64,7 +61,7 @@ export function Feedback({ onFeedbackSubmit, activeUserEmail, switchModalButtonT
   }, [activeFeedbackRating, setValue]);
 
   useEffect(() => {
-    const handleFeedbackOutsideClick = (event: MouseEvent) => {
+    const handleFeedbackOutsideClick = (event: MouseEvent): void => {
       if (modalWrapperRef.current && !modalWrapperRef.current.contains(event.target as Node) && isModalOpen) {
         setModalOpen(false);
         setSubmitStatus({});
