@@ -1,6 +1,6 @@
 import type { RefObject } from 'react';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Throttle } from '../../../../../utils';
+import { Throttle } from 'utils';
 
 const SCROLL_THROTTLE_WAIT_TIME = 100;
 

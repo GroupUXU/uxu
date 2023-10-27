@@ -1,5 +1,6 @@
 import type { ReactElement } from 'react';
-import { SectionInfiniteScroll, LayoutListingPost, useSeoConfig, PostList, useSiteConfig } from 'design-system';
+import { SectionInfiniteScroll, LayoutListingPost, PostList } from 'design-system';
+import { useSeoConfig, useSiteConfig } from 'hooks';
 import { FOOTER_CONFIG, HEADER_MENU_CONFIG, CONFIG_SEARCH_ENGINE } from '../config';
 import { useGetArticlesQuery } from '../gql';
 import { adapterArticlesData } from '../utils/adapters/adapterArticlesData';

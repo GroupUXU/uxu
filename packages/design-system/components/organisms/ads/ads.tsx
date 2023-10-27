@@ -1,5 +1,5 @@
 import type { CSSProperties, ReactElement } from 'react';
-import { adsSlots } from '../../../assets';
+import { adsSlots } from '../../../../assets';
 import type { AdsProps } from './types';
 import styles from './ads.module.scss';
 

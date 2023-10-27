@@ -1,5 +1,6 @@
 import type { ReactElement } from 'react';
-import { LayoutListingPost, useSeoConfig, useSiteConfig } from 'design-system';
+import { LayoutListingPost } from 'design-system';
+import {  useSeoConfig, useSiteConfig } from 'hooks';
 import { FOOTER_CONFIG, HEADER_MENU_CONFIG, CONFIG_SEARCH_ENGINE } from '../config';
 
 function Index(): ReactElement  {

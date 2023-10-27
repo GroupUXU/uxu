@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-sort-props, react/jsx-no-leaked-render, react/button-has-type -- I don't have time to fix this problem */
 /* eslint-disable react/hook-use-state, @typescript-eslint/explicit-function-return-type -- I don't have time for fix */
-import { useState, useEffect, useRef, FormEvent } from "react";
+import { useState, useEffect, useRef } from "react";
 import type { ReactElement } from "react";
 import classNames from "classnames";
 import { useForm } from "react-hook-form";

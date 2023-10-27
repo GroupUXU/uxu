@@ -1,5 +1,5 @@
 import type { PostListData } from 'design-system';
-import { createSlug } from 'design-system';
+import { createSlug } from 'utils';
 import type { GetArticlesQuery } from '../../../gql';
 import { createSlugForType } from '../../function/createSlugForType';
 import { adapterImageData } from '../adapterImageData';

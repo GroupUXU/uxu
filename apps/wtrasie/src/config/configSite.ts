@@ -1,5 +1,5 @@
-import type { SiteConfigTypes} from "design-system";
-import { SiteIdEnums } from "design-system";
+import type { SiteConfigTypes} from "utils";
+import { SiteIdEnums } from "utils";
 import type { NextRouter } from "next/router";
 
 export const locale = 'pl';

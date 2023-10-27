@@ -1,4 +1,4 @@
-import { emailRegExp } from "../../../utils";
+import { emailRegExp } from "utils";
 
 export const MESSAGE_SUCCESS = "Zapisano!";
 export const MESSAGE_FAILURE = "Coś poszło nie tak, spróbuj ponownie za 1 godzinę.";

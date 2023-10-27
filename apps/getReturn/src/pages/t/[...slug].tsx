@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react';
 import type { GetServerSidePropsContext, GetServerSidePropsResult } from 'next';
-import { LayoutListingPost, SectionInfiniteScroll, PostList, useSeoConfig, useSiteConfig } from 'design-system';
+import { LayoutListingPost, SectionInfiniteScroll, PostList } from 'design-system';
+import { useSeoConfig, useSiteConfig } from 'hooks';
 import { useGetArticlesWithTagQuery } from '../../gql';
 import { adapterArticlesData } from '../../utils/adapters/adapterArticlesData';
 import { FOOTER_CONFIG, HEADER_MENU_CONFIG, CONFIG_SEARCH_ENGINE } from "../../config";

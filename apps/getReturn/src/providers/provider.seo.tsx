@@ -2,7 +2,7 @@ import type { PropsWithChildren, ReactElement } from 'react';
 import { useContext } from 'react';
 import type { DefaultSeoProps } from 'next-seo';
 import { DefaultSeo } from 'next-seo';
-import { SiteConfigContext } from 'design-system';
+import { SiteConfigContext } from 'providers';
 import { SEO_CONFIG_DEFAULT } from '../config';
 
 

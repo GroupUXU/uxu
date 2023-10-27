@@ -4,7 +4,7 @@ import type { SocialLinkData } from "./components/SocialLink";
 import { SocialLink } from "./components/SocialLink";
 import { Facebook, Twitter, Youtube, Instagram, GitHub } from "react-feather";
 import { Link, Logo } from '../../atoms';
-import { useSiteConfig } from "../../../hooks";
+import { useSiteConfig } from "../../../../hooks";
 import styles from './footer.module.scss';
 import type { FooterProps } from './types';
 

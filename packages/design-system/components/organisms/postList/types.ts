@@ -1,4 +1,4 @@
-import type { Image, Member } from "../../../utils";
+import type { Image, Member } from "utils";
 
 export type PostListData = {
   id: string;

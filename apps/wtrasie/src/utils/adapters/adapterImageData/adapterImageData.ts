@@ -1,5 +1,5 @@
 /* eslint-disable -- Temporarily disabling all rules due to receiving 'any' type from backend, need to refactor once backend provides proper types */
-import type { Image } from 'design-system';
+import type { Image } from 'utils';
 import type { AdapterSrcImageDataProps, AdapterImageDataProps } from "./types";
 
 export function adapterSrcImageData({ attributes }: AdapterSrcImageDataProps): string | null {

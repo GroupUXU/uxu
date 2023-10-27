@@ -1,10 +1,9 @@
-/* eslint-disable react/hook-use-state -- I don't have time for fix it  */
 import type { PropsWithChildren } from 'react';
 import React, { useState, createContext } from 'react';
 import type { NextRouter } from 'next/router';
 import { useRouter } from 'next/router';
-import type { SiteConfigTypes } from '../utils';
-import { SiteIdEnums } from '../utils';
+import { SiteIdEnums } from 'utils';
+import type { SiteConfigTypes } from 'utils';
 
 const initialSiteConfigContext: SiteConfigTypes = {
   ads: {
