@@ -1,4 +1,4 @@
-import type { Slot } from '../../../assets';
+import type { Slot } from 'assets';
 
 export type AdsProps = {
   slot: Slot;

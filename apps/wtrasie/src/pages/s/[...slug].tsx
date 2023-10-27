@@ -1,7 +1,9 @@
 import type { ReactElement } from "react";
 import type { GetStaticPropsContext, GetStaticPaths, GetStaticProps } from 'next';
 import type { PostViewData } from 'design-system';
-import { createSlug, useSeoConfig, LayoutPostView, PostView, AdPhoneClient, useSiteConfig } from 'design-system';
+import { LayoutPostView, PostView, AdPhoneClient } from 'design-system';
+import { useSeoConfig, useSiteConfig } from 'hooks';
+import { createSlug } from 'utils';
 import { connectQueries } from '../../utils/function';
 import { adapterArticleData, adapterArticlesSlugData } from '../../utils/adapters';
 import type { GetArticlesQuery } from '../../gql';

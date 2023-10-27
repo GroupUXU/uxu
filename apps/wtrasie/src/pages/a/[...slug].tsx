@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react';
 import type { GetStaticPropsContext, GetServerSideProps } from 'next';
-import { LayoutPostView, PostView, useSeoConfig, useSiteConfig } from 'design-system';
+import { LayoutPostView, PostView } from 'design-system';
+import { useSeoConfig, useSiteConfig } from 'hooks';
 import type { GetAdapterArticleData } from '../../utils/adapters/adapterArticleData/types';
 import { adapterArticleData } from '../../utils/adapters/adapterArticleData';
 import { clientGetArticleQuery } from '../../gql';

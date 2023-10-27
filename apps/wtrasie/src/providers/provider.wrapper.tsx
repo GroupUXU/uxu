@@ -1,5 +1,5 @@
 import type { PropsWithChildren, ReactElement } from 'react';
-import { SiteConfigProvider } from 'design-system';
+import { SiteConfigProvider } from 'providers';
 import { SITE_CONFIG } from '../config';
 import { SEOProvider } from './provider.seo';
 import { ApolloCLientProvider } from './provider.apollo';

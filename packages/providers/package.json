@@ -1,0 +1,17 @@
+{
+  "name": "providers",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "utils": "*"
+  },
+  "devDependencies": {
+    "tsconfig": "*",
+    "typescript": "^4.5.3"
+  }
+}

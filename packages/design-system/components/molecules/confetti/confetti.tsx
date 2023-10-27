@@ -2,7 +2,7 @@ import type { ReactElement } from 'react';
 import { useEffect, useState } from 'react';
 import ComponentConfetti from 'react-confetti';
 import classnames from 'classnames';
-import { checkIsDOM } from '../../../utils';
+import { checkIsDOM } from 'utils';
 import type { ConfettiProps } from './types';
 import styles from './confetti.module.scss';
 

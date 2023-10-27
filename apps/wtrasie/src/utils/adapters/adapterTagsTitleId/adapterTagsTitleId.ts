@@ -1,4 +1,4 @@
-import { createSlug } from "design-system";
+import { createSlug } from "utils";
 import { createSlugForType } from "../../function";
 import type { GetTagsListQuery } from '../../../gql';
 import type { List, Item } from './types';

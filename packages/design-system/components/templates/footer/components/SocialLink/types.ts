@@ -1,5 +1,5 @@
-import { ComponentType } from "react";
-import { IconProps } from "react-feather";
+import type { ComponentType } from "react";
+import type { IconProps } from "react-feather";
 
 export type SocialLinkData = {
   name: string,

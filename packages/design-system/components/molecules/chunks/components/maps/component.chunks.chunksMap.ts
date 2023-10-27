@@ -1,7 +1,8 @@
+import type { FC } from 'react';
 import { CodeChunk, EmbedChunk, EmbedYouTubeChunk, GalleryChunk, HeaderChunk, IMGChunk, ListChunk, ParagraphChunk, QuoteChunk, TableChunk } from '../contents';
 import { ContentPartEnum } from '../../enums';
 
-export const chunksMap = new Map([
+export const chunksMap = new Map<ContentPartEnum, FC>([
   [ContentPartEnum.PARAGRAPH, ParagraphChunk],
   [ContentPartEnum.HEADER, HeaderChunk],
   [ContentPartEnum.IMG, IMGChunk],

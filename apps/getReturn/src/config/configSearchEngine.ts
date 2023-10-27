@@ -1,4 +1,4 @@
-import type { SearchEngineConfig } from "design-system";
+import type { SearchEngineConfig } from "utils";
 import type { SearchSuggestionContentDetails } from 'design-system/components/organisms/searchEngine/searchEngineInModal/types';
 
 

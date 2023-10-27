@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import { useEffect, useCallback, useMemo, useRef } from 'react';
 import type { ReactElement } from 'react';
-import { useSiteConfig } from '../../../hooks';
+import { useSiteConfig } from 'hooks';
 import type { KeyboardShortcutProps } from './types';
 import styles from './keyboardShortcut.module.scss';
 

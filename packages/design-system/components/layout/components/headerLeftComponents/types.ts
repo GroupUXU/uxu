@@ -1,4 +1,4 @@
-import type { SearchEngineConfig } from "../../../../utils";
+import type { SearchEngineConfig } from "utils";
 import type { SearchSuggestionContentDetails } from "../../../organisms/searchEngine/searchEngineInModal/types";
 
 export type HeaderLeftComponentsProps = {

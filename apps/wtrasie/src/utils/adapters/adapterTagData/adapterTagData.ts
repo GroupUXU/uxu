@@ -1,5 +1,5 @@
-import type { Tag } from "design-system";
-import { createSlug } from "design-system";
+import type { Tag } from "utils";
+import { createSlug } from "utils";
 import { createSlugForType } from "../../function";
 import type { AdapterTagDataProps } from "./types";
 

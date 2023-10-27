@@ -1,5 +1,5 @@
-import type { SiteConfigTypes} from "design-system";
-import { SiteIdEnums } from "design-system";
+import type { SiteConfigTypes} from "utils";
+import { SiteIdEnums } from "utils";
 import type { NextRouter } from "next/router";
 
 export const locale = 'pl';
@@ -14,7 +14,7 @@ export const SITE_CONFIG = ( clientLocale: string, isMobilePlatform: boolean, ro
   port: 4200,
   projectName: 'getReturn',
   site: {
-    id: SiteIdEnums.WTRASIE,
+    id: SiteIdEnums.GETRETURN,
     locale,
     domain: 'getreturn.pl',
     slug:   router.asPath,

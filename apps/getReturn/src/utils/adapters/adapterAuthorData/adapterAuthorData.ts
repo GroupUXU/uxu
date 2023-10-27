@@ -1,4 +1,4 @@
-import type { Member } from "design-system";
+import type { Member } from "utils";
 import { adapterImageData } from "../adapterImageData";
 import type { AdapterAuthorDataProps } from "./types";
 

@@ -1,7 +1,7 @@
 import type { PropsWithChildren } from "react";
 import type { NextSeoProps } from "next-seo";
+import type { SearchEngineConfig } from "utils";
 import type { FooterProps } from "../../templates/footer/types";
-import type { SearchEngineConfig } from "../../../utils";
 import type { SearchSuggestionContentDetails } from "../../organisms/searchEngine/searchEngineInModal/types";
 
 export type LayoutPostViewProps = PropsWithChildren<{
