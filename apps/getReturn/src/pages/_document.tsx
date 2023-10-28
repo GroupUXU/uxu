@@ -1,37 +1,19 @@
-import Document, { Head, Html, Main, NextScript } from "next/document";
-import type { DocumentContext, DocumentInitialProps } from "next/document";
-import Script from 'next/script';
+import type { ReactElement } from "react";
+import Document from "next/document";
+import type { DocumentContext, DocumentInitialProps, DocumentProps } from "next/document";
+import type { RenderDocumentStructureProps } from "utils";
+import { RenderDocumentStructure, getThemeFromRequest } from "utils";
 
-export default class CustomDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
+export default class CustomDocument extends Document<DocumentProps & RenderDocumentStructureProps> {
+  static async getInitialProps ( ctx: DocumentContext ): Promise<DocumentInitialProps & RenderDocumentStructureProps> {
+    const initialProps: DocumentInitialProps = await Document.getInitialProps( ctx );
+    let theme = getThemeFromRequest(ctx)
+    return {...initialProps, theme};
   }
 
-  render(): JSX.Element {
+  render (): ReactElement {
     return (
-      <Html>
-        <Head>
-          <Script
-            async
-            src="https://www.googletagmanager.com/gtm.js?id=GTM-MC3DNS7"
-            strategy="afterInteractive"
-          />
-        </Head>
-        <body>
-        <noscript>
-          <iframe
-            height="0"
-            src="https://www.googletagmanager.com/ns.html?id=GTM-MC3DNS7"
-            style={{ display: 'none', visibility: 'hidden' }}
-            title="Google Tag Manager No Script"
-            width="0"
-          />
-        </noscript>
-        <Main />
-        <NextScript />
-        </body>
-      </Html>
+      <RenderDocumentStructure {...this.props} />
     );
   }
 }

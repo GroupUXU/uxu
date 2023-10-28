@@ -13,7 +13,7 @@ type ArticleProps = {
 
 export default function Article({ articleData }: ArticleProps): ReactElement {
   const seo = useSeoConfig({ title: articleData?.title, description: articleData?.lead, images: [{ url: articleData?.cover?.src }] });
-  const { client} = useSiteConfig();
+  const { config: { client } } = useSiteConfig();
   const isMobile = client?.platform.isMobile || false;
 
   return (

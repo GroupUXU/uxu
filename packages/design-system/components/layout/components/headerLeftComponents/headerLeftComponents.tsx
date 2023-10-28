@@ -8,7 +8,7 @@ import styles from './headerLeftComponents.module.scss';
 
 
 export function HeaderLeftComponents({ headerMenu, isLinkActive, searchEngineConfig }: HeaderLeftComponentsProps): ReactElement {
-const { site } = useSiteConfig();
+const { config: { site } } = useSiteConfig();
   function createNavLink( slug: string, title: string ): ReactElement {
     return (
       <li key={slug}>

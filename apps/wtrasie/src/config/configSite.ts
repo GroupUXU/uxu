@@ -1,10 +1,9 @@
-import type { SiteConfigTypes} from "utils";
+import type { SiteConfig, SiteConfigProps } from "utils";
 import { SiteIdEnums } from "utils";
-import type { NextRouter } from "next/router";
 
 export const locale = 'pl';
 
-export const SITE_CONFIG = ( clientLocale: string, isMobilePlatform: boolean, router: NextRouter, osInfo: { isWindows: false,  isLinux: false, isMacOS: false } ): SiteConfigTypes => ({
+export const SITE_CONFIG = ({ theme, clientLocale, isMobilePlatform, router, osInfo }: SiteConfigProps): SiteConfig => ({
   ads: {
     enabled: true
   },
@@ -17,18 +16,18 @@ export const SITE_CONFIG = ( clientLocale: string, isMobilePlatform: boolean, ro
     id: SiteIdEnums.WTRASIE,
     locale,
     domain: 'wtrasie.pl',
-    slug:   router.asPath,
+    slug: router.asPath,
     brand: "wTrasie",
     shortBrand: "wTrasieShort",
     defaultCover: 'https://wtrasie.pl/defaultCover.png',
     canonicalUrl: `https://wtrasie.pl${router.asPath}`,
-    images: [{ url: 'https://wtrasie.pl/ogWTrasie.png' }],
+    images: [{url: 'https://wtrasie.pl/ogWTrasie.png'}],
     title: 'wTrasie - Wszystko co ważne w trasie',
     shortname: 'wt',
     description: 'wTrasie.pl - W Trasie, informacje prosto z trasy i ulic Twojego miasta. informacje na temat wypadków, wydarzeń oraz firm przydatnych w trasie',
     authEnabled: false,
     switchTheme: true,
-    themeDefault: 'dark',
+    theme,
   },
   social: {
     facebook: {

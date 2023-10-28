@@ -9,7 +9,7 @@ import styles from './footer.module.scss';
 import type { FooterProps } from './types';
 
 export function Footer({ footerColumns }: FooterProps): ReactElement {
-  const { site, social } = useSiteConfig();
+  const { config: { site, social } } = useSiteConfig();
 
   const socialPlatforms: Array<SocialLinkData> = [
     { name: 'Facebook', accountId: social?.facebook?.pageId, url: 'https://www.facebook.com/profile.php?id=', Icon: Facebook },

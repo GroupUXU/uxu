@@ -1,16 +1,17 @@
+import type { NextRouter } from "next/router";
 import type { SiteIdEnums } from "../../enums";
 import type { VectorBrandsVariant } from "../../../assets";
 
-export type AdsConfig = Partial<{
+type Ads = Partial<{
   enabled: boolean;
 }>;
 
-export type AnalyticsConfig = Partial<{
+type Analytics = Partial<{
   gtmId: string | string[];
   hotjarId: string;
 }>;
 
-export type FacebookConfig = Partial<{
+type Facebook = Partial<{
   oAuth: boolean;
   appId: string;
   clientToken: string;
@@ -20,47 +21,47 @@ export type FacebookConfig = Partial<{
   accountName: string;
 }>;
 
-export type GoogleConfig = Partial<{
+type Google = Partial<{
   oAuth: boolean;
   clientId: string;
 }>;
 
-export type TwitterConfig = Partial<{
+type Twitter = Partial<{
   accountName: string;
 }>;
 
-export type InstagramConfig = Partial<{
+type Instagram = Partial<{
   accountName: string;
 }>;
 
-export type YoutubeConfig = Partial<{
+type Youtube = Partial<{
   channelId: string;
 }>;
 
-export type GitHubConfig = Partial<{
+type GitHub = Partial<{
   accountName: string;
 }>;
 
-export type TikTokConfig = Partial<{
+type TikTok = Partial<{
   accountName: string;
 }>;
 
-export type SocialConfig = Partial<{
-  facebook?: FacebookConfig;
-  google?: GoogleConfig;
-  twitter?: TwitterConfig;
-  instagram?: InstagramConfig;
-  youtube?: YoutubeConfig;
-  github?: GitHubConfig;
-  tiktok?: TikTokConfig;
+export type Social = Partial<{
+  facebook: Facebook;
+  google: Google;
+  twitter: Twitter;
+  instagram: Instagram;
+  youtube: Youtube;
+  github: GitHub;
+  tiktok: TikTok;
 }>;
 
-export type GraphqlConfigTypes = Partial<{
+type Graphql = Partial<{
   productId: SiteIdEnums;
   url: string;
 }>;
 
-type SiteConfig = {
+type Site = {
   id: SiteIdEnums;
   locale: string,
   shortname: string;
@@ -74,30 +75,38 @@ type SiteConfig = {
   switchTheme: boolean;
   brand: VectorBrandsVariant;
   shortBrand: VectorBrandsVariant;
-  themeDefault: 'dark' | 'light';
+  theme: 'dark' | 'light';
   images: Array<{ url: string }>
 };
 
+type Client = {
+  locale: string,
+    platform: {
+    isMobile: boolean;
+    isDesktop: boolean;
+  }
+  osInfo: {
+    isWindows: boolean;
+    isLinux: boolean;
+    isMacOS: boolean;
+  }
+}
 
+export type SiteConfigProps = {
+  theme: Site['theme']
+  clientLocale: string,
+  isMobilePlatform: boolean,
+  router: NextRouter,
+  osInfo: Client['osInfo']
+}
 
-export type SiteConfigTypes = Partial<{
-  ads: AdsConfig;
-  analytics: AnalyticsConfig;
-  graphql: GraphqlConfigTypes;
+export type SiteConfig = Partial<{
+  ads: Ads;
+  analytics: Analytics;
+  graphql: Graphql;
   port: number;
   projectName: string;
-  site: SiteConfig;
-  social: SocialConfig;
-  client: {
-    locale: string,
-    platform: {
-      isMobile: boolean;
-      isDesktop: boolean;
-    }
-    osInfo: {
-      isWindows: boolean;
-      isLinux: boolean;
-      isMacOS: boolean;
-    }
-  }
+  site: Site;
+  social: Social;
+  client: Client
 }>;

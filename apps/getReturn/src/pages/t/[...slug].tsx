@@ -16,7 +16,7 @@ function isStringArray(value: unknown): boolean {
 }
 
 export default function Tag({ tagID , tagName }: TagProps ): ReactElement {
-  const { client } = useSiteConfig();
+  const { config: { client } } = useSiteConfig();
   const isMobile = client?.platform.isMobile || false;
   const { data, fetchMore } = useGetArticlesWithTagQuery({
     variables: {
