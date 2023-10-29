@@ -10,7 +10,7 @@ export function determineTheme(req: NextRequest, res: NextResponse): NextRespons
     cookieManager.setCookie("theme", themeCookie);
   }
 
-  res.headers.set('Set-Cookie', `theme=${themeCookie}; path=/; HttpOnly`);
+  res.headers.set('Set-Cookie', `theme=${themeCookie}; path=/;`);
   res.headers.set('theme', themeCookie);
 
   return res;

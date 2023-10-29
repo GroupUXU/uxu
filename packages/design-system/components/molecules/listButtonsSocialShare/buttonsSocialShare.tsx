@@ -1,13 +1,14 @@
 /* eslint-disable react/jsx-sort-props -- I don't have time for fix this problem */
 import type { ReactElement } from "react";
 import { Facebook, Twitter, Link } from 'react-feather';
-import { useSiteConfig, useCopyToClipboard } from "hooks";
+import { useSiteConfig } from "hooks";
+import { useCopyToClipboard } from "../../../hooks";
 import styles from "./buttonsSocialShare.module.scss";
 
 type ShareType = 'facebook' | 'twitter';
 
 export function ButtonsSocialShare (): ReactElement {
-  const {config: {site}} = useSiteConfig ();
+  const { config: { site } } = useSiteConfig ();
   const canonicalURL = site?.canonicalUrl || "";
   const [copyStatus, copyToClipboard] = useCopyToClipboard ( canonicalURL );
 

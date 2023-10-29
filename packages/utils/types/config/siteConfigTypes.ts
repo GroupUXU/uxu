@@ -100,7 +100,7 @@ export type SiteConfigProps = {
   osInfo: Client['osInfo']
 }
 
-export type SiteConfig = Partial<{
+export type SiteConfig = {
   ads: Ads;
   analytics: Analytics;
   graphql: Graphql;
@@ -109,4 +109,4 @@ export type SiteConfig = Partial<{
   site: Site;
   social: Social;
   client: Client
-}>;
+};

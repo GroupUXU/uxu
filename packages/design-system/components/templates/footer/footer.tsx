@@ -1,7 +1,7 @@
 import React from 'react';
 import type { ReactElement } from 'react';
 import { Facebook, Twitter, Youtube, Instagram, GitHub } from "react-feather";
-import { useSiteConfig } from "hooks";
+import { useSiteConfig, useTheme } from "hooks";
 import { Link, Logo } from '../../atoms';
 import type { SocialLinkData } from "./components/SocialLink";
 import { SocialLink } from "./components/SocialLink";
@@ -10,6 +10,9 @@ import type { FooterProps } from './types';
 
 export function Footer({ footerColumns }: FooterProps): ReactElement {
   const { config: { site, social } } = useSiteConfig();
+  const { setTheme } = useTheme();
+
+  console.log(site)
 
   const socialPlatforms: Array<SocialLinkData> = [
     { name: 'Facebook', accountId: social?.facebook?.pageId, url: 'https://www.facebook.com/profile.php?id=', Icon: Facebook },
@@ -64,6 +67,7 @@ export function Footer({ footerColumns }: FooterProps): ReactElement {
             </div>
           </div>
           {renderColumns()}
+          <button onClick={() => {setTheme('dark')}}>change theme</button>
         </div>
       </div>
     </footer>
