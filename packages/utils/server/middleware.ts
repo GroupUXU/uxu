@@ -7,7 +7,7 @@ export function middleware(req: NextRequest): NextResponse {
   let response = NextResponse.next();
 
   for (const [key, value] of Object.entries(platform)) {
-    response.headers.set(`X-Is-${key}`, String(value));
+    response.headers.set(`uxu-${key}`, String(value));
   }
 
   response = determineTheme(req, response);
