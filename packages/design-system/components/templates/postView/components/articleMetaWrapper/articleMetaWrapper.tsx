@@ -1,20 +1,29 @@
-/* eslint-disable react/jsx-no-leaked-render -- I don't have time for this fix */
 import type { ReactElement } from "react";
 import { parseFormatDate } from "utils";
 import { AvatarGroup } from "../../../../molecules";
 import styles from "./articleMetaWrapper.module.scss";
 import type { ArticleMetaWrapperProps } from "./types";
 
-export function ArticleMetaWrapper({ authors, createdAt }: ArticleMetaWrapperProps ): ReactElement {
+export function ArticleMetaWrapper({ authors, createdAt }: ArticleMetaWrapperProps): ReactElement {
+
+  function renderAuthors(): Array<ReactElement> | null {
+    return authors?.map((author, index) => {
+      const prefix = index > 0 ? ', ' : '';
+      return <span key={author.id}>{prefix}{author.title}</span>;
+    }) || null;
+  }
+
   return (
     <div className={styles.wrapperArticleMeta}>
-      <AvatarGroup members={authors || []} size="default"/>
+      <AvatarGroup members={authors || []} size="default" />
       <div className={styles.wrapperMeta}>
-        <div className={styles.authors}>{authors?.map(( author, index ) => {
-          return index > 0 ? (<span>, {author.title}</span>) : (<span>{author.title}</span>)
-        })}</div>
-        <div className={styles.wrapperPublicationDate}>{createdAt && <span>{parseFormatDate(createdAt)}</span>}</div>
+        <div className={styles.authors}>
+          {renderAuthors()}
+        </div>
+        <div className={styles.wrapperPublicationDate}>
+          {createdAt ? <span>{parseFormatDate(createdAt)}</span> : null}
+        </div>
       </div>
     </div>
-  )
-};
+  );
+}
