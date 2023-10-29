@@ -22,7 +22,7 @@ export type SearchSuggestionModalProps = {
 }
 
 export function SearchEngineInModal({ className, searchEngineConfig }: SearchSuggestionModalProps): ReactElement {
-  const { client } = useSiteConfig();
+  const { config: { client } } = useSiteConfig();
   const { register, watch } = useForm<{ search: string }>();
   const [isOpenModal, setIsOpenModal] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);

@@ -7,7 +7,7 @@ import { adapterArticlesData } from '../utils/adapters/adapterArticlesData';
 
 function Index(): ReactElement  {
   const seo = useSeoConfig({});
-  const { client } = useSiteConfig();
+  const { config: { client } } = useSiteConfig();
   const isMobile = client?.platform.isMobile || false;
 
   const { data, fetchMore } = useGetArticlesQuery({

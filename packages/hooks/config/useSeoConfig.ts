@@ -9,7 +9,7 @@ type UseSeoConfigProps = {
   url?: string
 }
 
-export function useSeoConfig({ title, description, type = 'website', locale, images, url }: UseSeoConfigProps): {
+export function useSeoConfig ( {title, description, type = 'website', locale, images, url}: UseSeoConfigProps ): {
   openGraph: {
     url: string,
     title: string,
@@ -21,7 +21,7 @@ export function useSeoConfig({ title, description, type = 'website', locale, ima
   title: string,
   description: string,
 } {
-  const { site } = useSiteConfig();
+  const {config: { site }} = useSiteConfig ();
 
   const defaultUrl = site?.canonicalUrl || '';
   const defaultTitle = site?.title || '';
@@ -29,7 +29,7 @@ export function useSeoConfig({ title, description, type = 'website', locale, ima
   const defaultLocale = site?.locale || 'en';
   const defaultImages = site?.images || [];
 
-  const validImages = (images || defaultImages).filter(image => typeof image.url === 'string') as { url: string }[];
+  const validImages = (images || defaultImages).filter ( image => typeof image.url === 'string' ) as { url: string }[];
   return {
     openGraph: {
       url: url || defaultUrl,

@@ -21,7 +21,7 @@ type ServiceProps = {
 
 export default function Service({ articleData, clientPhone }: ServiceProps): ReactElement {
   const seo = useSeoConfig({ title: articleData?.title, description: articleData?.lead, images: [{ url: articleData?.cover?.src }] });
-  const { client} = useSiteConfig();
+  const { config: { client } } = useSiteConfig();
   const isMobile = client?.platform.isMobile || false;
 
  const adsWithPhoneClient = clientPhone && {

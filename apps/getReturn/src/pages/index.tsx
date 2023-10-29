@@ -5,7 +5,7 @@ import { FOOTER_CONFIG, HEADER_MENU_CONFIG, CONFIG_SEARCH_ENGINE } from '../conf
 
 function Index(): ReactElement  {
   const seo = useSeoConfig({});
-  const { client} = useSiteConfig();
+  const { config: { client }} = useSiteConfig();
   const isMobile = client?.platform.isMobile || false;
 
   return (

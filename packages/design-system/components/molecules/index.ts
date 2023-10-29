@@ -5,3 +5,4 @@ export * from './collspace';
 export * from './listButtonsSocialShare';
 export * from './menu';
 export * from './avatarGroup';
+export * from './themeSwitcher';

@@ -3,7 +3,7 @@ import { useSiteConfig } from 'hooks';
 import styles from './embedYouTubeChunk.module.scss';
 
 export function EmbedYouTubeChunk(): ReactElement | null {
-  const { client } = useSiteConfig();
+  const { config: { client } } = useSiteConfig();
 
   return (
     <div className={styles.wrapper}>
