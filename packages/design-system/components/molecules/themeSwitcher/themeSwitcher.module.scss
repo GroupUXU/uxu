@@ -1,0 +1,65 @@
+
+$circle-size: 2.4rem;
+
+
+%circle {
+  content: "";
+  position: absolute;
+  width: $circle-size;
+  height: $circle-size;
+  border-radius: 100%;
+}
+
+.wrraper {
+  display: flex;
+  position: relative;
+  gap: var(--uxu-space-default);
+  padding: var(--uxu-space-small);
+  max-width: fit-content;
+  max-height: fit-content;
+  background-color: var(--uxu-color-background-200);
+  border: var(--uxu-border-alpha-default);
+  border-radius: var(--uxu-radii-large);
+
+  &:after {
+    @extend %circle;
+    top: 0.5rem;
+    left: 0.4rem;
+    z-index: 0;
+    background-color: var(--uxu-color-primary-background);
+  }
+
+  &.dark {
+    &:after {
+      left: 3.8rem;
+    }
+  }
+}
+
+.button {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  background-color: transparent;
+  color: var(--uxu-color-primary-foreground);
+
+  &:hover {
+    cursor: pointer;
+
+    &:before {
+      @extend %circle;
+      top: -0.2rem;
+      left: -0.2rem;
+      background-color: var(--uxu-color-primary-background);
+      z-index: -1;
+    }
+  }
+}

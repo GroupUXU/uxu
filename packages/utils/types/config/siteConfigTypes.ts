@@ -61,7 +61,7 @@ type Graphql = Partial<{
   url: string;
 }>;
 
-type Site = {
+export type Site = {
   id: SiteIdEnums;
   locale: string,
   shortname: string;
@@ -100,7 +100,7 @@ export type SiteConfigProps = {
   osInfo: Client['osInfo']
 }
 
-export type SiteConfig = {
+export type SiteConfig = Partial<{
   ads: Ads;
   analytics: Analytics;
   graphql: Graphql;
@@ -109,4 +109,4 @@ export type SiteConfig = {
   site: Site;
   social: Social;
   client: Client
-};
+}>;

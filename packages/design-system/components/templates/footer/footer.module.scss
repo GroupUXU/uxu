@@ -43,6 +43,13 @@
   }
 }
 
+.lastColumn {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
 .wrapperBrand {
   a {
     text-align: center;
