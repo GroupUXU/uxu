@@ -12,3 +12,4 @@ export * from './tree';
 export * from './container';
 export * from './siteBar';
 export * from './tagList';
+export * from './toast';

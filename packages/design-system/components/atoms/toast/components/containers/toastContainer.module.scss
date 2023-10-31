@@ -1,0 +1,129 @@
+@import "../../../../../style/mixins";
+
+.wrapper {
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: block;
+  position: fixed;
+
+  @include media('m') {
+    left: var(--uxu-space-large);
+    bottom: var(--uxu-space-large);
+  }
+
+  .toast {
+    display: none;
+    position: absolute;
+    opacity: 1;
+
+    @include media('m') {
+      &:before {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: calc(-1 * calc(var(--uxu-space-large)));
+        left: calc(-1 * calc(var(--uxu-space-large)));
+        width: calc(100% + calc(var(--uxu-space-large) * 2));
+        height: calc(100% + calc(var(--uxu-space-large) * 2));
+      }
+    }
+
+    &:first-of-type {
+      display: flex;
+      z-index: 9999;
+      opacity: 0.8;
+      filter: blur(1rem);
+      transform: scale(1.4);
+    }
+
+    &:nth-child(2) {
+      display: flex;
+      z-index: 9998;
+      @include media('m') {
+        transform: translate3d(0, calc(-100% + calc(-1 * var(--uxu-space-default))), 0) scale(0.9);
+      }
+    }
+
+    &:nth-child(3) {
+      display: flex;
+      z-index: 9997;
+      @include media('m') {
+        transform: translate3d(0, calc(-100% - 2 * var(--uxu-space-default)), 0) scale(0.8);
+      }
+    }
+
+    &:nth-child(4) {
+      display: flex;
+      z-index: 9996;
+      @include media('m') {
+        transform: translate3d(0, calc(-100% - 3 * var(--uxu-space-default)), 0) scale(0.7);
+      }
+    }
+
+    &.animate {
+      transition: all .35s cubic-bezier(.25, .75, .6, .98);
+
+      &:first-of-type {
+        opacity: 1;
+        filter: blur(0);
+        transform: translate3d(0, -100%, 0) scale(1);
+      }
+
+      &:nth-child(4) {
+        opacity: 0;
+      }
+
+      @include media('m') {
+        &:nth-child(2) {
+          transform: translate3d(0, calc(-100% - 2 * var(--uxu-space-default)), 0) scale(0.9);
+        }
+
+        &:nth-child(3) {
+          transform: translate3d(0, calc(-100% - 4 * var(--uxu-space-default)), 0) scale(0.8);
+        }
+
+        &:nth-child(4) {
+          opacity: 0;
+          transform: translate3d(0, calc(-100% - 6 * var(--uxu-space-default)), 0) scale(0.6);
+        }
+      }
+
+
+    }
+  }
+
+  &:hover {
+    .toast {
+
+      &:nth-child(1) {
+        z-index: 9999;
+        transform: translate3d(0, -100%, 0) scale(1);
+      }
+
+      &:nth-child(2) {
+        z-index: 9998;
+        transform: translate3d(0, calc(-200% + 0.2rem), 0) scale(1);
+      }
+
+      &:nth-child(3) {
+        z-index: 9998;
+        transform: translate3d(0, calc(-300% + 0.3rem), 0) scale(1);
+      }
+
+      @include media('m') {
+        &:nth-child(1) {
+          transform: translate3d(0, -100%, 0) scale(1);
+        }
+
+        &:nth-child(2) {
+          transform: translate3d(0, calc(-200% + calc(-1 * var(--uxu-space-default))), 0) scale(1);
+        }
+
+        &:nth-child(3) {
+          transform: translate3d(0, calc(-300% - 2 * var(--uxu-space-default)), 0) scale(1);
+        }
+      }
+    }
+  }
+}
