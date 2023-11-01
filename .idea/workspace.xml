@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/utils/allowCookies.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/utils/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/utils/toastChunksInitial.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/utils/server/get/getCookieConsentSettings.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/config/configSite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configSite.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configSite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configSite.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/toast/toast.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/toast/toast.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/toast/toast.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/toast/toast.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/provider/provider.toastChunks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/provider/provider.toastChunks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/providers/config/provider.configSite.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/providers/config/provider.configSite.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/providers/provider.wrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/providers/provider.wrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/server/get/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/get/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/types/config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/types/config/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/types/config/siteConfigTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/types/config/siteConfigTypes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/types/content/toast.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/types/content/toast.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/other/cookieManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/other/cookieManager.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +100,7 @@
       <workItem from="1696362699907" duration="5508000" />
       <workItem from="1696446764042" duration="41222000" />
       <workItem from="1698862982352" duration="7171000" />
-      <workItem from="1698871585310" duration="1121000" />
+      <workItem from="1698871585310" duration="2492000" />
     </task>
     <servers />
   </component>

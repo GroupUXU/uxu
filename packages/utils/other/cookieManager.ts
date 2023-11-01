@@ -49,12 +49,16 @@ export class CookieManager {
    * @param value cookie
    * @param expirationDays days from expiration cookie (optional)
    */
-  public setCookie (key: string, value: string, option?: { expirationDays?: number , path?: string }): void {
-    checkIsDOM ( () => {
-      const d: Date = new Date ();
-      d.setTime ( d.getTime () + ((option?.expirationDays || this.defaultExpirationDays) * 24 * 60 * 60 * 1000) );
-      const expires: string = `expires=${d.toUTCString ()}`;
-      document.cookie = `${key}=${value};${expires};path=${option?.path}`;
-    } );
+  public setCookie(key: string, value: string, option?: { expirationDays?: number, path?: string, sameSite?: 'None' | 'Lax' | 'Strict' }): void {
+    checkIsDOM(() => {
+      const d = new Date();
+      d.setTime(d.getTime() + ((option?.expirationDays || this.defaultExpirationDays) * 24 * 60 * 60 * 1000));
+      const expires = `expires=${d.toUTCString()}`;
+      const sameSite = option?.sameSite ? `;SameSite=${option.sameSite}` : '';
+      const secure = sameSite ? ';Secure' : '';
+      const path = `;path=${option?.path || '/'}`;
+      document.cookie = `${key}=${value};${expires}${path}${sameSite}${secure}`;
+    });
   }
+
 }
