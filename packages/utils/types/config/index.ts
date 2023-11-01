@@ -1,2 +1,2 @@
-export type { SiteConfig, Site, SiteConfigProps } from './siteConfigTypes';
+export type { SiteConfig, Site, SiteConfigContextProps, SiteConfigProps } from './siteConfigTypes';
 export type { SearchEngineConfig } from './searchEngineConfig';

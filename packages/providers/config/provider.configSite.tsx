@@ -1,7 +1,7 @@
 import type { PropsWithChildren, ReactElement } from 'react';
 import { useState, createContext } from 'react';
 import { SiteIdEnums } from 'utils';
-import type { SiteConfig } from 'utils';
+import type { SiteConfig, SiteConfigContextProps } from 'utils';
 
 const initialSiteConfigContext: { config: SiteConfig, setConfig: (newConfig: SiteConfig) => void } = {
   config: {
@@ -55,7 +55,7 @@ const initialSiteConfigContext: { config: SiteConfig, setConfig: (newConfig: Sit
   setConfig: () => {}
 };
 
-export const SiteConfigContext = createContext<{ config: SiteConfig, setConfig: (newConfig: SiteConfig) => void }>(initialSiteConfigContext);
+export const SiteConfigContext = createContext<SiteConfigContextProps>(initialSiteConfigContext);
 
 type SiteConfigProviderProps = PropsWithChildren<{ siteConfig: SiteConfig }>;
 

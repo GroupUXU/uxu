@@ -38,7 +38,7 @@ export function Toast({ id, text, visual, actions = [], className, toastChunkDis
       {renderRemoveButton()}
       {visual}
       <div className={styles.content}>
-        <p>{text}</p>
+        <p className={styles.text}>{text}</p>
         <div className={styles.actions}>
           {actions.map(({ Component, type }: { Component: ReactElement, type?: "remove" }) => {
             const originalOnClick = (Component as React.ReactElement<{ onClick?: () => void }>).props.onClick;

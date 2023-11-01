@@ -2,7 +2,7 @@ import App from 'next/app';
 import { useRouter } from 'next/router';
 import type { ReactElement } from "react";
 import type { AppProps, AppContext } from 'next/app';
-import { getThemeFromRequest, getClientLocaleFromRequest, getMobilePlatformStatusFromRequest, getOSInfoFromRequest } from 'utils';
+import { getThemeFromRequest, getClientLocaleFromRequest, getMobilePlatformStatusFromRequest, getOSInfoFromRequest, getCookieConsentSettings } from 'utils';
 import type { SiteConfigProps } from 'utils';
 import { WrapperProviders } from 'providers';
 import 'design-system/style/globalStyle.scss';
@@ -24,6 +24,7 @@ CustomApp.getInitialProps = async (appContext: AppContext) => {
   const appProps = await App.getInitialProps(appContext);
   const { ctx } = appContext;
   const theme = getThemeFromRequest(ctx);
+  const cookieConsentSettings = getCookieConsentSettings(ctx);
   const clientLocale = getClientLocaleFromRequest(ctx);
   const isMobilePlatform = getMobilePlatformStatusFromRequest(ctx);
   const osInfo = getOSInfoFromRequest(ctx);
@@ -32,6 +33,7 @@ CustomApp.getInitialProps = async (appContext: AppContext) => {
     ...appProps,
     theme,
     clientLocale,
+    cookieConsentSettings,
     isMobilePlatform,
     osInfo,
   };

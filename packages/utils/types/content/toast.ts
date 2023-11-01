@@ -1,7 +1,7 @@
 import type { ReactElement, Dispatch } from "react";
 
 export type ToastProps = {
-  id: number;
+  id: number | string;
   text?: string;
   className?: string;
   visual?: ReactElement;
@@ -10,12 +10,12 @@ export type ToastProps = {
   toastChunkDispatch: Dispatch<ToastChunkAction>
 }
 
-export type ToastChunk = { id: number; props?: Omit<ToastProps, 'id' | 'toastChunkDispatch'>; delay?: number };
+export type ToastChunk = { id: number | string; props?: Omit<ToastProps, 'id' | 'toastChunkDispatch'>; delay?: number };
 export type ToastChunks = Array<ToastChunk>;
 
 export type ToastChunkAction =
   | { type: 'ADD_TOAST', payload: ToastChunk }
-  | { type: 'REMOVE_TOAST', payload: { id: number } };
+  | { type: 'REMOVE_TOAST', payload: { id: number | string; } };
 
 type ActionItem = {
   type?: 'remove';
