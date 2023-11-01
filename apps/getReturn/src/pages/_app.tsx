@@ -1,12 +1,13 @@
-import type { ReactElement } from "react";
-import type { AppProps, AppContext } from 'next/app';
 import App from 'next/app';
 import { useRouter } from 'next/router';
-import { APOLLO_CLIENT, SITE_CONFIG } from "../config";
-import { SiteConfigProps, getThemeFromRequest, getClientLocaleFromRequest, getMobilePlatformStatusFromRequest, getOSInfoFromRequest } from 'utils';
+import type { ReactElement } from "react";
+import type { AppProps, AppContext } from 'next/app';
+import { getThemeFromRequest, getClientLocaleFromRequest, getMobilePlatformStatusFromRequest, getOSInfoFromRequest } from 'utils';
+import type { SiteConfigProps } from 'utils';
 import { WrapperProviders } from 'providers';
 import 'design-system/style/globalStyle.scss';
-import { ToastContainer } from "design-system";
+import { APOLLO_CLIENT, SITE_CONFIG } from "../config";
+
 
 function CustomApp({ Component, pageProps, ...customProps }: AppProps & SiteConfigProps): ReactElement {
   const router = useRouter();
@@ -14,7 +15,6 @@ function CustomApp({ Component, pageProps, ...customProps }: AppProps & SiteConf
     <main className='app'>
       <WrapperProviders apolloClient={APOLLO_CLIENT} siteConfig={SITE_CONFIG({...router, ...customProps})}>
         <Component {...pageProps} />
-        <ToastContainer />
       </WrapperProviders>
     </main>
   );
