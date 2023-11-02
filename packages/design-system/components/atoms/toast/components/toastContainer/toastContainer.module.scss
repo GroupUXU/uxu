@@ -3,7 +3,7 @@
 .wrapper {
   left: 0;
   bottom: 0;
-  z-index: 9999;
+  z-index: 99;
   display: block;
   position: fixed;
 
@@ -31,7 +31,7 @@
 
     &:first-of-type {
       display: flex;
-      z-index: 9999;
+      z-index: 99;
       opacity: 0.8;
       filter: blur(1rem);
       transform: scale(1.4);
@@ -39,7 +39,7 @@
 
     &:nth-child(2) {
       display: flex;
-      z-index: 9998;
+      z-index: 98;
       @include media('m') {
         transform: translate3d(0, calc(-100% + calc(-1 * var(--uxu-space-default))), 0) scale(0.9);
       }
@@ -47,7 +47,7 @@
 
     &:nth-child(3) {
       display: flex;
-      z-index: 9997;
+      z-index: 97;
       @include media('m') {
         transform: translate3d(0, calc(-100% - 2 * var(--uxu-space-default)), 0) scale(0.8);
       }
@@ -55,7 +55,7 @@
 
     &:nth-child(4) {
       display: flex;
-      z-index: 9996;
+      z-index: 96;
       @include media('m') {
         transform: translate3d(0, calc(-100% - 3 * var(--uxu-space-default)), 0) scale(0.7);
       }
@@ -97,17 +97,17 @@
     .toast {
 
       &:nth-child(1) {
-        z-index: 9999;
+        z-index: 99;
         transform: translate3d(0, -100%, 0) scale(1);
       }
 
       &:nth-child(2) {
-        z-index: 9998;
+        z-index: 98;
         transform: translate3d(0, calc(-200% + 0.2rem), 0) scale(1);
       }
 
       &:nth-child(3) {
-        z-index: 9998;
+        z-index: 97;
         transform: translate3d(0, calc(-300% + 0.3rem), 0) scale(1);
       }
 

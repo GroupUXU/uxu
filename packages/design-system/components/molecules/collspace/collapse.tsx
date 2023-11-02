@@ -33,7 +33,7 @@ type CollapseGroupProps = PropsWithChildren<{
   initialOpenIndex?: number;
 }>
 
-export function CollapseGroup( {items, initialOpenIndex}: CollapseGroupProps ): ReactElement {
+export function CollapseGroup( { items, initialOpenIndex }: CollapseGroupProps ): ReactElement {
   const [openIndex, setOpenIndex] = useState<number | null> ( initialOpenIndex || null );
 
   return (

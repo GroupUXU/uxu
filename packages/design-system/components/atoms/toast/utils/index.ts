@@ -1,2 +1,2 @@
 export * from './toastChunksInitial';
-export * from './allowCookies';
+export * from './setCookies';

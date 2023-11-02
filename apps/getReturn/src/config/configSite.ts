@@ -18,7 +18,7 @@ export const SITE_CONFIG = ({ theme, clientLocale, isMobilePlatform, router, osI
     domain: 'getreturn.pl',
     slug: router.asPath,
     brand: "getReturn",
-    shortBrand: "getReturn",
+    shortBrand: "getReturnShort",
     defaultCover: 'https://getreturn.pl/defaultCover.png',
     canonicalUrl: `https://getreturn.pl${router.asPath}`,
     images: [{url: 'https://getreturn.pl/ogWTrasie.png'}],
