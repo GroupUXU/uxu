@@ -74,7 +74,6 @@
 
     button {
       font-weight: bold;
-      border-top: var(--uxu-border-default);
       border-bottom: var(--uxu-border-default);
       background-color: var(--uxu-color-primary-accent1);
     }
@@ -83,6 +82,5 @@
 
   :global(.collapse) {
     top: 0;
-    border: none;
   }
 }

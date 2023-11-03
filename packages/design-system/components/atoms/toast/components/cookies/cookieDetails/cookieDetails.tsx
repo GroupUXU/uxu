@@ -1,44 +1,34 @@
 import { useContext, useState } from "react";
 import type { ReactElement } from 'react';
 import { X } from 'react-feather';
-import { Modal } from "../../../../modal";
+import { generateUniqueId } from "utils";
 import { Collapse, CollapseGroup } from "../../../../../molecules/collspace";
 import { setCookies } from "../../../utils";
-import { generateUniqueId } from "utils";
+import { Modal } from "../../../../modal";
 import type { CookieDetailsProps } from "./types";
 import styles from './cookieDetails.module.scss';
 
-
-export function CookieDetails({ siteConfig, ToastChunksContext }: CookieDetailsProps): ReactElement {
-  const { toastChunkDispatch } = useContext(ToastChunksContext);
-  const [open, setOpen] = useState(false);
+export function CookieDetails ( {siteConfig, ToastChunksContext}: CookieDetailsProps ): ReactElement {
+  const {toastChunkDispatch} = useContext ( ToastChunksContext );
+  const [open, setOpen] = useState ( false );
 
   function closeModal(): void {
-    setOpen ( false )
-  };
-  const acceptCookies = (): void => {
-    toastChunkDispatch({ type: "REMOVE_TOAST", payload: { id: "cookieInfoDefault" } });
-    setCookies({});
-    closeModal();
+    setOpen ( false );
   };
 
-  const cookieItems = [
-    {
-      id: "necessary",
-      label: { title: "Niezbędne pliki cookie", bold: true },
-      children: <p>To są pliki cookie wymagane do działania strony {siteConfig.projectName}</p>,
-    },
-    {
-      id: "analytics",
-      label: { title: "Analityka", bold: true },
-      children: <span>Pliki cookie służące do analizy i poprawy jakości naszej witryny</span>,
-    },
-    {
-      id: "ads",
-      label: { title: "Reklamy", bold: true },
-      children: <span>Pliki cookie wykorzystywane do dostosowywania wyświetlanych reklam</span>,
-    },
-  ];
+  function acceptCookies(): void {
+    toastChunkDispatch ( {type: "REMOVE_TOAST", payload: {id: "cookieInfoDefault"}} );
+    setCookies ( {} );
+    closeModal ();
+  };
+
+  function renderCollapse ( title: string, content: string ): ReactElement {
+    return (
+      <Collapse id={`${generateUniqueId ()}`} isOpen title={<p>{title}</p>} >
+        <p>{content}</p>
+      </Collapse>
+    );
+  }
 
   return (
     <>
@@ -47,7 +37,7 @@ export function CookieDetails({ siteConfig, ToastChunksContext }: CookieDetailsP
         onClick={() => {
           setOpen ( true )
         }}
-        style={{ marginRight: "var(--uxu-space-default)" }}
+        style={{marginRight: "var(--uxu-space-default)"}}
         type="button"
       >
         Szczegóły
@@ -60,20 +50,21 @@ export function CookieDetails({ siteConfig, ToastChunksContext }: CookieDetailsP
       >
         <div className={styles.modal}>
           <div className={styles.modalHeader}>
-            <span><strong>Preferencje plików cookie</strong></span>
+            <strong>Preferencje plików cookie</strong>
             <button onClick={closeModal} type="button">
               <X size={30}/>
             </button>
           </div>
           <div className={styles.modalContent}>
-            <p>Używamy plików cookie, aby poprawić komfort korzystania z witryny. Do działania {siteConfig.projectName} wymagane są pliki cookie.</p>
+            <p>Używamy plików cookie, aby poprawić komfort korzystania z witryny. Do
+              działania {siteConfig.projectName} wymagane są pliki cookie.</p>
             <CollapseGroup className={styles.collapseGroup}>
-               <Collapse title={<p>Pliki cookie niezbędne do działania strony</p>} isOpen id={`${generateUniqueId()}`}><p>Pliki cookie niezbędne do działania strony umożliwiają zapamiętanie Twoich preferencji, takich jak akceptacja cookies czy wybór stylu. Są kluczowe dla prawidłowego i spersonalizowanego funkcjonowania witryny.</p></Collapse>
-                <Collapse title={<p>Analiza/Analityka</p>} isOpen id={`${generateUniqueId()}`}><p>Używamy plików cookie do zbierania danych o tym, jak korzystasz z naszej strony. Pomaga nam to w optymalizacji treści, zrozumieniu preferencji użytkowników i ulepszaniu funkcjonalności. Twoja prywatność jest dla nas ważna, a dane są anonimowe.</p></Collapse>
+              {renderCollapse ( "Pliki cookie niezbędne do działania strony", "Pliki cookie niezbędne do działania strony umożliwiają zapamiętanie Twoich preferencji, takich jak akceptacja cookies czy wybór stylu. Są kluczowe dla prawidłowego i spersonalizowanego funkcjonowania witryny." )}
+              {renderCollapse ( "Analiza/Analityka", "Używamy plików cookie do zbierania danych o tym, jak korzystasz z naszej strony. Pomaga nam to w optymalizacji treści, zrozumieniu preferencji użytkowników i ulepszaniu funkcjonalności. Twoja prywatność jest dla nas ważna, a dane są anonimowe." )}
             </CollapseGroup>
           </div>
           <div className={styles.modalFooter}>
-            <button className="btn success" type="button">
+            <button className="btn success" onClick={acceptCookies} type="button">
               Akceptuję
             </button>
           </div>

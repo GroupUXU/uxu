@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import type { ReactElement } from 'react';
+import classnames from 'classnames';
 import type { CollapseProps } from "../../types";
 import styles from './collapse.module.scss';
-import classnames from 'classnames';
 
 export function Collapse({ id, title, isOpen: open = false, children, className, notifyCollapseStateChange }: CollapseProps): ReactElement {
   const [isOpen, setIsOpen] = useState(open);
@@ -10,7 +10,7 @@ export function Collapse({ id, title, isOpen: open = false, children, className,
 
   useEffect((): void => { setIsOpen(open)  }, [open])
 
-  const toggleCollapse = () => {
+  function toggleCollapse(): void {
     const newIsOpen = !isOpen;
     setIsOpen(newIsOpen);
     notifyCollapseStateChange?.(newIsOpen, id);
