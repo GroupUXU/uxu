@@ -42,5 +42,14 @@ export const SITE_CONFIG = ({ theme, clientLocale, isMobilePlatform, router, osI
     },
     osInfo
   },
-  cookieConsentSettings
+  cookieConsentSettings,
+  admin: {
+    company: {
+      name: "Get return Sp. z o.o.",
+      street: "Gen. Władysława Sikorskiego 111 / 314",
+      postCode: "66-400",
+      city: "Gorzów Wielkopolski",
+      email: "kontakt@getreturn.pl"
+    }
+  }
 });
