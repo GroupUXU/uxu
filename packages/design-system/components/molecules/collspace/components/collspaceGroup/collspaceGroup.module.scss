@@ -1,0 +1,11 @@
+.wrapper {
+  position: relative;
+
+  :global(.collapse) {
+    top: -0.2rem;
+
+    &:first-of-type {
+      top: 0;
+    }
+  }
+}

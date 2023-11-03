@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import type { ReactElement } from 'react';
 import { X } from 'react-feather';
 import { Modal } from "../../../../modal";
-import { CollapseGroup } from "../../../../../molecules/collspace";
+import { Collapse, CollapseGroup } from "../../../../../molecules/collspace";
 import { setCookies } from "../../../utils";
 import type { CookieDetailsProps } from "./types";
 import styles from './cookieDetails.module.scss';
@@ -66,10 +66,13 @@ export function CookieDetails({ siteConfig, ToastChunksContext }: CookieDetailsP
           </div>
           <div className={styles.modalContent}>
             <p>Używamy plików cookie, aby poprawić komfort korzystania z witryny. Do działania {siteConfig.projectName} wymagane są „bezwzględnie niezbędne” pliki cookie.</p>
-            <CollapseGroup items={cookieItems} />
+            <CollapseGroup initialOpenId="ok1">
+               <Collapse title={<p>ok1</p>} isOpen id="ok1"><p>jij1</p></Collapse>
+                <Collapse title={<p>ok2</p>} isOpen id="ok2"><p>jij2</p></Collapse>
+            </CollapseGroup>
           </div>
           <div className={styles.modalFooter}>
-            <button className="btn success" onClick={acceptCookies} type="button">
+            <button className="btn success" type="button">
               Akceptuję
             </button>
           </div>

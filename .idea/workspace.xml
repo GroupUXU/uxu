@@ -5,28 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/allowCookies/allowCookies.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/allowCookies/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/cookieDetails/cookieDetails.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/cookieDetails/cookieDetails.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/cookieDetails/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/cookieDetails/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/utils/setCookies.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/utils/toastChunksInitial.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspace/collapse.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspace/collapse.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspace/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspaceGroup/collspaceGroup.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspaceGroup/collspaceGroup.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspaceGroup/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/config/configSite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configSite.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/assets/vectors/vectorBrands.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/assets/vectors/vectorBrands.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/toast/toast.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/toast/toast.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/toastContainer/toastContainer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/toastContainer/toastContainer.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/utils/allowCookies.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/utils/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/utils/toastChunksInitial.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/components/headerLeftComponents/headerLeftComponents.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/components/headerLeftComponents/headerLeftComponents.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/collapse.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/collapse.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/style/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/style/button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/providers/provider.wrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/providers/provider.wrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/cookieDetails/cookieDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/cookieDetails/cookieDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/collapse.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/collapse.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +44,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "feat/add-cookie",
-    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/packages/design-system/components/atoms/toast/components",
+    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/packages/design-system/components/molecules/collspace/components/collspace",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -68,18 +59,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspace" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspaceGroup" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookieDetails" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/cookie" />
-      <recent name="$PROJECT_DIR$/packages/design-system/page" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/toast/provider" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspace" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/toast/utils" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/toast" />
-      <recent name="$PROJECT_DIR$/apps/wtrasie" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -121,7 +112,7 @@
       <workItem from="1696446764042" duration="41222000" />
       <workItem from="1698862982352" duration="7171000" />
       <workItem from="1698871585310" duration="2492000" />
-      <workItem from="1698908858064" duration="15576000" />
+      <workItem from="1698908858064" duration="29387000" />
     </task>
     <servers />
   </component>
