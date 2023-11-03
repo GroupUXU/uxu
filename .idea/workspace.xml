@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspaceGroup/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/allowCookies/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/cookieDetails/cookieDetails.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/cookieDetails/cookieDetails.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/cookieDetails/cookieDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/cookieDetails/cookieDetails.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspace/collapse.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspace/collapse.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspaceGroup/collspaceGroup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspaceGroup/collspaceGroup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/allowCookies/allowCookies.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/allowCookies/allowCookies.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +33,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feat/add-cookie",
+    "git-widget-placeholder": "feat/add-pages",
     "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/packages/design-system/components/molecules/collspace/components/collspace",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
