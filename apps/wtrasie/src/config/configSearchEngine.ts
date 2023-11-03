@@ -10,12 +10,5 @@ export const CONFIG_SEARCH_ENGINE: SearchEngineConfig<Array<SearchSuggestionCont
       auth: process.env.NEXT_PUBLIC_AUTH_API_SEARCH || "",
     }
   },
-  defaultSugestions: [
-    {
-      slug: "test",
-      title: "testy",
-      lead: "test",
-      type: "post"
-    },
-  ]
+  defaultSugestions: []
 };

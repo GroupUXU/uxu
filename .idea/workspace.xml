@@ -5,22 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/terms.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/terms.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutStaticText/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutStaticText/layoutStaticText.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutStaticText/layoutStaticText.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutStaticText/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/pages/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/pages/privacy-policy.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/pages/terms.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/privacy-policy.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/privacy-policy.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/pages/privacyPolicy.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/config/configFooter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configFooter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/config/configSearchEngine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configSearchEngine.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/getReturn/src/config/configSite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configSite.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configSite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configSite.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/providers/provider.wrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/providers/provider.wrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/types/config/siteConfigTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/types/config/siteConfigTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/terms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/terms.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configFooter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configFooter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configSearchEngine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configSearchEngine.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutStaticText/layoutStaticText.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutStaticText/layoutStaticText.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/privacy-policy.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/terms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/terms.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,30 +39,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feat/add-pages&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/pawelniedzwiecki/localhost/uxu/packages/design-system/components/layout&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/pawelniedzwiecki/localhost/uxu/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "feat/add-pages",
+    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/getReturn/src/pages",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "/Users/pawelniedzwiecki/localhost/uxu/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/design-system/components/layout" />
-      <recent name="$PROJECT_DIR$/apps/wtrasie/src/pages" />
       <recent name="$PROJECT_DIR$/apps/getReturn/src/pages" />
+      <recent name="$PROJECT_DIR$/apps/wtrasie/src/pages" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/layout" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspace" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspaceGroup" />
     </key>
@@ -116,7 +114,7 @@
       <workItem from="1698862982352" duration="7171000" />
       <workItem from="1698871585310" duration="2492000" />
       <workItem from="1698908858064" duration="32278000" />
-      <workItem from="1699040260862" duration="867000" />
+      <workItem from="1699040260862" duration="5006000" />
     </task>
     <servers />
   </component>

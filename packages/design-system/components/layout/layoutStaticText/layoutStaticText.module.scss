@@ -27,8 +27,33 @@ $default-grid-layout: (
   }
 
   .content {
+    max-width: 100%;
+    overflow: hidden;
     position: relative;
     padding: var(--uxu-space-large) 0;
+
+    :global(.wrapperTable) {
+      width: 100%;
+      display: block;
+      overflow-x: auto;
+      position: relative;
+
+    }
+
+    table {
+      width: 100%;
+      max-width: 100%;
+      padding: var(--uxu-space-large) 0;
+
+      thead {
+        background-color: var(--uxu-color-primary-accent1);
+      }
+
+      td {
+        padding: var(--uxu-space-default);
+        border: var(--uxu-border-default);
+      }
+    }
 
     h1, h2, h3, h4, h5, h6 {
       padding: var(--uxu-space-large) 0;
@@ -40,12 +65,12 @@ $default-grid-layout: (
 
       li {
         position: relative;
+
         ol, ul {
           padding: var(--uxu-space-small) var(--uxu-space-default);
         }
       }
     }
-
 
 
     p {

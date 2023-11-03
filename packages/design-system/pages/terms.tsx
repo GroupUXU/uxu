@@ -1,25 +1,28 @@
 import type { ReactElement } from 'react';
-import { LayoutStaticText, Link } from '../components';
+import type { SearchEngineConfig } from "utils";
 import { useSeoConfig, useSiteConfig } from "hooks";
-import { FooterProps } from "../components/templates/footer/types";
-import { SearchEngineConfig } from "utils";
-import { SearchSuggestionContentDetails } from "../components/organisms/searchEngine/searchEngineInModal/types";
+import { LayoutStaticText, Link } from '../components';
+import type { FooterProps } from "../components/templates/footer/types";
+import type { SearchSuggestionContentDetails } from "../components/organisms/searchEngine/searchEngineInModal/types";
 
 
-type HeaderMenuConfigTypes = Array<{ slug: string, title: string }>
-
-
-export function Terms ({ footer, headerMenu, defaultSuggestions }: {
+type TermsProps = {
   footer: FooterProps,
-  headerMenu: HeaderMenuConfigTypes,
+  headerMenu: Array<{ slug: string, title: string }>,
   defaultSuggestions: SearchEngineConfig<Array<SearchSuggestionContentDetails>>
-} ): ReactElement {
+}
+
+export function Terms ({ footer, headerMenu, defaultSuggestions }: TermsProps): ReactElement {
   const {config} = useSiteConfig ();
   const seo = useSeoConfig ( { title: `Regulamin - ${config.site?.domain || ""}`});
 
   return (
-    <LayoutStaticText seo={seo} footer={footer} headerMenu={headerMenu} siteBarLeft={<></>} siteBarRight={<></>}
-                      searchEngineConfig={defaultSuggestions}>
+    <LayoutStaticText
+      footer={footer}
+      headerMenu={headerMenu}
+      searchEngineConfig={defaultSuggestions}
+      seo={seo}
+    >
       <h1>Regulamin</h1>
       <p>Przed założeniem konta w Serwisie należy uważnie przeczytać poniższy Regulamin. Założenie konta jest
         równoznaczne z tym, że Użytkownik:</p>
