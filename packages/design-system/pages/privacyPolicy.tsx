@@ -13,7 +13,7 @@ type PrivacyPolicyProps = {
 
 export function PrivacyPolicy ( {footer, headerMenu, defaultSuggestions}: PrivacyPolicyProps ): ReactElement {
   const {config} = useSiteConfig ();
-  const seo = useSeoConfig ( {title: `Regulamin - ${config.site?.domain || ""}`} );
+  const seo = useSeoConfig ( {title: `Polityka Prywatności - ${config.site?.domain || ""}`} );
 
   return (
     <LayoutStaticText

@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/privacy-policy.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/privacy-policy.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/pages/privacyPolicy.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/config/configFooter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configFooter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/config/configSearchEngine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configSearchEngine.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/config/configSite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configSite.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/terms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/terms.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configFooter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configFooter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configSearchEngine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configSearchEngine.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutStaticText/layoutStaticText.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutStaticText/layoutStaticText.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/privacy-policy.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/terms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/terms.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/privacyPolicy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/privacyPolicy.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +32,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feat/add-pages",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/getReturn/src/pages",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -114,7 +102,7 @@
       <workItem from="1698862982352" duration="7171000" />
       <workItem from="1698871585310" duration="2492000" />
       <workItem from="1698908858064" duration="32278000" />
-      <workItem from="1699040260862" duration="5006000" />
+      <workItem from="1699040260862" duration="5337000" />
     </task>
     <servers />
   </component>
