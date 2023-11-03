@@ -25,7 +25,7 @@
   padding: var(--uxu-space-default) var(--uxu-space-default) var(--uxu-space-large);
 
   strong {
-     font-size: var(--uxu-font-size-large);
+    font-size: var(--uxu-font-size-large);
   }
 
   button {
@@ -46,9 +46,10 @@
 
 .modalContent {
   padding: 0 var(--uxu-space-default) var(--uxu-space-large);
- p {
-  padding-bottom: var(--uxu-space-default);
-}
+
+  p {
+    padding-bottom: var(--uxu-space-default);
+  }
 }
 
 .modalFooter {
@@ -58,5 +59,30 @@
 
   button {
     margin-left: auto;
+  }
+}
+
+
+.collapseGroup {
+  overflow: hidden;
+  border-left: var(--uxu-border-default);
+  border-right: var(--uxu-border-default);
+  border-radius: var(--uxu-radii-default);
+
+  :global(.label) {
+    overflow: hidden;
+
+    button {
+      font-weight: bold;
+      border-top: var(--uxu-border-default);
+      border-bottom: var(--uxu-border-default);
+      background-color: var(--uxu-color-primary-accent1);
+    }
+
+  }
+
+  :global(.collapse) {
+    top: 0;
+    border: none;
   }
 }

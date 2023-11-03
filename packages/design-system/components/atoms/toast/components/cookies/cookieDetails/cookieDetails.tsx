@@ -4,6 +4,7 @@ import { X } from 'react-feather';
 import { Modal } from "../../../../modal";
 import { Collapse, CollapseGroup } from "../../../../../molecules/collspace";
 import { setCookies } from "../../../utils";
+import { generateUniqueId } from "utils";
 import type { CookieDetailsProps } from "./types";
 import styles from './cookieDetails.module.scss';
 
@@ -65,10 +66,10 @@ export function CookieDetails({ siteConfig, ToastChunksContext }: CookieDetailsP
             </button>
           </div>
           <div className={styles.modalContent}>
-            <p>Używamy plików cookie, aby poprawić komfort korzystania z witryny. Do działania {siteConfig.projectName} wymagane są „bezwzględnie niezbędne” pliki cookie.</p>
-            <CollapseGroup initialOpenId="ok1">
-               <Collapse title={<p>ok1</p>} isOpen id="ok1"><p>jij1</p></Collapse>
-                <Collapse title={<p>ok2</p>} isOpen id="ok2"><p>jij2</p></Collapse>
+            <p>Używamy plików cookie, aby poprawić komfort korzystania z witryny. Do działania {siteConfig.projectName} wymagane są pliki cookie.</p>
+            <CollapseGroup className={styles.collapseGroup}>
+               <Collapse title={<p>Pliki cookie niezbędne do działania strony</p>} isOpen id={`${generateUniqueId()}`}><p>Pliki cookie niezbędne do działania strony umożliwiają zapamiętanie Twoich preferencji, takich jak akceptacja cookies czy wybór stylu. Są kluczowe dla prawidłowego i spersonalizowanego funkcjonowania witryny.</p></Collapse>
+                <Collapse title={<p>Analiza/Analityka</p>} isOpen id={`${generateUniqueId()}`}><p>Używamy plików cookie do zbierania danych o tym, jak korzystasz z naszej strony. Pomaga nam to w optymalizacji treści, zrozumieniu preferencji użytkowników i ulepszaniu funkcjonalności. Twoja prywatność jest dla nas ważna, a dane są anonimowe.</p></Collapse>
             </CollapseGroup>
           </div>
           <div className={styles.modalFooter}>
