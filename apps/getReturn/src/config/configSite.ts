@@ -3,7 +3,7 @@ import { SiteIdEnums } from "utils";
 
 export const locale = 'pl';
 
-export const SITE_CONFIG = ({ theme, clientLocale, isMobilePlatform, router, osInfo }: SiteConfigProps): SiteConfig => ({
+export const SITE_CONFIG = ({ theme, clientLocale, isMobilePlatform, router, osInfo, cookieConsentSettings }: SiteConfigProps): SiteConfig => ({
   ads: {
     enabled: true
   },
@@ -18,7 +18,7 @@ export const SITE_CONFIG = ({ theme, clientLocale, isMobilePlatform, router, osI
     domain: 'getreturn.pl',
     slug: router.asPath,
     brand: "getReturn",
-    shortBrand: "getReturn",
+    shortBrand: "getReturnShort",
     defaultCover: 'https://getreturn.pl/defaultCover.png',
     canonicalUrl: `https://getreturn.pl${router.asPath}`,
     images: [{url: 'https://getreturn.pl/ogWTrasie.png'}],
@@ -41,5 +41,6 @@ export const SITE_CONFIG = ({ theme, clientLocale, isMobilePlatform, router, osI
       isMobile: isMobilePlatform,
     },
     osInfo
-  }
+  },
+  cookieConsentSettings
 });

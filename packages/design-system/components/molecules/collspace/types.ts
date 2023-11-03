@@ -1,8 +1,9 @@
-import type { PropsWithChildren } from "react";
+import type { PropsWithChildren, ReactElement } from "react";
 
 export type CollapseProps = PropsWithChildren<{
-  label: { title: string, bold?: boolean };
-  isOpen: boolean;
+  id: string;
+  title: ReactElement;
+  isOpen?: boolean;
   className?: string;
-  onClick: () => void;
+  notifyCollapseStateChange?: (isOpen: boolean, id: string | number) => void;
 }>

@@ -6,6 +6,11 @@ type Ads = Partial<{
   enabled: boolean;
 }>;
 
+type CookieConsentSettings = Partial<{
+  ads: boolean
+  analytics: boolean;
+}>;
+
 type Analytics = Partial<{
   gtmId: string | string[];
   hotjarId: string;
@@ -97,8 +102,11 @@ export type SiteConfigProps = {
   clientLocale: string,
   isMobilePlatform: boolean,
   router: NextRouter,
-  osInfo: Client['osInfo']
+  osInfo: Client['osInfo'],
+  cookieConsentSettings: CookieConsentSettings
 }
+
+export type SiteConfigContextProps = { config: SiteConfig, setConfig: (newConfig: SiteConfig) => void }
 
 export type SiteConfig = Partial<{
   ads: Ads;
@@ -108,5 +116,6 @@ export type SiteConfig = Partial<{
   projectName: string;
   site: Site;
   social: Social;
-  client: Client
+  client: Client;
+  cookieConsentSettings: CookieConsentSettings;
 }>;

@@ -26,7 +26,7 @@ function toastReducer ( state: ToastChunks, action: ToastChunkAction ): ToastChu
   }
 }
 
-export function ProviderToastChunks ( { children, toastChunksInitial }: ProviderToastChunksProps ): ReactElement {
+export function ProviderToastChunks ( {children, toastChunksInitial}: ProviderToastChunksProps ): ReactElement {
   const [toastChunks, toastChunkDispatch] = useReducer ( toastReducer, toastChunksInitial );
 
   useEffect ( () => {

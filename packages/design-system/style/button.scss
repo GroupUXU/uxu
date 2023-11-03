@@ -36,18 +36,19 @@
 }
 
 .btn.primary {
+  border: var(--uxu-border-active);
   color: var(--uxu-color-primary-background);
   background-color: var(--uxu-color-primary-foreground);
 
   &:hover {
-    border: var(--uxu-border-alpha-default);
-    background-color: var(--uxu-color-gray-900);
+    background-color: transparent;
+    color: var(--uxu-color-primary-foreground);
   }
 }
 
 .btn.secondary {
-  background-color: var(--uxu-color-background-200);
-  color: var(--uxu-color-primary-accent5);
+  background-color: transparent;
+  color: var(--uxu-color-primary-foreground);
 }
 
 
@@ -95,13 +96,13 @@
 }
 
 .btn.success {
-  border: var(--uxu-border-alpha-0);
-  color: var(--uxu-color-primary-background);
+  border: var(--uxu-border-success);
+  color: var(--uxu-color-primary-foreground);
   background-color: var(--uxu-color-success-default);
 
   &:hover {
-    color: var(--uxu-color-primary-background);
-    background-color: var(--uxu-color-blue-500);
+    color: var(--uxu-color-success-default);
+    background-color: transparent;
   }
 }
 
