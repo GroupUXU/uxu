@@ -42,5 +42,14 @@ export const SITE_CONFIG = ({ theme, clientLocale, isMobilePlatform, router, osI
     },
     osInfo,
   },
-  cookieConsentSettings
+  cookieConsentSettings,
+  admin: {
+    company: {
+      name: "Na3 Sp. z o.o.",
+      street: "Serwituty 25",
+      postCode: "02-233",
+      city: "Warszawa",
+      email: "hello@uxu.pl"
+    }
+  }
 });

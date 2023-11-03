@@ -97,6 +97,16 @@ type Client = {
   }
 }
 
+type Admin = Partial<{
+  company: {
+    name: string;
+    street: string;
+    postCode: string;
+    city: string;
+    email: string;
+  }
+}>
+
 export type SiteConfigProps = {
   theme: Site['theme']
   clientLocale: string,
@@ -117,5 +127,6 @@ export type SiteConfig = Partial<{
   site: Site;
   social: Social;
   client: Client;
+  admin: Admin;
   cookieConsentSettings: CookieConsentSettings;
 }>;

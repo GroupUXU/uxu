@@ -1,4 +1,5 @@
 import type { FooterProps } from "design-system/components/templates/footer/types";
+import { generateUniqueId } from "utils";
 
 type FooterConfigTypes = {
   footer: {
@@ -12,76 +13,55 @@ export const FOOTER_CONFIG: FooterConfigTypes = {
     mobile: {
       footerColumns: [
         {
+          id: `${generateUniqueId()}`,
           header: "Przydatne",
-          id: "useful",
           links: [
             {
-              id: 'about',
-              title: "O nas",
+              id: `${generateUniqueId()}`,
+              title: "Wiadomości",
               linkPath: "/"
             },
             {
-              id: 'blog',
-              title: "Blog",
-              linkPath: "/blog"
+              id: `${generateUniqueId()}`,
+              title: "Usługi",
+              linkPath: "/s"
             },
           ]
         },
         {
-          header: "Dla klienta",
-          id: "forClient",
-          links: [
-            {
-              id: 'whatItsWork',
-              title: "Jak to działa ?",
-              linkPath: "/"
-            },
-            {
-              id: 'faq',
-              title: "FAQ",
-              linkPath: "/"
-            },
-            {
-              id: 'contact',
-              title: "Kontakt",
-              linkPath: "/"
-            }
-          ]
-        },
-        {
+          id: `${generateUniqueId()}`,
           header: "Nasze serwisy",
-          id: "ourWebSite",
           links: [
             {
-              id: 'uxu',
+              id: `${generateUniqueId()}`,
               title: "uxu.pl",
               linkPath: "https://www.uxu.pl",
             },
             {
-              id: 'polskidev',
+              id: `${generateUniqueId()}`,
               title: "polski.dev",
               linkPath: "https://www.polski.dev",
             },
             {
-              id: 'wTrasie',
+              id: `${generateUniqueId()}`,
               title: "wtrasie.pl",
               linkPath: "https://www.wtrasie.pl",
             },
           ]
         },
         {
+          id: `${generateUniqueId()}`,
           header: "Informacje prawne",
-          id: "lawsInformation",
           links: [
             {
-              id: 'statute',
+              id: `${generateUniqueId()}`,
               title: "Regulamin",
-              linkPath: "/"
+              linkPath: "/terms"
             },
             {
-              id: 'privacyPolicy',
+              id: `${generateUniqueId()}`,
               title: "Polityka Prywatności",
-              linkPath: "/"
+              linkPath: "/privacy-policy"
             }
           ]
         }
@@ -90,65 +70,55 @@ export const FOOTER_CONFIG: FooterConfigTypes = {
     desktop: {
       footerColumns: [
         {
+          id: `${generateUniqueId()}`,
           header: "Przydatne",
-          id: "useful",
           links: [
             {
-              id: 'about',
-              title: "O nas",
+              id: `${generateUniqueId()}`,
+              title: "Wiadomości",
               linkPath: "/"
             },
             {
-              id: 'blog',
-              title: "Blog",
-              linkPath: "/blog"
+              id: `${generateUniqueId()}`,
+              title: "Usługi",
+              linkPath: "/s"
             },
-            {
-              id: 'faq',
-              title: "Faq",
-              linkPath: "/"
-            },
-            {
-              id: 'contact',
-              title: "Kontakt",
-              linkPath: "/"
-            }
           ]
         },
         {
+          id: `${generateUniqueId()}`,
           header: "Nasze serwisy",
-          id: "ourWebSite",
           links: [
             {
-              id: 'uxu',
+              id: `${generateUniqueId()}`,
               title: "uxu.pl",
               linkPath: "https://www.uxu.pl",
             },
             {
-              id: 'polskidev',
+              id: `${generateUniqueId()}`,
               title: "polski.dev",
               linkPath: "https://www.polski.dev",
             },
             {
-              id: 'wTrasie',
+              id: `${generateUniqueId()}`,
               title: "wtrasie.pl",
               linkPath: "https://www.wtrasie.pl",
             },
           ]
         },
         {
+          id: `${generateUniqueId()}`,
           header: "Informacje prawne",
-          id: "lawsInformation",
           links: [
             {
-              id: 'statute',
+              id: `${generateUniqueId()}`,
               title: "Regulamin",
-              linkPath: "/"
+              linkPath: "/terms"
             },
             {
-              id: 'privacyPolicy',
+              id: `${generateUniqueId()}`,
               title: "Polityka Prywatności",
-              linkPath: "/"
+              linkPath: "/privacy-policy"
             }
           ]
         }

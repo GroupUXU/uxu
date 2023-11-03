@@ -21,7 +21,7 @@ export function WrapperProviders({ children, siteConfig, apolloClient }: Wrapper
             Component: <CookieDetails siteConfig={siteConfig} ToastChunksContext={ToastChunksContext} />
           },
           {
-            Component: <AllowCookies />,
+            Component: <AllowCookies ToastChunksContext={ToastChunksContext} />,
             type: 'remove'
           }
         ]
