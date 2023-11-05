@@ -31,7 +31,7 @@ export function Terms ({ footer, headerMenu, defaultSuggestions }: TermsProps): 
         <li><p>Zobowiązuje się do korzystania z Serwisu zgodnie z prawem</p></li>
         <li><p>Zgadza się na przetwarzanie jego danych osobowych w zakresie podanym w Regulaminie.</p></li>
       </ul>
-      <p>Regulamin korzystania z serwisu internetowego www.polski.dev oraz polityka serwisu w zakresie ochrony praw
+      <p>Regulamin korzystania z serwisu internetowego {config.site?.domain || ""} oraz polityka serwisu w zakresie ochrony praw
         autorskich:</p>
       <h3>I Definicje.</h3>
       <ol>
@@ -167,7 +167,7 @@ export function Terms ({ footer, headerMenu, defaultSuggestions }: TermsProps): 
       <ol>
         <li>
           <p>Niniejszy Regulamin określa zasady korzystania przez Użytkowników z serwisu internetowego dostępnego pod
-            adresem www.polskidev.pl oraz z oferowanych za jego pośrednictwem usług.</p>
+            adresem {config.site?.domain || ""} oraz z oferowanych za jego pośrednictwem usług.</p>
         </li>
         <li>
           <p>Niniejszy Regulamin jest regulaminem, o którym mowa w art. 8 ustawy z dnia 18 lipca 2002 r. o świadczeniu
