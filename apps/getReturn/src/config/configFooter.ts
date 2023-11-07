@@ -21,6 +21,11 @@ export const FOOTER_CONFIG: FooterConfigTypes = {
               title: "Blog",
               linkPath: "/blog"
             },
+            {
+              id: `${generateUniqueId()}`,
+              title: "Kontakt",
+              linkPath: "/contact"
+            },
           ]
         },
         {
@@ -72,6 +77,11 @@ export const FOOTER_CONFIG: FooterConfigTypes = {
               id: `${generateUniqueId()}`,
               title: "Blog",
               linkPath: "/blog"
+            },
+            {
+              id: `${generateUniqueId()}`,
+              title: "Kontakt",
+              linkPath: "/contact"
             },
           ]
         },

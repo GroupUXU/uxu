@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/config/configFooter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configFooter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/config/configHeader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configHeader.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configFooter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configFooter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configHeader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configHeader.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/design-system/pages/contact/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/contact/contact.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/privacyPolicy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/privacyPolicy.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/terms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/terms.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +111,7 @@
       <workItem from="1699375154849" duration="439000" />
       <workItem from="1699375602719" duration="562000" />
       <workItem from="1699376169742" duration="10566000" />
-      <workItem from="1699391684212" duration="1767000" />
+      <workItem from="1699391684212" duration="2181000" />
     </task>
     <servers />
   </component>

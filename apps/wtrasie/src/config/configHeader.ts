@@ -11,13 +11,15 @@ export const HEADER_MENU_CONFIG: HeaderMenuConfigTypes = {
     mobile: {
       menu: [
         { slug: "/", title: "Wiadomości" },
-        { slug: "/s", title: "Usługi" }
+        { slug: "/s", title: "Usługi" },
+        { slug: "/contact", title: "Kontakt" }
       ]
     },
     desktop: {
       menu: [
         { slug: "/", title: "Wiadomości" },
-        { slug: "/s", title: "Usługi" }
+        { slug: "/s", title: "Usługi" },
+        { slug: "/contact", title: "Kontakt" }
       ]
     }
   }

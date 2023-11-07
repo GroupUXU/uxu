@@ -66,13 +66,13 @@ export function Contact({ footer, headerMenu, defaultSuggestions }: TermsProps):
           <ul>
             {company?.name ? <li><h3>{company.name}</h3></li> : null}
             {company?.street ? <li><p>{company.street}</p></li> : null}
-            {company?.postCode ? <li><p>{company.postCode} {company.city}</p></li> : null}
+            {company?.postCode ? <li className={styles.space}><p>{company.postCode} {company.city}</p></li> : null}
             {company?.tax?.pl?.krs ? <li><p><b>KRS:</b> {company.tax.pl.krs}</p></li> : null}
             {company?.tax?.pl?.regon ? <li><p><b>REGON:</b> {company.tax.pl.regon}</p></li> : null}
-            {company?.tax?.pl?.nip ? <li><p><b>NIP:</b> {company.tax.pl.nip}</p></li> : null}
-            {company?.tax?.pl?.shareCapitalInPLN ? <li><p><b>Kapitał zakładowy:</b> {company.tax.pl.shareCapitalInPLN} PLN</p></li> : null}
+            {company?.tax?.pl?.nip ? <li  className={styles.space}><p><b>NIP:</b> {company.tax.pl.nip}</p></li> : null}
+            {company?.tax?.pl?.shareCapitalInPLN ? <li  className={styles.space}><p><b>Kapitał zakładowy:</b> {company.tax.pl.shareCapitalInPLN} PLN</p></li> : null}
             {company?.tax?.pl?.accountsBank?.map(account => (
-              <li key={account.iban}><p><b>{account.bank}:</b> {account.iban}</p></li>
+              <li key={account.iban}  className={styles.space}><p><b>{account.bank}:</b> {account.iban}</p></li>
             ))}
             {mainPhone ? <li><p><b>Tel:</b> +48 {mainPhone}</p></li> : null}
             {mainEmail ? <li><p><b>Email:</b> {mainEmail}</p></li> : null}
