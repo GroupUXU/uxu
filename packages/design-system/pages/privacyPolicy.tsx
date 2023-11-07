@@ -13,6 +13,8 @@ type PrivacyPolicyProps = {
 
 export function PrivacyPolicy ( {footer, headerMenu, defaultSuggestions}: PrivacyPolicyProps ): ReactElement {
   const {config} = useSiteConfig ();
+  const company = config.admin?.company;
+  const mainEmail = company?.contact.pl?.email?.find(contact => contact.type === 'main')?.email || "";
   const seo = useSeoConfig ( {title: `Polityka Prywatności - ${config.site?.domain || ""}`} );
 
   return (
@@ -352,7 +354,7 @@ export function PrivacyPolicy ( {footer, headerMenu, defaultSuggestions}: Privac
           <p>pocztą tradycyjną na
             adres: {config.admin?.company?.name || ""} ul. {config.admin?.company?.street || ""}, {config.admin?.company?.city || ""} {config.admin?.company?.postCode || ""}</p>
         </li>
-        <li>poczta elektroniczna: Adres email: {config.admin?.company?.email || ""}</li>
+        <li>poczta elektroniczna: Adres email: {mainEmail || ""}</li>
       </ul>
     </LayoutStaticText>
   )

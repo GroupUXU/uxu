@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unnecessary-condition -- eslint has problem */
 import type { ReactElement } from 'react';
 import { useForm } from "react-hook-form";
 import { useSeoConfig, useSiteConfig } from "hooks";
@@ -26,8 +25,8 @@ export function Contact({ footer, headerMenu, defaultSuggestions }: TermsProps):
   const { config } = useSiteConfig();
   const seo = useSeoConfig({ title: `Regulamin - ${config.site?.domain || ""}` });
   const company = config.admin?.company;
-  const mainEmail = company?.contact.pl?.email?.find(contact => contact.type === 'main');
-  const mainPhone = company?.contact.pl?.phone?.find(contact => contact.type === 'mobile');
+  const mainEmail = company?.contact.pl?.email?.find(contact => contact.type === 'main')?.email || "";
+  const mainPhone = company?.contact.pl?.phone?.find(contact => contact.type === 'mobile')?.number || "";
 
   const handleFormSubmit = async (): Promise<void> => { /* empty */ };
 
@@ -75,8 +74,8 @@ export function Contact({ footer, headerMenu, defaultSuggestions }: TermsProps):
             {company?.tax?.pl?.accountsBank?.map(account => (
               <li key={account.iban}><p><b>{account.bank}:</b> {account.iban}</p></li>
             ))}
-            {mainPhone ? <li><p><b>Tel:</b> +48 {mainPhone.number}</p></li> : null}
-            {mainEmail ? <li><p><b>Email:</b> {mainEmail.email}</p></li> : null}
+            {mainPhone ? <li><p><b>Tel:</b> +48 {mainPhone}</p></li> : null}
+            {mainEmail ? <li><p><b>Email:</b> {mainEmail}</p></li> : null}
           </ul>
         </div>
       </div>
