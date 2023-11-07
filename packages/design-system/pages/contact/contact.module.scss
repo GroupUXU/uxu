@@ -1,0 +1,117 @@
+@import "../../style/mixins";
+
+.header {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: calc(var(--uxu-space-large) * 2) 0;
+
+  h1 {
+    font-size: var(--uxu-font-size-h3);
+  }
+
+  p {
+    font-size: var(--uxu-font-size-small);
+    color: var(--uxu-color-primary-accent5);
+  }
+
+  @include media("m") {
+    h1 {
+      font-size: var(--uxu-font-size-h1);
+    }
+
+    p {
+      font-size: var(--uxu-font-size-default);
+    }
+  }
+}
+
+.container {
+  display: grid;
+  min-height: 60rem;
+  grid-template-columns: 100%;
+
+  @include media("m") {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+.wrapperContactForm, .wrapperContactData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapperContactForm {
+  @include media("m") {
+    padding-right: var(--uxu-space-large);
+  }
+
+  form {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: var(--uxu-space-large);
+    padding: var(--uxu-space-large) var(--uxu-space-default);
+    border-radius: var(--uxu-radii-default);
+    border: var(--uxu-border-alpha-default);
+    background-color: var(--uxu-color-background-100);
+
+    @include media("m") {
+      padding: var(--uxu-space-large);
+      margin-top: calc(var(--uxu-space-large) * 2);
+    }
+
+    button {
+      width: auto;
+    }
+  }
+
+  span {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--uxu-space-large) 0;
+    font-size: var(--uxu-font-size-small);
+    color: var(--uxu-color-primary-accent5);
+
+    @include media("m") {
+      width: 80%;
+    }
+
+    a {
+      color: var(--uxu-color-success-default);
+    }
+  }
+}
+
+.wrapperContactData {
+  align-items: center;
+  padding-bottom: calc(var(--uxu-space-default) * 4);
+
+  @include media("m") {
+    padding-left: var(--uxu-space-large);
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      color: var(--uxu-color-primary-accent5);
+
+      h3 {
+        color:  var(--uxu-color-primary-foreground)
+      }
+
+      &.space {
+        margin-bottom: var(--uxu-space-large);
+      }
+
+      b {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
