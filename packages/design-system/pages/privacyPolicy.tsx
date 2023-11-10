@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-condition -- Disabling false positive due to valid optional chaining usage */
 import type { ReactElement } from 'react';
 import type { SearchEngineConfig } from "utils";
 import { useSeoConfig, useSiteConfig } from "hooks";
@@ -14,7 +15,7 @@ type PrivacyPolicyProps = {
 export function PrivacyPolicy ( {footer, headerMenu, defaultSuggestions}: PrivacyPolicyProps ): ReactElement {
   const {config} = useSiteConfig ();
   const company = config.admin?.company;
-  const mainEmail = company?.contact.pl?.email?.find(contact => contact.type === 'main')?.email || "";
+  const mainEmail = company?.contact.pl?.email?.find(contact => contact.type === 'main')?.email;
   const seo = useSeoConfig ( {title: `Polityka Prywatności - ${config.site?.domain || ""}`} );
 
   return (

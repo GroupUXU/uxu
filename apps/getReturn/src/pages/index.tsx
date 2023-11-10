@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
 import { LayoutListingPost } from 'design-system';
-import {  useSeoConfig, useSiteConfig } from 'hooks';
-import { FOOTER_CONFIG, HEADER_MENU_CONFIG, CONFIG_SEARCH_ENGINE } from '../config';
+import { useSeoConfig, useSiteConfig } from 'hooks';
+import { CONFIG_SEARCH_ENGINE, FOOTER_CONFIG, HEADER_MENU_CONFIG } from '../config';
 
 function Index(): ReactElement  {
   const seo = useSeoConfig({});

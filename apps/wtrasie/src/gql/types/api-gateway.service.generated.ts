@@ -26,7 +26,6 @@ export type Article = {
   contentparts: Array<Maybe<ArticleContentpartsDynamicZone>>;
   cover: UploadFileEntityResponse;
   createdAt?: Maybe<Scalars['DateTime']['output']>;
-  id?: Maybe<Scalars['String']['output']>;
   lead: ComponentContentPartsLead;
   publishedAt?: Maybe<Scalars['DateTime']['output']>;
   seo: ComponentOthersSeo;
@@ -555,6 +554,59 @@ export type ComponentStatsViewsInput = {
   views?: InputMaybe<Scalars['Int']['input']>;
 };
 
+export type CustomerMessage = {
+  __typename?: 'CustomerMessage';
+  createdAt?: Maybe<Scalars['DateTime']['output']>;
+  email: Scalars['String']['output'];
+  message: Scalars['String']['output'];
+  publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  rating?: Maybe<Enum_Customermessage_Rating>;
+  status?: Maybe<Enum_Customermessage_Status>;
+  type?: Maybe<Enum_Customermessage_Type>;
+  updatedAt?: Maybe<Scalars['DateTime']['output']>;
+};
+
+export type CustomerMessageEntity = {
+  __typename?: 'CustomerMessageEntity';
+  attributes?: Maybe<CustomerMessage>;
+  id?: Maybe<Scalars['ID']['output']>;
+};
+
+export type CustomerMessageEntityResponse = {
+  __typename?: 'CustomerMessageEntityResponse';
+  data?: Maybe<CustomerMessageEntity>;
+};
+
+export type CustomerMessageEntityResponseCollection = {
+  __typename?: 'CustomerMessageEntityResponseCollection';
+  data: Array<CustomerMessageEntity>;
+  meta: ResponseCollectionMeta;
+};
+
+export type CustomerMessageFiltersInput = {
+  and?: InputMaybe<Array<InputMaybe<CustomerMessageFiltersInput>>>;
+  createdAt?: InputMaybe<DateTimeFilterInput>;
+  email?: InputMaybe<StringFilterInput>;
+  id?: InputMaybe<IdFilterInput>;
+  message?: InputMaybe<StringFilterInput>;
+  not?: InputMaybe<CustomerMessageFiltersInput>;
+  or?: InputMaybe<Array<InputMaybe<CustomerMessageFiltersInput>>>;
+  publishedAt?: InputMaybe<DateTimeFilterInput>;
+  rating?: InputMaybe<StringFilterInput>;
+  status?: InputMaybe<StringFilterInput>;
+  type?: InputMaybe<StringFilterInput>;
+  updatedAt?: InputMaybe<DateTimeFilterInput>;
+};
+
+export type CustomerMessageInput = {
+  email?: InputMaybe<Scalars['String']['input']>;
+  message?: InputMaybe<Scalars['String']['input']>;
+  publishedAt?: InputMaybe<Scalars['DateTime']['input']>;
+  rating?: InputMaybe<Enum_Customermessage_Rating>;
+  status?: InputMaybe<Enum_Customermessage_Status>;
+  type?: InputMaybe<Enum_Customermessage_Type>;
+};
+
 export type DateTimeFilterInput = {
   and?: InputMaybe<Array<InputMaybe<Scalars['DateTime']['input']>>>;
   between?: InputMaybe<Array<InputMaybe<Scalars['DateTime']['input']>>>;
@@ -655,6 +707,24 @@ export enum Enum_Componentotherssitebarfilters_Typ {
   Users = 'users'
 }
 
+export enum Enum_Customermessage_Rating {
+  Best = 'best',
+  Normal = 'normal',
+  Wrong = 'wrong'
+}
+
+export enum Enum_Customermessage_Status {
+  Delete = 'delete',
+  New = 'new',
+  Replied = 'replied',
+  Unanswered = 'unanswered'
+}
+
+export enum Enum_Customermessage_Type {
+  Contact = 'contact',
+  Feedback = 'feedback'
+}
+
 export enum Enum_Tag_Typ {
   City = 'city',
   Countie = 'countie',
@@ -699,7 +769,7 @@ export type FloatFilterInput = {
   startsWith?: InputMaybe<Scalars['Float']['input']>;
 };
 
-export type GenericMorph = Article | Client | ComponentContentPartsLead | ComponentContentPartsMaps | ComponentContentPartsMedia | ComponentContentPartsQuote | ComponentContentPartsTxt | ComponentContentPartsYouTube | ComponentContentPartsYoutube | ComponentFooterColumn | ComponentOthersAdress | ComponentOthersCompanyData | ComponentOthersEmail | ComponentOthersLink | ComponentOthersLinksList | ComponentOthersPagesSocialMedia | ComponentOthersPhone | ComponentOthersSeo | ComponentOthersSettingPage | ComponentOthersSiteBarFilters | ComponentStatsViews | I18NLocale | Setting | Tag | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
+export type GenericMorph = Article | Client | ComponentContentPartsLead | ComponentContentPartsMaps | ComponentContentPartsMedia | ComponentContentPartsQuote | ComponentContentPartsTxt | ComponentContentPartsYouTube | ComponentContentPartsYoutube | ComponentFooterColumn | ComponentOthersAdress | ComponentOthersCompanyData | ComponentOthersEmail | ComponentOthersLink | ComponentOthersLinksList | ComponentOthersPagesSocialMedia | ComponentOthersPhone | ComponentOthersSeo | ComponentOthersSettingPage | ComponentOthersSiteBarFilters | ComponentStatsViews | CustomerMessage | I18NLocale | Setting | Tag | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
 
 export type I18NLocale = {
   __typename?: 'I18NLocale';
@@ -814,37 +884,51 @@ export type JsonFilterInput = {
 
 export type Mutation = {
   __typename?: 'Mutation';
+  /** Change user password. Confirm with the current password. */
   changePassword?: Maybe<UsersPermissionsLoginPayload>;
   createArticle?: Maybe<ArticleEntityResponse>;
   createClient?: Maybe<ClientEntityResponse>;
+  createCustomerMessage?: Maybe<CustomerMessageEntityResponse>;
   createTag?: Maybe<TagEntityResponse>;
   createUploadFile?: Maybe<UploadFileEntityResponse>;
   createUploadFolder?: Maybe<UploadFolderEntityResponse>;
+  /** Create a new role */
   createUsersPermissionsRole?: Maybe<UsersPermissionsCreateRolePayload>;
+  /** Create a new user */
   createUsersPermissionsUser: UsersPermissionsUserEntityResponse;
   deleteArticle?: Maybe<ArticleEntityResponse>;
   deleteClient?: Maybe<ClientEntityResponse>;
+  deleteCustomerMessage?: Maybe<CustomerMessageEntityResponse>;
   deleteSetting?: Maybe<SettingEntityResponse>;
   deleteTag?: Maybe<TagEntityResponse>;
   deleteUploadFile?: Maybe<UploadFileEntityResponse>;
   deleteUploadFolder?: Maybe<UploadFolderEntityResponse>;
+  /** Delete an existing role */
   deleteUsersPermissionsRole?: Maybe<UsersPermissionsDeleteRolePayload>;
+  /** Delete an existing user */
   deleteUsersPermissionsUser: UsersPermissionsUserEntityResponse;
+  /** Confirm an email users email address */
   emailConfirmation?: Maybe<UsersPermissionsLoginPayload>;
+  /** Request a reset password token */
   forgotPassword?: Maybe<UsersPermissionsPasswordPayload>;
   login: UsersPermissionsLoginPayload;
   multipleUpload: Array<Maybe<UploadFileEntityResponse>>;
+  /** Register a user */
   register: UsersPermissionsLoginPayload;
   removeFile?: Maybe<UploadFileEntityResponse>;
+  /** Reset user password. Confirm with a code (resetToken from forgotPassword) */
   resetPassword?: Maybe<UsersPermissionsLoginPayload>;
   updateArticle?: Maybe<ArticleEntityResponse>;
   updateClient?: Maybe<ClientEntityResponse>;
+  updateCustomerMessage?: Maybe<CustomerMessageEntityResponse>;
   updateFileInfo: UploadFileEntityResponse;
   updateSetting?: Maybe<SettingEntityResponse>;
   updateTag?: Maybe<TagEntityResponse>;
   updateUploadFile?: Maybe<UploadFileEntityResponse>;
   updateUploadFolder?: Maybe<UploadFolderEntityResponse>;
+  /** Update an existing role */
   updateUsersPermissionsRole?: Maybe<UsersPermissionsUpdateRolePayload>;
+  /** Update an existing user */
   updateUsersPermissionsUser: UsersPermissionsUserEntityResponse;
   upload: UploadFileEntityResponse;
 };
@@ -864,6 +948,11 @@ export type MutationCreateArticleArgs = {
 
 export type MutationCreateClientArgs = {
   data: ClientInput;
+};
+
+
+export type MutationCreateCustomerMessageArgs = {
+  data: CustomerMessageInput;
 };
 
 
@@ -898,6 +987,11 @@ export type MutationDeleteArticleArgs = {
 
 
 export type MutationDeleteClientArgs = {
+  id: Scalars['ID']['input'];
+};
+
+
+export type MutationDeleteCustomerMessageArgs = {
   id: Scalars['ID']['input'];
 };
 
@@ -979,6 +1073,12 @@ export type MutationUpdateClientArgs = {
 };
 
 
+export type MutationUpdateCustomerMessageArgs = {
+  data: CustomerMessageInput;
+  id: Scalars['ID']['input'];
+};
+
+
 export type MutationUpdateFileInfoArgs = {
   id: Scalars['ID']['input'];
   info?: InputMaybe<FileInfoInput>;
@@ -1054,10 +1154,11 @@ export type Query = {
   articles?: Maybe<ArticleEntityResponseCollection>;
   client?: Maybe<ClientEntityResponse>;
   clients?: Maybe<ClientEntityResponseCollection>;
+  customerMessage?: Maybe<CustomerMessageEntityResponse>;
+  customerMessages?: Maybe<CustomerMessageEntityResponseCollection>;
   i18NLocale?: Maybe<I18NLocaleEntityResponse>;
   i18NLocales?: Maybe<I18NLocaleEntityResponseCollection>;
   me?: Maybe<UsersPermissionsMe>;
-  searchResults: SearchResults;
   setting?: Maybe<SettingEntityResponse>;
   tag?: Maybe<TagEntityResponse>;
   tags?: Maybe<TagEntityResponseCollection>;
@@ -1098,6 +1199,19 @@ export type QueryClientsArgs = {
 };
 
 
+export type QueryCustomerMessageArgs = {
+  id?: InputMaybe<Scalars['ID']['input']>;
+};
+
+
+export type QueryCustomerMessagesArgs = {
+  filters?: InputMaybe<CustomerMessageFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  publicationState?: InputMaybe<PublicationState>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+
 export type QueryI18NLocaleArgs = {
   id?: InputMaybe<Scalars['ID']['input']>;
 };
@@ -1107,11 +1221,6 @@ export type QueryI18NLocalesArgs = {
   filters?: InputMaybe<I18NLocaleFiltersInput>;
   pagination?: InputMaybe<PaginationArg>;
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-
-export type QuerySearchResultsArgs = {
-  query: Scalars['String']['input'];
 };
 
 
@@ -1178,11 +1287,6 @@ export type QueryUsersPermissionsUsersArgs = {
 export type ResponseCollectionMeta = {
   __typename?: 'ResponseCollectionMeta';
   pagination: Pagination;
-};
-
-export type SearchResults = {
-  __typename?: 'SearchResults';
-  hits?: Maybe<Array<Maybe<Article>>>;
 };
 
 export type Setting = {
