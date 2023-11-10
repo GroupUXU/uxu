@@ -1,1 +1,2 @@
-export * from './siteIdEnum'
+export * from './siteIdEnum';
+export * from './requestStatus';

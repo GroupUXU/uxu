@@ -86,7 +86,7 @@ export type Site = {
 
 type Client = {
   locale: string,
-    platform: {
+  platform: {
     isMobile: boolean;
     isDesktop: boolean;
   }
@@ -103,7 +103,22 @@ type Admin = Partial<{
     street: string;
     postCode: string;
     city: string;
-    email: string;
+    tax?: {
+      pl?: {
+        krs?: string;
+        nip: string;
+        regon?: string;
+        shareCapitalInPLN?: number;
+        accountsBank?: Array<{ bank: string, iban: string }>,
+      }
+    },
+    contact: {
+      pl?: {
+        email?: Array<{ type: "main", email: string }>;
+        phone?: Array<{ type: "mobile", number: string }>;
+      }
+    }
+
   }
 }>
 
@@ -116,7 +131,7 @@ export type SiteConfigProps = {
   cookieConsentSettings: CookieConsentSettings
 }
 
-export type SiteConfigContextProps = { config: SiteConfig, setConfig: (newConfig: SiteConfig) => void }
+export type SiteConfigContextProps = { config: SiteConfig, setConfig: ( newConfig: SiteConfig ) => void }
 
 export type SiteConfig = Partial<{
   ads: Ads;

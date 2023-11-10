@@ -134,8 +134,13 @@ export function useGetArticleLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions
           const options = {...defaultOptions, ...baseOptions}
           return Apollo.useLazyQuery<GetArticleQuery, GetArticleQueryVariables>(GetArticleDocument, options);
         }
+export function useGetArticleSuspenseQuery(baseOptions?: Apollo.SuspenseQueryHookOptions<GetArticleQuery, GetArticleQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useSuspenseQuery<GetArticleQuery, GetArticleQueryVariables>(GetArticleDocument, options);
+        }
 export type GetArticleQueryHookResult = ReturnType<typeof useGetArticleQuery>;
 export type GetArticleLazyQueryHookResult = ReturnType<typeof useGetArticleLazyQuery>;
+export type GetArticleSuspenseQueryHookResult = ReturnType<typeof useGetArticleSuspenseQuery>;
 export type GetArticleQueryResult = Apollo.QueryResult<GetArticleQuery, GetArticleQueryVariables>;
 export const GetArticlesDocument = gql`
     query GetArticles($pageSize: Int!, $page: Int!, $type: [String]!) {
@@ -221,8 +226,13 @@ export function useGetArticlesLazyQuery(baseOptions?: Apollo.LazyQueryHookOption
           const options = {...defaultOptions, ...baseOptions}
           return Apollo.useLazyQuery<GetArticlesQuery, GetArticlesQueryVariables>(GetArticlesDocument, options);
         }
+export function useGetArticlesSuspenseQuery(baseOptions?: Apollo.SuspenseQueryHookOptions<GetArticlesQuery, GetArticlesQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useSuspenseQuery<GetArticlesQuery, GetArticlesQueryVariables>(GetArticlesDocument, options);
+        }
 export type GetArticlesQueryHookResult = ReturnType<typeof useGetArticlesQuery>;
 export type GetArticlesLazyQueryHookResult = ReturnType<typeof useGetArticlesLazyQuery>;
+export type GetArticlesSuspenseQueryHookResult = ReturnType<typeof useGetArticlesSuspenseQuery>;
 export type GetArticlesQueryResult = Apollo.QueryResult<GetArticlesQuery, GetArticlesQueryVariables>;
 export const GetArticlesWithTagDocument = gql`
     query GetArticlesWithTag($pageSize: Int!, $page: Int!, $type: [String]!, $tagID: ID) {
@@ -309,6 +319,11 @@ export function useGetArticlesWithTagLazyQuery(baseOptions?: Apollo.LazyQueryHoo
           const options = {...defaultOptions, ...baseOptions}
           return Apollo.useLazyQuery<GetArticlesWithTagQuery, GetArticlesWithTagQueryVariables>(GetArticlesWithTagDocument, options);
         }
+export function useGetArticlesWithTagSuspenseQuery(baseOptions?: Apollo.SuspenseQueryHookOptions<GetArticlesWithTagQuery, GetArticlesWithTagQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useSuspenseQuery<GetArticlesWithTagQuery, GetArticlesWithTagQueryVariables>(GetArticlesWithTagDocument, options);
+        }
 export type GetArticlesWithTagQueryHookResult = ReturnType<typeof useGetArticlesWithTagQuery>;
 export type GetArticlesWithTagLazyQueryHookResult = ReturnType<typeof useGetArticlesWithTagLazyQuery>;
+export type GetArticlesWithTagSuspenseQueryHookResult = ReturnType<typeof useGetArticlesWithTagSuspenseQuery>;
 export type GetArticlesWithTagQueryResult = Apollo.QueryResult<GetArticlesWithTagQuery, GetArticlesWithTagQueryVariables>;

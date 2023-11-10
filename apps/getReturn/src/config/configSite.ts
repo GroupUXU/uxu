@@ -3,7 +3,14 @@ import { SiteIdEnums } from "utils";
 
 export const locale = 'pl';
 
-export const SITE_CONFIG = ({ theme, clientLocale, isMobilePlatform, router, osInfo, cookieConsentSettings }: SiteConfigProps): SiteConfig => ({
+export const SITE_CONFIG = ( {
+                               theme,
+                               clientLocale,
+                               isMobilePlatform,
+                               router,
+                               osInfo,
+                               cookieConsentSettings
+                             }: SiteConfigProps ): SiteConfig => ({
   ads: {
     enabled: true
   },
@@ -49,7 +56,21 @@ export const SITE_CONFIG = ({ theme, clientLocale, isMobilePlatform, router, osI
       street: "Gen. Władysława Sikorskiego 111/314",
       postCode: "66-400",
       city: "Gorzów Wielkopolski",
-      email: "kontakt@getreturn.pl"
+      tax: {
+        pl: {
+          nip: '5993278328',
+          krs: '0001056045',
+          regon: '526270293',
+          shareCapitalInPLN: 20000,
+          accountsBank: [{bank: "Nest Bank", iban: "PL 02 1870 1045 2078 1078 6238 0001"}]
+        }
+      },
+      contact: {
+        pl: {
+          email: [{type: "main", email: "kontakt@getreturn.pl"}],
+          phone: [{type: "mobile", number: "662 118 359"}]
+        }
+      }
     }
   }
 });

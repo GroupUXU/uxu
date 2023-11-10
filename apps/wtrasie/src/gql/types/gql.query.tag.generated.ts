@@ -84,8 +84,13 @@ export function useGetTagLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<Get
           const options = {...defaultOptions, ...baseOptions}
           return Apollo.useLazyQuery<GetTagQuery, GetTagQueryVariables>(GetTagDocument, options);
         }
+export function useGetTagSuspenseQuery(baseOptions?: Apollo.SuspenseQueryHookOptions<GetTagQuery, GetTagQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useSuspenseQuery<GetTagQuery, GetTagQueryVariables>(GetTagDocument, options);
+        }
 export type GetTagQueryHookResult = ReturnType<typeof useGetTagQuery>;
 export type GetTagLazyQueryHookResult = ReturnType<typeof useGetTagLazyQuery>;
+export type GetTagSuspenseQueryHookResult = ReturnType<typeof useGetTagSuspenseQuery>;
 export type GetTagQueryResult = Apollo.QueryResult<GetTagQuery, GetTagQueryVariables>;
 export const GetTagsListDocument = gql`
     query getTagsList($page: Int, $pageSize: Int) {
@@ -136,6 +141,11 @@ export function useGetTagsListLazyQuery(baseOptions?: Apollo.LazyQueryHookOption
           const options = {...defaultOptions, ...baseOptions}
           return Apollo.useLazyQuery<GetTagsListQuery, GetTagsListQueryVariables>(GetTagsListDocument, options);
         }
+export function useGetTagsListSuspenseQuery(baseOptions?: Apollo.SuspenseQueryHookOptions<GetTagsListQuery, GetTagsListQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useSuspenseQuery<GetTagsListQuery, GetTagsListQueryVariables>(GetTagsListDocument, options);
+        }
 export type GetTagsListQueryHookResult = ReturnType<typeof useGetTagsListQuery>;
 export type GetTagsListLazyQueryHookResult = ReturnType<typeof useGetTagsListLazyQuery>;
+export type GetTagsListSuspenseQueryHookResult = ReturnType<typeof useGetTagsListSuspenseQuery>;
 export type GetTagsListQueryResult = Apollo.QueryResult<GetTagsListQuery, GetTagsListQueryVariables>;

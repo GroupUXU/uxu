@@ -51,6 +51,11 @@ export function useGetClientsWithTagsLazyQuery(baseOptions?: Apollo.LazyQueryHoo
           const options = {...defaultOptions, ...baseOptions}
           return Apollo.useLazyQuery<GetClientsWithTagsQuery, GetClientsWithTagsQueryVariables>(GetClientsWithTagsDocument, options);
         }
+export function useGetClientsWithTagsSuspenseQuery(baseOptions?: Apollo.SuspenseQueryHookOptions<GetClientsWithTagsQuery, GetClientsWithTagsQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useSuspenseQuery<GetClientsWithTagsQuery, GetClientsWithTagsQueryVariables>(GetClientsWithTagsDocument, options);
+        }
 export type GetClientsWithTagsQueryHookResult = ReturnType<typeof useGetClientsWithTagsQuery>;
 export type GetClientsWithTagsLazyQueryHookResult = ReturnType<typeof useGetClientsWithTagsLazyQuery>;
+export type GetClientsWithTagsSuspenseQueryHookResult = ReturnType<typeof useGetClientsWithTagsSuspenseQuery>;
 export type GetClientsWithTagsQueryResult = Apollo.QueryResult<GetClientsWithTagsQuery, GetClientsWithTagsQueryVariables>;

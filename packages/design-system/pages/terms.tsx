@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-condition -- Disabling false positive due to valid optional chaining usage */
 import type { ReactElement } from 'react';
 import type { SearchEngineConfig } from "utils";
 import { useSeoConfig, useSiteConfig } from "hooks";
@@ -14,6 +15,8 @@ type TermsProps = {
 
 export function Terms ({ footer, headerMenu, defaultSuggestions }: TermsProps): ReactElement {
   const {config} = useSiteConfig ();
+  const company = config.admin?.company;
+  const mainEmail = company?.contact.pl?.email?.find(contact => contact.type === 'main')?.email;
   const seo = useSeoConfig ( { title: `Regulamin - ${config.site?.domain || ""}`});
 
   return (
@@ -366,7 +369,7 @@ export function Terms ({ footer, headerMenu, defaultSuggestions }: TermsProps): 
             Serwisu Treści, Komentarzy lub Nazwy Użytkownika naruszających postanowienia niniejszego Regulaminu, prawa
             osób trzecich (m.in. autorskie prawa majątkowe) oraz przepisów obowiązującego na terytorium Rzeczypospolitej
             Polskiej prawa, Użytkownik lub osoba trzecia powinna niezwłocznie zgłosić taki fakt, kontaktując się z
-            Serwisem pod adresem {config.admin?.company?.email || ""}</p>
+            Serwisem pod adresem {mainEmail || ""}</p>
         </li>
         <li>
           <p>
@@ -534,7 +537,7 @@ export function Terms ({ footer, headerMenu, defaultSuggestions }: TermsProps): 
         </li>
         <li>
           <p>Nieprawidłowości związane z funkcjonowaniem Usługi Użytkownik może zgłaszać na
-            adres: {config.admin?.company?.email || ""}</p>
+            adres: {mainEmail || ""}</p>
         </li>
         <li>
           <p>Za pośrednictwem Serwisu Usługodawca umożliwia:</p>
@@ -666,7 +669,7 @@ export function Terms ({ footer, headerMenu, defaultSuggestions }: TermsProps): 
             korzystania z Serwisu. Wszelkie zdarzenia mające wpływ na bezpieczeństwo przekazu informacji, w tym również
             dotyczące podejrzenia udostępniania plików zawierających wirusy i innych plików o podobnym charakterze lub
             innych aniżeli pliki treści o podobnym charakterze, należy zgłaszać Usługodawcy na
-            konto {config.admin?.company?.email || ""}</p>
+            konto {mainEmail || ""}</p>
         </li>
         <li>
           <p>Jednocześnie Usługodawca oświadcza, że stosowane przy ochronie Serwisu nowoczesne techniki zabezpieczenia

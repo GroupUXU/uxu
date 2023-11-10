@@ -49,7 +49,21 @@ export const SITE_CONFIG = ({ theme, clientLocale, isMobilePlatform, router, osI
       street: "Serwituty 25",
       postCode: "02-233",
       city: "Warszawa",
-      email: "hello@uxu.pl"
+      tax: {
+        pl: {
+          nip: '5223077290',
+          krs: '0000649985',
+          regon: '365979030',
+          shareCapitalInPLN: 5000,
+          accountsBank: [{bank: "Nest Bank", iban: "PL 65 2530 0008 2047 1060 6663 0002"}]
+        }
+      },
+      contact: {
+        pl: {
+          email: [{type: "main", email: "hello@uxu.pl"}],
+          phone: [{type: "mobile", number: "888 333 885"}]
+        }
+      }
     }
   }
 });

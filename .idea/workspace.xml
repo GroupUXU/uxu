@@ -5,8 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/query/gql.mutation.customerMessage.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/wtrasie/src/gql/query/gql.mutation.customerMessage.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/pages/contact/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/utils/enums/requestStatus.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/codegen.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/codegen.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/stubs/schema.graphql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/types/api-gateway.service.generated.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/types/api-gateway.service.generated.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/types/gql.query.article.generated.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/types/gql.query.article.generated.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/types/gql.query.tag.generated.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/types/gql.query.tag.generated.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/contact.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/codegen.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/codegen.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/gql/stubs/schema.graphql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/gql/types/api-gateway.service.generated.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/gql/types/api-gateway.service.generated.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/gql/types/gql.query.article.generated.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/gql/types/gql.query.article.generated.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/gql/types/gql.query.client.generated.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/gql/types/gql.query.client.generated.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/gql/types/gql.query.tag.generated.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/gql/types/gql.query.tag.generated.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/gql/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/gql/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/contact.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/contact/contact.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/contact/contact.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/contact/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/contact/contact.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/privacyPolicy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/privacyPolicy.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/design-system/pages/terms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/terms.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/enums/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/enums/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,39 +51,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/getReturn/src/pages",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "/Users/pawelniedzwiecki/localhost/uxu/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;add/contact&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/pawelniedzwiecki/localhost/uxu/packages/utils/enums&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/pawelniedzwiecki/localhost/uxu/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apps/getReturn/src/pages" />
+      <recent name="$PROJECT_DIR$/packages/utils/enums" />
+      <recent name="$PROJECT_DIR$/apps/wtrasie/src/gql/query" />
+      <recent name="$PROJECT_DIR$/apps/getReturn/src/gql/query" />
+      <recent name="$PROJECT_DIR$/packages/design-system/pages/contact" />
       <recent name="$PROJECT_DIR$/apps/wtrasie/src/pages" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/layout" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspace" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspaceGroup" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/design-system/pages/contact" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspace" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/toast/utils" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -102,7 +126,15 @@
       <workItem from="1698862982352" duration="7171000" />
       <workItem from="1698871585310" duration="2492000" />
       <workItem from="1698908858064" duration="32278000" />
-      <workItem from="1699040260862" duration="6016000" />
+      <workItem from="1699040260862" duration="6671000" />
+      <workItem from="1699371541586" duration="3603000" />
+      <workItem from="1699375154849" duration="439000" />
+      <workItem from="1699375602719" duration="562000" />
+      <workItem from="1699376169742" duration="10566000" />
+      <workItem from="1699391684212" duration="4770000" />
+      <workItem from="1699521818330" duration="635000" />
+      <workItem from="1699551389264" duration="16152000" />
+      <workItem from="1699640799662" duration="1794000" />
     </task>
     <servers />
   </component>
@@ -131,6 +163,11 @@
           <url>file://$PROJECT_DIR$/packages/design-system/components/atoms/toast/utils/toastChunksInitial.ts</url>
           <line>1</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/packages/design-system/components/atoms/note/note.tsx</url>
+          <line>23</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
