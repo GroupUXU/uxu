@@ -2,7 +2,7 @@ import type { SearchEngineConfig } from "utils";
 import type { SearchSuggestionContentDetails } from 'design-system/components/organisms/searchEngine/searchEngineInModal/types';
 
 
-export const CONFIG_SEARCH_ENGINE: SearchEngineConfig<Array<SearchSuggestionContentDetails>> = {
+export const  searchEngineConfig: SearchEngineConfig<Array<SearchSuggestionContentDetails>> = {
    searchClientData: {
      indexName: 'article',
      api: {

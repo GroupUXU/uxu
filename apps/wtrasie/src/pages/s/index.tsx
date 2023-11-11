@@ -1,14 +1,12 @@
 import type { ReactElement } from 'react';
-import { SectionInfiniteScroll, LayoutListingPost, PostList } from 'design-system';
-import { useSeoConfig, useSiteConfig } from 'hooks';
-import { FOOTER_CONFIG, HEADER_MENU_CONFIG, CONFIG_SEARCH_ENGINE } from '../../config';
+import { SectionInfiniteScroll, LayoutListingPost, PostList, StickyWrapper, Tree, renderBranches } from 'design-system';
+import { useSeoConfig } from 'hooks';
+import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig } from '../../config';
 import { useGetArticlesQuery } from '../../gql';
 import { adapterArticlesData } from '../../utils/adapters/adapterArticlesData';
 
 function Index(): ReactElement  {
   const seo = useSeoConfig({});
-  const { config: { client } } = useSiteConfig();
-  const isMobile = client?.platform.isMobile || false;
   const { data, fetchMore } = useGetArticlesQuery({
     variables: {
       pageSize: 12,
@@ -35,12 +33,17 @@ function Index(): ReactElement  {
 
   return (
     <LayoutListingPost
-      footer={isMobile ? FOOTER_CONFIG.footer.mobile : FOOTER_CONFIG.footer.desktop}
-      headerMenu={isMobile ? HEADER_MENU_CONFIG.mobile.menu : HEADER_MENU_CONFIG.desktop.menu}
-      searchEngineConfig={CONFIG_SEARCH_ENGINE}
+      footer={footerConfig}
+      headerMenu={headerMenuConfig}
+      searchEngineConfig={searchEngineConfig}
       seo={seo}
-      siteBarLeft={<p>left</p>}
-      siteBarRight={<p>right</p>}
+      siteBarLeft={(
+        <StickyWrapper top="calc(var(--uxu-space-large) * 3)">
+          <Tree activeHref="/">
+            {renderBranches(siteBarMenuConfig)}
+          </Tree>
+        </StickyWrapper>
+      )}
     >
       <SectionInfiniteScroll
         onScrollEnd={handleScrollEnd}

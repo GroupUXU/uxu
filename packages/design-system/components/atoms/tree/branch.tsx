@@ -1,5 +1,6 @@
 /* eslint-disable -- i don't have time now  */
 import React, { useState, useContext, ReactNode, useEffect, useMemo } from 'react';
+import type { ReactElement } from 'react';
 import { ChevronDown, ChevronRight, Minus } from "react-feather";
 import { Link } from '../link';
 import classnames from 'classnames';
@@ -17,8 +18,17 @@ const checkChildrenForActive = (children: ReactNode): boolean => {
   return isActiveChild;
 };
 
-export const Branch: React.FC<BranchProps> = ({ title, children, url, active }) => {
-  const { setActiveBranch, activeSlug, full } = useContext(TreeContext);
+
+export function renderBranches( branches: Array<BranchProps> ): Array<ReactElement> {
+  return branches.map ( ( branch ) => (
+    <Branch key={branch.title} title={branch.title} href={branch.href}>
+      {branch.branches && renderBranches (branch.branches)}
+    </Branch>
+  ) );
+};
+
+export const Branch: React.FC<BranchProps> = ({ title, children, href, active }) => {
+  const { setActiveBranch, activeHref, full } = useContext(TreeContext);
   const [isExpanded, setExpanded] = useState<boolean>(!!active);
 
   useEffect(() => {
@@ -33,8 +43,8 @@ export const Branch: React.FC<BranchProps> = ({ title, children, url, active }) 
   };
 
   const Title = useMemo(() => (
-    <Link href={url} title={title} className={classnames(styles.branchLink, { [styles.full]: full })}>{title}</Link>
-  ), [url, title, full]);
+    <Link href={href} title={title} className={classnames(styles.branchLink, { [styles.full]: full })}>{title}</Link>
+  ), [href, title, full]);
 
   return (
     <li className={classnames(styles.branch, { [styles.full]: full })}>
@@ -43,7 +53,7 @@ export const Branch: React.FC<BranchProps> = ({ title, children, url, active }) 
           onClick={handleToggle}
           className={classnames(styles.branchWrapperLink, {
             [styles.active]: isExpanded,
-            [styles.activeSlug]: url === activeSlug,
+            [styles.activeSlug]: href === activeHref,
             [styles.full]: full
           })}
         >

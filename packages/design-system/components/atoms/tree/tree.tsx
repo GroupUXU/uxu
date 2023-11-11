@@ -6,20 +6,20 @@ import { TreeProps, ITreeContext } from './types'
 
 export const TreeContext = createContext<ITreeContext> ({
   full: false,
-  activeSlug: "",
+  activeHref: "",
   activeBranch: null,
   setActiveBranch: () => {/* empty */},
 });
 
-export const Tree: React.FC<TreeProps> = ({children, activeSlug, full}) => {
+export const Tree: React.FC<TreeProps> = ({children, activeHref, full}) => {
   const [activeBranch, setActiveBranch] = useState<string | null>(null);
 
   const contextValue = useMemo(() => ({
     activeBranch,
     setActiveBranch,
-    activeSlug,
+    activeHref,
     full: !!full
-  }), [activeBranch, activeSlug, full]);
+  }), [activeBranch, activeHref, full]);
 
   return (
     <TreeContext.Provider value={contextValue}>

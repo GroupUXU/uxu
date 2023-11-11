@@ -1,8 +1,8 @@
 import type { ReactElement } from "react";
 import type { GetStaticPropsContext, GetStaticPaths, GetStaticProps } from 'next';
 import type { PostViewData } from 'design-system';
-import { LayoutPostView, PostView, AdPhoneClient } from 'design-system';
-import { useSeoConfig, useSiteConfig } from 'hooks';
+import { LayoutPostView, PostView, AdPhoneClient, StickyWrapper, Tree, renderBranches } from 'design-system';
+import { useSeoConfig } from 'hooks';
 import { createSlug } from 'utils';
 import { connectQueries } from '../../utils/function';
 import { adapterArticleData, adapterArticlesSlugData } from '../../utils/adapters';
@@ -12,7 +12,7 @@ import {
   clientGetArticlesQuery,
   clientClientsWithTagsQuery
 } from '../../gql';
-import { FOOTER_CONFIG, HEADER_MENU_CONFIG, CONFIG_SEARCH_ENGINE } from "../../config";
+import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig } from '../../config';
 
 type ServiceProps = {
   clientPhone?: string;
@@ -21,8 +21,6 @@ type ServiceProps = {
 
 export default function Service({ articleData, clientPhone }: ServiceProps): ReactElement {
   const seo = useSeoConfig({ title: articleData?.title, description: articleData?.lead, images: [{ url: articleData?.cover?.src }] });
-  const { config: { client } } = useSiteConfig();
-  const isMobile = client?.platform.isMobile || false;
 
  const adsWithPhoneClient = clientPhone && {
    tel: clientPhone,
@@ -31,11 +29,20 @@ export default function Service({ articleData, clientPhone }: ServiceProps): Rea
 
   return (
     <LayoutPostView
-      footer={isMobile ? FOOTER_CONFIG.footer.mobile : FOOTER_CONFIG.footer.desktop}
-      headerMenu={isMobile ? HEADER_MENU_CONFIG.mobile.menu : HEADER_MENU_CONFIG.desktop.menu}
-      searchEngineConfig={CONFIG_SEARCH_ENGINE}
+      footer={footerConfig}
+      headerMenu={headerMenuConfig}
+      searchEngineConfig={searchEngineConfig}
       seo={seo}
-      siteBarLeft={<p>SiteBar left</p>}
+      siteBarLeft={(
+        <>
+        <div style={{ height: "3rem" }}/>
+        <StickyWrapper top="calc(var(--uxu-space-large) * 3)">
+          <Tree activeHref="/">
+            {renderBranches(siteBarMenuConfig)}
+          </Tree>
+        </StickyWrapper>
+        </>
+      )}
       topElement={<AdPhoneClient {...adsWithPhoneClient} />}
     >
       {articleData ? <PostView postViewData={articleData}/> : null}
