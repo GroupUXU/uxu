@@ -2,7 +2,7 @@
 import type { ReactElement } from 'react';
 import type { SearchEngineConfig } from "utils";
 import { useSeoConfig, useSiteConfig } from "hooks";
-import { LayoutStaticText, Link } from '../components';
+import { CrumbleMenu, LayoutStaticText, Link } from '../components';
 import type { FooterProps } from "../components/templates/footer/types";
 import type { SearchSuggestionContentDetails } from "../components/organisms/searchEngine/searchEngineInModal/types";
 
@@ -24,6 +24,9 @@ export function PrivacyPolicy ( {footer, headerMenu, defaultSuggestions}: Privac
       headerMenu={headerMenu}
       searchEngineConfig={defaultSuggestions}
       seo={seo}
+      topElement={
+        <CrumbleMenu data={[{title: "home", href: "/"}, { title: 'polityka prywatności', href: '/privacy-policy' }]}/>
+      }
     >
       <h1>Polityka Prywatności</h1>
       <p>Poniżej przedstawiamy informacje dotyczące przetwarzania Państwa danych osobowych w związku z korzystaniem z

@@ -1,6 +1,14 @@
 import type { ReactElement } from 'react';
 import type { GetServerSidePropsContext, GetServerSidePropsResult } from 'next';
-import { LayoutListingPost, SectionInfiniteScroll, PostList, StickyWrapper, Tree, renderBranches } from 'design-system';
+import {
+  LayoutListingPost,
+  SectionInfiniteScroll,
+  PostList,
+  StickyWrapper,
+  Tree,
+  renderBranches,
+  CrumbleMenu
+} from 'design-system';
 import { useSeoConfig } from 'hooks';
 import { useGetArticlesWithTagQuery } from '../../gql';
 import { adapterArticlesData } from '../../utils/adapters/adapterArticlesData';
@@ -55,6 +63,9 @@ export default function Tag({ tagID , tagName }: TagProps ): ReactElement {
           </Tree>
         </StickyWrapper>
       )}
+      topElement={
+        <CrumbleMenu data={[{title: "home", href: "/"}, {title: tagName, href: `/t/${tagID}/${tagName}`}]}/>
+      }
     >
       <SectionInfiniteScroll
         onScrollEnd={handleScrollEnd}

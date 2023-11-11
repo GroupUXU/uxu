@@ -2,7 +2,7 @@
 import type { ReactElement } from 'react';
 import type { SearchEngineConfig } from "utils";
 import { useSeoConfig, useSiteConfig } from "hooks";
-import { LayoutStaticText, Link } from '../components';
+import { CrumbleMenu, LayoutStaticText, Link } from '../components';
 import type { FooterProps } from "../components/templates/footer/types";
 import type { SearchSuggestionContentDetails } from "../components/organisms/searchEngine/searchEngineInModal/types";
 
@@ -25,6 +25,9 @@ export function Terms ({ footer, headerMenu, defaultSuggestions }: TermsProps): 
       headerMenu={headerMenu}
       searchEngineConfig={defaultSuggestions}
       seo={seo}
+      topElement={
+        <CrumbleMenu data={[{title: "home", href: "/"}, {title: 'regulamin', href: '/terms' }]}/>
+      }
     >
       <h1>Regulamin</h1>
       <p>Przed założeniem konta w Serwisie należy uważnie przeczytać poniższy Regulamin. Założenie konta jest

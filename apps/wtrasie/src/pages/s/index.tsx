@@ -1,5 +1,13 @@
 import type { ReactElement } from 'react';
-import { SectionInfiniteScroll, LayoutListingPost, PostList, StickyWrapper, Tree, renderBranches } from 'design-system';
+import {
+  SectionInfiniteScroll,
+  LayoutListingPost,
+  PostList,
+  StickyWrapper,
+  Tree,
+  renderBranches,
+  CrumbleMenu
+} from 'design-system';
 import { useSeoConfig } from 'hooks';
 import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig } from '../../config';
 import { useGetArticlesQuery } from '../../gql';
@@ -44,6 +52,9 @@ function Index(): ReactElement  {
           </Tree>
         </StickyWrapper>
       )}
+      topElement={
+        <CrumbleMenu data={[{title: "home", href: "/"}, {title: "usługi", href: "/s"}]}/>
+      }
     >
       <SectionInfiniteScroll
         onScrollEnd={handleScrollEnd}

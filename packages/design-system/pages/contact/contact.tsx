@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { requestStatus } from 'utils';
 import { useSeoConfig, useSiteConfig } from "hooks";
 import { Note, LoadingDots } from '../../components/atoms';
-import { Input, LayoutFull, Link, Textarea } from '../../components';
+import { CrumbleMenu, Input, LayoutFull, Link, Textarea } from '../../components';
 import type { ContactProps, ContactFormInputsProps } from "./types";
 import styles from './contact.module.scss';
 import { FORM_FIELD } from "./consts";
@@ -61,6 +61,7 @@ export function Contact({ footer, headerMenu, defaultSuggestions, sendMessage }:
 
   return (
     <LayoutFull footer={footer} headerMenu={headerMenu} searchEngineConfig={defaultSuggestions} seo={seo}>
+      <CrumbleMenu data={[{ title: "home", href: "/" }, { title: "kontakt", href: "/contact" }]}/>
       <div className={styles.header}>
         <h1>Porozmawiaj z naszym zespołem</h1>
         <p>Pomożemy Ci znaleźć odpowiednie rozwiązanie.</p>
