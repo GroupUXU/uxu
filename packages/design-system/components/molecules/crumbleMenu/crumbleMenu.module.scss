@@ -1,0 +1,44 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  overflow-y: scroll;
+  padding: var(--uxu-space-default) 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    a, span {
+      text-transform: lowercase;
+    }
+
+    &.active {
+      a, span {
+        color: var(--uxu-color-primary-foreground);
+      }
+    }
+
+    &:before {
+      top: -0.2rem;
+      content: "/";
+      position: relative;
+      margin: 0 var(--uxu-space-small);
+      color: var(--uxu-color-primary-accent3);
+    }
+
+    &:first-of-type {
+      &:before {
+        display: none;
+      }
+    }
+
+    a, span {
+      display: flex;
+      line-height: 1;
+      align-items: center;
+      gap: var(--uxu-space-small);
+    }
+  }
+}

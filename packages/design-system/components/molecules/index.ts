@@ -1,6 +1,7 @@
 export * from './inputs';
 export * from './chunks';
 export * from './confetti';
+export * from './crumbleMenu';
 export * from './collspace';
 export * from './listButtonsSocialShare';
 export * from './menu';

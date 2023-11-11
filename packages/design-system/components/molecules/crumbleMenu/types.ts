@@ -1,0 +1,1 @@
+export type CrumbleMenuProps = Array<{ href: string, title: string; }>
