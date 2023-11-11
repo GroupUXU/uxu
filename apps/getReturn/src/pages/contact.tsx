@@ -1,13 +1,10 @@
 /* eslint-disable camelcase -- Disabling camelcase rule as 'Enum_Customermessage_Status' and 'Enum_Customermessage_Type' are auto-generated from the backend */
 import type { ReactElement } from 'react';
 import { Contact } from 'design-system';
-import { useSiteConfig } from "hooks";
-import { CONFIG_SEARCH_ENGINE, FOOTER_CONFIG, HEADER_MENU_CONFIG } from '../config';
+import { searchEngineConfig, footerConfig, headerMenuConfig } from '../config';
 import { Enum_Customermessage_Status, Enum_Customermessage_Type, useAddCustomerMessageMutation } from "../gql";
 
 function PageContact (): ReactElement {
-  const {config} = useSiteConfig ();
-  const isMobile = config.client?.platform.isMobile || false;
   const [addCustomerMessageMutation] = useAddCustomerMessageMutation ();
 
 
@@ -29,9 +26,9 @@ function PageContact (): ReactElement {
 
   return (
     <Contact
-      defaultSuggestions={CONFIG_SEARCH_ENGINE}
-      footer={isMobile ? FOOTER_CONFIG.footer.mobile : FOOTER_CONFIG.footer.desktop}
-      headerMenu={isMobile ? HEADER_MENU_CONFIG.mobile.menu : HEADER_MENU_CONFIG.desktop.menu}
+      defaultSuggestions={searchEngineConfig}
+      footer={footerConfig}
+      headerMenu={headerMenuConfig}
       sendMessage={sendMessage}
     />
   )

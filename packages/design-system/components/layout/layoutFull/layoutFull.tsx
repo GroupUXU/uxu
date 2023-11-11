@@ -19,7 +19,7 @@ export function LayoutFull( { children, footer, headerMenu, searchEngineConfig, 
       <NextSeo {...seo} />
       <Header
         leftComponents={<HeaderLeftComponents headerMenu={headerMenu} isLinkActive={isLinkActive} searchEngineConfig={searchEngineConfig} />}
-        mobileHamburgerMenu={<MobileVerticalModal currentSlug={currentSlug} headerMenu={headerMenu} isLinkActive={isLinkActive} />}
+        mobileHamburgerMenu={<MobileVerticalModal activeHref={currentSlug} headerMenu={headerMenu} isLinkActive={isLinkActive} />}
         rightComponents={<HeaderRightComponents modalAlignment='right' switchModalButtonText='sugestia' />}
       />
       <div className={styles.menuSpacer} />

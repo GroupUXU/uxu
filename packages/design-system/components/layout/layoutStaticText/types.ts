@@ -8,7 +8,7 @@ export type LayoutListingPostProps = PropsWithChildren<{
   seo?: NextSeoProps;
   footer: FooterProps;
   searchEngineConfig: SearchEngineConfig<Array<SearchSuggestionContentDetails>>;
-  headerMenu: Array<{ slug: string, title: string }>;
+  headerMenu: Array<{ href: string, title: string }>;
   topElement?: JSX.Element | Array<JSX.Element>;
   siteBarLeft?: JSX.Element | Array<JSX.Element>;
   siteBarRight?: JSX.Element | Array<JSX.Element>;

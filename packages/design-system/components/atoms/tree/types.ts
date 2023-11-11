@@ -2,13 +2,13 @@ import type { ReactNode, SetStateAction, Dispatch } from "react";
 
 export type TreeProps = {
   full?: boolean;
-  activeSlug: string;
+  activeHref: string;
   children: ReactNode;
 }
 
 export type ITreeContext = {
   full: boolean;
-  activeSlug: string;
+  activeHref: string;
   activeBranch: string | null;
   setActiveBranch: Dispatch<SetStateAction<string | null>>;
 }
@@ -16,6 +16,7 @@ export type ITreeContext = {
 export type BranchProps = {
   title: string;
   children?: ReactNode;
-  url: string;
+  href: string;
   active?: boolean;
+  branches?: Array<BranchProps>;
 }

@@ -1,11 +1,11 @@
 import type { ReactElement } from 'react';
 import type { GetStaticPropsContext, GetServerSideProps } from 'next';
-import { LayoutPostView, PostView } from 'design-system';
-import { useSeoConfig, useSiteConfig } from 'hooks';
+import { LayoutPostView, PostView, renderBranches, StickyWrapper, Tree } from 'design-system';
+import { useSeoConfig } from 'hooks';
 import type { GetAdapterArticleData } from '../../utils/adapters/adapterArticleData/types';
 import { adapterArticleData } from '../../utils/adapters/adapterArticleData';
 import { clientGetArticleQuery } from '../../gql';
-import { FOOTER_CONFIG, HEADER_MENU_CONFIG, CONFIG_SEARCH_ENGINE } from "../../config";
+import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig } from '../../config';
 
 
 type ArticleProps = {
@@ -14,16 +14,20 @@ type ArticleProps = {
 
 export default function Article({ articleData }: ArticleProps): ReactElement {
   const seo = useSeoConfig({ title: articleData?.title, description: articleData?.lead, images: [{ url: articleData?.cover?.src }] });
-  const { config: { client } } = useSiteConfig();
-  const isMobile = client?.platform.isMobile || false;
 
   return (
     <LayoutPostView
-      footer={isMobile ? FOOTER_CONFIG.footer.mobile : FOOTER_CONFIG.footer.desktop}
-      headerMenu={isMobile ? HEADER_MENU_CONFIG.mobile.menu : HEADER_MENU_CONFIG.desktop.menu}
-      searchEngineConfig={CONFIG_SEARCH_ENGINE}
+      footer={footerConfig}
+      headerMenu={headerMenuConfig}
+      searchEngineConfig={searchEngineConfig}
       seo={seo}
-      siteBarLeft={<p>left</p>}
+      siteBarLeft={(
+        <StickyWrapper top="calc(var(--uxu-space-large) * 3)">
+          <Tree activeHref="/">
+            {renderBranches(siteBarMenuConfig)}
+          </Tree>
+        </StickyWrapper>
+      )}
     >
       {articleData ? <PostView postViewData={articleData}/> : null}
     </LayoutPostView>

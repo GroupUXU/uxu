@@ -9,7 +9,7 @@ export type ContactFormInputsProps = {
 
 export type ContactProps = {
   footer: FooterProps,
-  headerMenu: Array<{ slug: string, title: string }>,
+  headerMenu: Array<{ href: string, title: string }>,
   sendMessage: (data: ContactFormInputsProps) => Promise<{ status: boolean }>,
   defaultSuggestions: SearchEngineConfig<Array<SearchSuggestionContentDetails>>
 };

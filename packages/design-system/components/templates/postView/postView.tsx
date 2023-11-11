@@ -32,7 +32,7 @@ export function PostView({ postViewData }: PostViewProps ): ReactElement {
               {({chunkComponents}) => chunkComponents.map(transformChunkToComponent)}
             </ParseContentPartToChunk>
         </div>
-        <div className={classnames(styles.wrapperAds, styles.adsInPost)} style={{paddingTop: "var(--uxu-space-default)"}}>
+        <div className={classnames(styles.wrapperAds, styles.adsInPost)} style={{ paddingTop: "var(--uxu-space-default)" }}>
           <Ads slot="s250600" stickyOffset="9rem" />
         </div>
         <div className={styles.content}>

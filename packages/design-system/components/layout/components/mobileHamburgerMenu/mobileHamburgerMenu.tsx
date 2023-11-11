@@ -2,12 +2,12 @@ import type { ReactElement  } from 'react';
 import { Tree, Branch } from '../../../atoms';
 import type { MobileVerticalModalProps } from "./types";
 
-export function MobileVerticalModal({ currentSlug, headerMenu, isLinkActive }: MobileVerticalModalProps): ReactElement {
+export function MobileVerticalModal({ activeHref, headerMenu, isLinkActive }: MobileVerticalModalProps): ReactElement {
  return (
-    <Tree activeSlug={currentSlug} full>
-      {headerMenu.map (({ slug, title }: {slug: string, title: string }) => (
-        <Branch active={isLinkActive(slug)} key={slug} title={title} url={slug}/>
-      ) )}
+    <Tree activeHref={activeHref} full>
+      {headerMenu.map(({ href, title }: { href: string, title: string }) => (
+        <Branch active={isLinkActive(href)} href={href} key={href} title={title} />
+      ))}
     </Tree>
   )
 }

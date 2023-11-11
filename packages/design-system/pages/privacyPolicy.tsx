@@ -8,7 +8,7 @@ import type { SearchSuggestionContentDetails } from "../components/organisms/sea
 
 type PrivacyPolicyProps = {
   footer: FooterProps,
-  headerMenu: Array<{ slug: string, title: string }>,
+  headerMenu: Array<{ href: string, title: string }>,
   defaultSuggestions: SearchEngineConfig<Array<SearchSuggestionContentDetails>>
 }
 

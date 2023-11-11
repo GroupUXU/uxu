@@ -8,5 +8,5 @@ export type LayoutFullProps = PropsWithChildren<{
   seo?: NextSeoProps;
   footer: FooterProps;
   searchEngineConfig: SearchEngineConfig<Array<SearchSuggestionContentDetails>>;
-  headerMenu: Array<{ slug: string, title: string }>;
+  headerMenu: Array<{ href: string, title: string }>;
 }>

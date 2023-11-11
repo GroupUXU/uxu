@@ -3,6 +3,6 @@ import type { SearchSuggestionContentDetails } from "../../../organisms/searchEn
 
 export type HeaderLeftComponentsProps = {
   isLinkActive: (slug: string) => boolean;
-  headerMenu: Array<{ slug: string, title: string }>;
+  headerMenu: Array<{ href: string, title: string }>;
   searchEngineConfig: SearchEngineConfig<Array<SearchSuggestionContentDetails>>;
 };

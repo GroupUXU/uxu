@@ -20,7 +20,7 @@ export function LayoutListingPost({ children, footer, headerMenu, searchEngineCo
       <NextSeo {...seo} />
       <Header
         leftComponents={<HeaderLeftComponents headerMenu={headerMenu} isLinkActive={isLinkActive} searchEngineConfig={searchEngineConfig} />}
-        mobileHamburgerMenu={<MobileVerticalModal currentSlug={currentSlug} headerMenu={headerMenu} isLinkActive={isLinkActive} />}
+        mobileHamburgerMenu={<MobileVerticalModal activeHref={currentSlug} headerMenu={headerMenu} isLinkActive={isLinkActive} />}
         rightComponents={<HeaderRightComponents modalAlignment='right' switchModalButtonText='sugestia' />}
       />
       <div className={styles.menuSpacer} />

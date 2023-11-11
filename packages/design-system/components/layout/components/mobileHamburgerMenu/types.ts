@@ -1,5 +1,5 @@
 export type MobileVerticalModalProps = {
-  currentSlug: string;
-  headerMenu: Array<{ slug: string, title: string }>;
+  activeHref: string;
+  headerMenu: Array<{ href: string, title: string }>;
   isLinkActive: (slug: string) => boolean;
 };

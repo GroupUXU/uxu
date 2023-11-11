@@ -1,56 +1,59 @@
 import type { ReactElement } from 'react';
-import { SectionInfiniteScroll, LayoutListingPost, PostList } from 'design-system';
-import { useSeoConfig, useSiteConfig } from 'hooks';
-import { FOOTER_CONFIG, HEADER_MENU_CONFIG, CONFIG_SEARCH_ENGINE } from '../config';
+import { SectionInfiniteScroll, LayoutListingPost, PostList, Tree, renderBranches, StickyWrapper } from 'design-system';
+import { useSeoConfig } from 'hooks';
+import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig } from '../config';
 import { useGetArticlesQuery } from '../gql';
 import { adapterArticlesData } from '../utils/adapters/adapterArticlesData';
 
-function Index(): ReactElement  {
-  const seo = useSeoConfig({});
-  const { config: { client } } = useSiteConfig();
-  const isMobile = client?.platform.isMobile || false;
+function Index (): ReactElement {
+  const seo = useSeoConfig ( {} );
 
-  const { data, fetchMore } = useGetArticlesQuery({
+  const {data, fetchMore} = useGetArticlesQuery ( {
     variables: {
       pageSize: 12,
       page: 1,
       type: ['article']
     },
     ssr: true
-  });
+  } );
 
-  const handleScrollEnd = async (page: number): Promise<{ page?: number }> => {
+  const handleScrollEnd = async ( page: number ): Promise<{ page?: number }> => {
     try {
-      await fetchMore({
+      await fetchMore ( {
         variables: {
           pageSize: 12,
           page,
           type: ['article']
         }
-      });
-      return { page: page + 1 };
+      } );
+      return {page: page + 1};
     } catch (error) {
-      return { page };
+      return {page};
     }
   };
 
   return (
     <LayoutListingPost
-      footer={isMobile ? FOOTER_CONFIG.footer.mobile : FOOTER_CONFIG.footer.desktop}
-      headerMenu={isMobile ? HEADER_MENU_CONFIG.mobile.menu : HEADER_MENU_CONFIG.desktop.menu}
-      searchEngineConfig={CONFIG_SEARCH_ENGINE}
+      footer={footerConfig}
+      headerMenu={headerMenuConfig}
+      searchEngineConfig={searchEngineConfig}
       seo={seo}
-      siteBarLeft={<p>left</p>}
-      siteBarRight={<p>right</p>}
+      siteBarLeft={(
+        <StickyWrapper top="calc(var(--uxu-space-large) * 3)">
+          <Tree activeHref="/">
+            {renderBranches(siteBarMenuConfig)}
+          </Tree>
+        </StickyWrapper>
+      )}
     >
       <SectionInfiniteScroll
         onScrollEnd={handleScrollEnd}
         page={data?.articles?.meta.pagination.page || 1}
         pageCount={data?.articles?.meta.pagination.pageCount || 1}
       >
-        {data ? adapterArticlesData(data, "small").map((article) => (
-          <PostList {...article} key={article.id || 'fallback'} />
-        )) : null}
+        {data ? adapterArticlesData ( data, "small" ).map ( ( article ) => (
+          <PostList {...article} key={article.id || 'fallback'}/>
+        ) ) : null}
       </SectionInfiniteScroll>
     </LayoutListingPost>
   );

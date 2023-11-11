@@ -1,10 +1,10 @@
 import type { ReactElement } from 'react';
 import type { GetServerSidePropsContext, GetServerSidePropsResult } from 'next';
-import { LayoutListingPost, SectionInfiniteScroll, PostList } from 'design-system';
-import { useSeoConfig, useSiteConfig } from 'hooks';
+import { LayoutListingPost, SectionInfiniteScroll, PostList, StickyWrapper, Tree, renderBranches } from 'design-system';
+import { useSeoConfig } from 'hooks';
 import { useGetArticlesWithTagQuery } from '../../gql';
 import { adapterArticlesData } from '../../utils/adapters/adapterArticlesData';
-import { FOOTER_CONFIG, HEADER_MENU_CONFIG, CONFIG_SEARCH_ENGINE } from "../../config";
+import { footerConfig, headerMenuConfig, searchEngineConfig, siteBarMenuConfig } from "../../config";
 
 type TagProps = {
   tagID: string;
@@ -16,8 +16,6 @@ function isStringArray(value: unknown): boolean {
 }
 
 export default function Tag({ tagID , tagName }: TagProps ): ReactElement {
-  const { config: { client } } = useSiteConfig();
-  const isMobile = client?.platform.isMobile || false;
   const { data, fetchMore } = useGetArticlesWithTagQuery({
     variables: {
       pageSize: 12,
@@ -46,12 +44,17 @@ export default function Tag({ tagID , tagName }: TagProps ): ReactElement {
 
   return (
     <LayoutListingPost
-      footer={isMobile ? FOOTER_CONFIG.footer.mobile : FOOTER_CONFIG.footer.desktop}
-      headerMenu={isMobile ? HEADER_MENU_CONFIG.mobile.menu : HEADER_MENU_CONFIG.desktop.menu}
-      searchEngineConfig={CONFIG_SEARCH_ENGINE}
+      footer={footerConfig}
+      headerMenu={headerMenuConfig}
+      searchEngineConfig={searchEngineConfig}
       seo={seo}
-      siteBarLeft={<p>left</p>}
-      siteBarRight={<p>right</p>}
+      siteBarLeft={(
+        <StickyWrapper top="calc(var(--uxu-space-large) * 3)">
+          <Tree activeHref="/">
+            {renderBranches(siteBarMenuConfig)}
+          </Tree>
+        </StickyWrapper>
+      )}
     >
       <SectionInfiniteScroll
         onScrollEnd={handleScrollEnd}

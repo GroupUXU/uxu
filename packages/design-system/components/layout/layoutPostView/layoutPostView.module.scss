@@ -33,6 +33,7 @@ $default-grid-layout: (
   grid-template-columns: map-get($default-grid-layout, xs);
 
   .siteBarLeft {
+    height: 100%;
     display: none;
   }
 
