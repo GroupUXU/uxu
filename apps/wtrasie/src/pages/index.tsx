@@ -1,6 +1,16 @@
 import type { ReactElement } from 'react';
-import { SectionInfiniteScroll, LayoutListingPost, PostList, Tree, renderBranches, StickyWrapper, CrumbleMenu } from 'design-system';
+import {
+  SectionInfiniteScroll,
+  LayoutListingPost,
+  PostList,
+  Tree,
+  renderBranches,
+  StickyWrapper,
+  CrumbleMenu,
+  LeadPostWithList
+} from 'design-system';
 import { useSeoConfig } from 'hooks';
+import type { PostShort } from "utils";
 import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig } from '../config';
 import { useGetArticlesQuery } from '../gql';
 import { adapterArticlesData } from '../utils/adapters/adapterArticlesData';
@@ -17,7 +27,9 @@ function Index (): ReactElement {
     ssr: true
   } );
 
-  const handleScrollEnd = async ( page: number ): Promise<{ page?: number }> => {
+  const handleScrollEnd = async ( page: number ): Promise<{
+    page?: number
+  }> => {
     try {
       await fetchMore ( {
         variables: {
@@ -32,6 +44,28 @@ function Index (): ReactElement {
     }
   };
 
+
+  let leadPostWithListData: Array<PostShort> = [];
+  let postListData: Array<PostShort> = [];
+
+  if ( data ) {
+    const articlesCopy = data.articles?.data || [];
+
+    const firstFiveArticles = articlesCopy.slice ( 0, 5 );
+    const remainingArticles = articlesCopy.slice ( 5 );
+
+    leadPostWithListData = adapterArticlesData (
+      {...data, articles: { meta: data.articles?.meta, data: firstFiveArticles }},
+      "medium"
+    );
+
+    postListData = adapterArticlesData (
+      {...data, articles: { meta: data.articles?.meta, data: remainingArticles }},
+      "small"
+    );
+  }
+
+
   return (
     <LayoutListingPost
       footer={footerConfig}
@@ -41,20 +75,23 @@ function Index (): ReactElement {
       siteBarLeft={(
         <StickyWrapper top="calc(var(--uxu-space-large) * 3)">
           <Tree activeHref="/">
-            {renderBranches(siteBarMenuConfig)}
+            {renderBranches ( siteBarMenuConfig )}
           </Tree>
         </StickyWrapper>
       )}
-      topElement={<CrumbleMenu data={[{ title: "home", href: "/" }]}/>}
+      topElement={(
+        <>
+          <LeadPostWithList posts={leadPostWithListData}/>
+          <CrumbleMenu data={[{title: "home", href: "/"}]}/>
+        </>
+      )}
     >
       <SectionInfiniteScroll
         onScrollEnd={handleScrollEnd}
         page={data?.articles?.meta.pagination.page || 1}
         pageCount={data?.articles?.meta.pagination.pageCount || 1}
       >
-        {data ? adapterArticlesData ( data, "small" ).map ( ( article ) => (
-          <PostList {...article} key={article.id || 'fallback'}/>
-        ) ) : null}
+        {postListData.map ( ( article ) => (<PostList {...article} key={article.id || 'fallback'}/>) )}
       </SectionInfiniteScroll>
     </LayoutListingPost>
   );

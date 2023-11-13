@@ -1,0 +1,45 @@
+@import "../../../../../../style/mixins";
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--uxu-space-small);
+  padding-bottom: var(--uxu-space-large);
+
+  @include media(m) {
+    width: 80%;
+    transform: scale(1);
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+  }
+
+
+  h1, p {
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+  }
+
+  h1 {
+    -webkit-line-clamp: 1;
+    font-size: var(--uxu-font-size-large);
+    color: var(--uxu-color-primary-foreground);
+
+    @include media(m) {
+      font-size: var(--uxu-font-size-h1);
+    }
+  }
+
+  p {
+    -webkit-line-clamp: 2;
+    color: var(--uxu-color-primary-accent5);
+  }
+
+}

@@ -5,27 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/crumbleMenu/crumbleMenu.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/crumbleMenu/crumbleMenu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/crumbleMenu/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/crumbleMenu/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/hooks/useHref.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost/leadPost.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost/leadPost.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/postList/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/postList/postList.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/postList/postList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/postList/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/leadPostWithList.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/leadPostWithList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/utils/types/content/post.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/a/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/a/[...slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/blog/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/blog/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/t/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/t/[...slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/a/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/a/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/gql/query/gql.query.article.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/gql/query/gql.query.article.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/gql/types/gql.query.article.generated.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/gql/types/gql.query.article.generated.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/t/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/t/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterArticleData/adapterArticleData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterArticleData/adapterArticleData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterArticlesData/adapterArticlesData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterArticlesData/adapterArticlesData.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/link/link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/link/link.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/contact/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/contact/contact.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/privacyPolicy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/privacyPolicy.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/terms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/terms.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/hooks/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/hooks/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/avatarGroup/avatarGroup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/avatarGroup/avatarGroup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/confetti/confetti.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/confetti/confetti.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/postList/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/postList/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/postView/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionInfiniteScroll/hooks/useLoadNextPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionInfiniteScroll/hooks/useLoadNextPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionInfiniteScroll/sectionInfiniteScroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionInfiniteScroll/sectionInfiniteScroll.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/types/content/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/types/content/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +60,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feat/add-crumbleMenu",
-    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/packages/design-system/components/atoms/crumbleMenu",
+    "git-widget-placeholder": "feat/add-section-leadPostWithList",
+    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/packages/design-system/components/templates/section/leadPostWithList/component/postList",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -67,18 +76,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/postList" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/crumbleMenu" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/stickyWrapper" />
-      <recent name="$PROJECT_DIR$/packages/utils/enums" />
-      <recent name="$PROJECT_DIR$/apps/wtrasie/src/gql/query" />
-      <recent name="$PROJECT_DIR$/apps/getReturn/src/gql/query" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost" />
       <recent name="$PROJECT_DIR$/packages/hooks" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules" />
       <recent name="$PROJECT_DIR$/packages/design-system/pages/contact" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspace" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -131,7 +140,9 @@
       <workItem from="1699551389264" duration="16152000" />
       <workItem from="1699640799662" duration="1794000" />
       <workItem from="1699699970888" duration="11513000" />
-      <workItem from="1699721499798" duration="11815000" />
+      <workItem from="1699721499798" duration="14678000" />
+      <workItem from="1699867113830" duration="1119000" />
+      <workItem from="1699889073944" duration="13379000" />
     </task>
     <servers />
   </component>

@@ -9,7 +9,7 @@ import {
   Tree
 } from 'design-system';
 import { useSeoConfig } from 'hooks';
-import type { GetAdapterArticleData } from '../../utils/adapters/adapterArticleData/types';
+import type { PostFull } from 'utils';
 import { adapterArticleData } from '../../utils/adapters/adapterArticleData';
 import { clientGetArticleQuery } from '../../gql';
 import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig } from '../../config';
@@ -17,7 +17,7 @@ import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig }
 
 type ArticleProps = {
   slug?: string;
-  articleData: GetAdapterArticleData | null;
+  articleData: PostFull | null;
 }
 
 export default function Article({ articleData, slug }: ArticleProps): ReactElement {

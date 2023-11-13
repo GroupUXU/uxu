@@ -1,6 +1,6 @@
 import type { ReactElement } from "react";
 import type { GetStaticPropsContext, GetStaticPaths, GetStaticProps } from 'next';
-import type { PostViewData } from 'design-system';
+import type { PostFull } from 'utils';
 import {
   LayoutPostView,
   PostView,
@@ -25,7 +25,7 @@ import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig }
 type ServiceProps = {
   slug?: string;
   clientPhone?: string;
-  articleData?: PostViewData;
+  articleData?: PostFull;
 };
 
 export default function Service ( {articleData, clientPhone, slug }: ServiceProps ): ReactElement {
@@ -101,7 +101,7 @@ export async function getStaticProps ( context: GetStaticPropsContext ): Promise
   const id: number = parseInt ( params.slug[ 0 ] );
 
   const {data: getArticleQuery} = await clientGetArticleQuery ( {variables: {id}} );
-  const articleData: PostViewData = adapterArticleData ( getArticleQuery );
+  const articleData: PostFull = adapterArticleData ( getArticleQuery );
 
   const tagsId: Array<string> = articleData.tags.map ( tag => tag.id );
 
