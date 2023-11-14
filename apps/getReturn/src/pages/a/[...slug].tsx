@@ -1,6 +1,11 @@
 import type { ReactElement } from 'react';
 import type { GetStaticPropsContext, GetServerSideProps } from 'next';
-import { CrumbleMenu, LayoutPostView, PostView, renderBranches, StickyWrapper, Tree, useSeoConfig } from 'design-system';
+import { CrumbleMenu } from 'design-system/components/molecules/crumbleMenu';
+import { LayoutPostView } from 'design-system/components/layout/layoutPostView';
+import { PostView } from 'design-system/components/templates/postView';
+import { renderBranches, Tree } from 'design-system/components/molecules/tree';
+import { StickyWrapper } from 'design-system/components/atoms/stickyWrapper';
+import { useSeoConfig } from 'design-system/hooks/useSeoConfig';
 import type { PostFull } from 'utils';
 import { adapterArticleData } from '../../utils/adapters/adapterArticleData';
 import { clientGetArticleQuery } from '../../gql';

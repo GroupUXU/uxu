@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import type { PostShort } from 'utils'
-import { Container } from '../../../atoms';
+import { Container } from '../../../atoms/container';
 import type { LeadPostWithListProps } from './types'
 import { LeadPost, PostList } from './component'
 import styles from './leadPostWithList.module.scss';

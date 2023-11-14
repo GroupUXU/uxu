@@ -1,8 +1,8 @@
 import React, { useState, useContext, ReactNode, useEffect, useMemo } from 'react';
 import type { ReactElement } from 'react';
-import { ChevronDown, ChevronRight, Minus } from "react-feather";
-import { Link } from '../../atoms';
 import classnames from 'classnames';
+import { ChevronDown, ChevronRight, Minus } from "react-feather";
+import { Link } from '../../atoms/link';
 import styles from './tree.module.scss';
 import { BranchProps } from './types'
 import { TreeContext } from './tree'

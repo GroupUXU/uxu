@@ -1,15 +1,12 @@
 import type { ReactElement } from 'react';
-import {
-  SectionInfiniteScroll,
-  LayoutListingPost,
-  PostList,
-  Tree,
-  renderBranches,
-  StickyWrapper,
-  CrumbleMenu,
-  LeadPostWithList,
-  useSeoConfig
-} from 'design-system';
+import { SectionInfiniteScroll } from 'design-system/components/templates/section/sectionInfiniteScroll';
+import { LayoutListingPost } from 'design-system/components/layout/layoutListingPost/layoutListingPost';
+import { PostList } from 'design-system/components/organisms/postList';
+import { Tree, renderBranches } from 'design-system/components/molecules/tree';
+import { StickyWrapper } from 'design-system/components/atoms/stickyWrapper';
+import { CrumbleMenu } from 'design-system/components/molecules/crumbleMenu';
+import { LeadPostWithList } from 'design-system/components/templates/section/leadPostWithList';
+import { useSeoConfig } from 'design-system/hooks/useSeoConfig';
 import type { PostShort } from "utils";
 import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig } from '../config';
 import { useGetArticlesQuery } from '../gql';

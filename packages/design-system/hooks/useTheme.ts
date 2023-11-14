@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import { CookieManager, checkIsDOM } from 'utils';
 import type { SiteConfig, SiteConfigProps, Site } from 'utils'; // Ensure 'Site' type is imported if it's defined in 'utils'.
-import { useSiteConfig } from './config/useSiteConfig';
+import { useSiteConfig } from './useSiteConfig';
 
 export function useTheme() {
   const cookieManager = useRef<CookieManager | null>(null);

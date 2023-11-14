@@ -4,7 +4,7 @@ import type { ReactElement } from "react";
 import type { AppProps, AppContext } from 'next/app';
 import { getThemeFromRequest, getClientLocaleFromRequest, getMobilePlatformStatusFromRequest, getOSInfoFromRequest, getCookieConsentSettings } from 'utils';
 import type { SiteConfigProps } from 'utils';
-import { WrapperProviders } from 'design-system';
+import { WrapperProviders } from 'design-system/providers/provider.wrapper';
 import 'design-system/style/globalStyle.scss';
 import { APOLLO_CLIENT, SITE_CONFIG } from "../config";
 

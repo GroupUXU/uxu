@@ -3,8 +3,10 @@ import { useCallback } from 'react';
 import type { ReactElement } from 'react';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
-import { SiteBar, Container } from '../../atoms';
-import { Footer, Header } from '../../templates';
+import { SiteBar } from '../../atoms/siteBar';
+import { Container } from '../../atoms/container';
+import { Header } from '../../templates/header';
+import { Footer } from '../../templates/footer';
 import { MobileVerticalModal, HeaderLeftComponents, HeaderRightComponents } from '../components'
 import type { LayoutPostViewProps } from './types';
 import styles from './layoutPostView.module.scss';

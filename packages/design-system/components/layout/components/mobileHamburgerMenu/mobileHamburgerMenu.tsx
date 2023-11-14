@@ -1,5 +1,5 @@
 import type { ReactElement  } from 'react';
-import { Tree, Branch } from '../../../molecules';
+import { Tree, Branch } from '../../../molecules/tree';
 import type { MobileVerticalModalProps } from "./types";
 
 export function MobileVerticalModal({ activeHref, headerMenu, isLinkActive }: MobileVerticalModalProps): ReactElement {

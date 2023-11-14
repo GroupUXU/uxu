@@ -2,7 +2,7 @@
 import { forwardRef } from 'react';
 import type { ReactElement } from 'react';
 import classNames from 'classnames';
-import { Note } from '../../../atoms';
+import { Note } from '../../../atoms/note';
 import type { InputProps } from './types';
 import styles from './input.module.scss';
 

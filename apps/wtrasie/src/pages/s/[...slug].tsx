@@ -1,17 +1,14 @@
 import type { ReactElement } from "react";
 import type { GetStaticPropsContext, GetStaticPaths, GetStaticProps } from 'next';
 import type { PostFull } from 'utils';
-import {
-  LayoutPostView,
-  PostView,
-  AdPhoneClient,
-  StickyWrapper,
-  Tree,
-  renderBranches,
-  CrumbleMenu,
-  useSeoConfig
-} from 'design-system';
 import { createSlug } from 'utils';
+import { AdPhoneClient } from 'design-system/components/molecules/adPhoneClient';
+import { LayoutPostView } from 'design-system/components/layout/layoutPostView';
+import { PostView } from 'design-system/components/templates/postView';
+import { Tree, renderBranches } from 'design-system/components/molecules/tree';
+import { StickyWrapper } from 'design-system/components/atoms/stickyWrapper';
+import { CrumbleMenu } from 'design-system/components/molecules/crumbleMenu';
+import { useSeoConfig } from 'design-system/hooks/useSeoConfig';
 import { connectQueries } from '../../utils/function';
 import { adapterArticleData, adapterArticlesSlugData } from '../../utils/adapters';
 import type { GetArticlesQuery } from '../../gql';

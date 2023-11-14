@@ -1,8 +1,8 @@
 import type { ReactElement } from "react";
 import Img from "next/image";
 import { Image } from "react-feather";
-import { Link } from "../../atoms";
-import { AvatarGroup } from "../../molecules";
+import { Link } from "../../atoms/link";
+import { AvatarGroup } from "../../molecules/avatarGroup";
 import styles from './postList.module.scss'
 import type { PostListProps } from "./types";
 

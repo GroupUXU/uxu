@@ -2,7 +2,7 @@
 import React from "react";
 import type { ReactElement } from "react";
 import { Smile, Meh, Frown } from "react-feather";
-import { InputRadioIcon } from '../../../molecules';
+import { InputRadioIcon } from '../../../molecules/inputs';
 import styles from '../feedback.module.scss';
 import type { FeedbackRatingsProps } from './types';
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import type { ReactElement } from "react";
-import { Input } from "../../../../../molecules";
-import { LoadingWheel } from "../../../../../atoms";
+import { Input } from "../../../../../molecules/inputs";
+import { LoadingWheel } from "../../../../../atoms/loading";
 import { SearchSuggestionList } from "./components/searchSuggestionList";
 import styles from "./searchSuggestionsModal.module.scss";
 import type { SearchModalContentProps } from './types';

@@ -1,7 +1,8 @@
 /* eslint-disable react/jsx-sort-props -- I don't have time for fix this problem */
 import type { ReactElement } from "react";
 import { Facebook, Twitter, Link } from 'react-feather';
-import { useCopyToClipboard, useSiteConfig } from "../../../hooks";
+import { useCopyToClipboard } from "../../../hooks/useCopyToClipboard";
+import { useSiteConfig } from "../../../hooks/useSiteConfig";
 import styles from "./buttonsSocialShare.module.scss";
 
 type ShareType = 'facebook' | 'twitter';

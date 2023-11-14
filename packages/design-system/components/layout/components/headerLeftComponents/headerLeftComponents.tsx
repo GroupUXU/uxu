@@ -1,8 +1,9 @@
 import type { ReactElement } from 'react';
 import classnames from 'classnames';
-import { useSiteConfig } from "../../../../hooks";
-import { Logo, Link } from '../../../atoms';
-import { SearchEngineInModal } from '../../../organisms';
+import { useSiteConfig } from "../../../../hooks/useSiteConfig";
+import { Link } from '../../../atoms/link';
+import { Logo } from '../../../atoms/logo';
+import { SearchEngineInModal } from '../../../organisms/searchEngine';
 import type { HeaderLeftComponentsProps } from './types';
 import styles from './headerLeftComponents.module.scss';
 
