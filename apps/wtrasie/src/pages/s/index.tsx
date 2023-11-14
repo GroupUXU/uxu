@@ -6,9 +6,9 @@ import {
   StickyWrapper,
   Tree,
   renderBranches,
-  CrumbleMenu
+  CrumbleMenu,
+  useSeoConfig
 } from 'design-system';
-import { useSeoConfig } from 'hooks';
 import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig } from '../../config';
 import { useGetArticlesQuery } from '../../gql';
 import { adapterArticlesData } from '../../utils/adapters/adapterArticlesData';

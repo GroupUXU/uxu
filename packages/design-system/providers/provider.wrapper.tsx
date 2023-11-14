@@ -2,7 +2,7 @@ import type { PropsWithChildren, ReactElement } from 'react';
 import { ApolloClient, NormalizedCacheObject } from "@apollo/client";
 import type { SiteConfig } from "utils";
 import { ApolloCLientProvider, SiteConfigProvider, SEOProvider } from './config';
-import { ToastChunksContext, ProviderToastChunks, toastChunksInitial, CookieDetails, AllowCookies } from '../design-system/components/atoms/toast';
+import { ToastChunksContext, ProviderToastChunks, toastChunksInitial, CookieDetails, AllowCookies } from '../components/organisms';
 
 type WrapperProvidersProps = PropsWithChildren<{
   siteConfig: SiteConfig,

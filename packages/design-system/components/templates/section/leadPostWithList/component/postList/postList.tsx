@@ -1,7 +1,7 @@
 import type { ReactElement } from "react";
 import type { PostListProps } from './types';
-import { Link } from "../../../../../atoms/link";
-import { AvatarGroup } from "../../../../../molecules/avatarGroup";
+import { Link } from "../../../../../atoms";
+import { AvatarGroup } from "../../../../../molecules";
 import styles from './postList.module.scss';
 import Image from "next/image";
 

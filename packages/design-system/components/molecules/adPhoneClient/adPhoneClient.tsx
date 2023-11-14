@@ -1,7 +1,6 @@
 import { Phone } from 'react-feather';
 import type { ReactElement } from 'react';
-import { Link } from "../link";
-import { Container } from "../container";
+import { Link, Container } from "../../atoms";
 import styles from './adPhoneClient.module.scss';
 import type { AdPhoneClientProps } from './types';
 

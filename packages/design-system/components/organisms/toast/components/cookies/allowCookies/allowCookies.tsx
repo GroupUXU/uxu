@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import type { ReactElement } from "react";
-import { setCookies } from "../../../utils";
+import { setCookies } from "../../../utils/setCookies";
 import type { AllowCookiesProps } from "./types";
 
 

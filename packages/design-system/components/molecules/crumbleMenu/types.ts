@@ -1,1 +1,3 @@
-export type CrumbleMenuProps = Array<{ href: string, title: string; }>
+export type CrumbleMenuProps = {
+  data?: Array<{ href: string, title: string; }>
+}

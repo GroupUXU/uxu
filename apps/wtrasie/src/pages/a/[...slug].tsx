@@ -6,9 +6,9 @@ import {
   PostView,
   renderBranches,
   StickyWrapper,
-  Tree
+  Tree,
+  useSeoConfig
 } from 'design-system';
-import { useSeoConfig } from 'hooks';
 import type { PostFull } from 'utils';
 import { adapterArticleData } from '../../utils/adapters/adapterArticleData';
 import { clientGetArticleQuery } from '../../gql';
@@ -17,7 +17,7 @@ import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig }
 
 type ArticleProps = {
   slug?: string;
-  articleData: PostFull | null;
+  articleData?: PostFull;
 }
 
 export default function Article({ articleData, slug }: ArticleProps): ReactElement {

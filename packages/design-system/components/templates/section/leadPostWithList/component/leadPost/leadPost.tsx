@@ -1,6 +1,6 @@
 import type { ReactElement } from "react";
-import { Link } from "../../../../../atoms/link";
-import { AvatarGroup } from "../../../../../molecules/avatarGroup";
+import { Link } from "../../../../../atoms";
+import { AvatarGroup } from "../../../../../molecules";
 import type { LeadPostProps } from './types'
 import styles from './leadPost.module.scss';
 

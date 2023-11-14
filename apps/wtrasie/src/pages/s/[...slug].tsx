@@ -8,9 +8,9 @@ import {
   StickyWrapper,
   Tree,
   renderBranches,
-  CrumbleMenu
+  CrumbleMenu,
+  useSeoConfig
 } from 'design-system';
-import { useSeoConfig } from 'hooks';
 import { createSlug } from 'utils';
 import { connectQueries } from '../../utils/function';
 import { adapterArticleData, adapterArticlesSlugData } from '../../utils/adapters';

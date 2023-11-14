@@ -1,7 +1,6 @@
-/* eslint-disable react/jsx-no-leaked-render -- It is false warning  */
 import type { ReactElement } from 'react';
-import { Confetti } from '../../../molecules/confetti';
-import { LoadingDots } from '../../../atoms/loading';
+import { Confetti } from '../../../molecules';
+import { LoadingDots } from '../../../atoms';
 import { useIsNextPage, useLoadNextPage } from './hooks';
 import styles from './sectionInfiniteScroll.module.scss';
 import type { SectionInfiniteScrollProps } from './types';

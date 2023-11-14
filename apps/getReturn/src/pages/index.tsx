@@ -1,6 +1,5 @@
 import type { ReactElement } from 'react';
-import { CrumbleMenu, LayoutStaticText } from 'design-system';
-import { useSeoConfig } from 'hooks';
+import { CrumbleMenu, LayoutStaticText, useSeoConfig } from 'design-system';
 import { footerConfig, headerMenuConfig, searchEngineConfig } from '../config';
 
 function Index(): ReactElement  {

@@ -7,9 +7,10 @@ import {
   StickyWrapper,
   Tree,
   renderBranches,
-  CrumbleMenu
+  CrumbleMenu,
+  useSeoConfig
 } from 'design-system';
-import { useSeoConfig } from 'hooks';
+import type { PostShort } from "utils";
 import { useGetArticlesWithTagQuery } from '../../gql';
 import { adapterArticlesData } from '../../utils/adapters/adapterArticlesData';
 import { footerConfig, headerMenuConfig, searchEngineConfig, siteBarMenuConfig } from "../../config";
@@ -72,9 +73,9 @@ export default function Tag({ tagID , tagName }: TagProps ): ReactElement {
         page={1}
         pageCount={data?.articles?.meta.pagination.pageCount || 1}
       >
-        {data ? adapterArticlesData(data, "small").map((article, index) => {
+        {data ? adapterArticlesData(data, "small").map((article: PostShort) => {
           return (
-            <PostList {...article} key={article.id || index} />
+            <PostList {...article} key={article.id} />
           )
         }) : null}
       </SectionInfiniteScroll>

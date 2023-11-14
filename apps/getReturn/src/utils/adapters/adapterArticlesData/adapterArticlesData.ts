@@ -1,11 +1,11 @@
-import type { PostListData } from 'design-system';
+import type { PostShort } from 'utils';
 import { createSlug } from 'utils';
 import type { GetArticlesQuery } from '../../../gql';
 import { createSlugForType } from '../../function/createSlugForType';
 import { adapterImageData } from '../adapterImageData';
 import { adapterAuthorData } from '../adapterAuthorData';
 
-export function adapterArticlesData(getArticles: GetArticlesQuery, typeImg: 'thumbnail' | 'small' | 'medium' | 'large' | 'url' ): Array<PostListData> {
+export function adapterArticlesData(getArticles: GetArticlesQuery, typeImg: 'thumbnail' | 'small' | 'medium' | 'large' | 'url' ): Array<PostShort> {
   if (!getArticles.articles?.data.length) return [];
 
   return getArticles.articles.data.map(art => ({

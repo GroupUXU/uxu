@@ -1,15 +1,14 @@
 import type { ReactElement } from 'react';
 import type { GetStaticPropsContext, GetServerSideProps } from 'next';
-import { CrumbleMenu, LayoutPostView, PostView, renderBranches, StickyWrapper, Tree } from 'design-system';
-import { useSeoConfig } from 'hooks';
-import type { GetAdapterArticleData } from '../../utils/adapters/adapterArticleData/types';
+import { CrumbleMenu, LayoutPostView, PostView, renderBranches, StickyWrapper, Tree, useSeoConfig } from 'design-system';
+import type { PostFull } from 'utils';
 import { adapterArticleData } from '../../utils/adapters/adapterArticleData';
 import { clientGetArticleQuery } from '../../gql';
 import { footerConfig, headerMenuConfig, searchEngineConfig, siteBarMenuConfig } from "../../config";
 
 type ArticleProps = {
   slug?: string;
-  articleData: GetAdapterArticleData | null;
+  articleData?: PostFull;
 }
 
 export default function Article({ articleData, slug }: ArticleProps): ReactElement {

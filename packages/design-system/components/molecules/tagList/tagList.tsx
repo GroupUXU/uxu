@@ -1,5 +1,5 @@
 import type { ReactElement } from "react";
-import { Link } from "../link";
+import { Link } from "../../atoms";
 import type { TagListProps } from "./types";
 import styles from './tagList.module.scss';
 

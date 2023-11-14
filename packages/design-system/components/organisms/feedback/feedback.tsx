@@ -6,7 +6,7 @@ import type { ReactElement } from "react";
 import classNames from "classnames";
 import { useForm } from "react-hook-form";
 import { Modal, Note, LoadingWheel } from '../../atoms';
-import { Input, Textarea } from '../../molecules/inputs';
+import { Input, Textarea } from '../../molecules';
 import { FeedbackRatings } from './components/feedbackRatings';
 import { MESSAGE_SUCCESS, MESSAGE_FAILURE, FORM_FIELD } from './consts';
 import type { FormInputs } from './types';

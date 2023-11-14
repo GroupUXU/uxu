@@ -5,8 +5,7 @@ import { ToastContainer } from "../components";
 
 const initialToastChunksContext: { toastChunks: ToastChunks, toastChunkDispatch: Dispatch<ToastChunkAction> } = {
   toastChunks: [],
-  toastChunkDispatch: () => { /* empty */
-  }
+  toastChunkDispatch: () => { /* empty */ }
 };
 
 export const ToastChunksContext = createContext ( initialToastChunksContext );

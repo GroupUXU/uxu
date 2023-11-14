@@ -1,4 +1,4 @@
-export * from './adPhoneClient';
+export * from './ads';
 export * from './avatar';
 export * from './container';
 export * from './dummyIMG';
@@ -11,6 +11,3 @@ export * from './modal';
 export * from './note';
 export * from './siteBar';
 export * from './stickyWrapper';
-export * from './tree';
-export * from './tagList';
-export * from './toast';

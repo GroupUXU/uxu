@@ -1,3 +1,3 @@
-import type { PostViewData } from 'design-system';
+import type { PostFull } from 'utils';
 
-export type GetAdapterArticleData = PostViewData
+export type GetAdapterArticleData = PostFull

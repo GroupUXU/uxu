@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react';
 import classnames from "classnames";
-import { Avatar } from '../../atoms/avatar';
+import { Avatar } from '../../atoms';
 import type { AvatarGroupProps } from "./types";
 import styles from './avatarGroup.module.scss';
 

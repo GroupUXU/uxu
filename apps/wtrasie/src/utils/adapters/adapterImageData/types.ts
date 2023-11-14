@@ -1,3 +1,5 @@
+import type { ImageSize } from 'utils';
+
 export type Format = {
   ext?: string | null;
   url?: string | null;
@@ -18,6 +20,12 @@ export type AdapterSrcImageDataProps = {
 
 
 export type AdapterImageDataProps = {
-  image?: { __typename?: 'UploadFile', url: string, caption?: string | null, alternativeText?: string | null, formats?: Format } | null;
-  typeImg: 'thumbnail' | 'small' | 'medium' | 'large' | 'url';
+  image?: {
+    __typename?: 'UploadFile',
+    url: string,
+    caption?: string | null,
+    alternativeText?: string | null,
+    formats?: Format
+  } | null;
+  typeImg: ImageSize;
 }

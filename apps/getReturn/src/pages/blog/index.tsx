@@ -1,4 +1,5 @@
 import type { ReactElement } from 'react';
+import type { PostShort } from 'utils';
 import {
   SectionInfiniteScroll,
   LayoutListingPost,
@@ -6,9 +7,9 @@ import {
   StickyWrapper,
   Tree,
   renderBranches,
-  CrumbleMenu
+  CrumbleMenu,
+  useSeoConfig
 } from 'design-system';
-import { useSeoConfig } from 'hooks';
 import { footerConfig, headerMenuConfig, searchEngineConfig, siteBarMenuConfig } from '../../config';
 import { useGetArticlesQuery } from '../../gql';
 import { adapterArticlesData } from '../../utils/adapters/adapterArticlesData';
@@ -59,7 +60,7 @@ function Index(): ReactElement  {
         page={data?.articles?.meta.pagination.page || 1}
         pageCount={data?.articles?.meta.pagination.pageCount || 1}
       >
-        {data ? adapterArticlesData(data, "small").map((article) => (
+        {data ? adapterArticlesData(data, "small").map((article: PostShort) => (
           <PostList {...article} key={article.id || 'fallback'} />
         )) : null}
       </SectionInfiniteScroll>

@@ -5,5 +5,9 @@ export * from './components';
 export * from './hooks';
 
 
+// #providers
+export * from './providers';
+
+
 // #pages
 export * from './pages';

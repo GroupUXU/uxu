@@ -2,9 +2,9 @@ import { useContext, useState } from "react";
 import type { ReactElement } from 'react';
 import { X } from 'react-feather';
 import { generateUniqueId } from "utils";
-import { Collapse, CollapseGroup } from "../../../../../molecules/collspace";
-import { setCookies } from "../../../utils";
-import { Modal } from "../../../../modal";
+import { Modal } from "../../../../../atoms";
+import { Collapse, CollapseGroup } from "../../../../../molecules";
+import { setCookies } from "../../../utils/setCookies";
 import type { CookieDetailsProps } from "./types";
 import styles from './cookieDetails.module.scss';
 

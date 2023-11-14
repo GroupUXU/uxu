@@ -1,8 +1,7 @@
-/* eslint-disable -- i don't have time now  */
 import React, { useState, useContext, ReactNode, useEffect, useMemo } from 'react';
 import type { ReactElement } from 'react';
 import { ChevronDown, ChevronRight, Minus } from "react-feather";
-import { Link } from '../link';
+import { Link } from '../../atoms';
 import classnames from 'classnames';
 import styles from './tree.module.scss';
 import { BranchProps } from './types'
@@ -29,7 +28,7 @@ export function renderBranches( branches: Array<BranchProps> ): Array<ReactEleme
 
 export const Branch: React.FC<BranchProps> = ({ title, children, href, active }) => {
   const { setActiveBranch, activeHref, full } = useContext(TreeContext);
-  const [isExpanded, setExpanded] = useState<boolean>(!!active);
+  const [isExpanded, setExpanded] = useState<boolean>(Boolean(active));
 
   useEffect(() => {
     if (checkChildrenForActive(children)) {

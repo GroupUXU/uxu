@@ -1,11 +1,11 @@
-import type { PostShort } from 'utils';
+import type { PostShort,ImageSize } from 'utils';
 import { createSlug } from 'utils';
 import type { GetArticlesQuery } from '../../../gql';
 import { createSlugForType } from '../../function/createSlugForType';
 import { adapterImageData } from '../adapterImageData';
 import { adapterAuthorData } from '../adapterAuthorData';
 
-export function adapterArticlesData(getArticles: GetArticlesQuery, typeImg: 'thumbnail' | 'small' | 'medium' | 'large' | 'url' ): Array<PostShort> {
+export function adapterArticlesData(getArticles: GetArticlesQuery, typeImg: ImageSize ): Array<PostShort> {
   if (!getArticles.articles?.data.length) return [];
 
   return getArticles.articles.data.map(art => ({

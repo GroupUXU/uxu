@@ -5,36 +5,115 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost/leadPost.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost/leadPost.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/postList/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/postList/postList.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/postList/postList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/postList/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/leadPostWithList.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/leadPostWithList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/utils/types/content/post.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/toastContainer/components/toast/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/a/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/a/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/blog/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/blog/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/t/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/t/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterArticleData/adapterArticleData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterArticleData/adapterArticleData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterArticleData/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterArticleData/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterArticlesData/adapterArticlesData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterArticlesData/adapterArticlesData.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/gql/query/gql.query.article.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/gql/query/gql.query.article.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/gql/types/gql.query.article.generated.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/gql/types/gql.query.article.generated.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/a/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/a/[...slug].tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterArticleData/adapterArticleData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterArticleData/adapterArticleData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/t/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/t/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterArticleData/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterArticleData/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterArticlesData/adapterArticlesData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterArticlesData/adapterArticlesData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterImageData/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterImageData/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/adPhoneClient/adPhoneClient.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/adPhoneClient/adPhoneClient.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/adPhoneClient/adPhoneClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/adPhoneClient/adPhoneClient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/adPhoneClient/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/adPhoneClient/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/adPhoneClient/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/adPhoneClient/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/hamburger/hamburger.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/hamburger/hamburger.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/keyboardShortcut/keyboardShortcut.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/keyboardShortcut/keyboardShortcut.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/link/link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/link/link.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/tagList/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/tagList/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/tagList/tagList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/tagList/tagList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/tagList/tagList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/tagList/tagList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/tagList/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/tagList/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/allowCookies/allowCookies.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/cookies/allowCookies/allowCookies.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/allowCookies/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/cookies/allowCookies/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/allowCookies/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/cookies/allowCookies/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/cookieDetails/cookieDetails.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/cookies/cookieDetails/cookieDetails.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/cookieDetails/cookieDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/cookies/cookieDetails/cookieDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/cookieDetails/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/cookies/cookieDetails/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/cookieDetails/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/cookies/cookieDetails/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/cookies/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/cookies/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/toast/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/toastContainer/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/toast/toast.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/toastContainer/components/toast/toast.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/toast/toast.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/toastContainer/components/toast/toast.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/toastContainer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/toastContainer/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/toastContainer/toastContainer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/toastContainer/toastContainer.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/toastContainer/toastContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/toastContainer/toastContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/provider/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/provider/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/provider/provider.toastChunks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/provider/provider.toastChunks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/utils/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/utils/setCookies.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/utils/setCookies.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/toast/utils/toastChunksInitial.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/utils/toastChunksInitial.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/tree/branch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/tree/branch.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/tree/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/tree/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/tree/tree.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/tree/tree.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/tree/tree.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/tree/tree.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/tree/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/tree/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/components/headerLeftComponents/headerLeftComponents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/components/headerLeftComponents/headerLeftComponents.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/components/mobileHamburgerMenu/mobileHamburgerMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/components/mobileHamburgerMenu/mobileHamburgerMenu.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/avatarGroup/avatarGroup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/avatarGroup/avatarGroup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/contents/EmbedYouTubeChunk/embedYouTubeChunk.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/contents/EmbedYouTubeChunk/embedYouTubeChunk.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/confetti/confetti.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/confetti/confetti.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/postList/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/postList/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/postView/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionInfiniteScroll/hooks/useLoadNextPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionInfiniteScroll/hooks/useLoadNextPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/crumbleMenu/crumbleMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/crumbleMenu/crumbleMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/crumbleMenu/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/crumbleMenu/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/listButtonsSocialShare/buttonsSocialShare.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/listButtonsSocialShare/buttonsSocialShare.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/themeSwitcher/themeSwitcher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/themeSwitcher/themeSwitcher.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/ads/ads.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/ads/ads.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/ads/ads.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/ads/ads.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/ads/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/ads/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/ads/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/ads/types.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/feedback/components/feedbackRatings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/feedback/components/feedbackRatings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/feedback/feedback.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/feedback/feedback.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/postList/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/postList/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/SearchSuggestionsModal/searchSuggestionsModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/SearchSuggestionsModal/searchSuggestionsModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/searchEngineInModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/searchEngineInModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/footer/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/footer/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/postView/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/postView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/postView/postView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost/leadPost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost/leadPost.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/postList/postList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/postList/postList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/leadPostWithList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/leadPostWithList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionInfiniteScroll/sectionInfiniteScroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionInfiniteScroll/sectionInfiniteScroll.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/types/content/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/types/content/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/hooks/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/hooks/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/contact/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/contact/contact.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/privacyPolicy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/privacyPolicy.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/terms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/terms.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hooks/config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/hooks/config/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hooks/config/useSeoConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/hooks/config/useSeoConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hooks/config/useSiteConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/hooks/config/useSiteConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hooks/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hooks/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hooks/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hooks/useHref.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/hooks/useHref.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hooks/useTheme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/hooks/useTheme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/providers/config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/providers/config/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/providers/config/provider.apollo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/providers/config/provider.apollo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/providers/config/provider.configSite.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/providers/config/provider.configSite.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/providers/config/provider.seo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/providers/config/provider.seo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/providers/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/providers/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/providers/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/providers/provider.wrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/providers/provider.wrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/providers/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/types/content/image.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/types/content/image.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/types/content/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/types/content/post.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +140,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "feat/add-section-leadPostWithList",
-    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/packages/design-system/components/templates/section/leadPostWithList/component/postList",
+    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/packages/design-system",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -76,18 +155,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/design-system" />
+      <recent name="$PROJECT_DIR$/packages/design-system/hooks" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/postList" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/crumbleMenu" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/stickyWrapper" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost" />
-      <recent name="$PROJECT_DIR$/packages/hooks" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/atoms" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules" />
-      <recent name="$PROJECT_DIR$/packages/design-system/pages/contact" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspace" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/organisms" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/toast/components/toastContainer/components" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -142,7 +221,9 @@
       <workItem from="1699699970888" duration="11513000" />
       <workItem from="1699721499798" duration="14678000" />
       <workItem from="1699867113830" duration="1119000" />
-      <workItem from="1699889073944" duration="13379000" />
+      <workItem from="1699889073944" duration="13668000" />
+      <workItem from="1699908600203" duration="901000" />
+      <workItem from="1699983597745" duration="8202000" />
     </task>
     <servers />
   </component>
@@ -168,14 +249,9 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/packages/design-system/components/atoms/toast/utils/toastChunksInitial.ts</url>
+          <url>file://$PROJECT_DIR$/packages/design-system/components/organisms/toast/utils/toastChunksInitial.ts</url>
           <line>1</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/packages/design-system/components/atoms/note/note.tsx</url>
-          <line>23</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

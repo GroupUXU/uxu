@@ -3,7 +3,7 @@ import { useState, useCallback } from 'react';
 import type { ReactElement } from 'react';
 import { useForm } from "react-hook-form";
 import { requestStatus } from 'utils';
-import { useSeoConfig, useSiteConfig } from "hooks";
+import { useSeoConfig, useSiteConfig } from "../../hooks";
 import { Note, LoadingDots } from '../../components/atoms';
 import { CrumbleMenu, Input, LayoutFull, Link, Textarea } from '../../components';
 import type { ContactProps, ContactFormInputsProps } from "./types";

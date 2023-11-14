@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import type { ReactElement } from "react";
 import { Sun, Moon } from 'react-feather';
 import classnames from 'classnames';
-import { useSiteConfig, useTheme } from "hooks";
+import { useSiteConfig, useTheme } from "../../../hooks";
 import styles from './themeSwitcher.module.scss';
 
 export function ThemeSwitcher(): ReactElement {

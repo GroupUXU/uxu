@@ -155,6 +155,9 @@ export const GET_ARICLES_WITH_TAG = gql`
                     type
                     title
                     createdAt
+                    lead {
+                        ...FragmentDataLead
+                    }
                     cover {
                         __typename
                         data {

@@ -1,14 +1,14 @@
 import { Image } from "./image";
 import { Member } from "./member";
 import { Tag } from "./tag";
-import { ContentPartProps } from "design-system";
+import { ContentPartProps } from "../../../design-system/components/molecules/chunks/types";
 
 export type PostShort = {
   id: string;
   lead?: string;
   title: string;
   slug: string;
-  cover: Image;
+  cover?: Image;
   authors: Array<Member>;
 }
 
@@ -18,7 +18,7 @@ export type PostFull = {
   type: string;
   title: string;
   createdAt: string | null;
-  cover: Image;
+  cover?: Image;
   authors: Array<Member>;
   tags: Array<Tag>;
   stats: { ratings: number; comments: number; views: number };

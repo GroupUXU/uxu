@@ -2,9 +2,8 @@
 import type { ReactElement } from "react";
 import classnames from 'classnames';
 import { transformChunkToComponent } from '../../molecules/chunks/components/parsers/transformChunkToComponent/transformChunkToComponent';
-import { ParseContentPartToChunk, ButtonsSocialShare } from '../../molecules';
-import { Ads } from '../../organisms';
-import { TagList } from '../../atoms';
+import { Ads } from '../../atoms';
+import { ParseContentPartToChunk, ButtonsSocialShare, TagList } from '../../molecules';
 import { ArticleMetaWrapper, Cover } from "./components";
 import styles from './postView.module.scss';
 import type { PostViewProps } from './types';

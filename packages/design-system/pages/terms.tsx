@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition -- Disabling false positive due to valid optional chaining usage */
 import type { ReactElement } from 'react';
 import type { SearchEngineConfig } from "utils";
-import { useSeoConfig, useSiteConfig } from "hooks";
+import { useSeoConfig, useSiteConfig } from "../hooks";
 import { CrumbleMenu, LayoutStaticText, Link } from '../components';
 import type { FooterProps } from "../components/templates/footer/types";
 import type { SearchSuggestionContentDetails } from "../components/organisms/searchEngine/searchEngineInModal/types";

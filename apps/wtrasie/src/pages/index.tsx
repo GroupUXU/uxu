@@ -7,9 +7,9 @@ import {
   renderBranches,
   StickyWrapper,
   CrumbleMenu,
-  LeadPostWithList
+  LeadPostWithList,
+  useSeoConfig
 } from 'design-system';
-import { useSeoConfig } from 'hooks';
 import type { PostShort } from "utils";
 import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig } from '../config';
 import { useGetArticlesQuery } from '../gql';
@@ -44,26 +44,9 @@ function Index (): ReactElement {
     }
   };
 
-
-  let leadPostWithListData: Array<PostShort> = [];
-  let postListData: Array<PostShort> = [];
-
-  if ( data ) {
-    const articlesCopy = data.articles?.data || [];
-
-    const firstFiveArticles = articlesCopy.slice ( 0, 5 );
-    const remainingArticles = articlesCopy.slice ( 5 );
-
-    leadPostWithListData = adapterArticlesData (
-      {...data, articles: { meta: data.articles?.meta, data: firstFiveArticles }},
-      "medium"
-    );
-
-    postListData = adapterArticlesData (
-      {...data, articles: { meta: data.articles?.meta, data: remainingArticles }},
-      "small"
-    );
-  }
+  const articlesCopy: Array<PostShort> = data?.articles?.data ? adapterArticlesData(data, "medium") : [];
+  const leadPostWithListData: Array<PostShort> = articlesCopy.slice ( 0, 5 );
+  const postListData: Array<PostShort> = articlesCopy.slice ( 5 );
 
 
   return (

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import type { ReactElement } from "react";
-import { Input } from "../../../../../molecules/inputs/input";
+import { Input } from "../../../../../molecules";
 import { LoadingWheel } from "../../../../../atoms";
 import { SearchSuggestionList } from "./components/searchSuggestionList";
 import styles from "./searchSuggestionsModal.module.scss";
