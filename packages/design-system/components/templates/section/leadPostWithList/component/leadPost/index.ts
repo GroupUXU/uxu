@@ -1,1 +1,1 @@
-export * from './LeadPost';
+export * from './leadPost';
