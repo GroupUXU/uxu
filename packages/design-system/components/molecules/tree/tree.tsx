@@ -1,8 +1,8 @@
 import React, { createContext, useState, useMemo } from 'react';
 import type { ReactElement } from 'react';
 import classnames from 'classnames';
+import type { TreeProps, ITreeContext } from './types';
 import styles from './tree.module.scss';
-import { TreeProps, ITreeContext } from './types'
 
 export const TreeContext = createContext<ITreeContext> ( {
   full: false,

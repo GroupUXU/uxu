@@ -1,10 +1,9 @@
-import type { ReactNode, SetStateAction, Dispatch } from "react";
+import type { SetStateAction, Dispatch, PropsWithChildren } from "react";
 
-export type TreeProps = {
+export type TreeProps = PropsWithChildren<{
   full?: boolean;
   activeHref: string;
-  children: ReactNode;
-}
+}>
 
 export type ITreeContext = {
   full: boolean;
@@ -13,10 +12,9 @@ export type ITreeContext = {
   setActiveBranch: Dispatch<SetStateAction<string | null>>;
 }
 
-export type BranchProps = {
+export type BranchProps = PropsWithChildren<{
   title: string;
-  children?: ReactNode;
   href: string;
   active?: boolean;
   branches?: Array<BranchProps>;
-}
+}>

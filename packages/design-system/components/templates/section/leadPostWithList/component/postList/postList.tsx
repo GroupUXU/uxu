@@ -1,9 +1,9 @@
 import type { ReactElement } from "react";
-import type { PostListProps } from './types';
+import Image from "next/image";
 import { Link } from "../../../../../atoms/link";
 import { AvatarGroup } from "../../../../../molecules/avatarGroup";
+import type { PostListProps } from './types';
 import styles from './postList.module.scss';
-import Image from "next/image";
 
 export function PostList ( {posts}: PostListProps ): ReactElement | null {
 
@@ -14,13 +14,13 @@ export function PostList ( {posts}: PostListProps ): ReactElement | null {
       {
         posts.map ( ( post ) => {
           return (
-            <Link href={post.slug} title={post.title} key={post.id}>
+            <Link href={post.slug} key={post.id} title={post.title}>
               <article className={styles.article}>
-                {post.cover?.src && (
+                {post.cover?.src ? (
                   <div className={styles.cover}>
-                    <Image src={post.cover.src} layout="fill" objectFit="cover" alt={post.cover.caption || ""}/>
+                    <Image alt={post.cover.caption || post.title} layout="fill" objectFit="cover" src={post.cover.src}  />
                   </div>
-                )}
+                ) : null}
                 <div className={styles.conent}>
                   <AvatarGroup members={post.authors} size="small"/>
                   <h2>{post.title}</h2>

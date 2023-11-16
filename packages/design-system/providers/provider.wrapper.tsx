@@ -1,10 +1,10 @@
 import type { PropsWithChildren, ReactElement } from 'react';
-import { ApolloClient, NormalizedCacheObject } from "@apollo/client";
+import type { ApolloClient, NormalizedCacheObject } from "@apollo/client";
 import type { SiteConfig } from "utils";
+import { ToastChunksContext, ProviderToastChunks, toastChunksInitial, CookieDetails, AllowCookies } from '../components/organisms/toast';
 import { ApolloCLientProvider } from './provider.apollo';
 import { SiteConfigProvider } from './provider.configSite';
 import { SEOProvider } from './provider.seo';
-import { ToastChunksContext, ProviderToastChunks, toastChunksInitial, CookieDetails, AllowCookies } from '../components/organisms/toast';
 
 type WrapperProvidersProps = PropsWithChildren<{
   siteConfig: SiteConfig,
@@ -17,16 +17,16 @@ export function WrapperProviders({ children, siteConfig, apolloClient }: Wrapper
       shouldBeIncluded: !siteConfig.cookieConsentSettings?.analytics,
       id: 'cookieInfoDefault',
       props: {
-        text: "Korzystamy z plików cookie, aby mierzyć i ulepszać Twoje doświadczenia.",
         actions: [
           {
-            Component: <CookieDetails siteConfig={siteConfig} ToastChunksContext={ToastChunksContext} />
+            Component: <CookieDetails ToastChunksContext={ToastChunksContext} siteConfig={siteConfig} />
           },
           {
             Component: <AllowCookies ToastChunksContext={ToastChunksContext} />,
             type: 'remove'
           }
-        ]
+        ],
+        text: "Korzystamy z plików cookie, aby mierzyć i ulepszać Twoje doświadczenia.",
       }
     }
   ]);

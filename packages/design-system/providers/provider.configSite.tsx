@@ -52,7 +52,7 @@ const initialSiteConfigContext: { config: SiteConfig, setConfig: (newConfig: Sit
       }
     }
   },
-  setConfig: () => {}
+  setConfig: (): void => { /* empty */ }
 };
 
 export const SiteConfigContext = createContext<SiteConfigContextProps>(initialSiteConfigContext);

@@ -12,8 +12,8 @@ export function SectionInfiniteScroll({ page, pageCount, onScrollEnd, children }
   return (
       <div className={styles.wrapper} ref={infiniteScrollRef}>
         {children}
-        {isLoadingNextPage && (<div className={styles.wrapperLoading}><LoadingDots size={2}/></div>)}
-        {!isNextPage && <Confetti title="Właśnie dotarłeś do końca internetów, brawo 😎" />}
+        {isLoadingNextPage ? (<div className={styles.wrapperLoading}><LoadingDots size={2}/></div>) : null}
+        {!isNextPage ? <Confetti title="Właśnie dotarłeś do końca internetów, brawo 😎" /> : null}
       </div>
   );
 }
