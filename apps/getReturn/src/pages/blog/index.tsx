@@ -7,10 +7,10 @@ import { StickyWrapper } from 'design-system/components/atoms/stickyWrapper';
 import { Tree, renderBranches } from 'design-system/components/molecules/tree';
 import { CrumbleMenu } from 'design-system/components/molecules/crumbleMenu';
 import { useSeoConfig } from 'design-system/hooks/useSeoConfig';
+import { LeadPostWithList } from "design-system/components/templates/section/leadPostWithList";
 import { footerConfig, headerMenuConfig, searchEngineConfig, siteBarMenuConfig } from '../../config';
 import { useGetArticlesQuery } from '../../gql';
 import { adapterArticlesData } from '../../utils/adapters/adapterArticlesData';
-import { LeadPostWithList } from "design-system/components/templates/section/leadPostWithList";
 
 function Index(): ReactElement  {
   const seo = useSeoConfig({});

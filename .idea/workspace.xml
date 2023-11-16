@@ -9,9 +9,6 @@
       <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/blog/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/blog/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost/leadPost.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost/leadPost.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/leadPostWithList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/leadPostWithList.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/leadPostWithList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/leadPostWithList.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +121,7 @@
       <workItem from="1699983597745" duration="8570000" />
       <workItem from="1699995493777" duration="4995000" />
       <workItem from="1700045736654" duration="613000" />
-      <workItem from="1700154472555" duration="5037000" />
+      <workItem from="1700154472555" duration="5759000" />
     </task>
     <servers />
   </component>

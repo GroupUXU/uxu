@@ -1,4 +1,5 @@
 import type { ReactElement } from 'react';
+import type { PostShort } from "utils";
 import { SectionInfiniteScroll } from 'design-system/components/templates/section/sectionInfiniteScroll';
 import { LayoutListingPost } from 'design-system/components/layout/layoutListingPost/layoutListingPost';
 import { PostList } from 'design-system/components/organisms/postList';
@@ -6,11 +7,10 @@ import { Tree, renderBranches } from 'design-system/components/molecules/tree';
 import { StickyWrapper } from 'design-system/components/atoms/stickyWrapper';
 import { CrumbleMenu } from 'design-system/components/molecules/crumbleMenu';
 import { useSeoConfig } from 'design-system/hooks/useSeoConfig';
+import { LeadPostWithList } from "design-system/components/templates/section/leadPostWithList";
 import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig } from '../../config';
 import { useGetArticlesQuery } from '../../gql';
 import { adapterArticlesData } from '../../utils/adapters/adapterArticlesData';
-import { PostShort } from "utils";
-import { LeadPostWithList } from "design-system/components/templates/section/leadPostWithList";
 
 function Index(): ReactElement  {
   const seo = useSeoConfig({});
