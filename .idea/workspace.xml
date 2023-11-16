@@ -6,16 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/tree/branch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/tree/branch.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/tree/tree.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/tree/tree.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/tree/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/tree/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/postList/postList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/postList/postList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/blog/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/blog/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost/leadPost.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost/leadPost.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/leadPostWithList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/leadPostWithList.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/leadPostWithList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/leadPostWithList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionInfiniteScroll/sectionInfiniteScroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionInfiniteScroll/sectionInfiniteScroll.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/hooks/useTheme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/hooks/useTheme.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/providers/provider.configSite.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/providers/provider.configSite.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/providers/provider.seo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/providers/provider.seo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/providers/provider.wrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/providers/provider.wrapper.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +124,7 @@
       <workItem from="1699983597745" duration="8570000" />
       <workItem from="1699995493777" duration="4995000" />
       <workItem from="1700045736654" duration="613000" />
-      <workItem from="1700154472555" duration="4255000" />
+      <workItem from="1700154472555" duration="5037000" />
     </task>
     <servers />
   </component>

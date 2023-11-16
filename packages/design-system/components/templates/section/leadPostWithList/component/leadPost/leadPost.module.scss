@@ -10,11 +10,11 @@
 
   @include media(m) {
     width: 80%;
-    transform: scale(1);
-    transition: transform 0.3s;
 
     &:hover {
-      transform: scale(1.02);
+      h1 {
+        color: var(--uxu-color-primary-accent5);
+      }
     }
 
   }
@@ -29,6 +29,7 @@
 
   h1 {
     -webkit-line-clamp: 1;
+    transition: color 0.3s;
     font-size: var(--uxu-font-size-large);
     color: var(--uxu-color-primary-foreground);
 

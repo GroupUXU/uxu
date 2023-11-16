@@ -18,7 +18,7 @@ export function LeadPostWithList ({ posts }: LeadPostWithListProps ): ReactEleme
         </div>
       ) : null}
       <Container className={styles.content}>
-        {leadPostData[ 0 ] ? <LeadPost {...leadPostData[ 0 ]} /> : null}
+        {leadPostData[0] ? <LeadPost {...leadPostData[ 0 ]} /> : null}
         {rest[0] ? <PostList posts={rest}/> : null}
       </Container>
     </section>

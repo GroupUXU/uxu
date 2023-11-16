@@ -1,7 +1,7 @@
 import type { ReactElement } from "react";
 import type { GetStaticPropsContext, GetStaticPaths, GetStaticProps } from 'next';
 import type { PostFull } from 'utils';
-import { createSlug } from 'utils';
+import { createSlug, PostShort } from 'utils';
 import { AdPhoneClient } from 'design-system/components/molecules/adPhoneClient';
 import { LayoutPostView } from 'design-system/components/layout/layoutPostView';
 import { PostView } from 'design-system/components/templates/postView';
@@ -10,7 +10,7 @@ import { StickyWrapper } from 'design-system/components/atoms/stickyWrapper';
 import { CrumbleMenu } from 'design-system/components/molecules/crumbleMenu';
 import { useSeoConfig } from 'design-system/hooks/useSeoConfig';
 import { connectQueries } from '../../utils/function';
-import { adapterArticleData, adapterArticlesSlugData } from '../../utils/adapters';
+import { adapterArticleData, adapterArticlesData, adapterArticlesSlugData } from '../../utils/adapters';
 import type { GetArticlesQuery } from '../../gql';
 import {
   clientGetArticleQuery,
