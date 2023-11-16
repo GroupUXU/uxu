@@ -2,7 +2,8 @@
 import { useState } from 'react';
 import type { ReactElement } from 'react';
 import classnames from 'classnames';
-import { Modal, Hamburger } from '../../atoms';
+import { Modal } from '../../atoms/modal';
+import { Hamburger } from '../../atoms/hamburger';
 import type { HeaderProps } from './types';
 import styles from './header.module.scss';
 

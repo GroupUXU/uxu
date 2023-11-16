@@ -5,27 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/crumbleMenu/crumbleMenu.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/crumbleMenu/crumbleMenu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/crumbleMenu/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/crumbleMenu/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/hooks/useHref.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/a/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/a/[...slug].tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/blog/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/blog/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/t/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/t/[...slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/a/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/a/[...slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/t/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/t/[...slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/link/link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/link/link.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/contact/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/contact/contact.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/privacyPolicy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/privacyPolicy.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/terms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/terms.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/hooks/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/hooks/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,39 +29,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feat/add-crumbleMenu",
-    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/packages/design-system/components/atoms/crumbleMenu",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "/Users/pawelniedzwiecki/localhost/uxu/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/add-section-leadPostWithList&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/pawelniedzwiecki/localhost/uxu/packages/design-system&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/pawelniedzwiecki/localhost/uxu/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/crumbleMenu" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/stickyWrapper" />
-      <recent name="$PROJECT_DIR$/packages/utils/enums" />
-      <recent name="$PROJECT_DIR$/apps/wtrasie/src/gql/query" />
-      <recent name="$PROJECT_DIR$/apps/getReturn/src/gql/query" />
+      <recent name="$PROJECT_DIR$/packages/design-system" />
+      <recent name="$PROJECT_DIR$/packages/design-system/hooks" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/postList" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/hooks" />
+      <recent name="$PROJECT_DIR$/packages/design-system/providers" />
+      <recent name="$PROJECT_DIR$/packages/design-system/hooks" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/atoms" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules" />
-      <recent name="$PROJECT_DIR$/packages/design-system/pages/contact" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/collspace" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/organisms" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -131,7 +114,14 @@
       <workItem from="1699551389264" duration="16152000" />
       <workItem from="1699640799662" duration="1794000" />
       <workItem from="1699699970888" duration="11513000" />
-      <workItem from="1699721499798" duration="11815000" />
+      <workItem from="1699721499798" duration="14678000" />
+      <workItem from="1699867113830" duration="1119000" />
+      <workItem from="1699889073944" duration="13668000" />
+      <workItem from="1699908600203" duration="901000" />
+      <workItem from="1699983597745" duration="8570000" />
+      <workItem from="1699995493777" duration="4995000" />
+      <workItem from="1700045736654" duration="613000" />
+      <workItem from="1700154472555" duration="5759000" />
     </task>
     <servers />
   </component>
@@ -157,14 +147,9 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/packages/design-system/components/atoms/toast/utils/toastChunksInitial.ts</url>
+          <url>file://$PROJECT_DIR$/packages/design-system/components/organisms/toast/utils/toastChunksInitial.ts</url>
           <line>1</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/packages/design-system/components/atoms/note/note.tsx</url>
-          <line>23</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,17 +1,14 @@
 import type { ReactElement } from "react";
 import type { GetStaticPropsContext, GetStaticPaths, GetStaticProps } from 'next';
-import type { PostViewData } from 'design-system';
-import {
-  LayoutPostView,
-  PostView,
-  AdPhoneClient,
-  StickyWrapper,
-  Tree,
-  renderBranches,
-  CrumbleMenu
-} from 'design-system';
-import { useSeoConfig } from 'hooks';
+import type { PostFull } from 'utils';
 import { createSlug } from 'utils';
+import { AdPhoneClient } from 'design-system/components/molecules/adPhoneClient';
+import { LayoutPostView } from 'design-system/components/layout/layoutPostView';
+import { PostView } from 'design-system/components/templates/postView';
+import { Tree, renderBranches } from 'design-system/components/molecules/tree';
+import { StickyWrapper } from 'design-system/components/atoms/stickyWrapper';
+import { CrumbleMenu } from 'design-system/components/molecules/crumbleMenu';
+import { useSeoConfig } from 'design-system/hooks/useSeoConfig';
 import { connectQueries } from '../../utils/function';
 import { adapterArticleData, adapterArticlesSlugData } from '../../utils/adapters';
 import type { GetArticlesQuery } from '../../gql';
@@ -25,7 +22,7 @@ import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig }
 type ServiceProps = {
   slug?: string;
   clientPhone?: string;
-  articleData?: PostViewData;
+  articleData?: PostFull;
 };
 
 export default function Service ( {articleData, clientPhone, slug }: ServiceProps ): ReactElement {
@@ -101,7 +98,7 @@ export async function getStaticProps ( context: GetStaticPropsContext ): Promise
   const id: number = parseInt ( params.slug[ 0 ] );
 
   const {data: getArticleQuery} = await clientGetArticleQuery ( {variables: {id}} );
-  const articleData: PostViewData = adapterArticleData ( getArticleQuery );
+  const articleData: PostFull = adapterArticleData ( getArticleQuery );
 
   const tagsId: Array<string> = articleData.tags.map ( tag => tag.id );
 

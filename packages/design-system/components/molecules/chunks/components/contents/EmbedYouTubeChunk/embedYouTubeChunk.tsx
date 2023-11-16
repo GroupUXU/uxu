@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react';
-import { useSiteConfig } from 'hooks';
+import { useSiteConfig } from '../../../../../../hooks/useSiteConfig';
 import styles from './embedYouTubeChunk.module.scss';
 
 export function EmbedYouTubeChunk(): ReactElement | null {

@@ -3,7 +3,7 @@ import React, { useCallback } from 'react';
 import type { ReactElement, CSSProperties } from 'react';
 import { BookOpen, FileText } from 'react-feather';
 import classnames from 'classnames';
-import { Link } from '../../../../../../../atoms';
+import { Link } from '../../../../../../../atoms/link';
 import styles from './searchSuggestionList.module.scss';
 import type { SuggestionListProps } from "./types";
 

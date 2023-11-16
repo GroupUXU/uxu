@@ -1,15 +1,13 @@
 import type { ReactElement } from 'react';
 import type { GetServerSidePropsContext, GetServerSidePropsResult } from 'next';
-import {
-  LayoutListingPost,
-  SectionInfiniteScroll,
-  PostList,
-  StickyWrapper,
-  Tree,
-  renderBranches,
-  CrumbleMenu
-} from 'design-system';
-import { useSeoConfig } from 'hooks';
+import { LayoutListingPost } from 'design-system/components/layout/layoutListingPost';
+import { SectionInfiniteScroll } from 'design-system/components/templates/section/sectionInfiniteScroll';
+import { PostList } from 'design-system/components/organisms/postList';
+import { StickyWrapper } from 'design-system/components/atoms/stickyWrapper';
+import { Tree, renderBranches } from 'design-system/components/molecules/tree';
+import { CrumbleMenu } from 'design-system/components/molecules/crumbleMenu';
+import { useSeoConfig } from 'design-system/hooks/useSeoConfig';
+import type { PostShort } from "utils";
 import { useGetArticlesWithTagQuery } from '../../gql';
 import { adapterArticlesData } from '../../utils/adapters/adapterArticlesData';
 import { footerConfig, headerMenuConfig, searchEngineConfig, siteBarMenuConfig } from "../../config";
@@ -72,9 +70,9 @@ export default function Tag({ tagID , tagName }: TagProps ): ReactElement {
         page={1}
         pageCount={data?.articles?.meta.pagination.pageCount || 1}
       >
-        {data ? adapterArticlesData(data, "small").map((article, index) => {
+        {data ? adapterArticlesData(data, "small").map((article: PostShort) => {
           return (
-            <PostList {...article} key={article.id || index} />
+            <PostList {...article} key={article.id} />
           )
         }) : null}
       </SectionInfiniteScroll>

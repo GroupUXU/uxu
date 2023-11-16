@@ -1,0 +1,75 @@
+@import "../../../../../../../style/mixins";
+
+.wrapper {
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: var(--uxu-border-default);
+  background-color: var(--uxu-color-background-100);
+
+  .btnRemoveDefault {
+    position: absolute;
+    top: var(--uxu-space-small);
+    right: var(--uxu-space-small);
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    margin: 0;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+    background-color: transparent;
+
+    &:hover {
+      color: var(--uxu-color-primary-accent3);
+    }
+  }
+
+  &.danger,
+  &.warning {
+    color: var(--uxu-color-primary-background);
+
+    .btnRemoveDefault {
+      color: var(--uxu-color-primary-accent3);
+
+      &:hover {
+        color: var(--uxu-color-primary-background);
+      }
+    }
+  }
+
+  &.danger {
+    background-color: var(--uxu-color-error-default);
+  }
+
+  &.warning {
+    background-color: var(--uxu-color-warning-default);
+  }
+
+  &.success {
+    background-color: var(--uxu-color-success-default);
+  }
+
+  @include media('m') {
+    width: 60rem;
+    border-radius: var(--uxu-radii-default);
+    box-shadow: var(--uxu-shadow-alpha-100);
+  }
+}
+
+.content {
+  padding: var(--uxu-space-default);
+
+  .text {
+    font-size: 1.4rem;
+  }
+}
+
+.actions {
+  width: 100%;
+  display: flex;
+  padding-top: var(--uxu-space-default);
+  justify-content: flex-end;
+}

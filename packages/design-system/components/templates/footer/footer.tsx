@@ -1,9 +1,10 @@
 import React from 'react';
 import type { ReactElement } from 'react';
 import { Facebook, Twitter, Youtube, Instagram, GitHub } from "react-feather";
-import { useSiteConfig } from "hooks";
-import { Link, Logo } from '../../atoms';
-import { ThemeSwitcher } from '../../molecules';
+import { useSiteConfig } from "../../../hooks/useSiteConfig";
+import { Link } from '../../atoms/link';
+import { Logo } from '../../atoms/logo';
+import { ThemeSwitcher } from '../../molecules/themeSwitcher';
 import type { SocialLinkData } from "./components/SocialLink";
 import { SocialLink } from "./components/SocialLink";
 import styles from './footer.module.scss';

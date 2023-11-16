@@ -2,7 +2,7 @@
 import type { ReactElement } from 'react';
 import { forwardRef } from 'react';
 import classNames from 'classnames';
-import { Note } from '../../../atoms';
+import { Note } from '../../../atoms/note';
 import type { TextAreaProps } from './types';
 import styles from './textarea.module.scss';
 

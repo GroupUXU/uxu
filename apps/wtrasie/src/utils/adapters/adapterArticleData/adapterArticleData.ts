@@ -1,11 +1,11 @@
-import type { PostViewData } from 'design-system';
+import type { PostFull } from 'utils';
 import type { GetArticleQuery } from '../../../gql';
 import { adapterImageData } from "../adapterImageData";
 import { adapterAuthorData } from "../adapterAuthorData";
 import { adapterTagData } from "../adapterTagData";
 import { adapterContentPart } from "../adapterContentPart";
 
-export function adapterArticleData(getArticleData: GetArticleQuery): PostViewData {
+export function adapterArticleData(getArticleData: GetArticleQuery): PostFull {
 
   if (!getArticleData.article?.data) return {
     id: "",

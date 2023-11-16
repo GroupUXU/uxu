@@ -1,4 +1,4 @@
-import type { BranchProps } from "design-system";
+import type { BranchProps } from "design-system/components/molecules/tree";
 
 type HeaderMenuConfigTypes = Array<{ href: string, title: string }>
 

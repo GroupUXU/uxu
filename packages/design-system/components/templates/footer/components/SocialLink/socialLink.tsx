@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react';
-import { Link } from "../../../../atoms";
+import { Link } from "../../../../atoms/link";
 import type { SocialLinkData } from './types';
 
 export function SocialLink ( {name, accountId, url, Icon}: SocialLinkData ): ReactElement | null {

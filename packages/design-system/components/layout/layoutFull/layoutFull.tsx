@@ -2,8 +2,9 @@ import { useCallback } from 'react';
 import type { ReactElement } from 'react';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
-import { Container } from '../../atoms';
-import { Footer, Header } from '../../templates';
+import { Container } from '../../atoms/container';
+import { Header } from '../../templates/header';
+import { Footer } from '../../templates/footer';
 import { MobileVerticalModal, HeaderLeftComponents, HeaderRightComponents } from '../components'
 import type { LayoutFullProps } from './types';
 import styles from './layoutFull.module.scss';

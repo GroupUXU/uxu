@@ -1,5 +1,5 @@
-import classNames from 'classnames';
 import type { ReactElement } from 'react';
+import classNames from 'classnames';
 import type { HamburgerProps } from './hamburger.types';
 import styles from './hamburger.module.scss';
 
