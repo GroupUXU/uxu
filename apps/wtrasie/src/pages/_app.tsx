@@ -2,18 +2,20 @@ import App from 'next/app';
 import { useRouter } from 'next/router';
 import type { ReactElement } from "react";
 import type { AppProps, AppContext } from 'next/app';
+import type { NormalizedCacheObject } from '@apollo/client';
 import { getThemeFromRequest, getClientLocaleFromRequest, getMobilePlatformStatusFromRequest, getOSInfoFromRequest, getCookieConsentSettings } from 'utils';
 import type { SiteConfigProps } from 'utils';
 import { WrapperProviders } from 'design-system/providers/provider.wrapper';
 import 'design-system/style/globalStyle.scss';
-import { APOLLO_CLIENT, SITE_CONFIG } from "../config";
+import { useApollo, SITE_CONFIG } from "../config";
 
 
-function CustomApp({ Component, pageProps, ...customProps }: AppProps & SiteConfigProps): ReactElement {
+function CustomApp({ Component, pageProps, ...customProps }: AppProps<{ initialApolloState?: NormalizedCacheObject }> & SiteConfigProps): ReactElement {
+  const apolloClient = useApollo(pageProps.initialApolloState || null);
   const router = useRouter();
   return (
     <main className='app'>
-      <WrapperProviders apolloClient={APOLLO_CLIENT} siteConfig={SITE_CONFIG({...router, ...customProps})}>
+      <WrapperProviders apolloClient={apolloClient} siteConfig={SITE_CONFIG({...router, ...customProps})}>
         <Component {...pageProps} />
       </WrapperProviders>
     </main>

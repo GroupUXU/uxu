@@ -64,7 +64,7 @@ export default function Service ( {articleData, clientPhone, slug }: ServiceProp
 
 export async function getStaticPaths (): Promise<GetStaticPaths> {
 
-  const {data} = await clientGetArticlesQuery ( {variables: {pageSize: 25, page: 1, type: ['service']}} );
+  const { result: { data } } = await clientGetArticlesQuery ( {variables: {pageSize: 25, page: 1, type: ['service']}} );
 
   const connectedArticles: Array<GetArticlesQuery> = await connectQueries ( {
     functionQuery: clientGetArticlesQuery,

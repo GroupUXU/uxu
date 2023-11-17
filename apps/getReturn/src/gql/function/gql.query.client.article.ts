@@ -1,7 +1,8 @@
-import type { ApolloQueryResult } from "@apollo/client";
-import { APOLLO_CLIENT } from '../../config/apolloClient/config.apolloClient';
+import type { ApolloQueryResult, ApolloClient, NormalizedCacheObject } from "@apollo/client";
+import { initializeApollo } from '../../config/apolloClient/config.apolloClient';
 import { GET_ARICLE, GET_ARICLES } from '../query';
 import type { GetArticleQuery, GetArticlesQuery } from '../types';
+
 
 type ClientGetArticlesQueryProps = {
   variables: {
@@ -11,10 +12,13 @@ type ClientGetArticlesQueryProps = {
   }
 }
 
-export async function clientGetArticlesQuery({ variables: { pageSize = 10, page = 1, type = ['article', 'service'] }}: ClientGetArticlesQueryProps): Promise<ApolloQueryResult<GetArticlesQuery>> {
+export async function clientGetArticlesQuery({ variables: { pageSize = 10, page = 1, type = ['article', 'service'] }}: ClientGetArticlesQueryProps): Promise<{ apolloClient:  ApolloClient<NormalizedCacheObject>, result: ApolloQueryResult<GetArticlesQuery> }> {
   const options = {query: GET_ARICLES, variables: { pageSize, page, type }};
-  return APOLLO_CLIENT.query<GetArticlesQuery>( options );
+  const apolloClient = initializeApollo()
+  const result = await apolloClient.query<GetArticlesQuery>(options)
+  return { apolloClient, result }
 }
+
 
 
 type ClientGetArticleQueryProps = {
@@ -25,5 +29,5 @@ type ClientGetArticleQueryProps = {
 
 export async function clientGetArticleQuery ({ variables: { id }}: ClientGetArticleQueryProps): Promise<ApolloQueryResult<GetArticleQuery>> {
   const options = {query: GET_ARICLE, variables: { id }};
-  return APOLLO_CLIENT.query<GetArticleQuery> ( options );
+  return initializeApollo().query<GetArticleQuery> ( options );
 }
