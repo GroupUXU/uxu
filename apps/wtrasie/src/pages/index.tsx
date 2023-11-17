@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react';
 import type { PostShort } from "utils";
-import type { ApolloQueryResult } from "@apollo/client";
+import type { NormalizedCacheObject } from "@apollo/client";
 import { SectionInfiniteScroll } from 'design-system/components/templates/section/sectionInfiniteScroll';
 import { LayoutListingPost } from 'design-system/components/layout/layoutListingPost/layoutListingPost';
 import { PostList } from 'design-system/components/organisms/postList';
@@ -11,7 +11,6 @@ import { LeadPostWithList } from 'design-system/components/templates/section/lea
 import { useSeoConfig } from 'design-system/hooks/useSeoConfig';
 import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig } from '../config';
 import { useGetArticlesQuery, clientGetArticlesQuery } from '../gql';
-import type { GetArticlesQuery } from '../gql';
 import { adapterArticlesData } from '../utils/adapters/adapterArticlesData';
 
 function Index (): ReactElement {
@@ -46,7 +45,6 @@ function Index (): ReactElement {
   const leadPostWithListData: Array<PostShort> = articlesCopy.slice ( 0, 5 );
   const postListData: Array<PostShort> = articlesCopy.slice ( 5 );
 
-
   return (
     <LayoutListingPost
       footer={footerConfig}
@@ -79,11 +77,11 @@ function Index (): ReactElement {
 };
 
 
-export async function getServerSideProps(): Promise<{props: { initialApolloState: ApolloQueryResult<GetArticlesQuery> }}> {
-  const initialApolloState = await clientGetArticlesQuery({ variables: { pageSize: 12, page: 1 }})
+export async function getServerSideProps(): Promise<{props: { initialApolloState: NormalizedCacheObject }}> {
+  const { apolloClient} = await clientGetArticlesQuery({ variables: { pageSize: 12, page: 1, type: ['article'] }})
   return {
     props: {
-      initialApolloState
+      initialApolloState: apolloClient.extract()
     },
   };
 }

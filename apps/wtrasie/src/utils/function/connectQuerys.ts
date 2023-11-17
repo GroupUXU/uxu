@@ -1,6 +1,6 @@
-import type { ApolloQueryResult } from '@apollo/client';
+import type { ApolloClient, NormalizedCacheObject, ApolloQueryResult } from "@apollo/client";
 
-type FunctionQuery<T> = (variables: unknown) => Promise<ApolloQueryResult<T>>;
+type FunctionQuery<T> = (variables: unknown) => Promise<{ apolloClient:  ApolloClient<NormalizedCacheObject>, result: ApolloQueryResult<T> }>;
 
 
 type Props<T, V> = {
@@ -11,7 +11,7 @@ type Props<T, V> = {
 
 export async function connectQueries<T, V>( {functionQuery, variablesQuery, pageCount}: Props<T, V>): Promise<Array<T>> {
   return Promise.all(new Array(pageCount).fill(null).map(async (_, index) => {
-    const query = await functionQuery ( {...variablesQuery, page: index + 1 } );
-    return query.data
+    const { result } = await functionQuery ( {...variablesQuery, page: index + 1 } );
+    return result.data
   }))
 }

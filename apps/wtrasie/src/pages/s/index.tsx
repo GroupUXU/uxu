@@ -1,5 +1,6 @@
 import type { ReactElement } from 'react';
 import type { PostShort } from "utils";
+import type { NormalizedCacheObject } from "@apollo/client";
 import { SectionInfiniteScroll } from 'design-system/components/templates/section/sectionInfiniteScroll';
 import { LayoutListingPost } from 'design-system/components/layout/layoutListingPost/layoutListingPost';
 import { PostList } from 'design-system/components/organisms/postList';
@@ -9,7 +10,7 @@ import { CrumbleMenu } from 'design-system/components/molecules/crumbleMenu';
 import { useSeoConfig } from 'design-system/hooks/useSeoConfig';
 import { LeadPostWithList } from "design-system/components/templates/section/leadPostWithList";
 import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig } from '../../config';
-import { useGetArticlesQuery } from '../../gql';
+import { clientGetArticlesQuery, useGetArticlesQuery } from '../../gql';
 import { adapterArticlesData } from '../../utils/adapters/adapterArticlesData';
 
 function Index(): ReactElement  {
@@ -72,5 +73,15 @@ function Index(): ReactElement  {
   </LayoutListingPost>
   );
 };
+
+
+export async function getServerSideProps(): Promise<{props: { initialApolloState: NormalizedCacheObject }}> {
+  const { apolloClient } = await clientGetArticlesQuery({ variables: { pageSize: 12, page: 1, type: ['service'] }})
+  return {
+    props: {
+      initialApolloState: apolloClient.extract(),
+    },
+  };
+}
 
 export default Index;
