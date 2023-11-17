@@ -1,4 +1,6 @@
 import type { ReactElement } from 'react';
+import type { PostShort } from "utils";
+import type { ApolloQueryResult } from "@apollo/client";
 import { SectionInfiniteScroll } from 'design-system/components/templates/section/sectionInfiniteScroll';
 import { LayoutListingPost } from 'design-system/components/layout/layoutListingPost/layoutListingPost';
 import { PostList } from 'design-system/components/organisms/postList';
@@ -7,9 +9,9 @@ import { StickyWrapper } from 'design-system/components/atoms/stickyWrapper';
 import { CrumbleMenu } from 'design-system/components/molecules/crumbleMenu';
 import { LeadPostWithList } from 'design-system/components/templates/section/leadPostWithList';
 import { useSeoConfig } from 'design-system/hooks/useSeoConfig';
-import type { PostShort } from "utils";
 import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig } from '../config';
-import { useGetArticlesQuery } from '../gql';
+import { useGetArticlesQuery, clientGetArticlesQuery } from '../gql';
+import type { GetArticlesQuery } from '../gql';
 import { adapterArticlesData } from '../utils/adapters/adapterArticlesData';
 
 function Index (): ReactElement {
@@ -20,8 +22,7 @@ function Index (): ReactElement {
       pageSize: 12,
       page: 1,
       type: ['article']
-    },
-    ssr: true
+    }
   } );
 
   const handleScrollEnd = async ( page: number ): Promise<{
@@ -76,5 +77,15 @@ function Index (): ReactElement {
     </LayoutListingPost>
   );
 };
+
+
+export async function getServerSideProps(): Promise<{props: { initialApolloState: ApolloQueryResult<GetArticlesQuery> }}> {
+  const initialApolloState = await clientGetArticlesQuery({ variables: { pageSize: 12, page: 1 }})
+  return {
+    props: {
+      initialApolloState
+    },
+  };
+}
 
 export default Index;
