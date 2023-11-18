@@ -7,6 +7,9 @@ export type RenderDocumentStructureProps = {
 };
 
 export function RenderDocumentStructure({ theme }: RenderDocumentStructureProps): ReactElement {
+
+
+
   return (
     <Html data-theme={theme}>
       <Head>
@@ -25,6 +28,16 @@ export function RenderDocumentStructure({ theme }: RenderDocumentStructureProps)
           }}
         />
         <meta name="google-adsense-account" content="ca-pub-4518094843351143"/>
+        <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" />
+        <script dangerouslySetInnerHTML={{
+         __html: `
+          window.googletag = window.googletag || {cmd: []};
+          googletag.cmd.push(function() {
+            googletag.defineSlot('/23023978625/2525', [250, 250], 'div-gpt-ad-1700304626809-0').addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+         `,
+        }}/>
       </Head>
       <body>
       <noscript>

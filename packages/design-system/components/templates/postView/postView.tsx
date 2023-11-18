@@ -22,7 +22,11 @@ export function PostView({ postViewData }: PostViewProps ): ReactElement {
           <ArticleMetaWrapper authors={authors} createdAt={createdAt}/>
         </div>
         <div className={classnames(styles.wrapperAds, styles.adsInPost)}>
-          <Ads slot="s250250" stickyOffset="9rem" />
+          <Ads slot="s250250" stickyOffset="9rem">
+            <div id='div-gpt-ad-1700304626809-0' style={{minWidth: '250px', minHeight: '250px' }}>
+              <script dangerouslySetInnerHTML={{ __html: `googletag.cmd.push(function() { googletag.display('div-gpt-ad-1700304626809-0'); });`, }} />
+            </div>
+          </Ads>
         </div>
       </div>
       <Cover cover={cover} title={title}/>

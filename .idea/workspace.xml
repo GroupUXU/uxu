@@ -6,14 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/function/gql.query.client.article.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/function/gql.query.client.article.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/gql/function/gql.query.client.tag.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/gql/function/gql.query.client.tag.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/blog/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/blog/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/gql/function/gql.query.client.article.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/gql/function/gql.query.client.article.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/function/connectQuerys.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/utils/function/connectQuerys.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/ads/ads.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/ads/ads.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/ads/ads.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/ads/ads.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/postView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/postView/postView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +35,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "fix/ssr-casche",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/packages/design-system",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
