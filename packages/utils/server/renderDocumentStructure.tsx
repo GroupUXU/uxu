@@ -6,8 +6,7 @@ export type RenderDocumentStructureProps = {
   theme: SiteConfigProps['theme']
 };
 
-export function RenderDocumentStructure({ theme }: RenderDocumentStructureProps): ReactElement {
-
+export function RenderDocumentStructure ( {theme}: RenderDocumentStructureProps ): ReactElement {
 
 
   return (
@@ -28,14 +27,15 @@ export function RenderDocumentStructure({ theme }: RenderDocumentStructureProps)
           }}
         />
         <meta name="google-adsense-account" content="ca-pub-4518094843351143"/>
-        <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" />
+        <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"/>
         <script dangerouslySetInnerHTML={{
-         __html: `
+          __html: `
           window.googletag = window.googletag || {cmd: []};
-          googletag.cmd.push(function() {
-            googletag.defineSlot('/23023978625/2525', [250, 250], 'div-gpt-ad-1700304626809-0').addService(googletag.pubads());
-            googletag.pubads().enableSingleRequest();
-            googletag.enableServices();
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/23023978625/2525', [250, 250], 'div-gpt-ad-1700309639482-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
          `,
         }}/>
       </Head>

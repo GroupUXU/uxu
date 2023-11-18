@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/ads/ads.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/ads/ads.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/ads/ads.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/ads/ads.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/postView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/postView/postView.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure.tsx" afterDir="false" />
     </list>
