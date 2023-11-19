@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useRef } from 'react';
 import { CookieManager, checkIsDOM } from 'utils';
-import type { SiteConfig, SiteConfigProps, Site } from 'utils'; // Ensure 'Site' type is imported if it's defined in 'utils'.
+import type { SiteConfig, Site } from 'utils'; // Ensure 'Site' type is imported if it's defined in 'utils'.
 import { useSiteConfig } from './useSiteConfig';
 
-export function useTheme(): { setTheme: (newTheme: SiteConfigProps['theme']) => void } {
+export function useTheme(): { setTheme: (newTheme: SiteConfig['site']['theme']) => void } {
   const cookieManager = useRef<CookieManager | null>(null);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ export function useTheme(): { setTheme: (newTheme: SiteConfigProps['theme']) => 
   }, []);
 
   const { config, setConfig } = useSiteConfig();
-  const currentTheme: "dark" | "light" = config.site?.theme || 'dark';
+  const currentTheme: "dark" | "light" = config.site.theme;
 
   const updateDOMTheme = useCallback((theme: "dark" | "light"): void => {
     checkIsDOM((): void => {
@@ -21,12 +21,10 @@ export function useTheme(): { setTheme: (newTheme: SiteConfigProps['theme']) => 
   }, []);
 
   const setTheme = useCallback(
-    (newTheme: SiteConfigProps['theme']): void => {
+    (newTheme: SiteConfig['site']['theme']): void => {
       if (currentTheme !== newTheme) {
         cookieManager.current?.setCookie('theme', newTheme);
         updateDOMTheme(newTheme);
-
-        if (!config.site) return;
 
         const updatedSiteConfig: Site = {
           ...config.site,

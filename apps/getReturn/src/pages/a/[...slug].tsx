@@ -2,14 +2,11 @@ import type { ReactElement } from 'react';
 import type { GetStaticPropsContext, GetServerSideProps } from 'next';
 import { CrumbleMenu } from 'design-system/components/molecules/crumbleMenu';
 import { LayoutPostView } from 'design-system/components/layout/layoutPostView';
-import { PostView } from 'design-system/components/templates/postView';
-import { renderBranches, Tree } from 'design-system/components/molecules/tree';
-import { StickyWrapper } from 'design-system/components/atoms/stickyWrapper';
 import { useSeoConfig } from 'design-system/hooks/useSeoConfig';
 import type { PostFull } from 'utils';
 import { adapterArticleData } from '../../utils/adapters/adapterArticleData';
 import { clientGetArticleQuery } from '../../gql';
-import { footerConfig, headerMenuConfig, searchEngineConfig, siteBarMenuConfig } from "../../config";
+import { footerConfig, headerMenuConfig, searchEngineConfig } from "../../config";
 
 type ArticleProps = {
   slug?: string;
@@ -24,19 +21,11 @@ export default function Article({ articleData, slug }: ArticleProps): ReactEleme
     <LayoutPostView
       footer={footerConfig}
       headerMenu={headerMenuConfig}
+      postViewData={articleData}
       searchEngineConfig={searchEngineConfig}
       seo={seo}
-      siteBarLeft={(
-        <StickyWrapper top="calc(var(--uxu-space-large) * 3)">
-          <Tree activeHref="/">
-            {renderBranches(siteBarMenuConfig)}
-          </Tree>
-        </StickyWrapper>
-      )}
       topElement={<CrumbleMenu data={[{ title: "home", href: "/" }, { title: 'blog', href: '/blog' }, { title: articleData?.title || 'artykuł', href: slug || "/" }]}/>}
-    >
-      {articleData ? <PostView postViewData={articleData}/> : null}
-    </LayoutPostView>
+    />
   );
 }
 

@@ -23,11 +23,11 @@ export function useSeoConfig ( {title, description, type = 'website', locale, im
 } {
   const {config: { site }} = useSiteConfig ();
 
-  const defaultUrl = site?.canonicalUrl || '';
-  const defaultTitle = site?.title || '';
-  const defaultDescription = site?.description || '';
-  const defaultLocale = site?.locale || 'en';
-  const defaultImages = site?.images || [];
+  const defaultUrl = site.canonicalUrl || '';
+  const defaultTitle = site.title || '';
+  const defaultDescription = site.description || '';
+  const defaultLocale = site.locale || 'en';
+  const defaultImages = site.images;
 
   const validImages = (images || defaultImages).filter ( image => typeof image.url === 'string' ) as { url: string }[];
   return {

@@ -5,9 +5,79 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/apps/getReturn/typings.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/wtrasie/typings.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/adsSlot/adsSlot.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/adsSlot/typings.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/utils/enums/pageType.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure/components/adIntegrationHubHeader/adIntegrationHubHeader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure/components/adIntegrationHubHeader/components/googleAdManager/googleAdManagerHead.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure/components/adIntegrationHubHeader/components/googleAdManager/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure/components/adIntegrationHubHeader/components/googleTagManager/googleTagManagerBody.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure/components/adIntegrationHubHeader/components/googleTagManager/googleTagManagerHead.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure/components/adIntegrationHubHeader/components/googleTagManager/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure/components/adIntegrationHubHeader/components/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure/components/adIntegrationHubHeader/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure/components/adIntegrationHubHeader/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure/components/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure/renderDocumentStructure.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/postView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/postView/postView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/config/configSite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/config/configSite.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/_document.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/pages/a/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/pages/a/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configSite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configSite.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/_document.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/a/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/a/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/assets/ads/assets.ads.slots.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/assets/ads/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/assets/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/assets/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/ads/ads.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/adsSlot/adsSlot.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/ads/ads.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/ads/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/adsSlot/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/ads/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/adsSlot/types.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/keyboardShortcut/keyboardShortcut.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/keyboardShortcut/keyboardShortcut.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/components/headerLeftComponents/headerLeftComponents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/components/headerLeftComponents/headerLeftComponents.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/layoutPostView.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/layoutPostView.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/layoutPostView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/layoutPostView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/contents/EmbedYouTubeChunk/embedYouTubeChunk.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/contents/EmbedYouTubeChunk/embedYouTubeChunk.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/listButtonsSocialShare/buttonsSocialShare.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/listButtonsSocialShare/buttonsSocialShare.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/themeSwitcher/themeSwitcher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/themeSwitcher/themeSwitcher.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/searchEngineInModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/searchEngineInModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/footer/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/footer/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/components/articleMetaWrapper/articleMetaWrapper.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/components/articleMetaWrapper/articleMetaWrapper.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/components/articleMetaWrapper/articleMetaWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/components/articleMetaWrapper/articleMetaWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/components/articleMetaWrapper/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/components/articleMetaWrapper/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/components/articleMetaWrapper/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/components/articleMetaWrapper/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/components/cover/cover.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/components/cover/cover.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/components/cover/cover.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/components/cover/cover.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/components/cover/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/components/cover/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/components/cover/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/components/cover/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/postView.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/postView.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/postView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/postView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/postView/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/hooks/useSeoConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/hooks/useSeoConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/hooks/useTheme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/hooks/useTheme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/providers/provider.configSite.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/providers/provider.configSite.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/providers/provider.seo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/providers/provider.seo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/providers/provider.wrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/providers/provider.wrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/typings.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/typings.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/other/generateUniqueId.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/other/generateUniqueId.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/server/get/getMobilePlatformStatusFromRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/get/getMobilePlatformStatusFromRequest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/server/get/getOSInfoFromRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/get/getOSInfoFromRequest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/server/get/getThemeFromRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/get/getThemeFromRequest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/server/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/types/config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/types/config/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/types/config/siteConfigTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/types/config/siteConfigTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,39 +98,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/packages/design-system",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "/Users/pawelniedzwiecki/localhost/uxu/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/add-adds-lib&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/pawelniedzwiecki/localhost/uxu/apps/getReturn&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/pawelniedzwiecki/localhost/uxu/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/design-system" />
-      <recent name="$PROJECT_DIR$/packages/design-system/hooks" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/postList" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section" />
+      <recent name="$PROJECT_DIR$/apps/getReturn" />
+      <recent name="$PROJECT_DIR$/apps/wtrasie" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/adsSlot" />
+      <recent name="$PROJECT_DIR$/packages/utils/enums" />
+      <recent name="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/design-system/providers" />
-      <recent name="$PROJECT_DIR$/packages/design-system/hooks" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/atoms" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/organisms" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components" />
+      <recent name="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure/components" />
+      <recent name="$PROJECT_DIR$/packages/utils/server/renderDocumentStructure" />
+      <recent name="$PROJECT_DIR$/packages/uxuAdIntegrationHub/adHeaderCreator/components" />
+      <recent name="$PROJECT_DIR$/packages/uxuads" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -122,6 +192,27 @@
       <workItem from="1700045736654" duration="613000" />
       <workItem from="1700154472555" duration="5759000" />
       <workItem from="1700234815931" duration="13327000" />
+      <workItem from="1700342474865" duration="6468000" />
+      <workItem from="1700349930373" duration="56000" />
+      <workItem from="1700349994533" duration="129000" />
+      <workItem from="1700350129329" duration="6428000" />
+      <workItem from="1700395412560" duration="2245000" />
+      <workItem from="1700398944111" duration="1510000" />
+      <workItem from="1700400468143" duration="2961000" />
+      <workItem from="1700405032605" duration="3115000" />
+      <workItem from="1700408159386" duration="7834000" />
+      <workItem from="1700418722781" duration="4643000" />
+      <workItem from="1700423598613" duration="146000" />
+      <workItem from="1700423750459" duration="289000" />
+      <workItem from="1700424045465" duration="7000" />
+      <workItem from="1700424068883" duration="248000" />
+      <workItem from="1700424322393" duration="1313000" />
+      <workItem from="1700425643092" duration="329000" />
+      <workItem from="1700425978361" duration="2234000" />
+      <workItem from="1700428221184" duration="246000" />
+      <workItem from="1700428472345" duration="150000" />
+      <workItem from="1700428636597" duration="26000" />
+      <workItem from="1700428855300" duration="179000" />
     </task>
     <servers />
   </component>

@@ -7,6 +7,7 @@
 
   &::before,
   &::after {
+    z-index: 0;
     width: 100%;
     position: absolute;
     text-align: center;
@@ -24,4 +25,9 @@
     top: calc(50% + 0.5rem);
     content: 'reklama';
   }
+}
+
+.ad {
+  z-index: 1;
+  position: relative;
 }

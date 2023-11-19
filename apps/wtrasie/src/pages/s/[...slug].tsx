@@ -4,9 +4,6 @@ import type { PostFull } from 'utils';
 import { createSlug } from 'utils';
 import { AdPhoneClient } from 'design-system/components/molecules/adPhoneClient';
 import { LayoutPostView } from 'design-system/components/layout/layoutPostView';
-import { PostView } from 'design-system/components/templates/postView';
-import { Tree, renderBranches } from 'design-system/components/molecules/tree';
-import { StickyWrapper } from 'design-system/components/atoms/stickyWrapper';
 import { CrumbleMenu } from 'design-system/components/molecules/crumbleMenu';
 import { useSeoConfig } from 'design-system/hooks/useSeoConfig';
 import { connectQueries } from '../../utils/function';
@@ -17,7 +14,7 @@ import {
   clientGetArticlesQuery,
   clientClientsWithTagsQuery
 } from '../../gql';
-import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig } from '../../config';
+import { footerConfig, headerMenuConfig, searchEngineConfig } from '../../config';
 
 type ServiceProps = {
   slug?: string;
@@ -41,24 +38,16 @@ export default function Service ( {articleData, clientPhone, slug }: ServiceProp
     <LayoutPostView
       footer={footerConfig}
       headerMenu={headerMenuConfig}
+      postViewData={articleData}
       searchEngineConfig={searchEngineConfig}
       seo={seo}
-      siteBarLeft={(
-        <StickyWrapper top="calc(var(--uxu-space-large) * 3)">
-          <Tree activeHref="/">
-            {renderBranches ( siteBarMenuConfig )}
-          </Tree>
-        </StickyWrapper>
-      )}
       topElement={
         <>
           <AdPhoneClient {...adsWithPhoneClient} />
           <CrumbleMenu data={[{ title: "home", href: "/" }, { title: "usługi", href: "/s" }, { title: articleData?.title || "usługa", href: slug || "/" }]}/>
         </>
       }
-    >
-      {articleData ? <PostView postViewData={articleData}/> : null}
-    </LayoutPostView>
+    />
   );
 }
 

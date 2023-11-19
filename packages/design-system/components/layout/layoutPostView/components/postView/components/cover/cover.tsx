@@ -2,7 +2,7 @@
 
 import type { ReactElement } from "react";
 import Image from "next/legacy/image";
-import { DummyImg } from "../../../../atoms/dummyIMG";
+import { DummyImg } from "../../../../../../atoms/dummyIMG";
 import styles from "./cover.module.scss";
 import type { CoverProps } from './types';
 

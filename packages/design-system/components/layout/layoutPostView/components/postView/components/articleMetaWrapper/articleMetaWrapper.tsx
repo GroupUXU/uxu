@@ -1,6 +1,6 @@
 import type { ReactElement } from "react";
 import { parseFormatDate } from "utils";
-import { AvatarGroup } from "../../../../molecules/avatarGroup";
+import { AvatarGroup } from "../../../../../../molecules/avatarGroup";
 import styles from "./articleMetaWrapper.module.scss";
 import type { ArticleMetaWrapperProps } from "./types";
 

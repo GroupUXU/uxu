@@ -1,40 +1,40 @@
-import type { SiteConfig, SiteConfigProps } from "utils";
 import { SiteIdEnums } from "utils";
+import type { SiteConfig, AdSlotsMap } from "utils";
+
+const adSlotsMap: AdSlotsMap = new Map([
+  ['2XDXLEADX1', { id: 23024113287, code: 'WTRASIEPL300X250X2XDXLEADX1', size: { width: 300, height: 250 } }],
+  ['2XDXSITEBARLEFTX1', { id: 23024391190, code: 'WTRASIEPL160X600X2XDXSITEBARLEFTX1', size: { width: 160, height: 600 } }],
+  ['2XDXSITEBARRIGHTX1', { id: 23024993204, code: 'WTRASIEPL300X600X2XDXSITEBARRIGHTX1', size: { width: 300, height: 600 } }],
+  ['1XDXWIDEBOARDX1', { id: 23024405779, code: 'WTRASIEPL970X250X1XDXWIDEBOARDX1', size: { width: 970, height: 250 } }],
+  ['1XMXWIDEBOARDX1', { id: 23024126889, code: 'WTRASIEPL300X100X1XMXWIDEBOARDX1', size: { width: 300, height: 100 } }],
+])
 
 export const locale = 'pl';
 
-export const SITE_CONFIG = ( {
-                               theme,
-                               clientLocale,
-                               isMobilePlatform,
-                               router,
-                               osInfo,
-                               cookieConsentSettings
-                             }: SiteConfigProps ): SiteConfig => ({
-  ads: {
-    enabled: true
-  },
-  analytics: {
-    gtmId: "GTM-MC3DNS7"
+export const siteConfig: SiteConfig = {
+  marketingToolsConfig: {
+    googleTagManagerId: 'GTM-MC3DNS7',
+    googleAdManagerId: '23023978625',
+    adSlotsMap,
   },
   port: 3000,
   projectName: 'getReturn',
   site: {
     id: SiteIdEnums.WTRASIE,
     locale,
-    domain: 'getreturn.pl',
-    slug: router.asPath,
+    domain: 'getReturn.pl',
+    slug: '/',
     brand: "getReturn",
     shortBrand: "getReturnShort",
-    defaultCover: 'https://getreturn.pl/defaultCover.png',
-    canonicalUrl: `https://getreturn.pl${router.asPath}`,
-    images: [{url: 'https://getreturn.pl/ogWTrasie.png'}],
-    title: 'getReturn - kredyty',
-    shortname: 'wt',
-    description: 'getReturn.pl - kredyty',
+    defaultCover: 'https://getReturn.pl/defaultCover.png',
+    canonicalUrl: `https://getReturn.pl`,
+    images: [{url: 'https://getReturn.pl/defaultCover.png'}],
+    title: 'GetReturn - Sankcja darmowego kredytu',
+    shortname: 'gr',
+    description: 'getReturn',
     authEnabled: false,
     switchTheme: true,
-    theme,
+    theme: 'dark',
   },
   social: {
     facebook: {
@@ -42,14 +42,21 @@ export const SITE_CONFIG = ( {
     }
   },
   client: {
-    locale: clientLocale,
+    locale,
     platform: {
-      isDesktop: !isMobilePlatform,
-      isMobile: isMobilePlatform,
+      isDesktop: false,
+      isMobile: false,
     },
-    osInfo
+    osInfo: {
+      isWindows: false,
+      isLinux: false,
+      isMacOS: false,
+    },
   },
-  cookieConsentSettings,
+  cookieConsentSettings: {
+    ads: false,
+    analytics: false
+  },
   admin: {
     company: {
       name: "GetReturn Sp. z o.o.",
@@ -73,4 +80,4 @@ export const SITE_CONFIG = ( {
       }
     }
   }
-});
+};

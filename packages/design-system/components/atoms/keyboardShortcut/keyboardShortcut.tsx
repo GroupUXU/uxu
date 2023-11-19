@@ -10,7 +10,7 @@ const OTHER_SYMBOLS = { meta: 'Ctrl', shift: 'Shift', alt: 'Alt', ctrl: 'Ctrl' }
 
 export function KeyboardShortcut({ command, shift, option, ctrl, callback, children, className }: KeyboardShortcutProps): ReactElement {
   const { config: { client} } = useSiteConfig();
-  const isMacOS = client?.osInfo.isMacOS;
+  const isMacOS = client.osInfo.isMacOS;
 
   const pressedKeys = useRef(new Set<string>());
 

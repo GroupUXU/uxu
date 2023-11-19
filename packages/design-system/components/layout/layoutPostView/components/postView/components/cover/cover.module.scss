@@ -1,4 +1,4 @@
-@import "../../../../../style/mixins";
+@import "../../../../../../../style/mixins";
 
 .wrapperCoverWithMeta {
   width: 100%;
@@ -13,7 +13,7 @@
     position: relative;
 
     @include media(s) {
-      height: 50rem;
+      height: 60rem;
     }
   }
 

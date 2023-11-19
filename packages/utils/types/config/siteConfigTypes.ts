@@ -1,19 +1,20 @@
-import type { NextRouter } from "next/router";
 import type { SiteIdEnums } from "../../enums";
 import type { VectorBrandsVariant } from "../../../assets";
 
-type Ads = Partial<{
-  enabled: boolean;
-}>;
 
 type CookieConsentSettings = Partial<{
   ads: boolean
   analytics: boolean;
 }>;
 
-type Analytics = Partial<{
-  gtmId: string | string[];
-  hotjarId: string;
+export type AdSlotData = { id: number, code: string, size: { width: number, height: number }};
+
+export type AdSlotsMap = Map<string, AdSlotData>;
+
+export type MarketingToolsConfig = Partial<{
+  googleAdManagerId?: string;
+  googleTagManagerId?: string;
+  adSlotsMap?: AdSlotsMap;
 }>;
 
 type Facebook = Partial<{
@@ -59,11 +60,6 @@ export type Social = Partial<{
   youtube: Youtube;
   github: GitHub;
   tiktok: TikTok;
-}>;
-
-type Graphql = Partial<{
-  productId: SiteIdEnums;
-  url: string;
 }>;
 
 export type Site = {
@@ -122,21 +118,10 @@ type Admin = Partial<{
   }
 }>
 
-export type SiteConfigProps = {
-  theme: Site['theme']
-  clientLocale: string,
-  isMobilePlatform: boolean,
-  router: NextRouter,
-  osInfo: Client['osInfo'],
-  cookieConsentSettings: CookieConsentSettings
-}
-
 export type SiteConfigContextProps = { config: SiteConfig, setConfig: ( newConfig: SiteConfig ) => void }
 
-export type SiteConfig = Partial<{
-  ads: Ads;
-  analytics: Analytics;
-  graphql: Graphql;
+export type SiteConfig = {
+  marketingToolsConfig: MarketingToolsConfig;
   port: number;
   projectName: string;
   site: Site;
@@ -144,4 +129,4 @@ export type SiteConfig = Partial<{
   client: Client;
   admin: Admin;
   cookieConsentSettings: CookieConsentSettings;
-}>;
+};

@@ -11,11 +11,11 @@ export function ThemeSwitcher(): ReactElement {
   const { config: { site }} = useSiteConfig();
 
   const toggleTheme = useCallback((theme: 'dark' | 'light'): void  => {
-    theme !== site?.theme && setTheme(theme);
+    theme !== site.theme && setTheme(theme);
   }, [setTheme, site]);
 
   return (
-    <div className={classnames(styles.wrraper, { [styles.dark]: site?.theme === "dark" })}>
+    <div className={classnames(styles.wrraper, { [styles.dark]: site.theme === "dark" })}>
       <button
         className={styles.button}
         onClick={() => {

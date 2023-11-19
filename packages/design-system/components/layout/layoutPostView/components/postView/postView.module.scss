@@ -1,4 +1,4 @@
-@import "../../../style/mixins";
+@import "../../../../../style/mixins";
 
 .article {
   width: 100%;
@@ -9,15 +9,26 @@
   padding: var(--uxu-space-large) 0;
 }
 
+.wrapperLeadWithAd {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: auto;
+  position: relative;
 
-.adWithContentWrapper {
+  @include media(m){
+    grid-template-columns: 1fr 30rem;
+  }
+}
+
+
+.wrapperContentWithAd {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: auto;
   position: relative;
 
  @include media(m){
-   grid-template-columns: calc(100% - 26.5rem) 25rem;
+   grid-template-columns: 20rem 1fr 30rem;
  }
 }
 

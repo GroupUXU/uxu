@@ -3,15 +3,15 @@ import { useCallback } from 'react';
 import type { ReactElement } from 'react';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
-import { SiteBar } from '../../atoms/siteBar';
 import { Container } from '../../atoms/container';
 import { Header } from '../../templates/header';
 import { Footer } from '../../templates/footer';
-import { MobileVerticalModal, HeaderLeftComponents, HeaderRightComponents } from '../components'
+import { MobileVerticalModal, HeaderLeftComponents, HeaderRightComponents } from '../components';
+import { PostView } from './components'
 import type { LayoutPostViewProps } from './types';
 import styles from './layoutPostView.module.scss';
 
-export function LayoutPostView({ children, footer, headerMenu, searchEngineConfig, seo, siteBarLeft, topElement }: LayoutPostViewProps): ReactElement {
+export function LayoutPostView({ footer, headerMenu, searchEngineConfig, seo, topElement, postViewData }: LayoutPostViewProps): ReactElement {
   const router = useRouter();
   const currentSlug = router.pathname || '/';
 
@@ -25,13 +25,10 @@ export function LayoutPostView({ children, footer, headerMenu, searchEngineConfi
         mobileHamburgerMenu={<MobileVerticalModal activeHref={currentSlug} headerMenu={headerMenu} isLinkActive={isLinkActive} />}
         rightComponents={<HeaderRightComponents modalAlignment='right' switchModalButtonText='sugestia' />}
       />
-      <div className={styles.menuSpacer} />
+      <div className={styles.bg} />
       {topElement}
       <Container>
-        <div className={styles.container}>
-          <div className={styles.siteBarLeft}>{siteBarLeft && <SiteBar site="left">{siteBarLeft}</SiteBar>}</div>
-          <div style={{position: 'relative'}}>{children}</div>
-        </div>
+        {postViewData && <PostView postViewData={postViewData}/>}
       </Container>
       <Footer {...footer} />
     </>
