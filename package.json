@@ -1,10 +1,6 @@
 {
   "name": "uxu",
   "private": false,
-  "packageManager": "yarn@3.5.1",
-  "engines": {
-    "node": "<=18"
-  },
   "browserslist": [
     "Chrome >= 83",
     "Firefox >= 90",
