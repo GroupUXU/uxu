@@ -9,7 +9,7 @@ The platform by UXU GROUP is a collection of tools and features that enable rapi
 
 ## Requirements
 
-- Node 18.16.0 (use [NVM](https://github.com/nvm-sh/nvm))
+- Node 18 (use [NVM](https://github.com/nvm-sh/nvm))
 - Yarn (any version - Yarn 1.x is included in the repo)
 
 On Windows:
