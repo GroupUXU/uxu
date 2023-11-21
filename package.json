@@ -1,14 +1,9 @@
 {
   "name": "uxu",
   "private": false,
-  "repository": {
-    "type": "git",
-    "url": "https://git.dcwp.pl/crisp/crisp.git"
-  },
   "packageManager": "yarn@3.5.1",
   "engines": {
-    "node": "<=18",
-    "yarn": ">=1.22.0"
+    "node": "<=18"
   },
   "browserslist": [
     "Chrome >= 83",
