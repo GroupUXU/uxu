@@ -1,6 +1,15 @@
 {
   "name": "uxu",
-  "private": false,
+  "private": true,
+  "packageManager": "yarn@1.22.19",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GroupUXU/uxu"
+  },
+  "engines": {
+    "node": "<18",
+    "yarn": ">=1.22.0"
+  },
   "browserslist": [
     "Chrome >= 83",
     "Firefox >= 90",
