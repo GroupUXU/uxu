@@ -7,7 +7,7 @@ const shouldExecuteStrategy = (
   numChunk === 1 ||
   numChunksSinceLastAd === 3
 
-export function chunksStrategyForPostMobile(
+export function strategyForContentPartInPostMobile(
   props: StrategyProps,
 ): StrategyResult {
 

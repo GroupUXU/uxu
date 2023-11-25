@@ -7,7 +7,7 @@ import { createInsertAdsFn } from './components';
 
 
 
-export function ParserChunksWithStrategy( { children, AdComponent = AdChunk, chunks, adSlots, strategy }: ChunksWithStrategyAdsProps): ReactElement<{ children: { chunksWithAds: Chunks }}> {
+export function ParserChunksWithStrategy( { children, AdComponent = AdChunk, chunks, adSlots, strategy }: ChunksWithStrategyAdsProps): ReactElement<{ children: { chunksWithStrategy: Chunks }}> {
   const insertAds = useMemo(
     () =>
       createInsertAdsFn({
@@ -16,10 +16,10 @@ export function ParserChunksWithStrategy( { children, AdComponent = AdChunk, chu
     [AdComponent],
   );
 
-  const chunksWithAds: Chunks  = useMemo(
+  const chunksWithStrategy: Chunks  = useMemo(
     () => insertAds({ chunks, adSlots, strategy }),
     [chunks, adSlots, strategy],
   );
 
-  return <>{children({ chunksWithAds })}</>;
+  return <>{children({ chunksWithStrategy })}</>;
 }

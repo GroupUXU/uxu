@@ -1,4 +1,5 @@
 export enum ContentPartEnum {
+  EMPTY,
   AD,
   PARAGRAPH,
   HEADER,

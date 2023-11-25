@@ -3,7 +3,7 @@ import type { ReactElement } from "react";
 import classnames from 'classnames';
 import { transformChunkToComponent } from '../../../../molecules/contentPartDisplay/parsers/transformChunkToComponent/transformChunkToComponent';
 import { AdsSlot } from '../../../../atoms/adsSlot';
-import { ParseContentPartToChunk } from '../../../../molecules/contentPartDisplay';
+import { ParseContentPartToChunk, ParserChunksWithStrategy, strategyForContentPartInPostDesktop, strategyForContentPartInPostMobile } from '../../../../molecules/contentPartDisplay';
 import { ButtonsSocialShare } from '../../../../molecules/listButtonsSocialShare';
 import { TagList } from '../../../../molecules/tagList';
 import { useSiteConfig } from "../../../../../hooks/useSiteConfig";
@@ -36,7 +36,11 @@ export function PostView({ postViewData }: PostViewProps ): ReactElement {
         <div className={styles.content}>
           <TagList tags={tags}/>
             <ParseContentPartToChunk contentParts={contentparts}>
-              {({chunkComponents}) => chunkComponents.map(transformChunkToComponent)}
+              {({ chunkComponents }) => (
+                <ParserChunksWithStrategy adSlots={[]} chunks={chunkComponents} strategy={strategyForContentPartInPostDesktop}>
+                  {({ chunksWithStrategy }) => chunksWithStrategy.map(transformChunkToComponent)}
+                </ParserChunksWithStrategy>
+              )}
             </ParseContentPartToChunk>
         </div>
         <div className={classnames(styles.wrapperAds, styles.adsInPost)} style={{ paddingTop: "var(--uxu-space-default)" }}>

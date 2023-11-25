@@ -5,41 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/contents/AdChunk/codeChunk.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/contents/AdChunk/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithStrategy/components/createInsertAdsFn/components/chunkOrderManager/chunkOrderManager.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithStrategy/components/createInsertAdsFn/components/chunkOrderManager/components/getAdChunks/getAdChunk.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithStrategy/components/createInsertAdsFn/components/chunkOrderManager/components/getAdChunks/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithStrategy/components/createInsertAdsFn/components/chunkOrderManager/components/getAdChunks/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithStrategy/components/createInsertAdsFn/components/chunkOrderManager/components/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithStrategy/components/createInsertAdsFn/components/chunkOrderManager/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithStrategy/components/createInsertAdsFn/components/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithStrategy/components/createInsertAdsFn/components/retrieveOrProcessSubpartData/components/extractInfoFromSubPart/extractInfoFromSubPart.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithStrategy/components/createInsertAdsFn/components/retrieveOrProcessSubpartData/components/extractInfoFromSubPart/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithStrategy/components/createInsertAdsFn/components/retrieveOrProcessSubpartData/retrieveOrProcessSubpartData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithStrategy/components/createInsertAdsFn/components/retrieveOrProcessSubpartData/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithStrategy/components/createInsertAdsFn/createInsertAdsFn.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithStrategy/components/createInsertAdsFn/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithStrategy/components/createInsertAdsFn/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithStrategy/components/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithStrategy/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithStrategy/parserChunksWithStrategy.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithStrategy/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/strategies/chunksStrategyForPost/desktop/chunksStrategyForPostDesktop.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/strategies/chunksStrategyForPost/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/strategies/chunksStrategyForPost/mobile/chunksStrategyForPostMobile.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/strategies/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/contents/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/contents/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/maps/component.chunks.chunksMap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/maps/component.chunks.chunksMap.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parseContentPartToChunk/parseContentPartToChunk.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parseContentPartToChunk/parseContentPartToChunk.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parseContentPartToChunk/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parseContentPartToChunk/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/transformChunkToComponent/transformChunkToComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/transformChunkToComponent/transformChunkToComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/transformChunkToComponent/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/transformChunkToComponent/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/enums.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/enums.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterContentPart/adapterContentPart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getReturn/src/utils/adapters/adapterContentPart/adapterContentPart.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterContentPart/adapterContentPart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/utils/adapters/adapterContentPart/adapterContentPart.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/postView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/postView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/enums.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/enums.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/parsers/parseContentPartToChunk/parseContentPartToChunk.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/parsers/parseContentPartToChunk/parseContentPartToChunk.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/parsers/parseContentPartToChunk/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/parsers/parseContentPartToChunk/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/parsers/parserChunksWithStrategy/parserChunksWithStrategy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/parsers/parserChunksWithStrategy/parserChunksWithStrategy.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/parsers/parserChunksWithStrategy/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/parsers/parserChunksWithStrategy/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/strategies/chunksStrategyForPost/desktop/chunksStrategyForPostDesktop.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/strategies/strategyForContentPartInPost/desktop/strategyForContentPartInPostDesktop.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/strategies/chunksStrategyForPost/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/strategies/strategyForContentPartInPost/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/strategies/chunksStrategyForPost/mobile/chunksStrategyForPostMobile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/strategies/strategyForContentPartInPost/mobile/strategyForContentPartInPostMobile.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/strategies/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/strategies/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,11 +67,11 @@
       <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/adsSlot" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/strategies" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithAdStrategy/components/createInsertAdsFn/components/retrieveOrProcessSubpartData/components" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithAdStrategy/components/createInsertAdsFn/components/chunkOrderManager/components/getAdChunks" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithAdStrategy/components/createInsertAdsFn/components/chunkOrderManager/components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -177,7 +156,9 @@
       <workItem from="1700428855300" duration="179000" />
       <workItem from="1700941525588" duration="5067000" />
       <workItem from="1700946961325" duration="708000" />
-      <workItem from="1700947677213" duration="1874000" />
+      <workItem from="1700947677213" duration="2991000" />
+      <workItem from="1700951107503" duration="572000" />
+      <workItem from="1700951686744" duration="1400000" />
     </task>
     <servers />
   </component>

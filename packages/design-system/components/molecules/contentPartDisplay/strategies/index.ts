@@ -1,1 +1,1 @@
-export * from './chunksStrategyForPost';
+export * from './strategyForContentPartInPost';

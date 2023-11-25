@@ -1,12 +1,12 @@
-import type { ContentPartProps } from "../../../../../../packages/design-system/components/molecules/contentPartDisplay";
-import { ContentPartEnum } from "design-system/components/molecules/chunks/enums";
+import type { ChunkProps } from "design-system/components/molecules/contentPartDisplay";
+import { ContentPartEnum } from "design-system/components/molecules/contentPartDisplay";
 import { adapterImageData } from "../adapterImageData";
 import type { AdapterContentPartProps } from './types';
 
-export function adapterContentPart(content?: AdapterContentPartProps): ContentPartProps {
-  const defaultData: ContentPartProps = {
+export function adapterContentPart(content?: AdapterContentPartProps): ChunkProps<Record<string, unknown>> {
+  const defaultData: ChunkProps<Record<string, unknown>> = {
     id: "",
-    type: ContentPartEnum.PARAGRAPH,
+    type: ContentPartEnum.EMPTY,
   };
 
   if (!content) return defaultData;
@@ -28,11 +28,11 @@ export function adapterContentPart(content?: AdapterContentPartProps): ContentPa
           id: content.id || "",
           type: ContentPartEnum.IMG,
           src: adapterImageData({image: content.media.data.attributes , typeImg: "medium" })?.src || content.media.data.attributes.url,
-          caption: content.media.data.attributes.caption || null,
-          alternativeText: content.media.data.attributes.alternativeText || null,
+          caption: content.media.data.attributes.caption || undefined,
+          alternativeText: content.media.data.attributes.alternativeText || undefined,
         };
-      } 
-        return defaultData;
+      }
+      return defaultData;
     default:
       return defaultData;
   }

@@ -4,7 +4,7 @@ import type { Chunks, AdComponent, AdSlots, Strategy } from '../../types';
 
 
 export type ChunksWithStrategyAdsProps = {
-  children: (args: { chunksWithAds: Chunks }) => ReactNode;
+  children: (args: { chunksWithStrategy: Chunks }) => ReactNode;
   AdComponent?: AdComponent;
   adSlots: AdSlots;
   chunks: Chunks;

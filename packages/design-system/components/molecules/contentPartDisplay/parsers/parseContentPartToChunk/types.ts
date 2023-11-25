@@ -3,5 +3,5 @@ import type { Chunks, ChunkProps} from "../../types";
 
 export type ParseContentPartToChunkProps = {
   contentParts: Array<ChunkProps<Record<string, unknown>>>;
-  children: ({ chunkComponents }: { chunkComponents: Chunks }) => ReactElement;
+  children: ({ chunkComponents }: { chunkComponents: Chunks }) => ReactElement | Array<ReactElement>;
 };

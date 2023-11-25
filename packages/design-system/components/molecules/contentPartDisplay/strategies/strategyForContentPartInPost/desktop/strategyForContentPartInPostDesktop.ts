@@ -13,24 +13,13 @@ const shouldExecuteStrategy = (
 ): boolean =>
   numChunk === 1 ||
   numChunksSinceLastAd === 4 ||
-  (numChunksSinceLastAd === 3 &&
-    (totalCharactersSinceLastAd >= 700 ||
-      typesInSubPartsSinceLastAd.some(
-        EARLY_AD_TRIGGER_TYPES.has,
-        EARLY_AD_TRIGGER_TYPES,
-      )));
+  (numChunksSinceLastAd === 3 && (totalCharactersSinceLastAd >= 700 || typesInSubPartsSinceLastAd.some(type => EARLY_AD_TRIGGER_TYPES.has(type))));
 
-export function chunksStrategyForPost(
-  props: StrategyProps,
-): StrategyResult {
-  const {
-    numChunk,
-    numChunksSinceLastAd,
-    chunkDataForCurrentAndNextSinceLastAd,
-  } = props;
+export function strategyForContentPartInPostDesktop(props: StrategyProps): StrategyResult {
+  const { numChunk, numChunksSinceLastAd, chunkDataForCurrentAndNextSinceLastAd} = props;
   const { next, current } = chunkDataForCurrentAndNextSinceLastAd;
 
-  const executeStrategyNow = shouldExecuteStrategy(
+  const executeStrategyNow: boolean = shouldExecuteStrategy(
     numChunk,
     numChunksSinceLastAd,
     current.totalCharactersSinceLastAd,
@@ -38,6 +27,7 @@ export function chunksStrategyForPost(
   );
 
   return {
-    executeStrategyNow
+    executeStrategyNow,
+    bonusChunkPlacement: undefined
   };
 }
