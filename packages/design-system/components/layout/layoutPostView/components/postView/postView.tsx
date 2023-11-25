@@ -1,9 +1,9 @@
 /* eslint-disable react/jsx-no-leaked-render -- I don't have time for this fix */
 import type { ReactElement } from "react";
 import classnames from 'classnames';
-import { transformChunkToComponent } from '../../../../molecules/chunks/components/parsers/transformChunkToComponent/transformChunkToComponent';
+import { transformChunkToComponent } from '../../../../molecules/contentPartDisplay/parsers/transformChunkToComponent/transformChunkToComponent';
 import { AdsSlot } from '../../../../atoms/adsSlot';
-import { ParseContentPartToChunk } from '../../../../molecules/chunks';
+import { ParseContentPartToChunk } from '../../../../molecules/contentPartDisplay';
 import { ButtonsSocialShare } from '../../../../molecules/listButtonsSocialShare';
 import { TagList } from '../../../../molecules/tagList';
 import { useSiteConfig } from "../../../../../hooks/useSiteConfig";

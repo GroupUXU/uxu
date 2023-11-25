@@ -1,4 +1,4 @@
-import type { ContentPartProps } from "design-system/components/molecules/chunks";
+import type { ContentPartProps } from "../../../../../../packages/design-system/components/molecules/contentPartDisplay";
 import { ContentPartEnum } from "design-system/components/molecules/chunks/enums";
 import { adapterImageData } from "../adapterImageData";
 import type { AdapterContentPartProps } from './types';

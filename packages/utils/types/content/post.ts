@@ -1,7 +1,7 @@
 import { Image } from "./image";
 import { Member } from "./member";
 import { Tag } from "./tag";
-import { ContentPartProps } from "../../../design-system/components/molecules/chunks/types";
+import { ContentPartProps } from "../../../design-system/components/molecules/contentPartDisplay/types";
 
 export type PostShort = {
   id: string;
