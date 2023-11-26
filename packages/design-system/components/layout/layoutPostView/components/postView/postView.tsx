@@ -17,7 +17,7 @@ export function PostView({ postViewData }: PostViewProps ): ReactElement {
   const strategy = isMobile ? strategyForContentPartInPostMobile : strategyForContentPartInPostDesktop;
   const adSlots: Array<string> = isMobile ? [ '2XMXAMIDTEXTX1', '2XMXAMIDTEXTX2', '2XMXAMIDTEXTX3' ] : [ '2XDXAMIDTEXTX1', '2XDXAMIDTEXTX2', '2XDXAMIDTEXTX3' ]
   const { cover = null, authors = [], createdAt, title = '', lead = '', tags = [], contentparts = [] } = postViewData;
-
+console.log(isMobile, 'isMobileisMobileisMobileisMobile')
   return (
     <article className={classnames( styles.article, 'article' )}>
       <div className={styles.wrapperLeadWithAd}>
