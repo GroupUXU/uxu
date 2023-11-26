@@ -20,7 +20,7 @@ function Index(): ReactElement  {
     variables: {
       pageSize: 12,
       page: 1,
-      type: ['article', 'service']
+      type: ['article']
     },
     ssr: true
   });
