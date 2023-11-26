@@ -1,0 +1,15 @@
+export enum ContentPartEnum {
+  EMPTY,
+  AD,
+  PARAGRAPH,
+  HEADER,
+  IMG,
+  QUOTE,
+  LIST,
+  CODE,
+  OPINION,
+  EMBED,
+  TABLE,
+  GALLERY,
+  EMBEDYOUTUBE,
+}

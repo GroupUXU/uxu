@@ -6,14 +6,18 @@ import { LayoutListingPost } from 'design-system/components/layout/layoutListing
 import { PostList } from 'design-system/components/organisms/postList';
 import { Tree, renderBranches } from 'design-system/components/molecules/tree';
 import { StickyWrapper } from 'design-system/components/atoms/stickyWrapper';
+import { AdsSlot } from 'design-system/components/atoms/adsSlot';
 import { CrumbleMenu } from 'design-system/components/molecules/crumbleMenu';
 import { LeadPostWithList } from 'design-system/components/templates/section/leadPostWithList';
 import { useSeoConfig } from 'design-system/hooks/useSeoConfig';
+import { useSiteConfig } from "design-system/hooks/useSiteConfig";
 import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig } from '../config';
 import { useGetArticlesQuery, clientGetArticlesQuery } from '../gql';
 import { adapterArticlesData } from '../utils/adapters/adapterArticlesData';
 
 function Index (): ReactElement {
+  const { config } = useSiteConfig();
+  const isMobile = config.client.platform.isMobile;
   const seo = useSeoConfig ( {} );
 
   const {data, fetchMore} = useGetArticlesQuery ( {
@@ -61,6 +65,7 @@ function Index (): ReactElement {
       topElement={(
         <>
           <LeadPostWithList posts={leadPostWithListData}/>
+          <AdsSlot slot={isMobile ? '1XMXWIDEBOARDX1' : '1XDXWIDEBOARDX1'} style={{ margin: "var(--uxu-space-large) auto" }} />
           <CrumbleMenu data={[{title: "home", href: "/"}]}/>
         </>
       )}

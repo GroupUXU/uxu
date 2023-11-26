@@ -62,7 +62,7 @@ export function SearchEngineInModal({ className, searchEngineConfig }: SearchSug
       >
         <Search size={18} />
         <p>Szukaj...</p>
-        {client?.platform.isDesktop && (
+        {client.platform.isDesktop && (
           <KeyboardShortcut
             callback={toggleModal}
             className={styles.shortcut}

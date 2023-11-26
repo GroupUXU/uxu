@@ -16,14 +16,14 @@ export function Footer ( {footerColumns}: FooterProps ): ReactElement {
   const socialPlatforms: Array<SocialLinkData> = [
     {
       name: 'Facebook',
-      accountId: social?.facebook?.pageId,
+      accountId: social.facebook?.pageId,
       url: 'https://www.facebook.com/profile.php?id=',
       Icon: Facebook
     },
-    {name: 'Twitter', accountId: social?.twitter?.accountName, url: 'https://twitter.com/', Icon: Twitter},
-    {name: 'YouTube', accountId: social?.youtube?.channelId, url: 'https://www.youtube.com/channel/', Icon: Youtube},
-    {name: 'Instagram', accountId: social?.instagram?.accountName, url: 'https://www.instagram.com/', Icon: Instagram},
-    {name: 'GitHub', accountId: social?.github?.accountName, url: 'https://github.com/', Icon: GitHub},
+    {name: 'Twitter', accountId: social.twitter?.accountName, url: 'https://twitter.com/', Icon: Twitter},
+    {name: 'YouTube', accountId: social.youtube?.channelId, url: 'https://www.youtube.com/channel/', Icon: Youtube},
+    {name: 'Instagram', accountId: social.instagram?.accountName, url: 'https://www.instagram.com/', Icon: Instagram},
+    {name: 'GitHub', accountId: social.github?.accountName, url: 'https://github.com/', Icon: GitHub},
   ];
 
   function renderSocialLinks (): Array<ReactElement> {
@@ -59,8 +59,8 @@ export function Footer ( {footerColumns}: FooterProps ): ReactElement {
         <div className={styles.grid}>
           <div className={styles.column} style={{justifyContent: "space-between", gridRow: "1/4"}}>
             <div className={styles.wrapperBrand}>
-              <Link className={styles.logo} href="/" title={site?.shortname || ""}>
-                <Logo brand={site?.brand || "uxu"}/>
+              <Link className={styles.logo} href="/" title={site.shortname}>
+                <Logo brand={site.brand}/>
               </Link>
               <Link href="https://www.uxu.pl" title="UXU">
                 © 2023 UXU GROUP

@@ -5,16 +5,12 @@ import type { SiteConfig, SiteConfigContextProps } from 'utils';
 
 const initialSiteConfigContext: { config: SiteConfig, setConfig: (newConfig: SiteConfig) => void } = {
   config: {
-    ads: {
-      enabled: true
+    admin: {},
+    cookieConsentSettings: {
+      ads: false,
+      analytics: false
     },
-    analytics: {
-      gtmId: ""
-    },
-    graphql: {
-      productId: SiteIdEnums.DEFAULT,
-      url: '',
-    },
+    marketingToolsConfig: {},
     port: 3000,
     projectName: '',
     site: {

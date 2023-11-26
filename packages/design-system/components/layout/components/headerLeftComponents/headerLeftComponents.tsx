@@ -22,10 +22,10 @@ const { config: { site } } = useSiteConfig();
   return (
     <>
       <Link  className={classnames(styles.logoMobile, styles.logo)} href="/" title="wTrasie">
-        <Logo brand={site?.shortBrand || "uxu"} className={styles.logo}/>
+        <Logo brand={site.shortBrand} className={styles.logo}/>
       </Link>
       <Link className={classnames(styles.logoDesktop, styles.logo)} href="/" title="wTrasie">
-        <Logo brand={site?.brand || "uxu"} className={styles.logo}/>
+        <Logo brand={site.brand} className={styles.logo}/>
       </Link>
         <nav className={styles.nav}>
           {headerMenu.map(({ href, title }) => createNavLink(href, title))}

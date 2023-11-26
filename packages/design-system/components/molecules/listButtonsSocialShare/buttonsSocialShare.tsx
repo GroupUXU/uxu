@@ -9,7 +9,7 @@ type ShareType = 'facebook' | 'twitter';
 
 export function ButtonsSocialShare (): ReactElement {
   const { config: { site } } = useSiteConfig ();
-  const canonicalURL = site?.canonicalUrl || "";
+  const canonicalURL = site.canonicalUrl || "";
   const [copyStatus, copyToClipboard] = useCopyToClipboard ( canonicalURL );
 
   const shareCanonicalURL = ( type: ShareType ): void => {
