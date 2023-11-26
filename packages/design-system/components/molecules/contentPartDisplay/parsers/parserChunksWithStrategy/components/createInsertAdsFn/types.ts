@@ -1,4 +1,5 @@
-import { Chunks, AdSlots, Strategy, AdComponent, Chunk } from "../../../../types";
+import type { Chunks, AdSlots, Strategy, AdComponent, Chunk } from "../../../../types";
+import type { ContentPartEnum } from "../../../../enums";
 
 export type CreateInsertAdsFnProps = {
   AdComponent: AdComponent
@@ -12,7 +13,7 @@ export type InsertAdsFnProps = {
 
 export type SubPartInfo = {
   charactersInSubPart: number;
-  typeNameSubPart: string;
+  typeNameSubPart: ContentPartEnum;
 };
 
 export type ProcessedSubpartInfoCache = Map<Chunk, SubPartInfo>;

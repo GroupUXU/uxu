@@ -1,7 +1,7 @@
 import { Image } from "./image";
 import { Member } from "./member";
 import { Tag } from "./tag";
-import { ContentPartProps } from "../../../design-system/components/molecules/contentPartDisplay/types";
+import { ChunkProps } from "../../../design-system/components/molecules/contentPartDisplay/types";
 
 export type PostShort = {
   id: string;
@@ -22,5 +22,5 @@ export type PostFull = {
   authors: Array<Member>;
   tags: Array<Tag>;
   stats: { ratings: number; comments: number; views: number };
-  contentparts: Array<ContentPartProps>;
+  contentparts: Array<ChunkProps<Record<string, unknown>>>;
 };

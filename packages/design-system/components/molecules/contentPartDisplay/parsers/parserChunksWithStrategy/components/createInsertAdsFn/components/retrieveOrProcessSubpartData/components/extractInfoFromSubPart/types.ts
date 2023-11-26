@@ -1,6 +1,8 @@
-import { Chunk } from "../../../../../../../../types";
+import type { Chunk } from "../../../../../../../../types";
 
 export type SubChunkHasType = {
-  value?: string;
-  __typename?: string;
+  props: {
+    value?: string;
+    type?: string;
+  }
 } & Chunk;

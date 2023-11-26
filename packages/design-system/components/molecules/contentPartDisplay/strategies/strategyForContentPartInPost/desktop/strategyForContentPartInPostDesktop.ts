@@ -1,15 +1,15 @@
 import type { StrategyProps, StrategyResult } from '../../../types';
+import { ContentPartEnum } from '../../../enums';
 
-const EARLY_AD_TRIGGER_TYPES: Set<string> = new Set<string>([
-  'ContentPartSocial',
-  'ContentPartPhoto',
+const EARLY_AD_TRIGGER_TYPES: Set<ContentPartEnum> = new Set<ContentPartEnum>([
+  ContentPartEnum.IMG,
 ]);
 
 const shouldExecuteStrategy = (
   numChunk: number,
   numChunksSinceLastAd: number,
   totalCharactersSinceLastAd: number,
-  typesInSubPartsSinceLastAd: string[],
+  typesInSubPartsSinceLastAd: Array<ContentPartEnum>,
 ): boolean =>
   numChunk === 1 ||
   numChunksSinceLastAd === 4 ||

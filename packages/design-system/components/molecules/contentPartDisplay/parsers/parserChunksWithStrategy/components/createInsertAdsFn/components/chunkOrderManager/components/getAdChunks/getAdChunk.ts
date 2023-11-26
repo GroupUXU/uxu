@@ -1,6 +1,6 @@
-import { Chunk } from '../../../../../../../../types';
+import type { Chunk } from '../../../../../../../../types';
 import { ContentPartEnum } from "../../../../../../../../enums";
-import { GetAdChunkProps } from './types';
+import type { GetAdChunkProps } from './types';
 
 export function getAdChunk({ adSlot, AdComponent }: GetAdChunkProps ): Chunk {
   return {

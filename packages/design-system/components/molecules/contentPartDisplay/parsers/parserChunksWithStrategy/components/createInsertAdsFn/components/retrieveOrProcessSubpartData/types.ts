@@ -1,5 +1,5 @@
-import { Chunk } from "../../../../../../types";
-import { ProcessedSubpartInfoCache } from "../../types";
+import type { Chunk } from "../../../../../../types";
+import type { ProcessedSubpartInfoCache } from "../../types";
 
 export type RetrieveOrProcessSubpartDataProps = {
   chunk: Chunk;

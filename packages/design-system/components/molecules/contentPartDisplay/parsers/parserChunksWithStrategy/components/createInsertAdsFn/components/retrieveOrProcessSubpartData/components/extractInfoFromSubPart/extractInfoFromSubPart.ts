@@ -1,16 +1,15 @@
 import type { Chunk } from '../../../../../../../../types';
+import { ContentPartEnum } from '../../../../../../../../enums';
 import type { SubPartInfo } from '../../../../types';
-import type { SubChunkHasType } from "./types";
 
-const subPartTypesForCharacterCounting: Set<string> = new Set<string>(['ContentPartText']);
+const subPartTypesForCharacterCounting: Set<ContentPartEnum> = new Set<ContentPartEnum>([ContentPartEnum.PARAGRAPH]);
 
-export function extractInfoFromSubPart(subChunk: Chunk): SubPartInfo {
-  const chunk = subChunk as SubChunkHasType;
-  const value = chunk.value ?? '';
-  const __typename = chunk.__typename ?? '';
+export function extractInfoFromSubPart(chunk: Chunk): SubPartInfo {
+  const value: string = String(chunk.props.value) || '';
+  const type: ContentPartEnum = chunk.props.type;
 
   return {
-    charactersInSubPart: subPartTypesForCharacterCounting.has(__typename) ? value.length : 0,
-    typeNameSubPart: __typename
+    charactersInSubPart: subPartTypesForCharacterCounting.has(type) ? value.length : 0,
+    typeNameSubPart: type
   };
 }

@@ -27,7 +27,7 @@ export type AdSlotInfo = {
 
 export type ChunkDataAfterLastAd = {
   totalCharactersSinceLastAd: number;
-  typesInSubPartsSinceLastAd: Array<string>;
+  typesInSubPartsSinceLastAd: Array<ContentPartEnum>;
 };
 
 export type ChunkDataForCurrentAndNextSinceLastAd = {

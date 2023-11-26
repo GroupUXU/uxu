@@ -1,4 +1,4 @@
-import { AdSlotInfo, AdComponent, BonusChunkPlacement } from "../../../../../../types";
+import type { AdSlotInfo, AdComponent, BonusChunkPlacement } from "../../../../../../types";
 
 export type ChunkOrderManagerProps = {
   adSlotInfo: AdSlotInfo;

@@ -37,7 +37,7 @@ export function PostView({ postViewData }: PostViewProps ): ReactElement {
           <TagList tags={tags}/>
             <ParseContentPartToChunk contentParts={contentparts}>
               {({ chunkComponents }) => (
-                <ParserChunksWithStrategy adSlots={[]} chunks={chunkComponents} strategy={strategyForContentPartInPostDesktop}>
+                <ParserChunksWithStrategy adSlots={isMobile ? [ '2XMXAMIDTEXTX1', '2XMXAMIDTEXTX2', '2XMXAMIDTEXTX3' ] : [ '2XDXAMIDTEXTX1', '2XDXAMIDTEXTX2', '2XDXAMIDTEXTX3' ]} chunks={chunkComponents} strategy={isMobile ? strategyForContentPartInPostMobile : strategyForContentPartInPostDesktop}>
                   {({ chunksWithStrategy }) => chunksWithStrategy.map(transformChunkToComponent)}
                 </ParserChunksWithStrategy>
               )}

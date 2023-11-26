@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { ReactElement } from 'react';
+import type { ReactElement } from 'react';
 import { AdChunk } from '../../chunks';
 import type { Chunks } from '../../types';
 import type { ChunksWithStrategyAdsProps } from './types';

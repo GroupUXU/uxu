@@ -27,11 +27,13 @@ export function createInsertAdsFn({ AdComponent }: CreateInsertAdsFnProps): (pro
         },
       };
 
+
     return chunks.flatMap((chunk, index): Chunks => {
       let result: SubPartInfo = retrieveOrProcessSubpartData({
         chunk,
         processedSubpartInfoCache,
       });
+
 
       chunkDataForCurrentAndNextSinceLastAd.current.totalCharactersSinceLastAd += result.charactersInSubPart;
       chunkDataForCurrentAndNextSinceLastAd.current.typesInSubPartsSinceLastAd.push(result.typeNameSubPart);
@@ -65,7 +67,7 @@ export function createInsertAdsFn({ AdComponent }: CreateInsertAdsFnProps): (pro
         const adsSlotIteratorNext = adsSlotsIterator.next();
         adSlotInfo = { adSlot: String(adsSlotIteratorNext.value), noMoreAdSlots: Boolean(adsSlotIteratorNext.done) };
       } else {
-        numChunksSinceLastAd = Number(numChunksSinceLastAd);
+        numChunksSinceLastAd = ++numChunksSinceLastAd;
       }
 
       return chunkOrder;
