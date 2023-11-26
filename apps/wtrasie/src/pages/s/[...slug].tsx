@@ -1,17 +1,13 @@
 import type { ReactElement } from "react";
-import type { GetStaticPropsContext, GetStaticPaths, GetStaticProps } from 'next';
+import type { GetStaticPropsContext, GetStaticProps } from 'next';
 import type { PostFull } from 'utils';
-import { createSlug } from 'utils';
 import { AdPhoneClient } from 'design-system/components/molecules/adPhoneClient';
 import { LayoutPostView } from 'design-system/components/layout/layoutPostView';
 import { CrumbleMenu } from 'design-system/components/molecules/crumbleMenu';
 import { useSeoConfig } from 'design-system/hooks/useSeoConfig';
-import { connectQueries } from '../../utils/function';
-import { adapterArticleData, adapterArticlesSlugData } from '../../utils/adapters';
-import type { GetArticlesQuery } from '../../gql';
+import { adapterArticleData } from '../../utils/adapters';
 import {
   clientGetArticleQuery,
-  clientGetArticlesQuery,
   clientClientsWithTagsQuery
 } from '../../gql';
 import { footerConfig, headerMenuConfig, searchEngineConfig } from '../../config';
@@ -51,31 +47,7 @@ export default function Service ( {articleData, clientPhone, slug }: ServiceProp
   );
 }
 
-export async function getStaticPaths (): Promise<GetStaticPaths> {
-
-  const { result: { data } } = await clientGetArticlesQuery ( {variables: {pageSize: 25, page: 1, type: ['service']}} );
-
-  const connectedArticles: Array<GetArticlesQuery> = await connectQueries ( {
-    functionQuery: clientGetArticlesQuery,
-    variablesQuery: {variables: {pageSize: 25, type: ['service']}},
-    pageCount: data.articles?.meta.pagination.pageCount || 1
-  } );
-
-  const articlesSlugData: Array<{
-    id: string,
-    title: string,
-    slug: string
-  }> = connectedArticles.flatMap ( adapterArticlesSlugData );
-
-
-  return {
-    // @ts-expect-error -- it is ok
-    paths: articlesSlugData.map ( article => ({params: {slug: [article.id, createSlug ( article.title )]}}) ),
-    fallback: true,
-  };
-}
-
-export async function getStaticProps ( context: GetStaticPropsContext ): Promise<GetStaticProps> {
+export async function getServerSideProps( context: GetStaticPropsContext ): Promise<GetStaticProps> {
   const {params} = context;
 
   if ( !params || !Array.isArray ( params.slug ) || params.slug.length === 0 ) {

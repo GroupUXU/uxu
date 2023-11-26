@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/postView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/postView.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +154,7 @@
       <workItem from="1700960483924" duration="423000" />
       <workItem from="1700960913648" duration="513000" />
       <workItem from="1700990936223" duration="17000" />
-      <workItem from="1700991403815" duration="3665000" />
+      <workItem from="1700991403815" duration="4082000" />
     </task>
     <servers />
   </component>
