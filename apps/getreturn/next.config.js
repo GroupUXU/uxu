@@ -6,8 +6,8 @@ module.exports = {
   },
   experimental: {
     serverActions: {
-      allowedForwardedHosts: ['localhost', 'getreturn.pl'],
-      allowedOrigins: ['http://localhost', 'https://www.getreturn.pl']
+      allowedForwardedHosts: ['localhost', 'getreturn.pl', 'vercel.app'],
+      allowedOrigins: ['http://localhost', 'https://www.getreturn.pl', 'https://vercel.app']
     },
   }
 };
