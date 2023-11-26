@@ -7,7 +7,7 @@ import { useSiteConfig } from "../../../hooks/useSiteConfig";
 import type { AdsProps } from './types';
 import styles from './adsSlot.module.scss';
 
-export function AdsSlot ( { slot, stickyOffset, style, className }: AdsProps ): ReactElement | null {
+export function AdsSlot ({ slot, stickyOffset, style, className }: AdsProps ): ReactElement | null {
   const {config: {marketingToolsConfig: {adSlotsMap, googleAdManagerId}}} = useSiteConfig ();
   const dataSlot: AdSlotData | undefined = adSlotsMap?.get ( slot );
   const isDataSlot = Boolean ( dataSlot );
@@ -31,7 +31,7 @@ export function AdsSlot ( { slot, stickyOffset, style, className }: AdsProps ): 
 
   if ( !isDataSlot ) return null;
 
-  const adStyle: CSSProperties = {width: `${dataSlot?.size.width}px`, height: `${dataSlot?.size.height}px`, ...style};
+  const adStyle: CSSProperties = { width: `${dataSlot?.size.width}px`, height: `${dataSlot?.size.height}px`, ...style};
   const containerStyle: CSSProperties = stickyOffset ? {...adStyle, position: 'sticky', top: stickyOffset} : adStyle;
 
   return (

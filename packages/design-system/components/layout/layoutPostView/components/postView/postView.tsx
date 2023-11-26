@@ -14,8 +14,9 @@ import type { PostViewProps } from './types';
 export function PostView({ postViewData }: PostViewProps ): ReactElement {
   const { config: { client } } = useSiteConfig();
   const isMobile = client.platform.isMobile;
+  const strategy = isMobile ? strategyForContentPartInPostMobile : strategyForContentPartInPostDesktop;
+  const adSlots: Array<string> = isMobile ? [ '2XMXAMIDTEXTX1', '2XMXAMIDTEXTX2', '2XMXAMIDTEXTX3' ] : [ '2XDXAMIDTEXTX1', '2XDXAMIDTEXTX2', '2XDXAMIDTEXTX3' ]
   const { cover = null, authors = [], createdAt, title = '', lead = '', tags = [], contentparts = [] } = postViewData;
-
   return (
     <article className={classnames( styles.article, 'article' )}>
       <div className={styles.wrapperLeadWithAd}>
@@ -37,7 +38,7 @@ export function PostView({ postViewData }: PostViewProps ): ReactElement {
           <TagList tags={tags}/>
             <ParseContentPartToChunk contentParts={contentparts}>
               {({ chunkComponents }) => (
-                <ParserChunksWithStrategy adSlots={isMobile ? [ '2XMXAMIDTEXTX1', '2XMXAMIDTEXTX2', '2XMXAMIDTEXTX3' ] : [ '2XDXAMIDTEXTX1', '2XDXAMIDTEXTX2', '2XDXAMIDTEXTX3' ]} chunks={chunkComponents} strategy={isMobile ? strategyForContentPartInPostMobile : strategyForContentPartInPostDesktop}>
+                <ParserChunksWithStrategy adSlots={adSlots} chunks={chunkComponents} strategy={strategy}>
                   {({ chunksWithStrategy }) => chunksWithStrategy.map(transformChunkToComponent)}
                 </ParserChunksWithStrategy>
               )}
