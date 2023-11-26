@@ -31,7 +31,7 @@ export function AdsSlot ({ slot, stickyOffset, style, className }: AdsProps ): R
 
   if ( !isDataSlot ) return null;
 
-  const adStyle: CSSProperties = {maxWidth: '100%', overflow: 'hidden', width: `${dataSlot?.size.width}px`, height: `${dataSlot?.size.height}px`, ...style};
+  const adStyle: CSSProperties = { width: `${dataSlot?.size.width}px`, height: `${dataSlot?.size.height}px`, ...style};
   const containerStyle: CSSProperties = stickyOffset ? {...adStyle, position: 'sticky', top: stickyOffset} : adStyle;
 
   return (
