@@ -1,10 +1,30 @@
 {
+  "name": "uxu",
   "private": true,
+  "packageManager": "yarn@1.22.19",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GroupUXU/uxu"
+  },
+  "engines": {
+    "node": "<18",
+    "yarn": ">=1.22.0"
+  },
+  "browserslist": [
+    "Chrome >= 83",
+    "Firefox >= 90",
+    "Safari >= 14",
+    "Opera >= 78",
+    "Edge >= 92",
+    "Samsung >= 13"
+  ],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "wtrasie": "npx turbo run dev --filter=wtrasie",
+    "getreturn": "npx turbo run dev --filter=getreturn"
   },
   "devDependencies": {
     "eslint": "^8.48.0",
@@ -12,8 +32,6 @@
     "tsconfig": "*",
     "turbo": "^1.10.14"
   },
-  "name": "uxu",
-  "packageManager": "yarn@1.22.19",
   "workspaces": [
     "apps/*",
     "packages/*"
