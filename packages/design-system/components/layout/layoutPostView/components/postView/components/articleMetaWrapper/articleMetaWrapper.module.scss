@@ -19,7 +19,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    color: var(--uxu-color-primary-accent5);
+    font-weight: bold;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
   }
@@ -33,9 +33,7 @@
     span {
       width: 100%;
       display: block;
-      font-weight: bold;
       font-size: var(--uxu-font-size-mini);
-      color: var(--uxu-color-primary-accent5);
     }
   }
 }

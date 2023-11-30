@@ -15,7 +15,7 @@
     left: 0;
     width: calc(100% - calc(var(--uxu-space-small) * 2));
     height: 6rem;
-    background-color: var(--uxu-color-background-100);
+    background-color: var(--uxu-color-background-default);
     transition: top var(--uxu-motion-fast) ease;
     border-radius: var(--uxu-radii-default);
     margin: 0 var(--uxu-space-small);
@@ -67,7 +67,7 @@
         width: 0.4rem;
         height: 1.5rem;
         position: absolute;
-        background-color: var(--uxu-color-primary-accent3);
+        background-color: var(--uxu-color-text-default);
       }
     }
   }

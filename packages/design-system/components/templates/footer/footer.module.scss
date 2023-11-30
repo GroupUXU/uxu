@@ -4,7 +4,15 @@
   width: 100%;
   padding: var(--uxu-space-large) 0;
   border-top: var(--uxu-border-default);
-  background-color: var(--uxu-color-primary-accent1);
+  background-color: var(--uxu-color-background-secound);
+  
+  a {
+    color: var(--uxu-color-link-secound);
+    
+    &:hover {
+      color: var(--uxu-color-link-hover);
+    }
+  }
 }
 
 .grid {
@@ -32,6 +40,7 @@
     min-width: 20rem;
     list-style: none;
     padding-bottom: var(--uxu-space-large);
+    
     li {
       text-align: center;
       padding: var(--uxu-space-small);
@@ -100,7 +109,7 @@
         top: 0.1rem;
         position: absolute;
         @include dimensions(0.2rem, 2rem);
-        background-color: var(--uxu-color-primary-accent2);
+        background-color: var(--uxu-color-background-secound);
       }
 
       &:last-of-type::after {

@@ -17,6 +17,7 @@
     border: none;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     padding: var(--uxu-space-small) var(--uxu-space-default);
 
     &:hover {
@@ -24,26 +25,26 @@
     }
 
     &:nth-child(1) {
-      background-color: var(--uxu-color-success-dark);
+      background-color: var(--uxu-color-blue-6);
 
       &:hover {
-        background-color: var(--uxu-color-success-default);
+        background-color: var(--uxu-color-blue-3);
       }
     }
 
     &:nth-child(2) {
-      background-color: var(--uxu-color-success-light);
+      background-color: var(--uxu-color-blue-10);
 
       &:hover {
-        background-color: var(--uxu-color-success-default);
+        background-color: var(--uxu-color-blue-5);
       }
     }
 
     &:nth-child(3) {
-      background-color: var(--uxu-color-primary-accent3);
+      background-color: var(--uxu-color-gray-1);
 
       &:hover {
-        background-color: var(--uxu-color-primary-accent4);
+        background-color: var(--uxu-color-gray-2);
       }
 
       svg {

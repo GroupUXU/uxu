@@ -12,11 +12,12 @@
 
     a, span {
       text-transform: lowercase;
+      color: var(--uxu-color-link-secound);
     }
 
     &.active {
       a, span {
-        color: var(--uxu-color-primary-foreground);
+        color: var(--uxu-color-link-hover);
       }
     }
 
@@ -25,7 +26,7 @@
       content: "/";
       position: relative;
       margin: 0 var(--uxu-space-small);
-      color: var(--uxu-color-primary-accent3);
+      color: var(--uxu-color-gray-3);
     }
 
     &:first-of-type {

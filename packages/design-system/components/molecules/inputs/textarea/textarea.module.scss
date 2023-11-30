@@ -9,10 +9,10 @@
   width: 100%;
   min-height: 10rem;
   display: block;
-  border: var(--uxu-border-alpha-default);
+  border: var(--uxu-border-default);
   border-radius: var(--uxu-radii-default);
-  background: var(--uxu-color-gray-100);
-  color: var(--uxu-color-primary-foreground);
+  background: rgba(var(--uxu-color-background-default-rgba), 0.6);
+  color: var(--uxu-color-text-default);
   padding: var(--uxu-space-default);
   transition: border-color var(--uxu-motion-default);
 
@@ -24,7 +24,7 @@
 
   &:focus {
     outline: none;
-    border: var(--uxu-border-alpha-active);
+    border: var(--uxu-border-active);
 
     &::placeholder {
       opacity: 0;

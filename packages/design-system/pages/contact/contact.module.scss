@@ -14,7 +14,6 @@
 
   p {
     font-size: var(--uxu-font-size-small);
-    color: var(--uxu-color-primary-accent5);
   }
 
   @include media("m") {
@@ -56,8 +55,8 @@
     gap: var(--uxu-space-large);
     padding: var(--uxu-space-large) var(--uxu-space-default);
     border-radius: var(--uxu-radii-default);
-    border: var(--uxu-border-alpha-default);
-    background-color: var(--uxu-color-background-100);
+    border: var(--uxu-border-default);
+    background-color: var(--uxu-color-background-secound);
 
     @include media("m") {
       padding: var(--uxu-space-large);
@@ -75,14 +74,9 @@
     text-align: center;
     padding: var(--uxu-space-large) 0;
     font-size: var(--uxu-font-size-small);
-    color: var(--uxu-color-primary-accent5);
 
     @include media("m") {
       width: 80%;
-    }
-
-    a {
-      color: var(--uxu-color-success-default);
     }
   }
 }
@@ -99,10 +93,9 @@
     list-style: none;
 
     li {
-      color: var(--uxu-color-primary-accent5);
 
       h3 {
-        color:  var(--uxu-color-primary-foreground)
+        color:  var(--uxu-color-text-header)
       }
 
       &.space {

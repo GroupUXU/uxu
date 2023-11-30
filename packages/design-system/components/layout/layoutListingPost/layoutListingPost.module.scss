@@ -12,13 +12,13 @@ $default-grid-layout: (
   height: 64px;
   display: block;
   position: absolute;
-  background: linear-gradient(to right, var(--uxu-color-gray-100), var(--uxu-color-primary-background));
+  background: linear-gradient(to right, var(--uxu-color-background-secound), var(--uxu-color-background-default));
 }
 
 .container {
   display: grid;
   margin: 0 auto;
-  max-width: var(--lt-color-gray-100);
+  max-width: var(--uxu-content-maxWidth);
   grid-template-columns: map-get($default-grid-layout, xs);
 
   .siteBarLeft,

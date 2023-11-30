@@ -33,9 +33,9 @@
   height: auto;
   position: relative;
   padding: var(--uxu-space-default);
-  border: var(--uxu-border-alpha-default);
+  border: var(--uxu-border-default);
   border-radius: var(--uxu-radii-default);
-  background: var(--uxu-color-background-100);
+  background: var(--uxu-color-background-secound);
 }
 
 .formFeedback {
@@ -47,8 +47,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  background: rgba(var(--uxu-color-primary-background-rgba), 0.6);
-  border-top: var(--uxu-border-alpha-default);
+  background: rgba(var(--uxu-color-background-default-rgba), 0.6);
+  border-top: var(--uxu-border-default);
   padding: var(--uxu-space-default);
   margin: 0 calc(var(--uxu-space-default) * -1) calc(var(--uxu-space-default) * -1);
   width: calc(100% + var(--uxu-space-default) * 2);

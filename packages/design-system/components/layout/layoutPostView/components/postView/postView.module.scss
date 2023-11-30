@@ -33,6 +33,7 @@
 }
 
 .header {
+  color: var(--uxu-color-link-secound);
   padding-bottom: var(--uxu-space-large);
 }
 
@@ -69,7 +70,7 @@
     padding: var(--uxu-space-large);
     margin: var(--uxu-space-default) auto;
     border: var(--uxu-border-default);
-    background-color: var(--uxu-color-body-background);
+    background-color: var(--uxu-color-background-secound);
 
     &::before,
     &::after {

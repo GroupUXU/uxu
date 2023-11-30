@@ -27,12 +27,10 @@ export function LayoutStaticText( { children, footer, headerMenu, searchEngineCo
       />
       <div className={styles.menuSpacer} />
       {topElement}
-      <Container>
-        <div className={styles.container}>
+      <Container className={styles.container}>
           <div className={styles.siteBarLeft}>{siteBarLeft && <SiteBar site="left">{siteBarLeft}</SiteBar>}</div>
           <section className={styles.content}>{children}</section>
           <div className={styles.siteBarRight}>{siteBarRight && <SiteBar site="right">{siteBarRight}</SiteBar>}</div>
-        </div>
       </Container>
       <Footer {...footer} />
     </>
