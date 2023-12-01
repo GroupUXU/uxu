@@ -1,13 +1,3 @@
-html {
-  --uxu-color-body-background: var(--uxu-color-primary-background);
-  --uxu-color-body-background-rgba: var(--uxu-color-primary-background-rgba);
-}
-
-html[data-theme="light"] {
-  --uxu-color-body-background: var(--uxu-color-primary-accent2);
-  --uxu-color-body-background-rgba: var(--uxu-color-primary-accent2-rgba);
-}
-
 body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -19,8 +9,8 @@ body {
   font-size: var(--uxu-font-size-default);
   font-weight: var(--uxu-font-weight-regular);
   line-height: var(--uxu-line-height-default);
-  color: var(--uxu-color-primary-foreground);
-  background-color: var(--uxu-color-body-background);
+  color: var(--uxu-color-text-default);
+  background-color: var(--uxu-color-background-default);
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans',
   sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }

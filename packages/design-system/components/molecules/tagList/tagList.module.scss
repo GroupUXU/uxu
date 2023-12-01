@@ -4,18 +4,28 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  margin: var(--uxu-space-small) 0;
   gap: var(--uxu-space-small);
 
 
   li {
     width: fit-content;
-    color: var(--uxu-color-primary-accent5);
+    padding: var(--uxu-space-small);
+    background-color: var(--uxu-color-background-secound);
+    
+    a {
+      color: var(--uxu-color-link-secound);
+      
+      &:hover {
+        color: var(--uxu-color-link-hover);
+      }
+    }
 
     &::before {
       content: "#";
       position: relative;
       display: inline-block;
-      color: var(--uxu-color-primary-accent5);
+      color: var(--uxu-color-gray-3);
     }
   }
 }

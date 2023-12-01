@@ -7,8 +7,8 @@
   width: 100%;
   padding: var(--uxu-space-small) 0;
   backdrop-filter: blur(1rem);
-  background-color: rgba(var(--uxu-color-primary-background-rgba), 0.5);
-  border-bottom: var(--uxu-border-alpha-default);
+  background-color: rgba(var(--uxu-color-background-default-rgba), 0.5);
+  border-bottom: var(--uxu-border-default);
   z-index: 999;
 }
 

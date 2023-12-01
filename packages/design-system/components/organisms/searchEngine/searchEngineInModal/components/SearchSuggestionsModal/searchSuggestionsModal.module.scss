@@ -8,9 +8,9 @@
   max-height: calc(100% - 12rem);
   display: flex;
   flex-direction: column;
-  border: var(--uxu-border-alpha-default);
+  border: var(--uxu-border-default);
   border-radius: var(--uxu-radii-default);
-  background-color: var(--uxu-color-background-200);
+  background-color: var(--uxu-color-background-secound);
 
   @include media(m) {
     width: 80%;
@@ -21,14 +21,14 @@
   .header {
     margin: 0 var(--uxu-space-small);
     padding: 0 var(--uxu-space-small);
-    border-bottom: var(--uxu-border-alpha-default);
+    border-bottom: var(--uxu-border-default);
 
     .wrapperSearch {
       input {
         border: none;
         min-height: 6rem;
         font-size: var(--uxu-font-size-large);
-        background-color: var(--uxu-color-background-200);
+        background-color: var(--uxu-color-background-secound);
 
         &:focus {
           border: none;
@@ -50,7 +50,6 @@
       display: flex;
       font-weight: 600;
       font-size: var(--uxu-font-size-mini);
-      color: var(--uxu-color-primary-accent5);
       padding: var(--uxu-space-small) var(--uxu-space-default) 0;
     }
 

@@ -1,8 +1,8 @@
 a {
-  color: var(--uxu-color-primary-accent5);
+  color: var(--uxu-color-link-default);
   transition: color var(--uxu-motion-default) ease-in-out;
 
   &:hover {
-    color: var(--uxu-color-primary-foreground)
+    color: var(--uxu-color-link-hover)
   }
 }

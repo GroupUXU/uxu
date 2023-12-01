@@ -22,7 +22,11 @@
   cursor: pointer;
   align-items: center;
   background-color: transparent;
-  color: var(--uxu-color-primary-accent5);
+  color: var(--uxu-color-link-hover);
+  
+  a {
+    color: var(--uxu-color-link-secound);
+  }
 
   svg {
     height: 1.8rem;
@@ -31,21 +35,25 @@
   &.active {
 
     svg {
-      color: var(--uxu-color-primary-foreground);
+      color: var(--uxu-color-link-secound);
     }
 
     &.activeSlug {
       cursor: no-drop;
       font-weight: bold;
-      color: var(--uxu-color-primary-foreground);
+      color: var(--uxu-color-link-secound);
     }
   }
 
   &:hover {
-    color: var(--uxu-color-primary-foreground);
+    color: var(--uxu-color-link-secound);
+    
+    a {
+      color: var(--uxu-color-link-hover);
+    }
 
     svg {
-      color: var(--uxu-color-primary-accent5);
+      color: var(--uxu-color-link-hover);
     }
   }
 

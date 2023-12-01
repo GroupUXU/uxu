@@ -6,8 +6,53 @@
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/s/[...slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/postView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/postView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/adsSlot/adsSlot.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/adsSlot/adsSlot.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/avatar/avatar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/avatar/avatar.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/dummyIMG/dummyImg.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/dummyIMG/dummyImg.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/hamburger/hamburger.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/hamburger/hamburger.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/keyboardShortcut/keyboardShortcut.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/keyboardShortcut/keyboardShortcut.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/loading/loadingDots/loadingDots.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/loading/loadingDots/loadingDots.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/loading/loadingWheel/loadingWheel.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/loading/loadingWheel/loadingWheel.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/logo/logo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/logo/logo.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/modal/modal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/modal/modal.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/note/note.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/note/note.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/components/headerLeftComponents/headerLeftComponents.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/components/headerLeftComponents/headerLeftComponents.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutFull/layoutFull.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutFull/layoutFull.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutListingPost/layoutListingPost.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutListingPost/layoutListingPost.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutListingPost/layoutListingPost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutListingPost/layoutListingPost.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/components/articleMetaWrapper/articleMetaWrapper.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/components/articleMetaWrapper/articleMetaWrapper.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/postView.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/components/postView/postView.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/layoutPostView.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/layoutPostView.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutStaticText/layoutStaticText.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutStaticText/layoutStaticText.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutStaticText/layoutStaticText.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutStaticText/layoutStaticText.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/adPhoneClient/adPhoneClient.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/adPhoneClient/adPhoneClient.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/crumbleMenu/crumbleMenu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/crumbleMenu/crumbleMenu.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/inputs/input/input.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/inputs/input/input.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/inputs/radio/icon/inputRadioIcon.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/inputs/radio/icon/inputRadioIcon.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/inputs/textarea/textarea.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/inputs/textarea/textarea.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/listButtonsSocialShare/buttonsSocialShare.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/listButtonsSocialShare/buttonsSocialShare.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/tagList/tagList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/tagList/tagList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/themeSwitcher/themeSwitcher.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/themeSwitcher/themeSwitcher.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/tree/tree.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/tree/tree.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/feedback/feedback.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/feedback/feedback.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/SearchSuggestionsModal/components/searchSuggestionList/searchSuggestionList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/SearchSuggestionsModal/components/searchSuggestionList/searchSuggestionList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/SearchSuggestionsModal/searchSuggestionsModal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/components/SearchSuggestionsModal/searchSuggestionsModal.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/searchEngineInModal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/searchEngine/searchEngineInModal/searchEngineInModal.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/cookies/cookieDetails/cookieDetails.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/cookies/cookieDetails/cookieDetails.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/toastContainer/components/toast/toast.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/organisms/toast/components/toastContainer/components/toast/toast.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/footer/footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/footer/footer.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/header/header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/header/header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost/leadPost.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/leadPost/leadPost.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/postList/postList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/component/postList/postList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/leadPostWithList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/leadPostWithList/leadPostWithList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/pages/contact/contact.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/pages/contact/contact.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/style/body.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/style/body.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/style/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/style/button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/style/link.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/style/link.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/style/typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/style/typography.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/theme/borders.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/theme/borders.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/theme/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/theme/colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/theme/shadows.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/theme/shadows.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +61,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBowerSettings">
+    <bower-package value="" />
+    <bower.json value="" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -33,16 +82,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feat/update-nextjs",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/packages/design-system/components/molecules/contentPartDisplay/chunks/AdChunk",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
+    "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.standard": "",
+    "node.js.selected.package.stylelint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "settings.editor.selected.configurable": "preferences.sourceCode.CSS",
     "ts.external.directory.path": "/Users/pawelniedzwiecki/localhost/uxu/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -155,6 +206,9 @@
       <workItem from="1700960913648" duration="513000" />
       <workItem from="1700990936223" duration="17000" />
       <workItem from="1700991403815" duration="4082000" />
+      <workItem from="1701109034766" duration="21000" />
+      <workItem from="1701114468862" duration="1039000" />
+      <workItem from="1701361863568" duration="18758000" />
     </task>
     <servers />
   </component>

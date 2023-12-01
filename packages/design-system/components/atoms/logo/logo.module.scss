@@ -8,7 +8,7 @@
     display: block;
 
     path {
-      fill: var(--uxu-color-primary-foreground);
+      fill: var(--uxu-color-text-default);
       transition: fill var(--uxu-motion-default) ease-in-out;
     }
   }

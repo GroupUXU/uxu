@@ -21,15 +21,15 @@
 
 .wrapperIcon {
   padding: var(--uxu-space-small);
-  color: var(--uxu-color-primary-accent5);
+  color: var(--uxu-color-text-default);
 
   &:hover {
-    color: var(--icon-hover-color, rgba(var(--uxu-color-success-default-rgba), 0.9));
-    background-color: var(--icon-hover-bg-color, rgba(var(--uxu-color-success-default-rgba), 0.2));
+    color: var(--icon-hover-color, rgba(var(--uxu-color-success-1-rgba), 0.9));
+    background-color: var(--icon-hover-bg-color, rgba(var(--uxu-color-success-1-rgba), 0.2));
   }
 }
 
 .wrapperIconCheck {
-  color: var(--icon-container-check-color, rgba(var(--uxu-color-success-default-rgba), 0.9));
-  background-color: var(--icon-container-check-bg-color, rgba(var(--uxu-color-success-default-rgba), 0.2));
+  color: var(--icon-container-check-color, rgba(var(--uxu-color-success-1-rgba), 0.9));
+  background-color: var(--icon-container-check-bg-color, rgba(var(--uxu-color-success-1-rgba), 0.2));
 }

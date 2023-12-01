@@ -9,11 +9,11 @@
   padding-bottom: var(--uxu-space-large);
 
   @include media(m) {
-    width: 80%;
+    width: 45vw;
 
     &:hover {
       h1 {
-        color: var(--uxu-color-primary-accent5);
+        color: var(--uxu-color-link-hover);
       }
     }
 
@@ -31,7 +31,7 @@
     -webkit-line-clamp: 1;
     transition: color 0.3s;
     font-size: var(--uxu-font-size-large);
-    color: var(--uxu-color-primary-foreground);
+    color: var(--uxu-color-link-secound);
 
     @include media(m) {
       font-size: var(--uxu-font-size-h1);
@@ -40,7 +40,7 @@
 
   p {
     -webkit-line-clamp: 2;
-    color: var(--uxu-color-primary-accent5);
+    color: var(--uxu-color-text-default);
   }
 
 }

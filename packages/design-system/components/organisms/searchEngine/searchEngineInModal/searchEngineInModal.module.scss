@@ -8,9 +8,8 @@
   justify-content: flex-start;
   gap: var(--uxu-space-default);
   font-size: var(--uxu-font-size-small);
-  color: var(--uxu-color-primary-accent5);
   border-radius: var(--uxu-radii-default);
-  background-color: var(--uxu-color-background-200);
+  background-color: var(--uxu-color-background-secound);
   padding: var(--uxu-space-small) var(--uxu-space-small) var(--uxu-space-small) var(--uxu-space-default);
 }
 
@@ -53,7 +52,7 @@
     left: 0;
     width: calc(100% - calc(var(--uxu-space-small) * 2));
     height: 6rem;
-    background-color: var(--uxu-color-background-100);
+    background-color: var(--uxu-color-background-default);
     transition: top var(--uxu-motion-fast) ease;
     border-radius: var(--uxu-radii-default);
     margin: 0 var(--uxu-space-small);

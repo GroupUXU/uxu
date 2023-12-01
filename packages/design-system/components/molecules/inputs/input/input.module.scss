@@ -9,15 +9,15 @@
   width: 100%;
   height: 4rem;
   display: block;
-  border: var(--uxu-border-alpha-default);
+  border: var(--uxu-border-default);
   border-radius: var(--uxu-radii-default);
-  background: var(--uxu-color-gray-100);
-  color: var(--uxu-color-primary-foreground);
+  background: rgba(var(--uxu-color-background-default-rgba), 0.6);
+  color: var(--uxu-color-text-default);
   padding: var(--uxu-space-default);
   transition: border-color var(--uxu-motion-default);
 
   &::placeholder {
-    color: var(--uxu-color-primary-accent3);
+    color: var(--uxu-color-text-default);
     opacity: 1;
     transition: opacity var(--uxu-motion-default);
   }

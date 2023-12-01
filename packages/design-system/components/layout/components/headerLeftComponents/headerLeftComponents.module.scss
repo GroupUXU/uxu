@@ -13,12 +13,15 @@
 
   svg {
     height: 3.2rem;
+    path {
+      fill: var(--uxu-color-link-secound);
+    }
   }
 
   &:hover {
     svg {
       path {
-        fill: var(--uxu-color-primary-accent5);
+        fill: var(--uxu-color-link-hover);
       }
     }
   }
@@ -46,11 +49,16 @@
     gap: var(--uxu-space-default);
 
     a {
+      color: var(--uxu-color-link-secound);
       font-size: var(--uxu-font-size-small);
+      
+      &:hover {
+        color: var(--uxu-color-link-hover);
+      }
 
       &.active {
         font-weight: bold;
-        color: var(--uxu-color-primary-foreground);
+        color: var(--uxu-color-link-hover);
       }
     }
   }

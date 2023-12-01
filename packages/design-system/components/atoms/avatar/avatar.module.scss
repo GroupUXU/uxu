@@ -6,10 +6,10 @@
   justify-content: center;
   border-radius: 50%;
   border: var(--uxu-border-default);
-  background-color: var(--uxu-color-primary-accent1);
+  background-color: var(--uxu-color-background-default);
 
   svg {
-    color: var(--uxu-color-primary-accent3);
+    color: var(--uxu-color-text-default);
   }
 
   &.small {

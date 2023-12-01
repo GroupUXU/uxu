@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--uxu-color-primary-accent2);
+  background-color: var(--uxu-color-background-secound);
   position: relative;
 
   &::before,
@@ -11,7 +11,7 @@
     width: 100%;
     position: absolute;
     text-align: center;
-    color: var(--uxu-color-primary-accent3);
+    color: var(--uxu-color-text-default);
   }
 
   &::before {

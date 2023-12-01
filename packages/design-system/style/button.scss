@@ -9,13 +9,13 @@
   white-space: nowrap;
   justify-content: center;
   align-items: center;
-  background-color: var(--uxu-color-background-100);
-  color: var(--uxu-color-primary-accent5);
+  background-color: var(--uxu-color-background-secound);
+  color: var(--uxu-color-link-secound);
   transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
   border-radius: var(--uxu-radii-default);
   font-size: var(--uxu-font-size-default);
   line-height: var(--uxu-line-height-small);
-  border: var(--uxu-border-alpha-default);
+  border: var(--uxu-border-default);
   padding: var(--uxu-space-small) calc(var(--uxu-space-default) - 0.2rem);
 
   &:focus {
@@ -23,9 +23,8 @@
   }
 
   &:hover {
-    border: var(--uxu-border-alpha-default);
-    color: var(--uxu-color-primary-foreground);
-    background-color: var(--uxu-color-background-200);
+    border: var(--uxu-border-active);
+    background-color: var(--uxu-color-background-default);
   }
 }
 
@@ -37,20 +36,14 @@
 
 .btn.primary {
   border: var(--uxu-border-active);
-  color: var(--uxu-color-primary-background);
-  background-color: var(--uxu-color-primary-foreground);
+  color: var(--uxu-color-text-secound);
+  background-color: var(--uxu-color-background-foreground);
 
   &:hover {
     background-color: transparent;
     color: var(--uxu-color-primary-foreground);
   }
 }
-
-.btn.secondary {
-  background-color: transparent;
-  color: var(--uxu-color-primary-foreground);
-}
-
 
 .btn.tertiary {
   background-color: transparent;
