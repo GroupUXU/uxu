@@ -1,9 +1,10 @@
 .wrapper {
   display: flex;
+  overflow: hidden;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   background-color: var(--uxu-color-background-secound);
-  position: relative;
 
   &::before,
   &::after {
