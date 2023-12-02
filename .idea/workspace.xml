@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/colorShiftTextAnimator/colorShiftTextAnimator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/colorShiftTextAnimator/colorShiftTextAnimator.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/pressCoverageLinks/pressCoverageLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/pressCoverageLinks/pressCoverageLinks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/tree/branch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/tree/branch.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/layoutPostView.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/layout/layoutPostView/layoutPostView.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/style/variebles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/style/variebles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/theme/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/theme/colors.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +168,7 @@
       <workItem from="1701544876900" duration="962000" />
       <workItem from="1701545845344" duration="41000" />
       <workItem from="1701545894339" duration="603000" />
-      <workItem from="1701546611717" duration="1566000" />
+      <workItem from="1701546611717" duration="3557000" />
     </task>
     <servers />
   </component>

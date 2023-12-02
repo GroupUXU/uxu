@@ -65,9 +65,9 @@ html {
   }
   
   --uxu-gradient-gray-gray: linear-gradient(90deg, var(--uxu-color-gray-3) 0%, var(--uxu-color-gray-3) 100%);
-  --uxu-gradient-blue-tell: linear-gradient(90deg, rgba(0, 124, 240) 0%, rgba(0, 223, 216) 100%);
-  --uxu-gradient-purple-pink: linear-gradient(90deg, rgba(121, 40, 202) 0%, rgba(255, 0, 128) 100%);
-  --uxu-gradient-red-amber: linear-gradient(90deg, rgba(255, 77, 77) 0%, rgba(249, 203, 40) 100%);
+  --uxu-gradient-blue-tell: linear-gradient(90deg, var(--uxu-color-blue-5) 0%, var(--uxu-color-tell-5) 100%);
+  --uxu-gradient-purple-pink: linear-gradient(90deg, var(--uxu-color-purple-5) 0%, var(--uxu-color-pink-5) 100%);
+  --uxu-gradient-red-amber: linear-gradient(90deg, var(--uxu-color-red-5) 0%, var(--uxu-color-amber-5) 100%);
 }
 
 html[data-theme='light'] {
