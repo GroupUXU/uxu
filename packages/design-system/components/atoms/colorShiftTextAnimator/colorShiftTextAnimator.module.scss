@@ -1,0 +1,85 @@
+@import "../../../style/mixins";
+
+.wrapper, .header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header span {
+  text-align: center;
+  position: relative;
+  font-size: var(--uxu-font-size-h2);
+  font-weight: bold;
+  color: var(--uxu-color-text-header);
+  
+  @include media(s) {
+	font-size: calc(2 * var(--uxu-font-size-h1));
+  }
+  
+  @include media(l) {
+	font-size: calc(2 * var(--uxu-font-size-h2));
+  }
+  
+  &::before {
+	opacity: 0;
+	display: block;
+	position: absolute;
+	color: transparent;
+	content: attr(data-text);
+	-webkit-background-clip: text;
+  }
+}
+
+@for $i from 1 through 3 {
+  .header span:nth-child(#{$i}) {
+	animation: gradient-animation-#{$i}-#{$i} 8s infinite;
+	
+	&::before {
+	  animation: gradient-animation-#{$i} 8s infinite;
+	  background-image: var(--uxu-gradient-#{nth(('blue-tell', 'purple-pink', 'red-amber'), $i)});
+	}
+  }
+}
+
+@keyframes gradient-animation-1 {
+  0%, 33%, 100% { opacity: 1; }
+  80% { opacity: 0; }
+}
+
+@keyframes gradient-animation-1-1 {
+  0%, 33%, 100% { color: transparent; }
+  80% { color: var(--uxu-color-text-header); }
+}
+
+@keyframes gradient-animation-2 {
+  33%, 100% { opacity: 0; }
+  66% { opacity: 1; }
+}
+
+@keyframes gradient-animation-2-2 {
+  33%, 100% { color: var(--uxu-color-text-header); }
+  66% { color: transparent; }
+}
+
+@keyframes gradient-animation-3 {
+  66%, 100% { opacity: 0; }
+  80% { opacity: 1; }
+}
+
+@keyframes gradient-animation-3-3 {
+  66%, 100% { color: var(--uxu-color-text-header); }
+  80% { color: transparent; }
+}
+
+
+.wrapper p {
+  padding-top: 3rem;
+  text-align: center;
+  
+  @include media(s) {
+	font-size: var(--uxu-font-size-large);
+  }
+}

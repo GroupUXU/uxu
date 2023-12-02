@@ -1,0 +1,25 @@
+.section, .wrapperButtons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  height: 100vh;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.wrapperButtons {
+  flex-wrap: wrap;
+  gap: var(--uxu-space-large);
+  padding: calc(2 * var(--uxu-space-large)) 0 calc(3 * var(--uxu-space-large)) 0;
+}
+
+
+.headerPressCoverageLinks {
+  font-weight: normal;
+  color: var(--uxu-color-text-default);
+  margin: calc(2 * var(--uxu-space-large)) 0 var(--uxu-space-large)  0;
+}
