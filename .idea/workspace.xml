@@ -5,27 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/getreturn/src/components/template/section/sectionMediaCoverage/consts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getreturn/src/components/template/section/sectionMediaCoverage/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getreturn/src/components/template/section/sectionMediaCoverage/sectionMediaCoverage.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getreturn/src/components/template/section/sectionMediaCoverage/sectionMediaCoverage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/getreturn/src/components/template/section/sectionMediaCoverage/type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/assets/vectors/vectorBrandsPress.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/colorShiftTextAnimator/colorShiftTextAnimator.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/colorShiftTextAnimator/colorShiftTextAnimator.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/colorShiftTextAnimator/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/colorShiftTextAnimator/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/pressCoverageLinks/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/pressCoverageLinks/pressCoverageLinks.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/pressCoverageLinks/pressCoverageLinks.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/pressCoverageLinks/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getreturn/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getreturn/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/assets/vectors/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/assets/vectors/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/listButtonsSocialShare/buttonsSocialShare.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/listButtonsSocialShare/buttonsSocialShare.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/style/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/style/button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/style/variebles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/style/variebles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/theme/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/theme/colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/colorShiftTextAnimator/colorShiftTextAnimator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/colorShiftTextAnimator/colorShiftTextAnimator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/pressCoverageLinks/pressCoverageLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/pressCoverageLinks/pressCoverageLinks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/tree/branch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/tree/branch.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +168,7 @@
       <workItem from="1701544876900" duration="962000" />
       <workItem from="1701545845344" duration="41000" />
       <workItem from="1701545894339" duration="603000" />
-      <workItem from="1701546611717" duration="1188000" />
+      <workItem from="1701546611717" duration="1566000" />
     </task>
     <servers />
   </component>

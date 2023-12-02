@@ -17,7 +17,6 @@ function checkChildrenForActive(children: ReactNode): boolean {
   return isActiveChild;
 };
 
-
 export function renderBranches( branches: Array<BranchProps> ): Array<ReactElement> {
   return branches.map ( ( branch ) => (
     <Branch href={branch.href} key={branch.title} title={branch.title}>
