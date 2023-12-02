@@ -1,25 +1,22 @@
 import type { ReactElement } from 'react';
-import { CrumbleMenu } from 'design-system/components/molecules/crumbleMenu';
-import { LayoutStaticText } from 'design-system/components/layout/layoutStaticText';
+import { LayoutFull } from 'design-system/components/layout/layoutFull';
 import { useSeoConfig } from 'design-system/hooks/useSeoConfig';
 import { footerConfig, headerMenuConfig, searchEngineConfig } from '../config';
+import { SectionMediaCoverage } from '../components/template/section/sectionMediaCoverage';
 
-function Index(): ReactElement  {
-  const seo = useSeoConfig({});
+function Index(): ReactElement {
+    const seo = useSeoConfig({});
 
-  return (
-    <LayoutStaticText
-      footer={footerConfig}
-      headerMenu={headerMenuConfig}
-      searchEngineConfig={searchEngineConfig}
-      seo={seo}
-      topElement={<CrumbleMenu data={[{ title: "home", href: "/" }]}/>}
-    >
-      <section style={{height: "100vh", width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
-        <p>Strona w budowie</p>
-      </section>
-    </LayoutStaticText>
-  );
+    return (
+        <LayoutFull
+            footer={footerConfig}
+            headerMenu={headerMenuConfig}
+            searchEngineConfig={searchEngineConfig}
+            seo={seo}
+        >
+           <SectionMediaCoverage />
+        </LayoutFull>
+    );
 };
 
 export default Index;

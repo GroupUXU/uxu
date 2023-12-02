@@ -5,8 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/apps/getreturn/src/components/template/section/sectionMediaCoverage/consts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/getreturn/src/components/template/section/sectionMediaCoverage/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/getreturn/src/components/template/section/sectionMediaCoverage/sectionMediaCoverage.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/getreturn/src/components/template/section/sectionMediaCoverage/sectionMediaCoverage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/getreturn/src/components/template/section/sectionMediaCoverage/type.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/assets/vectors/vectorBrandsPress.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/colorShiftTextAnimator/colorShiftTextAnimator.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/colorShiftTextAnimator/colorShiftTextAnimator.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/colorShiftTextAnimator/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/colorShiftTextAnimator/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/pressCoverageLinks/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/pressCoverageLinks/pressCoverageLinks.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/pressCoverageLinks/pressCoverageLinks.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/pressCoverageLinks/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/adsSlot/adsSlot.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/adsSlot/adsSlot.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/getreturn/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getreturn/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/assets/vectors/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/assets/vectors/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/listButtonsSocialShare/buttonsSocialShare.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/listButtonsSocialShare/buttonsSocialShare.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/style/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/style/button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/style/variebles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/style/variebles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/theme/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/theme/colors.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +55,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/pawelniedzwiecki/localhost/uxu/packages/design-system/components/molecules/contentPartDisplay/chunks/AdChunk&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/ColorShiftTextAnimator&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/pawelniedzwiecki/localhost/uxu/packages/assets/vectors&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
@@ -54,11 +73,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/assets/vectors" />
+      <recent name="$PROJECT_DIR$/apps/getreturn/src/components/template/section/sectionMediaCoverage" />
+      <recent name="$PROJECT_DIR$/packages/design-system/style" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/colorShiftTextAnimator" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/chunks/AdChunk" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/contents" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components" />
-      <recent name="$PROJECT_DIR$/apps/getReturn" />
-      <recent name="$PROJECT_DIR$/apps/wtrasie" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks" />
@@ -163,6 +182,10 @@
       <workItem from="1701109034766" duration="21000" />
       <workItem from="1701114468862" duration="1039000" />
       <workItem from="1701361863568" duration="18758000" />
+      <workItem from="1701544876900" duration="962000" />
+      <workItem from="1701545845344" duration="41000" />
+      <workItem from="1701545894339" duration="603000" />
+      <workItem from="1701546611717" duration="1188000" />
     </task>
     <servers />
   </component>
