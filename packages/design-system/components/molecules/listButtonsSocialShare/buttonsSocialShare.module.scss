@@ -1,62 +1,74 @@
+@import "./../../../style/mixins";
+
 .wrapper {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  grid-template-columns: 100%;
   
-  span {
-    position: relative;
-    font-size: 8rem;
-    font-weight: bold;
-    color: white;
-    
-    &::before {
-      opacity: 0;
-      display: block;
-      position: absolute;
-      color: transparent;
-      content: attr(data-text);
-      -webkit-background-clip: text;
-    }
+  @include media(s) {
+    grid-template-columns: 60% 6rem 1fr;
   }
   
-  @for $i from 1 through 3 {
-    span:nth-child(#{$i}) {
-      animation: color-shift-text-animator-opacity-#{$i} 8s infinite, color-shift-text-animator-color-#{$i} 8s infinite;
-      &::before {
-        background-image: var(--uxu-gradient-#{nth(('blue-tell', 'purple-pink', 'red-amber'), $i)});
+  button {
+    color: white;
+    display: flex;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    padding: var(--uxu-space-small) var(--uxu-space-default);
+    
+    &:hover {
+      color: white;
+    }
+    
+    &:nth-child(1) {
+      background-color: var(--uxu-color-blue-4);
+      
+      &:hover {
+        background-color: var(--uxu-color-blue-5);
       }
     }
+    
+    &:nth-child(2) {
+      background-color: var(--uxu-color-blue-6);
+      
+      &:hover {
+        background-color: var(--uxu-color-blue-8);
+      }
+    }
+    
+    &:nth-child(3) {
+      background-color: var(--uxu-color-gray-1);
+      
+      &:hover {
+        background-color: var(--uxu-color-gray-2);
+      }
+      
+      svg {
+        fill: transparent;
+        
+        path {
+          color: white;
+        }
+      }
+    }
+    
+    svg {
+      width: 3rem;
+      height: 3rem;
+      fill: white;
+      
+      path {
+        color: transparent;
+      }
+    }
+    
+    span {
+      width: 100%;
+      display: block;
+    }
   }
-}
-
-@keyframes color-shift-text-animator-opacity-1 {
-  0%, 33%, 100% { opacity: 1; }
-  80% { opacity: 0; }
-}
-
-@keyframes color-shift-text-animator-color-1 {
-  0%, 33%, 100%  { color: transparent; }
-  80% { color: white; }
-}
-
-@keyframes color-shift-text-animator-opacity-2 {
-  33%, 100% { opacity: 0; }
-  66% { opacity: 1; }
-}
-
-@keyframes color-shift-text-animator-color-2 {
-  33%, 100% { color: white; }
-  66% { color: transparent; }
-}
-
-@keyframes color-shift-text-animator-opacity-3 {
-  66%, 100% { opacity: 0; }
-  80% { opacity: 1; }
-}
-
-@keyframes color-shift-text-animator-color-3 {
-  66%, 100% { color: white; }
-  80% { color: transparent; }
 }
