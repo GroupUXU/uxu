@@ -1,26 +1,34 @@
+@import "design-system/style/mixins";
+
 .section, .wrapperButtons {
   width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .section {
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .wrapperButtons {
+  width: 100%;
   flex-wrap: wrap;
   gap: var(--uxu-space-large);
-  padding: calc(2 * var(--uxu-space-large)) 0 calc(3 * var(--uxu-space-large)) 0;
+  padding: calc(2 * var(--uxu-space-large)) 0 var(--uxu-space-large) 0;
+  
+  @include media(s) {
+    padding: calc(2 * var(--uxu-space-large)) 0 calc(3 * var(--uxu-space-large)) 0;
+  }
 }
 
 
 .headerPressCoverageLinks {
+  width: 100%;
+  display: block;
+  text-align: center;
   font-weight: normal;
   color: var(--uxu-color-text-default);
-  margin: var(--uxu-space-large) 0;
+  margin-bottom: var(--uxu-space-large);
 }
