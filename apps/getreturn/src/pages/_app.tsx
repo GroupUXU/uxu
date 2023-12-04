@@ -7,6 +7,7 @@ import type { NormalizedCacheObject } from '@apollo/client';
 import { getThemeFromRequest, getClientLocaleFromRequest, getMobilePlatformStatusFromRequest, getOSInfoFromRequest, getCookieConsentSettings } from 'utils';
 import { WrapperProviders } from 'design-system/providers/provider.wrapper';
 import 'design-system/style/globalStyle.scss';
+import '../styles/globalStyleCustom.scss';
 import { useApollo, siteConfig } from "../config";
 
 function CustomApp({ Component, pageProps, theme, clientLocale, osInfo, isMobilePlatform }: AppProps<{ initialApolloState?: NormalizedCacheObject }> & { theme: SiteConfig['site']['theme'], cookieConsentSettings: SiteConfig['cookieConsentSettings'], clientLocale: SiteConfig['client']['locale'], isMobilePlatform: SiteConfig['client']['platform'], osInfo: SiteConfig['client']['osInfo'] }): ReactElement {
