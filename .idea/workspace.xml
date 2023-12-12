@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/getreturn/src/styles/globalStyleCustom.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getreturn/src/components/template/section/sectionMediaCoverage/sectionMediaCoverage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getreturn/src/components/template/section/sectionMediaCoverage/sectionMediaCoverage.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getreturn/src/components/template/section/sectionMediaCoverage/sectionMediaCoverage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getreturn/src/components/template/section/sectionMediaCoverage/sectionMediaCoverage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getreturn/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getreturn/src/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/getreturn/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/getreturn/src/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +37,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "add/article-in-home",
-    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/packages/assets/vectors",
+    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.stylelint": "true",
@@ -58,11 +54,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/packages/assets/vectors" />
       <recent name="$PROJECT_DIR$/apps/getreturn/src/components/template/section/sectionMediaCoverage" />
       <recent name="$PROJECT_DIR$/packages/design-system/style" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/colorShiftTextAnimator" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/contentPartDisplay/chunks/AdChunk" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks" />
@@ -171,6 +167,9 @@
       <workItem from="1701545845344" duration="41000" />
       <workItem from="1701545894339" duration="603000" />
       <workItem from="1701546611717" duration="3557000" />
+      <workItem from="1701890351761" duration="2261000" />
+      <workItem from="1701978051704" duration="1233000" />
+      <workItem from="1702045136437" duration="6610000" />
     </task>
     <servers />
   </component>
