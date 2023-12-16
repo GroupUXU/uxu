@@ -5,7 +5,6 @@ type HeaderMenuConfigTypes = Array<{ href: string, title: string }>
 export const headerMenuConfig: HeaderMenuConfigTypes = [
   {href: "/", title: "Home"},
   {href: "/s", title: "Usługi"},
-  {href: "/contact", title: "Kontakt"}
 ]
 
 export const siteBarMenuConfig: Array<BranchProps> = [

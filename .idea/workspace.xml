@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.prettierrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configFooter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configFooter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configMenu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configMenu.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/contact.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/privacy-policy.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/terms.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,27 +39,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "add/article-in-home",
-    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.CSS",
-    "ts.external.directory.path": "/Users/pawelniedzwiecki/localhost/uxu/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/auth&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/pawelniedzwiecki/localhost/uxu&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.CSS&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/pawelniedzwiecki/localhost/uxu/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -61,11 +69,11 @@
       <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/colorShiftTextAnimator" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/auth" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/strategies" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithAdStrategy/components/createInsertAdsFn/components/retrieveOrProcessSubpartData/components" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithAdStrategy/components/createInsertAdsFn/components/chunkOrderManager/components/getAdChunks" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -169,7 +177,13 @@
       <workItem from="1701546611717" duration="3557000" />
       <workItem from="1701890351761" duration="2261000" />
       <workItem from="1701978051704" duration="1233000" />
-      <workItem from="1702045136437" duration="6610000" />
+      <workItem from="1702045136437" duration="8014000" />
+      <workItem from="1702229606804" duration="792000" />
+      <workItem from="1702287402457" duration="6653000" />
+      <workItem from="1702321972238" duration="4789000" />
+      <workItem from="1702584384958" duration="608000" />
+      <workItem from="1702671697187" duration="1026000" />
+      <workItem from="1702730753396" duration="484000" />
     </task>
     <servers />
   </component>
