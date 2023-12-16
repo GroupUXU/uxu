@@ -26,27 +26,6 @@ export const footerConfig: FooterProps = {
     },
     {
       id: `${generateUniqueId()}`,
-      header: "Nasze serwisy",
-      links: [
-        {
-          id: `${generateUniqueId()}`,
-          title: "uxu.pl",
-          linkPath: "https://www.uxu.pl",
-        },
-        {
-          id: `${generateUniqueId()}`,
-          title: "polski.dev",
-          linkPath: "https://www.polski.dev",
-        },
-        {
-          id: `${generateUniqueId()}`,
-          title: "getreturn.pl",
-          linkPath: "https://www.getreturn.pl",
-        },
-      ]
-    },
-    {
-      id: `${generateUniqueId()}`,
       header: "Informacje prawne",
       links: [
         {

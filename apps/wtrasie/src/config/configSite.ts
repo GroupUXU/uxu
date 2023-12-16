@@ -65,23 +65,20 @@ export const siteConfig: SiteConfig = {
   },
   admin: {
     company: {
-      name: "Na3 Sp. z o.o.",
-      street: "Serwituty 25",
-      postCode: "02-233",
-      city: "Warszawa",
+      name: "MSJ Michał Wojsław",
+      street: "al. Aleja Bohaterów Monte Cassino 10/41",
+      postCode: "42-217",
+      city: "Częstochowa",
       tax: {
         pl: {
-          nip: '5223077290',
-          krs: '0000649985',
-          regon: '365979030',
-          shareCapitalInPLN: 5000,
-          accountsBank: [{bank: "Nest Bank", iban: "PL 65 2530 0008 2047 1060 6663 0002"}]
+          nip: '5732853839',
+          regon: '361022789',
         }
       },
       contact: {
         pl: {
-          email: [{type: "main", email: "hello@uxu.pl"}],
-          phone: [{type: "mobile", number: "888 333 885"}]
+          email: [{type: "main", email: "biuro.msj@gmail.com"}],
+          phone: [{type: "mobile", number: "536 000 005"}]
         }
       }
     }
