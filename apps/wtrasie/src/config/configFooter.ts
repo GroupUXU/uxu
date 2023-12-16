@@ -17,7 +17,28 @@ export const footerConfig: FooterProps = {
           title: "Usługi",
           linkPath: "/s"
         },
+        {
+          id: `${generateUniqueId()}`,
+          title: "Kontakt",
+          linkPath: "/contact"
+        },
       ]
     },
+    {
+      id: `${generateUniqueId()}`,
+      header: "Informacje prawne",
+      links: [
+        {
+          id: `${generateUniqueId()}`,
+          title: "Regulamin",
+          linkPath: "/terms"
+        },
+        {
+          id: `${generateUniqueId()}`,
+          title: "Polityka Prywatności",
+          linkPath: "/privacy-policy"
+        }
+      ]
+    }
   ],
 };
