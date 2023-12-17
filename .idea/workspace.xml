@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/privacy-policy.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/terms.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/nodemon.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/src/api/auth/controllers/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/src/api/auth/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/src/api/auth/providers/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/src/api/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configFooter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configFooter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configMenu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configMenu.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configSite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configSite.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/src/app.controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/src/api/auth/controllers/app.controller.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/src/api/auth/controllers/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/src/app.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/src/api/auth/providers/auth.provider.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +49,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "feat/auth",
-    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/wtrasie/src/pages",
+    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/auth/src/api/auth/providers",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.stylelint": "true",
@@ -59,18 +66,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/auth/src/api/auth/providers" />
+      <recent name="$PROJECT_DIR$/apps/auth/src/api/auth/controllers" />
       <recent name="$PROJECT_DIR$/apps/wtrasie/src/pages" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/packages/assets/vectors" />
-      <recent name="$PROJECT_DIR$/apps/getreturn/src/components/template/section/sectionMediaCoverage" />
-      <recent name="$PROJECT_DIR$/packages/design-system/style" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/auth/src/api/auth/controllers" />
       <recent name="$PROJECT_DIR$/apps/auth" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/strategies" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithAdStrategy/components/createInsertAdsFn/components/retrieveOrProcessSubpartData/components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -180,7 +187,10 @@
       <workItem from="1702321972238" duration="4789000" />
       <workItem from="1702584384958" duration="608000" />
       <workItem from="1702671697187" duration="1026000" />
-      <workItem from="1702730753396" duration="1060000" />
+      <workItem from="1702730753396" duration="1780000" />
+      <workItem from="1702735329989" duration="3192000" />
+      <workItem from="1702821377051" duration="178000" />
+      <workItem from="1702821953953" duration="9005000" />
     </task>
     <servers />
   </component>

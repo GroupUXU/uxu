@@ -3,31 +3,36 @@ version: '3.8'
 services:
   app:
     build: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
     ports:
       - "3000:3000"
     depends_on:
       - db
       - redis
     environment:
-      - DATABASE_URL=postgresql://postgres:Wsxedcrfv@db/uxu
-      - REDIS_URL=redis://:@redis:6379
+      - DATABASE_URL=postgresql://uxu:uxu@db/uxu
+      - REDIS_URL=redis://:uxu@redis:6379
 
   db:
     image: postgres:13
-    ports:
-      - "5432:5432"
     environment:
       POSTGRES_DB: uxu
-      POSTGRES_PASSWORD: Wsxedcrfv
+      POSTGRES_USER: uxu
+      POSTGRES_PASSWORD: uxu
     volumes:
       - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
 
   redis:
     image: redis:6
-    ports:
-      - "6379:6379"
+    command: [ "redis-server", "--requirepass", "uxu" ]
     volumes:
       - redisdata:/data
+    ports:
+      - "6379:6379"
 
 volumes:
   pgdata:

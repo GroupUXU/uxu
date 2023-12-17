@@ -1,26 +1,18 @@
-FROM node:18 AS builder
+FROM node:18
 
 WORKDIR /usr/src/app
 
 COPY package*.json ./
 COPY yarn.lock ./
 
-RUN yarn install --frozen-lockfile
+# Instalujemy zależności, w tym zależności deweloperskie
+RUN yarn install
+
+# Instalujemy `nodemon` globalnie
+RUN yarn global add nodemon
 
 COPY . .
 
-RUN yarn build
+EXPOSE 3000
 
-# Etap 2: Uruchomienie aplikacji
-FROM node:16
-
-WORKDIR /usr/src/app
-
-COPY package*.json ./
-COPY yarn.lock ./
-
-RUN yarn install --production --frozen-lockfile
-
-COPY --from=builder /usr/src/app/dist ./dist
-
-CMD ["yarn", "start:prod"]
+CMD ["yarn", "run", "start:dev"]
