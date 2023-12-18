@@ -11,7 +11,7 @@ RUN yarn install
 # Instalujemy `nodemon` globalnie
 RUN yarn global add nodemon
 
-COPY . .
+COPY .. .
 
 EXPOSE 3000
 

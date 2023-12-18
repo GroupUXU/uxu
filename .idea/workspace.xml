@@ -5,19 +5,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/auth/nodemon.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/src/api/auth/controllers/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/src/api/auth/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/src/api/auth/providers/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/src/api/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/config/apolloClient/config.apolloClient.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/config/apolloClient/config.cache.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/config/apolloClient/config.links.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/config/apolloClient/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/config/configFooter.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/config/configMenu.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/config/configSearchEngine.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/config/configSite.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/config/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/fragments/gql.fragment.adress.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/fragments/gql.fragment.contentParts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/fragments/gql.fragment.lead.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/fragments/gql.fragment.phone.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/fragments/gql.fragment.views.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/fragments/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/function/gql.query.client.article.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/function/gql.query.client.client.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/function/gql.query.client.tag.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/function/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/query/gql.mutation.customerMessage.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/query/gql.query.article.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/query/gql.query.client.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/query/gql.query.tag.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/query/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/types/api-gateway.service.generated.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/types/gql.fragment.adress.generated.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/types/gql.fragment.contentParts.generated.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/types/gql.fragment.lead.generated.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/types/gql.fragment.phone.generated.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/types/gql.fragment.views.generated.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/types/gql.mutation.customerMessage.generated.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/types/gql.query.article.generated.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/types/gql.query.client.generated.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/types/gql.query.tag.generated.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/gql/types/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/middleware.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/_app.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/_document.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/api/search/[query].ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/contact.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/privacy-policy.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/terms.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/auth/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/auth/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/auth/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/auth/src/app.controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/src/api/auth/controllers/app.controller.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/auth/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/src/api/auth/controllers/auth.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/auth/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/auth/src/app.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/src/api/auth/providers/auth.provider.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/nest-cli.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/nest-cli.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/nodemon.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/nodemon.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/src/api/auth/controllers/app.controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/src/api/auth/controllers/app.controller.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/src/api/auth/controllers/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/src/api/auth/controllers/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/src/api/auth/controllers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/src/api/auth/controllers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/src/api/auth/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/src/api/auth/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/src/api/auth/providers/auth.provider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/src/api/auth/providers/auth.provider.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/src/api/auth/providers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/src/api/auth/providers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/src/api/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/src/api/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/test/app.e2e-spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/test/app.e2e-spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/test/jest-e2e.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/test/jest-e2e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/tsconfig.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/tsconfig.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/backend/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +105,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "feat/auth",
-    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/auth/src/api/auth/providers",
+    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/auth/frontend/src/config/apolloClient",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.stylelint": "true",
@@ -66,18 +122,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/auth/frontend/src/config/apolloClient" />
+      <recent name="$PROJECT_DIR$/apps/auth/frontend" />
       <recent name="$PROJECT_DIR$/apps/auth/src/api/auth/providers" />
       <recent name="$PROJECT_DIR$/apps/auth/src/api/auth/controllers" />
       <recent name="$PROJECT_DIR$/apps/wtrasie/src/pages" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/packages/assets/vectors" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/auth/frontend" />
+      <recent name="$PROJECT_DIR$/apps/auth/backend" />
       <recent name="$PROJECT_DIR$/apps/auth/src/api/auth/controllers" />
       <recent name="$PROJECT_DIR$/apps/auth" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/strategies" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -190,7 +246,8 @@
       <workItem from="1702730753396" duration="1780000" />
       <workItem from="1702735329989" duration="3192000" />
       <workItem from="1702821377051" duration="178000" />
-      <workItem from="1702821953953" duration="9005000" />
+      <workItem from="1702821953953" duration="9749000" />
+      <workItem from="1702935334394" duration="2026000" />
     </task>
     <servers />
   </component>

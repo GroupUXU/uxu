@@ -2,5 +2,6 @@
   "extends": "./tsconfig.json",
   "exclude": [
     "project-name/node_modules",
-    "test", "dist", "**/*spec.ts"]
+    "test",
+    "backend/dist", "**/*spec.ts"]
 }
