@@ -24,20 +24,20 @@ export const siteConfig: SiteConfig = {
     adSlotsMap,
   },
   port: 3000,
-  projectName: 'getReturn',
+  projectName: 'aua',
   site: {
-    id: SiteIdEnums.WTRASIE,
+    id: SiteIdEnums.AUA,
     locale,
-    domain: 'getReturn.pl',
+    domain: 'aua.pl',
     slug: '/',
-    brand: "getReturn",
-    shortBrand: "getReturnShort",
-    defaultCover: 'https://getReturn.pl/defaultCover.png',
-    canonicalUrl: `https://getReturn.pl`,
+    brand: "aua",
+    shortBrand: "aua",
+    defaultCover: 'https://aua.pl/defaultCover.png',
+    canonicalUrl: `https://aua.pl`,
     images: [{url: 'https://getReturn.pl/defaultCover.png'}],
-    title: 'GetReturn - Sankcja darmowego kredytu',
-    shortname: 'gr',
-    description: 'getReturn',
+    title: 'Aua - Sankcja darmowego kredytu',
+    shortname: 'aua',
+    description: 'Aua',
     authEnabled: false,
     switchTheme: true,
     theme: 'dark',
@@ -65,23 +65,23 @@ export const siteConfig: SiteConfig = {
   },
   admin: {
     company: {
-      name: "GetReturn Sp. z o.o.",
-      street: "Gen. Władysława Sikorskiego 111/314",
-      postCode: "66-400",
-      city: "Gorzów Wielkopolski",
+      name: "Na3 Sp. z o.o.",
+      street: "Serwituty 25",
+      postCode: "02-233",
+      city: "Warszawa",
       tax: {
         pl: {
-          nip: '5993278328',
-          krs: '0001056045',
-          regon: '526270293',
-          shareCapitalInPLN: 20000,
-          accountsBank: [{bank: "Nest Bank", iban: "PL 02 1870 1045 2078 1078 6238 0001"}]
+          nip: '5223077290',
+          krs: '0000649985',
+          regon: '365979030',
+          shareCapitalInPLN: 5000,
+          accountsBank: [{bank: "Nest Bank", iban: "PL92 2530 0008 2047 1060 6663 0001"}]
         }
       },
       contact: {
         pl: {
-          email: [{type: "main", email: "kontakt@getreturn.pl"}],
-          phone: [{type: "mobile", number: "662 118 359"}]
+          email: [{type: "main", email: "hello@uxu.pl"}],
+          phone: [{type: "mobile", number: "888 333 885"}]
         }
       }
     }

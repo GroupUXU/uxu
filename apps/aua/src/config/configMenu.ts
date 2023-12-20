@@ -12,17 +12,5 @@ export const siteBarMenuConfig: Array<BranchProps> = [
   {
     title: "poradniki", href: "/"
   },
-  {
-    title: "finanse", href: "/"
-  },
-  {
-    title: "biznes", href: "/"
-  },
-  {
-    title: "praca", href: "/"
-  },
-  {
-    title: "podatki", href: "/"
-  },
 ]
 
