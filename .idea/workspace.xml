@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/privacy-policy.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/terms.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configFooter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configFooter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configMenu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configMenu.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configSite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configSite.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/aua/src/config/configMenu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/config/configMenu.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/aua/src/config/configSite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/config/configSite.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/assets/vectors/vectorBrands.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/assets/vectors/vectorBrands.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/enums/siteIdEnum.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/enums/siteIdEnum.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,41 +34,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feat/auth",
-    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/wtrasie/src/pages",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.CSS",
-    "ts.external.directory.path": "/Users/pawelniedzwiecki/localhost/uxu/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/auth&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/pawelniedzwiecki/localhost/uxu/apps/auth/frontend/src/config/apolloClient&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.CSS&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/pawelniedzwiecki/localhost/uxu/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/auth/frontend/src/config/apolloClient" />
+      <recent name="$PROJECT_DIR$/apps/auth/frontend" />
+      <recent name="$PROJECT_DIR$/apps/auth/src/api/auth/providers" />
+      <recent name="$PROJECT_DIR$/apps/auth/src/api/auth/controllers" />
       <recent name="$PROJECT_DIR$/apps/wtrasie/src/pages" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/packages/assets/vectors" />
-      <recent name="$PROJECT_DIR$/apps/getreturn/src/components/template/section/sectionMediaCoverage" />
-      <recent name="$PROJECT_DIR$/packages/design-system/style" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/auth/frontend" />
+      <recent name="$PROJECT_DIR$/apps/auth/backend" />
+      <recent name="$PROJECT_DIR$/apps/auth/src/api/auth/controllers" />
       <recent name="$PROJECT_DIR$/apps/auth" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/strategies" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/chunks/components/parsers/parserChunksWithAdStrategy/components/createInsertAdsFn/components/retrieveOrProcessSubpartData/components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -180,7 +178,13 @@
       <workItem from="1702321972238" duration="4789000" />
       <workItem from="1702584384958" duration="608000" />
       <workItem from="1702671697187" duration="1026000" />
-      <workItem from="1702730753396" duration="1060000" />
+      <workItem from="1702730753396" duration="1780000" />
+      <workItem from="1702735329989" duration="3192000" />
+      <workItem from="1702821377051" duration="178000" />
+      <workItem from="1702821953953" duration="9749000" />
+      <workItem from="1702935334394" duration="3260000" />
+      <workItem from="1703093207572" duration="609000" />
+      <workItem from="1703097100139" duration="671000" />
     </task>
     <servers />
   </component>
