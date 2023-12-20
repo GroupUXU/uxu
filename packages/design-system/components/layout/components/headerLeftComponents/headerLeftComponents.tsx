@@ -21,10 +21,10 @@ const { config: { site } } = useSiteConfig();
   };
   return (
     <>
-      <Link  className={classnames(styles.logoMobile, styles.logo)} href="/" title="wTrasie">
+      <Link  className={classnames(styles.logoMobile, styles.logo)} href="/" title={site.brand}>
         <Logo brand={site.shortBrand} className={styles.logo}/>
       </Link>
-      <Link className={classnames(styles.logoDesktop, styles.logo)} href="/" title="wTrasie">
+      <Link className={classnames(styles.logoDesktop, styles.logo)} href="/" title={site.brand}>
         <Logo brand={site.brand} className={styles.logo}/>
       </Link>
         <nav className={styles.nav}>

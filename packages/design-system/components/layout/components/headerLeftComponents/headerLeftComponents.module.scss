@@ -27,7 +27,7 @@
   }
 
   @include media(m) {
-    width: 25rem;
+    padding-right: var(--uxu-space-default);
     &.logoDesktop {
       display: block;
     }
