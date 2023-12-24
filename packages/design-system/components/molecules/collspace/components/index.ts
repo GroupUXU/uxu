@@ -1,2 +1,1 @@
-export * from './collspace';
-export * from './collspaceGroup';
+export * from './panel';

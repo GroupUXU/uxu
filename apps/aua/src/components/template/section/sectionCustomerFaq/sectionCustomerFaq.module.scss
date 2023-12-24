@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  padding: calc(var(--uxu-space-large) * 2) 0;
+  flex-direction: column;
+  gap: var(--uxu-space-default);
+  width: 60%;
+}
+
+
+.header {
+  color: var(--uxu-color-text-header);
+  font-size: var(--uxu-font-size-h1);
+  padding-bottom: var(--uxu-space-large);
+}
+
+.description {
+  padding-bottom: var(--uxu-space-large);
+}
+
+
+.headerFaq {
+  font-weight: bold;
+  font-size: var(--uxu-font-size-h5);
+}

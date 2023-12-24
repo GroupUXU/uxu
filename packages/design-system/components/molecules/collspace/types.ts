@@ -1,9 +1,27 @@
-import type { PropsWithChildren, ReactElement } from "react";
+import {ReactNode} from "react";
 
-export type CollapseProps = PropsWithChildren<{
-  id: string;
-  title: ReactElement;
-  isOpen?: boolean;
-  className?: string;
-  notifyCollapseStateChange?: (isOpen: boolean, id: string | number) => void;
-}>
+export type KeyType = string | null;
+
+export type CollapseProps = {
+    defaultActiveKey?: string;
+    children: ReactNode;
+    className?: string;
+    accordion?: boolean;
+};
+
+export type CollapsePanelProps = {
+    header: string;
+    key: string;
+    isActive: boolean;
+    onClick: () => void;
+    children: ReactNode;
+    type?: 'default';
+    classNameWrapper?: string;
+    classNameHeader?: string;
+    classNameContent?: string;
+};
+
+export type ClonedPanelProps = {
+    isActive: boolean;
+    onClick: () => void;
+} & CollapsePanelProps

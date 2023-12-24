@@ -1,0 +1,45 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  
+  &.default {
+    padding: var(--uxu-space-large) 0;
+    border-bottom: var(--uxu-border-default);
+  }
+}
+
+.header {
+  display: flex;
+  cursor: pointer;
+  justify-content: flex-start;
+  background: transparent;
+  color: var(--uxu-color-text-default);
+  transition: color var(--uxu-motion-default) ease-out;
+  
+  &.default {
+    font-weight: bold;
+    color: var(--uxu-color-link-secound);
+    
+    &:hover {
+      color: var(--uxu-color-link-hover);
+    }
+  }
+  
+  .arrow {
+    margin-left: auto;
+    transition: all var(--uxu-motion-default) ease-out;
+  }
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--uxu-motion-default) ease-out,
+  margin-top var(--uxu-motion-default) ease-out;
+  
+  &.active {
+    margin-top: var(--uxu-space-large);
+  }
+}

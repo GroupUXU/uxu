@@ -1,0 +1,40 @@
+.section {
+  position: relative;
+  width: 100%;
+  display: block;
+  padding: calc(var(--uxu-space-large) * 3) 0 var(--uxu-space-large) 0;
+}
+
+.circle {
+  width: 9rem;
+  height: 9rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--uxu-font-size-h2);
+  font-weight: bold;
+  color: var(--uxu-color-text-secound);
+  position: relative;
+  
+  
+  .line {
+	width: 0.5rem;
+	height: 9rem;
+	position: absolute;
+	display: block;
+	top: calc(var(--uxu-space-large) * -3);
+  }
+}
+
+
+
+.header {
+  width: 100%;
+  display: block;
+  text-align: center;
+  background: var(--uxu-gradient-blue-tell);
+  padding: var(--uxu-space-default) 0 var(--uxu-space-large) 0;
+  color: transparent;
+}
