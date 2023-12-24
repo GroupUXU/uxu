@@ -5,7 +5,6 @@
   flex-direction: column;
   
   &.default {
-    padding: var(--uxu-space-large) 0;
     border-bottom: var(--uxu-border-default);
   }
 }
@@ -20,6 +19,7 @@
   
   &.default {
     font-weight: bold;
+    padding: var(--uxu-space-large) 0;
     color: var(--uxu-color-link-secound);
     
     &:hover {
@@ -36,10 +36,9 @@
 .content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height var(--uxu-motion-default) ease-out,
-  margin-top var(--uxu-motion-default) ease-out;
+  transition: max-height var(--uxu-motion-default) ease-out, margin-bottom var(--uxu-motion-default) ease-out;
   
   &.active {
-    margin-top: var(--uxu-space-large);
+    margin-bottom: var(--uxu-space-large);
   }
 }

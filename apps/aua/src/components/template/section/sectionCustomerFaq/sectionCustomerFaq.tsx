@@ -2,9 +2,6 @@ import styles from './sectionCustomerFaq.module.scss';
 import { Collapse, Panel } from 'design-system/components/molecules/collspace'
 
 export function SectionCustomerFaq() {
-    const handleChange = (key: string) => {
-        console.log(`Panel zmienił stan: ${key}`);
-    };
 
     return (
         <div className={styles.wrapper}>
@@ -17,7 +14,7 @@ export function SectionCustomerFaq() {
                 w ramach sankcji darmowego kredytu.</p>
             <span className={styles.headerFaq}>Częste pytania klientów na tym etapie :</span>
             <div style={{paddingTop: "3rem"}}>
-                <Collapse defaultActiveKey="1" onChange={handleChange} accordion>
+                <Collapse accordion>
                     <Panel key="1" header="Panel 1" type="default">
                         <p>Treść Panelu 1</p>
                     </Panel>
