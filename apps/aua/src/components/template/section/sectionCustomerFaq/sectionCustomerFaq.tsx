@@ -1,26 +1,23 @@
 import styles from './sectionCustomerFaq.module.scss';
-import { Collapse, Panel } from 'design-system/components/molecules/collspace'
+import { Collapse, Panel } from 'design-system/components/molecules/collspace';
+import type { SectionCustomerFaqProps } from "./types";
 
-export function SectionCustomerFaq() {
+export function SectionCustomerFaq({ header, description, collapse }: SectionCustomerFaqProps) {
 
     return (
         <div className={styles.wrapper}>
-            <strong className={styles.header}>Analiza umowy pod kątem sankcji
-                darmowego kredytu</strong>
-            <p className={styles.description}>Sankcja darmowego kredytu, zgodnie z Art. 45. Kodeksu Cywilnego, umożliwia
-                zwrot odsetek z umowy kredytowej. Nasz proces analizy polega na bezpłatnym
-                badaniu, dokonywanym przez prawników w ciągu 72 godzin, przesłanej umowy
-                kredytowej, aby ustalić, czy przysługuje Ci zwrot
-                w ramach sankcji darmowego kredytu.</p>
+            <strong className={styles.header}>{header}</strong>
+            <p className={styles.description}>{description}</p>
             <span className={styles.headerFaq}>Częste pytania klientów na tym etapie :</span>
             <div style={{paddingTop: "3rem"}}>
                 <Collapse accordion>
-                    <Panel key="1" header="Panel 1" type="default">
-                        <p>Treść Panelu 1</p>
-                    </Panel>
-                    <Panel key="2" header="Panel 2" type="default">
-                        <p>Treść Panelu 2</p>
-                    </Panel>
+                    {collapse.map(({header: collapseHeader, description: collapseDescription }) => {
+                        return (
+                            <Panel key={collapseHeader} header={collapseHeader} type="default">
+                                <p>{collapseDescription}</p>
+                            </Panel>
+                        )
+                    })}
                 </Collapse>
             </div>
         </div>
