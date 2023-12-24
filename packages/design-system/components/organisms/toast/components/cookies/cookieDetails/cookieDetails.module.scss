@@ -63,24 +63,17 @@
 }
 
 
-.collapseGroup {
+.collapse {
   overflow: hidden;
-  border-left: var(--uxu-border-default);
-  border-right: var(--uxu-border-default);
+  border: var(--uxu-border-default);
   border-radius: var(--uxu-radii-default);
-
-  :global(.label) {
-    overflow: hidden;
-
-    button {
-      font-weight: bold;
-      border-bottom: var(--uxu-border-default);
-      background-color: var(--uxu-color-primary-accent1);
+  background-color: var(--uxu-color-background-default);
+  
+  .panel {
+    padding: var(--uxu-space-default);
+    
+    &:last-of-type {
+      border-bottom: none;
     }
-
-  }
-
-  :global(.collapse) {
-    top: 0;
   }
 }

@@ -1,10 +1,11 @@
-import {CollapsePanelProps} from "../../types";
-import {ReactElement, useEffect, useRef} from "react";
-import styles from './panel.module.scss';
-import classnames from "classnames";
+import {useEffect, useRef} from "react";
+import type {ReactElement} from "react";
 import {ChevronRight} from 'react-feather';
+import classnames from "classnames";
+import {PanelProps} from "../../types";
+import styles from './panel.module.scss';
 
-export function Panel({header, isActive, onClick, children, type, classNameWrapper, classNameHeader, classNameContent}: CollapsePanelProps): ReactElement {
+export function Panel({header, isActive, onClick, children, type, classNameWrapper, classNameHeader, classNameContent}: PanelProps): ReactElement {
     const contentRef = useRef<HTMLDivElement>(null);
 
     useEffect((): void => {
