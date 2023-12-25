@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/public/video/test.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/public/video/testvideo.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionWhatItWork/sectionWhatItWork.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionWhatItWork/sectionWhatItWork.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionWithCircle/sectionWithCircle.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionWithCircle/sectionWithCircle.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionWithCircle/sectionWithCircle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionWithCircle/sectionWithCircle.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +187,7 @@
       <workItem from="1703181462202" duration="608000" />
       <workItem from="1703184727201" duration="576000" />
       <workItem from="1703345517756" duration="30737000" />
-      <workItem from="1703518254327" duration="8092000" />
+      <workItem from="1703518254327" duration="8965000" />
     </task>
     <servers />
   </component>

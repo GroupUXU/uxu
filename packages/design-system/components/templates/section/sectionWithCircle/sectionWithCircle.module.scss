@@ -34,6 +34,8 @@
   width: 100%;
   display: block;
   text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   background: var(--uxu-gradient-blue-tell);
   padding: var(--uxu-space-default) 0 var(--uxu-space-large) 0;
   color: transparent;

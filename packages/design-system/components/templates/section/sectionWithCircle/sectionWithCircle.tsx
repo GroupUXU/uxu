@@ -7,10 +7,19 @@ export function SectionWithCircle({inCircle, header, color, children}: SectionWi
     return (
         <section className={styles.section}>
             <div className={styles.circle} style={{background: color}}>
-                <div className={styles.line} style={{background: color}} />
+                <div className={styles.line} style={{background: color}}/>
                 {inCircle}
             </div>
-            <h3 className={styles.header} style={{background: color, backgroundClip: 'text'}}>{header}</h3>
+            <h3
+                className={styles.header}
+                style={{
+                    background: color,
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent'
+                }}
+            >
+                {header}
+            </h3>
             {children}
         </section>)
 }

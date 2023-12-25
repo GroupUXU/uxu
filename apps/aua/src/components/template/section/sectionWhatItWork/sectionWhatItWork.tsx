@@ -15,8 +15,8 @@ export function SectionWhatItWork(): ReactElement {
                 <div className={styles.railVideo}>
                     <div className={styles.wrapperVideo}>
                         <PlayerAutoMuteReplay
-                            width={406}
-                            height={720}
+                            width={315}
+                            height={564}
                             urlVideo="/video/testvideo.mp4"
                             urlCover="/img/tutorialCover.png"
                         />
