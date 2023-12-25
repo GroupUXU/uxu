@@ -12,6 +12,8 @@
 .header {
   display: flex;
   cursor: pointer;
+  text-align: left;
+  align-items: center;
   justify-content: flex-start;
   background: transparent;
   color: var(--uxu-color-text-default);

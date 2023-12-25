@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionWhatItWork/consts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionWhatItWork/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionWhatItWork/sectionWhatItWork.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionWhatItWork/sectionWhatItWork.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionCustomerFaq/sectionCustomerFaq.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionCustomerFaq/sectionCustomerFaq.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionMediaCoverage/sectionMediaCoverage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionMediaCoverage/sectionMediaCoverage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionCustomerFaq/sectionCustomerFaq.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionCustomerFaq/sectionCustomerFaq.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/aua/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/panel/panel.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/panel/panel.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +43,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "reactor/collapse",
-    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/packages/design-system/components/molecules/collspace/components/panel",
+    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/aua/src/components/template/section/sectionWhatItWork",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.stylelint": "true",
@@ -56,11 +60,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionWhatItWork" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/panel" />
       <recent name="$PROJECT_DIR$/apps/aua/public/video" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionWithCircle" />
       <recent name="$PROJECT_DIR$/apps/auth/frontend/src/config/apolloClient" />
-      <recent name="$PROJECT_DIR$/apps/auth/frontend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/panel" />
@@ -186,7 +190,7 @@
       <workItem from="1703097100139" duration="671000" />
       <workItem from="1703181462202" duration="608000" />
       <workItem from="1703184727201" duration="576000" />
-      <workItem from="1703345517756" duration="29366000" />
+      <workItem from="1703345517756" duration="30737000" />
     </task>
     <servers />
   </component>

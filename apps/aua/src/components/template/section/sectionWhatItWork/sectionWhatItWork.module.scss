@@ -1,0 +1,31 @@
+@import "design-system/style/mixins";
+
+.wrapper {
+  position: relative;
+}
+
+
+.wrapperVideo {
+  display: none;
+  
+  @include media(s) {
+	height: 100%;
+	display: block;
+	right: 0;
+	padding-top: 35rem;
+	position: absolute;
+  }
+}
+
+.wrapperContent {
+  width: 100%;
+  position: relative;
+  
+  .wrapperFaq {
+	width: 100%;
+	
+	@include media(s) {
+	  width: calc(100% - 50rem);
+	}
+  }
+}

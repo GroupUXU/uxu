@@ -9,7 +9,7 @@ export function SectionCustomerFaq({ header, description, collapse }: SectionCus
         <div className={styles.wrapper}>
             <strong className={styles.header}>{header}</strong>
             <p className={styles.description}>{description}</p>
-            <span className={styles.headerFaq}>Częste pytania klientów na tym etapie :</span>
+            <span className={styles.headerFaq}>Częste pytania klientów na tym etapie:</span>
             <div style={{paddingTop: "3rem"}}>
                 <Collapse accordion>
                     {collapse.map(({header: collapseHeader, description: collapseDescription }) => {
