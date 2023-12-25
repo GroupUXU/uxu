@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/player/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/player/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/player/playerAutoMuteReplay/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/player/playerAutoMuteReplay/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/player/playerAutoMuteReplay/playerAutoMuteReplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/player/playerAutoMuteReplay/playerAutoMuteReplay.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/player/playerAutoMuteReplay/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/player/playerAutoMuteReplay/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/aua/public/video/test.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/public/video/testvideo.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionWhatItWork/sectionWhatItWork.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionWhatItWork/sectionWhatItWork.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +37,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feat/add-vide-aua",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/aua/public/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -190,7 +186,7 @@
       <workItem from="1703181462202" duration="608000" />
       <workItem from="1703184727201" duration="576000" />
       <workItem from="1703345517756" duration="30737000" />
-      <workItem from="1703518254327" duration="7378000" />
+      <workItem from="1703518254327" duration="8092000" />
     </task>
     <servers />
   </component>
