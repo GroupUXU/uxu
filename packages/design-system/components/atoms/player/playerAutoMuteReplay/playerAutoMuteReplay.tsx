@@ -1,48 +1,55 @@
-import { useState, useEffect, useRef } from 'react';
+import {useState, useCallback, useRef, useEffect} from 'react';
 import type { ReactElement } from "react";
 import ReactPlayer from 'react-player';
+import Img from 'next/image'
 import { Volume2, VolumeX } from 'react-feather';
-import styles from './player.module.scss';
+import { checkIsDOM } from "utils";
+import { PlayerAutoMuteReplayProps } from "./types";
+import styles from './playerAutoMuteReplay.module.scss';
 
-export function PlayerAutoMuteReplay(): ReactElement {
-    const [isAutoPlay, setIsAutoPlay] = useState(true);
-    const [isMuted, setIsMuted] = useState(true);
-    const [isLoop, setIsLoop] = useState(true);
-    const [isClient, setIsClient] = useState(false);
+export function PlayerAutoMuteReplay({ width, height, urlVideo, urlCover, autoPlay = true }: PlayerAutoMuteReplayProps): ReactElement | null {
+    const [isDom, setIsDom ] = useState(false);
+    const [isPlaying, setIsPlaying] = useState({ autoPlay, isMuted: true, isLoop: true });
     const playerRef = useRef<ReactPlayer>(null);
 
-    useEffect(() => {
-        setIsClient(true);
+    const toggleMute = useCallback(() => {
+        setIsPlaying(prevState => ({
+            ...prevState,
+            isMuted: !prevState.isMuted
+        }));
     }, []);
 
-    const toggleMute = () => {
-        setIsMuted(!isMuted);
-
-        if (!isMuted) {
-            setIsLoop(false);
-        } else {
-            if (playerRef.current) {
-                playerRef.current.seekTo(0);
-                setIsAutoPlay(true);
-            }
+    useEffect(() => {
+        if (playerRef.current && !isPlaying.isMuted) {
+            playerRef.current.seekTo(0, 'seconds');
+            setIsPlaying(prevState => ({ ...prevState, autoPlay: true }));
         }
-    };
+    }, [isPlaying.isMuted]);
+
+    useEffect(() => {
+        checkIsDOM(() => {
+            setIsDom(true);
+        })
+    },[])
+
+
+    if(!isDom) return null;
 
     return (
-        <button className={styles.wrapper} style={{width: '406px', height: '720px'}} onClick={toggleMute}>
-            <div className={styles.controls}>{isMuted ? <VolumeX size={30} /> : <Volume2 size={30} />}</div>
-            {isClient && (
-                <ReactPlayer
-                    ref={playerRef}
-                    width={406}
-                    height={720}
-                    url='/video/test.mp4'
-                    playing={isAutoPlay}
-                    muted={isMuted}
-                    loop={isLoop}
-                    fallback={<p>Loading player...</p>}
-                />
-            )}
+        <button className={styles.wrapper} style={{ width: `${width}px`, height: `${height}px` }} onClick={toggleMute}>
+            <div className={styles.controls}>
+                {isPlaying.isMuted ? <VolumeX size={30} /> : <Volume2 size={30} />}
+            </div>
+            <ReactPlayer
+                ref={playerRef}
+                width={406}
+                height={720}
+                url={urlVideo}
+                playing={isPlaying.autoPlay}
+                muted={isPlaying.isMuted}
+                loop={isPlaying.isLoop}
+                fallback={<Img src={urlCover} height={height} width={width} layout="responsive" alt="cover" />}
+            />
         </button>
     );
-}
+};

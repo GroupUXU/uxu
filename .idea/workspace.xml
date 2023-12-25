@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionWhatItWork/consts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionWhatItWork/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionWhatItWork/sectionWhatItWork.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionWhatItWork/sectionWhatItWork.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionCustomerFaq/sectionCustomerFaq.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionCustomerFaq/sectionCustomerFaq.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/panel/panel.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/panel/panel.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/player/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/player/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/player/playerAutoMuteReplay/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/player/playerAutoMuteReplay/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/player/playerAutoMuteReplay/playerAutoMuteReplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/player/playerAutoMuteReplay/playerAutoMuteReplay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/player/playerAutoMuteReplay/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/player/playerAutoMuteReplay/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +41,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "reactor/collapse",
-    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/aua/src/components/template/section/sectionWhatItWork",
+    "git-widget-placeholder": "feat/add-vide-aua",
+    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/aua/public/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.stylelint": "true",
@@ -60,18 +59,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/aua/public/img" />
+      <recent name="$PROJECT_DIR$/apps/aua/public/video" />
+      <recent name="$PROJECT_DIR$/packages/design-system/components/atoms" />
       <recent name="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionWhatItWork" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/panel" />
-      <recent name="$PROJECT_DIR$/apps/aua/public/video" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionWithCircle" />
-      <recent name="$PROJECT_DIR$/apps/auth/frontend/src/config/apolloClient" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/player/AutoMuteReplayPlayer" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/panel" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components" />
       <recent name="$PROJECT_DIR$/apps/auth/frontend" />
-      <recent name="$PROJECT_DIR$/apps/auth/backend" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -191,6 +190,7 @@
       <workItem from="1703181462202" duration="608000" />
       <workItem from="1703184727201" duration="576000" />
       <workItem from="1703345517756" duration="30737000" />
+      <workItem from="1703518254327" duration="7378000" />
     </task>
     <servers />
   </component>

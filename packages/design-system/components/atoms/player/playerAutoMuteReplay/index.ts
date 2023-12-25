@@ -1,1 +1,1 @@
-export * from './autoMuteReplayPlayer';
+export * from './playerAutoMuteReplay';
