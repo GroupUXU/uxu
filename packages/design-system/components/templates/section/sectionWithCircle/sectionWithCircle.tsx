@@ -14,6 +14,7 @@ export function SectionWithCircle({inCircle, header, color, children}: SectionWi
                 className={styles.header}
                 style={{
                     background: color,
+                    backgroundClip: 'text',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent'
                 }}
