@@ -1,26 +1,28 @@
 import type {ReactElement} from "react";
 import {SectionWithCircle} from "design-system/components/templates/section/sectionWithCircle";
-import {dataWhatItWorks} from "./consts";
+import {PlayerAutoMuteReplay} from 'design-system/components/atoms/player';
 import {SectionCustomerFaq} from "../sectionCustomerFaq";
+import {dataWhatItWorks} from "./consts";
 import styles from './sectionWhatItWork.module.scss';
+import {useSiteConfig} from "design-system/hooks/useSiteConfig";
 
 export function SectionWhatItWork(): ReactElement {
+    const {config: {client: {platform: {isDesktop}}}} = useSiteConfig();
 
     return (
         <div className={styles.wrapper}>
-            <div className={styles.wrapperVideo}>
-                <video
-                    autoPlay
-                    loop
-                    playsInline
-                    preload="auto"
-                    src="/video/test.mp4"
-                    style={{position: 'sticky', top: "8rem"}}
-                    width="350px"
-                >
-                    <track default kind="captions" label="polish" src="/video/test.mp4" srcLang="pl"/>
-                </video>
-            </div>
+            {isDesktop && (
+                <div className={styles.railVideo}>
+                    <div className={styles.wrapperVideo}>
+                        <PlayerAutoMuteReplay
+                            width={406}
+                            height={720}
+                            urlVideo="/video/test.mp4"
+                            urlCover="/img/tutorialCover.png"
+                        />
+                    </div>
+                </div>
+            )}
             <div className={styles.wrapperContent}>
                 {dataWhatItWorks.map(item => {
                     return (

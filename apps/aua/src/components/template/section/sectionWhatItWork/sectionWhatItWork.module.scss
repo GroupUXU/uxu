@@ -5,15 +5,21 @@
 }
 
 
-.wrapperVideo {
+.railVideo {
   display: none;
   
   @include media(s) {
 	height: 100%;
 	display: block;
 	right: 0;
-	padding-top: 35rem;
+	padding: 35rem 0 10rem 0;
 	position: absolute;
+	z-index: 1;
+  }
+  
+  .wrapperVideo {
+	top: 8rem;
+	position: sticky;
   }
 }
 
