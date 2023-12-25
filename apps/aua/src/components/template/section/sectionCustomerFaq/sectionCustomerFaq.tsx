@@ -1,8 +1,9 @@
-import styles from './sectionCustomerFaq.module.scss';
+import type { ReactElement } from "react";
 import { Collapse, Panel } from 'design-system/components/molecules/collspace';
 import type { SectionCustomerFaqProps } from "./types";
+import styles from './sectionCustomerFaq.module.scss';
 
-export function SectionCustomerFaq({ header, description, collapse }: SectionCustomerFaqProps) {
+export function SectionCustomerFaq({ header, description, collapse }: SectionCustomerFaqProps): ReactElement {
 
     return (
         <div className={styles.wrapper}>
@@ -13,7 +14,7 @@ export function SectionCustomerFaq({ header, description, collapse }: SectionCus
                 <Collapse accordion>
                     {collapse.map(({header: collapseHeader, description: collapseDescription }) => {
                         return (
-                            <Panel key={collapseHeader} header={collapseHeader} type="default">
+                            <Panel header={collapseHeader} key={collapseHeader} type="default">
                                 <p>{collapseDescription}</p>
                             </Panel>
                         )

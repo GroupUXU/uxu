@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionCustomerFaq/consts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/aua/src/consts/dataWhatItWorks.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/aua/src/consts/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionCustomerFaq/sectionCustomerFaq.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionCustomerFaq/sectionCustomerFaq.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionMediaCoverage/sectionMediaCoverage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionMediaCoverage/sectionMediaCoverage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/aua/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +186,7 @@
       <workItem from="1703097100139" duration="671000" />
       <workItem from="1703181462202" duration="608000" />
       <workItem from="1703184727201" duration="576000" />
-      <workItem from="1703345517756" duration="27440000" />
+      <workItem from="1703345517756" duration="29366000" />
     </task>
     <servers />
   </component>
