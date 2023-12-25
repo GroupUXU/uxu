@@ -1,19 +1,19 @@
-import {ReactNode} from "react";
+import {ReactElement, ReactNode} from "react";
 
 export type KeyType = string | null;
 
 export type CollapseProps = {
-    defaultActiveKey?: string;
+    defaultActiveKey?: KeyType;
     children: ReactNode;
     className?: string;
     accordion?: boolean;
 };
 
-export type CollapsePanelProps = {
-    header: string;
-    key: string;
-    isActive: boolean;
-    onClick: () => void;
+export type PanelProps = {
+    header: ReactElement | string;
+    key: KeyType;
+    isActive?: boolean;
+    onClick?: () => void;
     children: ReactNode;
     type?: 'default';
     classNameWrapper?: string;
@@ -21,7 +21,7 @@ export type CollapsePanelProps = {
     classNameContent?: string;
 };
 
-export type ClonedPanelProps = {
+export type ClonedProps = {
     isActive: boolean;
     onClick: () => void;
-} & CollapsePanelProps
+} & PanelProps
