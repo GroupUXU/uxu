@@ -2,10 +2,10 @@ import type {ReactElement} from "react";
 import {SectionWithCircleProps} from './types';
 import styles from './sectionWithCircle.module.scss';
 
-export function SectionWithCircle({inCircle, header, color, children}: SectionWithCircleProps): ReactElement {
+export function SectionWithCircle({id, inCircle, header, color, children}: SectionWithCircleProps): ReactElement {
 
     return (
-        <section className={styles.section}>
+        <section className={styles.section} id={id}>
             <div className={styles.circle} style={{background: color}}>
                 <div className={styles.line} style={{background: color}}/>
                 {inCircle}
