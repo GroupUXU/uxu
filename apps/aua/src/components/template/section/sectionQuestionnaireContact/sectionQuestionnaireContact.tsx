@@ -53,15 +53,17 @@ export function SectionQuestionnaireContact(): ReactElement {
                     <form onSubmit={() => {
                         handleSubmit(onSubmit)
                     }}>
-                        {steps[currentStep].data.map((field, index) => (
+                        {steps[currentStep].data.map((field) => (
                             field.type === 'text' ? (
                                 <Input
+                                    key={field.label}
                                     errorMessage={field.errorMessage}
-                                    key={index}
-                                    {...register(field.label, {
-                                        required: field.isRequire,
-                                        pattern: field.pattern
-                                    })}
+                                    {...register(field.label,
+                                        {
+                                            required: field.isRequire,
+                                            pattern: field.pattern
+                                        }
+                                    )}
                                     placeholder={field.placeholder}
                                     type={field.type}
                                 />
