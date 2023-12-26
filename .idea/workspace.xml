@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/consts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/utils/regex/phone.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/src/consts/dataWhatItWorks.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/src/consts/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/regex/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/regex/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/aua/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

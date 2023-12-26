@@ -1,17 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { useForm } from 'react-hook-form';
-import { Coffee, Clock, DollarSign } from 'react-feather';
-import { Link } from "design-system/components/atoms/link";
-import { Input } from "design-system/components/molecules/inputs";
+import {useState, useEffect} from "react";
+import type {ReactElement} from "react";
+import {useForm} from 'react-hook-form';
+import {Coffee, Clock, DollarSign} from 'react-feather';
+import {Link} from "design-system/components/atoms/link";
+import {Input} from "design-system/components/molecules/inputs";
+import {useSiteConfig} from "design-system/hooks/useSiteConfig";
 import styles from './sectionQuestionnaireContact.module.scss';
-import { useSiteConfig } from "design-system/hooks/useSiteConfig";
-import { steps } from './consts';
+import {steps} from './consts';
 
-export function SectionQuestionnaireContact() {
-    const { config } = useSiteConfig();
-    const [currentStep, setCurrentStep] = useState(0);
+export function SectionQuestionnaireContact(): ReactElement {
+    const {config} = useSiteConfig();
+    const [currentStep, setCurrentStep] = useState<number>(0);
     const [formData, setFormData] = useState<Record<number, Record<string, unknown>>>({});
-    const { handleSubmit, register, reset, getValues } = useForm();
+    const {handleSubmit, register, reset, getValues} = useForm();
 
     useEffect(() => {
         reset(formData[currentStep]);
@@ -19,20 +20,19 @@ export function SectionQuestionnaireContact() {
 
     const isLastStep = currentStep === steps.length - 1;
 
-    const onNext = (data) => {
-        const newFormData = { ...formData, [currentStep]: data };
+    function onNext(data: Record<string, unknown>): void {
+        const newFormData: Record<number, Record<string, unknown>> = {...formData, [currentStep]: data};
         setFormData(newFormData);
 
         if (isLastStep) {
             // Submit the entire form
-            console.log('Final data:', Object.assign({}, ...Object.values(newFormData)));
         } else {
             // Go to the next step
             setCurrentStep(currentStep + 1);
         }
     };
 
-    const onBack = () => {
+    function onBack(): void {
         if (currentStep > 0) {
             setCurrentStep(currentStep - 1);
         }
@@ -50,34 +50,37 @@ export function SectionQuestionnaireContact() {
                         <strong>{steps[currentStep].title}</strong>
                         <p>{steps[currentStep].description}</p>
                     </div>
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    <form onSubmit={() => {
+                        handleSubmit(onSubmit)
+                    }}>
                         {steps[currentStep].data.map((field, index) => (
                             field.type === 'text' ? (
                                 <Input
+                                    errorMessage={field.errorMessage}
                                     key={index}
                                     {...register(field.label, {
                                         required: field.isRequire,
                                         pattern: field.pattern
                                     })}
-                                    type={field.type}
-                                    errorMessage={field.errorMessage}
                                     placeholder={field.placeholder}
+                                    type={field.type}
                                 />
                             ) : null
                         ))}
                         <div className={styles.wrapperButtons}>
                             {currentStep > 0 && (
-                                <button type="button" className="btn" style={{ marginRight: "auto" }} onClick={onBack}>
+                                <button className="btn" onClick={onBack} style={{marginRight: "auto"}} type="button">
                                     Wstecz
                                 </button>
                             )}
-                            <button type="submit" className="btn primary">{isLastStep ? 'Wyślij' : 'Dalej'}</button>
+                            <button className="btn primary" type="submit">{isLastStep ? 'Wyślij' : 'Dalej'}</button>
                         </div>
                     </form>
                 </div>
                 <span className={styles.info}>
                     Przesyłając ten formularz, potwierdzam, że przeczytałem i zrozumiałem{' '}
-                    <Link href="/privacy-policy" title="Polityka prywatności">politykę prywatności</Link> firmy {config.admin.company?.name}
+                    <Link href="/privacy-policy"
+                          title="Polityka prywatności">politykę prywatności</Link> firmy {config.admin.company?.name}
                 </span>
             </div>
             <div className={styles.wrapperInfo}>
