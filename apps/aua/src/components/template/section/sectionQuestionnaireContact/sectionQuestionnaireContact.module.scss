@@ -1,0 +1,59 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: var(--uxu-space-large) 0 calc(var(--uxu-space-large) * 3) 0;
+}
+
+.wrapperQuestionnaire {
+  .wrapperForm {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	gap: var(--uxu-space-large);
+	padding: var(--uxu-space-large) var(--uxu-space-default);
+	border-radius: var(--uxu-radii-default);
+	border: var(--uxu-border-default);
+	background-color: var(--uxu-color-background-secound);
+	
+	.wrapperHeader {
+	  display: flex;
+	  flex-direction: column;
+	  gap: var(--uxu-space-small);
+	  text-align: center;
+	}
+	
+	form {
+	  display: flex;
+	  flex-direction: column;
+	  gap: var(--uxu-space-default);
+	  
+	  
+	  .wrapperButtons {
+		display: flex;
+		justify-content: flex-end;
+	  }
+	}
+  }
+  
+  .info {
+	width: 100%;
+	display: block;
+	text-align: center;
+	padding-top: var(--uxu-space-large);
+  }
+}
+
+
+.wrapperInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--uxu-space-large);
+  padding: var(--uxu-space-large);
+  
+  p {
+	display: flex;
+	align-items: center;
+	gap: var(--uxu-space-default);
+  }
+}

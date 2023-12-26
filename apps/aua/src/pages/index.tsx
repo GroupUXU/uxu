@@ -7,6 +7,7 @@ import {LeadPostWithList} from "design-system/components/templates/section/leadP
 import {footerConfig, headerMenuConfig, searchEngineConfig} from '../config';
 import {SectionMediaCoverage} from '../components/template/section/sectionMediaCoverage';
 import {SectionWhatItWork} from '../components/template/section/sectionWhatItWork';
+import {SectionQuestionnaireContact} from '../components/template/section/sectionQuestionnaireContact';
 import {clientGetArticlesQuery, useGetArticlesQuery} from "../gql";
 import {adapterArticlesData} from "../utils/adapters";
 
@@ -35,6 +36,9 @@ function Index(): ReactElement {
             <SectionMediaCoverage/>
             <h4 className="headerSection">JAK TO DZIAŁA ?</h4>
             <SectionWhatItWork />
+            <h4 className="headerSection">SPRAWDŹ SWOJĄ UMOWĘ</h4>
+            <SectionQuestionnaireContact />
+            <h4 className="headerSection">OSTATNIO NA BLOGU</h4>
             <LeadPostWithList posts={leadPostWithListData}/>
         </LayoutFull>
     );
