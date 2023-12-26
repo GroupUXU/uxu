@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionWithCircle/sectionWithCircle.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionWithCircle/sectionWithCircle.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionWithCircle/sectionWithCircle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/templates/section/sectionWithCircle/sectionWithCircle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +37,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/aua/public/img",
+    "git-widget-placeholder": "feat/sectionQuestionnaireContactSection",
+    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/packages/utils/regex",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.stylelint": "true",
@@ -54,11 +55,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/utils/regex" />
+      <recent name="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact" />
       <recent name="$PROJECT_DIR$/apps/aua/public/img" />
       <recent name="$PROJECT_DIR$/apps/aua/public/video" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/atoms" />
-      <recent name="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionWhatItWork" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/panel" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/player/AutoMuteReplayPlayer" />
@@ -185,7 +186,8 @@
       <workItem from="1703181462202" duration="608000" />
       <workItem from="1703184727201" duration="576000" />
       <workItem from="1703345517756" duration="30737000" />
-      <workItem from="1703518254327" duration="9004000" />
+      <workItem from="1703518254327" duration="9715000" />
+      <workItem from="1703610948283" duration="229000" />
     </task>
     <servers />
   </component>
