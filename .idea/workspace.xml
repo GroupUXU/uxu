@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionMediaCoverage/sectionMediaCoverage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionMediaCoverage/sectionMediaCoverage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionWhatItWork/consts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionWhatItWork/consts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionWhatItWork/sectionWhatItWork.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionWhatItWork/sectionWhatItWork.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

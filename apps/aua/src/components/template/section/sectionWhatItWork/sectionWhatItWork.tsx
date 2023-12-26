@@ -27,10 +27,11 @@ export function SectionWhatItWork(): ReactElement {
                 {dataWhatItWorks.map(item => {
                     return (
                         <SectionWithCircle
+                            id={item.id}
                             color={item.color}
                             header={item.header}
                             inCircle={item.inCircle}
-                            key={item.header}
+                            key={item.id}
                         >
                             <div className={styles.wrapperFaq}>
                                 <SectionCustomerFaq

@@ -4,6 +4,7 @@ import {useForm} from 'react-hook-form';
 import {Coffee, Clock, DollarSign} from 'react-feather';
 import {Link} from "design-system/components/atoms/link";
 import {Input} from "design-system/components/molecules/inputs";
+import {SectionWithCircle} from "design-system/components/templates/section/sectionWithCircle";
 import {useSiteConfig} from "design-system/hooks/useSiteConfig";
 import styles from './sectionQuestionnaireContact.module.scss';
 import {steps} from './consts';
@@ -43,6 +44,12 @@ export function SectionQuestionnaireContact(): ReactElement {
     };
 
     return (
+        <SectionWithCircle
+            id="start"
+            color="var(--uxu-gradient-blue-tell)"
+            header="Analiza wstępna"
+            inCircle="0"
+        >
         <div className={styles.wrapper}>
             <div className={styles.wrapperQuestionnaire}>
                 <div className={styles.wrapperForm}>
@@ -91,5 +98,7 @@ export function SectionQuestionnaireContact(): ReactElement {
                 <p><DollarSign size={40}/> Analiza umowy jest w 100% darmowa</p>
             </div>
         </div>
+
+        </SectionWithCircle>
     );
 }

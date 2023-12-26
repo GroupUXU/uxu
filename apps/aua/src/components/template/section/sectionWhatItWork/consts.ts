@@ -1,5 +1,6 @@
 
 type DataWhatItWorks = {
+    id: string,
     inCircle: string,
     header: string,
     color: string
@@ -15,6 +16,7 @@ type DataWhatItWorks = {
 
 export const dataWhatItWorks: Array<DataWhatItWorks> = [
     {
+        id: "analize",
         inCircle: "1",
         header: "Analiza",
         color: "var(--uxu-gradient-blue-tell)",
@@ -38,6 +40,7 @@ export const dataWhatItWorks: Array<DataWhatItWorks> = [
         }
     },
     {
+        id: "docs",
         inCircle: "2",
         header: "Dokumentacja",
         color: "var(--uxu-gradient-purple-pink)",
@@ -61,6 +64,7 @@ export const dataWhatItWorks: Array<DataWhatItWorks> = [
         }
     },
     {
+        id: "pay",
         inCircle: "3",
         header: "Wypłata",
         color: "var(--uxu-gradient-red-amber)",
