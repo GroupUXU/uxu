@@ -69,7 +69,7 @@
   padding: 0 0 calc(var(--uxu-space-large) * 2) 0;
   
   @include media(m) {
-	padding: var(--uxu-space-large);
+	padding: var(--uxu-space-large) 0 calc(var(--uxu-space-large) * 4) var(--uxu-space-large);
   }
   
   p {
