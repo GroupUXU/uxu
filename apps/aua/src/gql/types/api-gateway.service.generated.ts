@@ -391,7 +391,7 @@ export type FloatFilterInput = {
   startsWith?: InputMaybe<Scalars['Float']['input']>;
 };
 
-export type GenericMorph = Article | ComponentContentPartsLead | ComponentContentPartsMaps | ComponentContentPartsMedia | ComponentContentPartsQuote | ComponentContentPartsTxt | ComponentContentPartsYouTube | ComponentContentPartsYoutube | ComponentOthersEmail | ComponentOthersPhone | ComponentOthersSeo | ComponentStatsViews | CustomerMessage | I18NLocale | Tag | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
+export type GenericMorph = Article | ComponentContentPartsLead | ComponentContentPartsMaps | ComponentContentPartsMedia | ComponentContentPartsQuote | ComponentContentPartsTxt | ComponentContentPartsYouTube | ComponentContentPartsYoutube | ComponentOthersEmail | ComponentOthersPhone | ComponentOthersSeo | ComponentStatsViews | CustomerMessage | I18NLocale | Lead | Tag | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
 
 export type I18NLocale = {
   __typename?: 'I18NLocale';
@@ -504,12 +504,60 @@ export type JsonFilterInput = {
   startsWith?: InputMaybe<Scalars['JSON']['input']>;
 };
 
+export type Lead = {
+  __typename?: 'Lead';
+  createdAt?: Maybe<Scalars['DateTime']['output']>;
+  email: Scalars['String']['output'];
+  name: Scalars['String']['output'];
+  phone: Scalars['String']['output'];
+  secondName: Scalars['String']['output'];
+  updatedAt?: Maybe<Scalars['DateTime']['output']>;
+};
+
+export type LeadEntity = {
+  __typename?: 'LeadEntity';
+  attributes?: Maybe<Lead>;
+  id?: Maybe<Scalars['ID']['output']>;
+};
+
+export type LeadEntityResponse = {
+  __typename?: 'LeadEntityResponse';
+  data?: Maybe<LeadEntity>;
+};
+
+export type LeadEntityResponseCollection = {
+  __typename?: 'LeadEntityResponseCollection';
+  data: Array<LeadEntity>;
+  meta: ResponseCollectionMeta;
+};
+
+export type LeadFiltersInput = {
+  and?: InputMaybe<Array<InputMaybe<LeadFiltersInput>>>;
+  createdAt?: InputMaybe<DateTimeFilterInput>;
+  email?: InputMaybe<StringFilterInput>;
+  id?: InputMaybe<IdFilterInput>;
+  name?: InputMaybe<StringFilterInput>;
+  not?: InputMaybe<LeadFiltersInput>;
+  or?: InputMaybe<Array<InputMaybe<LeadFiltersInput>>>;
+  phone?: InputMaybe<StringFilterInput>;
+  secondName?: InputMaybe<StringFilterInput>;
+  updatedAt?: InputMaybe<DateTimeFilterInput>;
+};
+
+export type LeadInput = {
+  email?: InputMaybe<Scalars['String']['input']>;
+  name?: InputMaybe<Scalars['String']['input']>;
+  phone?: InputMaybe<Scalars['String']['input']>;
+  secondName?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   /** Change user password. Confirm with the current password. */
   changePassword?: Maybe<UsersPermissionsLoginPayload>;
   createArticle?: Maybe<ArticleEntityResponse>;
   createCustomerMessage?: Maybe<CustomerMessageEntityResponse>;
+  createLead?: Maybe<LeadEntityResponse>;
   createTag?: Maybe<TagEntityResponse>;
   createUploadFile?: Maybe<UploadFileEntityResponse>;
   createUploadFolder?: Maybe<UploadFolderEntityResponse>;
@@ -519,6 +567,7 @@ export type Mutation = {
   createUsersPermissionsUser: UsersPermissionsUserEntityResponse;
   deleteArticle?: Maybe<ArticleEntityResponse>;
   deleteCustomerMessage?: Maybe<CustomerMessageEntityResponse>;
+  deleteLead?: Maybe<LeadEntityResponse>;
   deleteTag?: Maybe<TagEntityResponse>;
   deleteUploadFile?: Maybe<UploadFileEntityResponse>;
   deleteUploadFolder?: Maybe<UploadFolderEntityResponse>;
@@ -540,6 +589,7 @@ export type Mutation = {
   updateArticle?: Maybe<ArticleEntityResponse>;
   updateCustomerMessage?: Maybe<CustomerMessageEntityResponse>;
   updateFileInfo: UploadFileEntityResponse;
+  updateLead?: Maybe<LeadEntityResponse>;
   updateTag?: Maybe<TagEntityResponse>;
   updateUploadFile?: Maybe<UploadFileEntityResponse>;
   updateUploadFolder?: Maybe<UploadFolderEntityResponse>;
@@ -565,6 +615,11 @@ export type MutationCreateArticleArgs = {
 
 export type MutationCreateCustomerMessageArgs = {
   data: CustomerMessageInput;
+};
+
+
+export type MutationCreateLeadArgs = {
+  data: LeadInput;
 };
 
 
@@ -599,6 +654,11 @@ export type MutationDeleteArticleArgs = {
 
 
 export type MutationDeleteCustomerMessageArgs = {
+  id: Scalars['ID']['input'];
+};
+
+
+export type MutationDeleteLeadArgs = {
   id: Scalars['ID']['input'];
 };
 
@@ -686,6 +746,12 @@ export type MutationUpdateFileInfoArgs = {
 };
 
 
+export type MutationUpdateLeadArgs = {
+  data: LeadInput;
+  id: Scalars['ID']['input'];
+};
+
+
 export type MutationUpdateTagArgs = {
   data: TagInput;
   id: Scalars['ID']['input'];
@@ -752,6 +818,8 @@ export type Query = {
   customerMessages?: Maybe<CustomerMessageEntityResponseCollection>;
   i18NLocale?: Maybe<I18NLocaleEntityResponse>;
   i18NLocales?: Maybe<I18NLocaleEntityResponseCollection>;
+  lead?: Maybe<LeadEntityResponse>;
+  leads?: Maybe<LeadEntityResponseCollection>;
   me?: Maybe<UsersPermissionsMe>;
   tag?: Maybe<TagEntityResponse>;
   tags?: Maybe<TagEntityResponseCollection>;
@@ -799,6 +867,18 @@ export type QueryI18NLocaleArgs = {
 
 export type QueryI18NLocalesArgs = {
   filters?: InputMaybe<I18NLocaleFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+
+export type QueryLeadArgs = {
+  id?: InputMaybe<Scalars['ID']['input']>;
+};
+
+
+export type QueryLeadsArgs = {
+  filters?: InputMaybe<LeadFiltersInput>;
   pagination?: InputMaybe<PaginationArg>;
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
