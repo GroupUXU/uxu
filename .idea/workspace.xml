@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/aua/src/gql/mutation/gql.mutation.createLead.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/aua/src/gql/mutation/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/aua/src/gql/types/gql.mutation.createLead.generated.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/codegen.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/codegen.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/consts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/consts.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/src/gql/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/gql/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/src/gql/types/api-gateway.service.generated.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/gql/types/api-gateway.service.generated.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/src/gql/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/gql/types/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/regex/phone.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/regex/phone.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/frontend/src/pages/api/search/[query].ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/frontend/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +193,8 @@
       <workItem from="1703758060478" duration="2685000" />
       <workItem from="1703777380624" duration="4853000" />
       <workItem from="1703787531666" duration="5986000" />
-      <workItem from="1703801975479" duration="1072000" />
+      <workItem from="1703801975479" duration="1798000" />
+      <workItem from="1704561878874" duration="578000" />
     </task>
     <servers />
   </component>
