@@ -5,19 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/aua/src/gql/mutation/gql.mutation.createLead.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/aua/src/gql/mutation/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/aua/src/gql/types/gql.mutation.createLead.generated.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/components/atoms/box/box.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/components/atoms/box/box.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/components/atoms/box/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/components/atoms/box/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/components/layout/layoutLogin/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/components/layout/layoutLogin/layoutLogin.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/components/layout/layoutLogin/layoutLogin.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/components/layout/layoutLogin/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/consts/form.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/consts/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/changepassword/code.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/changepassword/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/changepassword/reset.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/info/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/login.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/singup/email.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/singup/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/utils/regex/password.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/codegen.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/codegen.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/consts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/consts.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/src/gql/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/gql/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/src/gql/types/api-gateway.service.generated.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/gql/types/api-gateway.service.generated.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/src/gql/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/gql/types/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/regex/phone.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/regex/phone.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/frontend/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/frontend/src/pages/privacy-policy.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/auth/frontend/src/pages/terms.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/link/link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/link/link.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/link/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/link/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/style/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/style/button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/theme/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/theme/colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/design-system/theme/spaces.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/theme/spaces.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/regex/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/regex/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,41 +58,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feat/sectionQuestionnaireContactSection&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/pawelniedzwiecki/localhost/uxu/apps/aua/src/gql/mutation&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.CSS&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/pawelniedzwiecki/localhost/uxu/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "feat/sectionQuestionnaireContactSection",
+    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/auth/frontend/src/pages/changepassword",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.CSS",
+    "ts.external.directory.path": "/Users/pawelniedzwiecki/localhost/uxu/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apps/aua/src/gql/mutation" />
+      <recent name="$PROJECT_DIR$/apps/auth/frontend/src/pages/changepassword" />
+      <recent name="$PROJECT_DIR$/apps/auth/frontend/src/pages/singup" />
       <recent name="$PROJECT_DIR$/packages/utils/regex" />
-      <recent name="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact" />
-      <recent name="$PROJECT_DIR$/apps/aua/public/img" />
-      <recent name="$PROJECT_DIR$/apps/aua/public/video" />
+      <recent name="$PROJECT_DIR$/apps/auth/frontend/src/pages" />
+      <recent name="$PROJECT_DIR$/apps/auth/frontend/src/components/atoms/box" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/auth/frontend/src/pages/singup" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/player/AutoMuteReplayPlayer" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/panel" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components" />
-      <recent name="$PROJECT_DIR$/apps/auth/frontend" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -201,7 +217,9 @@
       <workItem from="1703758060478" duration="2685000" />
       <workItem from="1703777380624" duration="4853000" />
       <workItem from="1703787531666" duration="5986000" />
-      <workItem from="1703801975479" duration="1072000" />
+      <workItem from="1703801975479" duration="1798000" />
+      <workItem from="1704561878874" duration="10636000" />
+      <workItem from="1704580100410" duration="6750000" />
     </task>
     <servers />
   </component>

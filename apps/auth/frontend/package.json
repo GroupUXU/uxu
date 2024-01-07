@@ -11,15 +11,16 @@
   "dependencies": {
     "@apollo/client": "^3.8.4",
     "apollo-link-rest": "^0.9.0",
+    "assets": "*",
     "design-system": "*",
-    "react": "^18",
-    "react-dom": "^18",
+    "hooks": "*",
     "next": "14.0.4",
     "next-seo": "^6.1.0",
-    "utils": "*",
-    "hooks": "*",
     "providers": "*",
-    "assets": "*"
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hook-form": "^7.49.2",
+    "utils": "*"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.4.19",
