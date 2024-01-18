@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import type { ReactElement } from "react";
 import { useForm } from 'react-hook-form';
 import { Coffee, Clock, DollarSign } from 'react-feather';
+import {CookieManager} from "utils";
 import { Link } from "design-system/components/atoms/link";
 import { Input } from "design-system/components/molecules/inputs";
 import { SectionWithCircle } from "design-system/components/templates/section/sectionWithCircle";
@@ -15,6 +16,7 @@ import { Note } from "design-system/components/atoms/note";
 
 export function SectionQuestionnaireContact(): ReactElement {
     const { config } = useSiteConfig();
+    const cookie = new CookieManager();
     const [addLeadMutation] = useAddLeadMutation();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<{ success?: boolean, message?: string }>({});
@@ -38,7 +40,7 @@ export function SectionQuestionnaireContact(): ReactElement {
         if (isLastStep) {
             setIsSubmitting(true);
             try {
-                await addLeadMutation({ variables: { data } });
+                await addLeadMutation({ variables: { data: { ...data, recid: cookie.getCookie('recid') } } });
                 setSubmitStatus({ success: true, message: "Niebawem skontaktujemy się z Tobą :)" });
                 resetTimeout();
             } catch (error) {
@@ -61,7 +63,7 @@ export function SectionQuestionnaireContact(): ReactElement {
             reset();
             setSubmitStatus({});
             setIsSubmitting(false);
-        }, 5000);
+        }, 10000);
     };
 
     const renderInfo = () => {

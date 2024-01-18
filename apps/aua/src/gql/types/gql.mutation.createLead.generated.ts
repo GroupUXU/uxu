@@ -8,7 +8,7 @@ export type AddLeadMutationVariables = Types.Exact<{
 }>;
 
 
-export type AddLeadMutation = { __typename?: 'Mutation', createLead?: { __typename?: 'LeadEntityResponse', data?: { __typename?: 'LeadEntity', id?: string | null, attributes?: { __typename?: 'Lead', name: string, secondName: string, email: string, phone: string } | null } | null } | null };
+export type AddLeadMutation = { __typename?: 'Mutation', createLead?: { __typename?: 'LeadEntityResponse', data?: { __typename?: 'LeadEntity', id?: string | null, attributes?: { __typename?: 'Lead', name: string, secondName: string, email: string, phone: string, recid?: string | null } | null } | null } | null };
 
 
 export const AddLeadDocument = gql`
@@ -21,6 +21,7 @@ export const AddLeadDocument = gql`
         secondName
         email
         phone
+        recid
       }
     }
   }

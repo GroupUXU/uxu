@@ -3,7 +3,6 @@ import type { Image } from 'utils';
 import type { AdapterSrcImageDataProps, AdapterImageDataProps } from "./types";
 
 export function adapterSrcImageData({ attributes }: AdapterSrcImageDataProps): string | null {
-  console.log(attributes, 'attributes')
   const { url } = attributes;
   if (url != null) return url;
   return null;

@@ -13,8 +13,10 @@ export type Scalars = {
   Int: { input: number; output: number; }
   Float: { input: number; output: number; }
   ArticleContentpartsDynamicZoneInput: { input: any; output: any; }
+  Date: { input: any; output: any; }
   DateTime: { input: any; output: any; }
   JSON: { input: any; output: any; }
+  LeadLoansDynamicZoneInput: { input: any; output: any; }
   TagContentpartsDynamicZoneInput: { input: any; output: any; }
   Upload: { input: any; output: any; }
 };
@@ -196,6 +198,31 @@ export type ComponentOthersEmail = {
   id: Scalars['ID']['output'];
 };
 
+export type ComponentOthersLoan = {
+  __typename?: 'ComponentOthersLoan';
+  amountDisbursedByBank: Scalars['Float']['output'];
+  documents: UploadFileRelationResponseCollection;
+  futureInstallmentSavings: Scalars['Float']['output'];
+  id: Scalars['ID']['output'];
+  interestOnLoanOrigination: Scalars['Float']['output'];
+  loanID: Scalars['String']['output'];
+  loanInsuranceCost: Scalars['Float']['output'];
+  loanOriginationFees: Scalars['Float']['output'];
+  loanStartDate: Scalars['Date']['output'];
+  loanType: Enum_Componentothersloan_Loantype;
+  numberOfInstallments: Scalars['Int']['output'];
+  otherLoanCosts: Scalars['Float']['output'];
+  ourCommissionForThisAgreement: Scalars['Float']['output'];
+  remainingLoanBalance: Scalars['Float']['output'];
+};
+
+
+export type ComponentOthersLoanDocumentsArgs = {
+  filters?: InputMaybe<UploadFileFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
 export type ComponentOthersPhone = {
   __typename?: 'ComponentOthersPhone';
   id: Scalars['ID']['output'];
@@ -325,6 +352,11 @@ export enum Enum_Article_Type {
   Service = 'service'
 }
 
+export enum Enum_Componentothersloan_Loantype {
+  Cash = 'cash',
+  Mortgage = 'mortgage'
+}
+
 export enum Enum_Componentothersphone_Typ {
   Fax = 'fax',
   Home = 'home',
@@ -347,6 +379,18 @@ export enum Enum_Customermessage_Status {
 export enum Enum_Customermessage_Type {
   Contact = 'contact',
   Feedback = 'feedback'
+}
+
+export enum Enum_Lead_Status {
+  AtAnalysis = 'atAnalysis',
+  AtLawyer = 'atLawyer',
+  InCourt = 'inCourt',
+  LostInCourt = 'lostInCourt',
+  New = 'new',
+  Recontact = 'recontact',
+  Rejected = 'rejected',
+  WaitForContract = 'waitForContract',
+  WonInCourt = 'wonInCourt'
 }
 
 export enum Enum_Tag_Typ {
@@ -391,7 +435,7 @@ export type FloatFilterInput = {
   startsWith?: InputMaybe<Scalars['Float']['input']>;
 };
 
-export type GenericMorph = Article | ComponentContentPartsLead | ComponentContentPartsMaps | ComponentContentPartsMedia | ComponentContentPartsQuote | ComponentContentPartsTxt | ComponentContentPartsYouTube | ComponentContentPartsYoutube | ComponentOthersEmail | ComponentOthersPhone | ComponentOthersSeo | ComponentStatsViews | CustomerMessage | I18NLocale | Lead | Tag | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
+export type GenericMorph = Article | ComponentContentPartsLead | ComponentContentPartsMaps | ComponentContentPartsMedia | ComponentContentPartsQuote | ComponentContentPartsTxt | ComponentContentPartsYouTube | ComponentContentPartsYoutube | ComponentOthersEmail | ComponentOthersLoan | ComponentOthersPhone | ComponentOthersSeo | ComponentStatsViews | CustomerMessage | I18NLocale | Lead | Tag | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
 
 export type I18NLocale = {
   __typename?: 'I18NLocale';
@@ -508,9 +552,13 @@ export type Lead = {
   __typename?: 'Lead';
   createdAt?: Maybe<Scalars['DateTime']['output']>;
   email: Scalars['String']['output'];
+  loans?: Maybe<Array<Maybe<LeadLoansDynamicZone>>>;
   name: Scalars['String']['output'];
+  pesel?: Maybe<Scalars['String']['output']>;
   phone: Scalars['String']['output'];
+  recid?: Maybe<Scalars['String']['output']>;
   secondName: Scalars['String']['output'];
+  status: Enum_Lead_Status;
   updatedAt?: Maybe<Scalars['DateTime']['output']>;
 };
 
@@ -539,17 +587,26 @@ export type LeadFiltersInput = {
   name?: InputMaybe<StringFilterInput>;
   not?: InputMaybe<LeadFiltersInput>;
   or?: InputMaybe<Array<InputMaybe<LeadFiltersInput>>>;
+  pesel?: InputMaybe<StringFilterInput>;
   phone?: InputMaybe<StringFilterInput>;
+  recid?: InputMaybe<StringFilterInput>;
   secondName?: InputMaybe<StringFilterInput>;
+  status?: InputMaybe<StringFilterInput>;
   updatedAt?: InputMaybe<DateTimeFilterInput>;
 };
 
 export type LeadInput = {
   email?: InputMaybe<Scalars['String']['input']>;
+  loans?: InputMaybe<Array<Scalars['LeadLoansDynamicZoneInput']['input']>>;
   name?: InputMaybe<Scalars['String']['input']>;
+  pesel?: InputMaybe<Scalars['String']['input']>;
   phone?: InputMaybe<Scalars['String']['input']>;
+  recid?: InputMaybe<Scalars['String']['input']>;
   secondName?: InputMaybe<Scalars['String']['input']>;
+  status?: InputMaybe<Enum_Lead_Status>;
 };
+
+export type LeadLoansDynamicZone = ComponentOthersLoan | Error;
 
 export type Mutation = {
   __typename?: 'Mutation';
