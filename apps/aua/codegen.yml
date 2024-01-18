@@ -1,8 +1,10 @@
 overwrite: true
 schema:
-  - http://localhost:1337/graphql:
-      method: GET
-documents: [ "./src/gql/fragments/**/*.ts" ,"./src/gql/mutation/**/*.ts", "./src/gql/query/**/*.ts" ]
+  - "http://localhost:1337/graphql"
+documents:
+  - "./src/gql/fragments/**/*.ts"
+  - "./src/gql/mutation/**/*.ts"
+  - "./src/gql/query/**/*.ts"
 generates:
   ./src/gql/types/api-gateway.service.generated.ts:
     plugins:
@@ -16,4 +18,3 @@ generates:
     plugins:
       - typescript-operations
       - typescript-react-apollo
-

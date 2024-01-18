@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 
-export function determinePlatform(req: NextRequest): Record<string, boolean> {
+export function setPlatformHeader(req: NextRequest): Record<string, boolean> {
   const userAgent: string = req.headers.get('user-agent') || '';
   const isMobilePlatform: boolean = /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(userAgent);
   const isWindows: boolean = /Windows NT/i.test(userAgent);

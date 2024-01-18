@@ -11,6 +11,7 @@ export const POST_CREATE_LEAD = gql`
           secondName
           email
           phone
+          recid
         }
       }
     }

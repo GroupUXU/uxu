@@ -5,35 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/components/atoms/box/box.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/components/atoms/box/box.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/components/atoms/box/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/components/atoms/box/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/components/layout/layoutLogin/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/components/layout/layoutLogin/layoutLogin.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/components/layout/layoutLogin/layoutLogin.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/components/layout/layoutLogin/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/consts/form.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/consts/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/changepassword/code.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/changepassword/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/changepassword/reset.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/info/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/login.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/singup/email.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/singup/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/utils/regex/password.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/auth/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/auth/frontend/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/auth/frontend/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/auth/frontend/src/pages/privacy-policy.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/auth/frontend/src/pages/terms.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/link/link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/link/link.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/components/atoms/link/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/components/atoms/link/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/style/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/style/button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/theme/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/theme/colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/design-system/theme/spaces.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/design-system/theme/spaces.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/regex/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/regex/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/aua/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/server/get/getRecIdFromRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/get/getRecIdFromRequest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/server/get/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/get/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/server/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/server/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/server/set/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/set/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/server/set/setRecidHeader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/set/setRecidHeader.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/types/server/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/types/server/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/types/server/requestCookie.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/types/server/requestCookie.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,8 +45,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feat/sectionQuestionnaireContactSection",
-    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/auth/frontend/src/pages/changepassword",
+    "git-widget-placeholder": "reafactor/system-for-lead",
+    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/aua/src/gql",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.stylelint": "true",
@@ -81,18 +63,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/aua/src/gql" />
+      <recent name="$PROJECT_DIR$/packages/utils/server/get" />
+      <recent name="$PROJECT_DIR$/packages/utils/server/set" />
       <recent name="$PROJECT_DIR$/apps/auth/frontend/src/pages/changepassword" />
       <recent name="$PROJECT_DIR$/apps/auth/frontend/src/pages/singup" />
-      <recent name="$PROJECT_DIR$/packages/utils/regex" />
-      <recent name="$PROJECT_DIR$/apps/auth/frontend/src/pages" />
-      <recent name="$PROJECT_DIR$/apps/auth/frontend/src/components/atoms/box" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/utils/server/set" />
       <recent name="$PROJECT_DIR$/apps/auth/frontend/src/pages/singup" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/atoms/player/AutoMuteReplayPlayer" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components/panel" />
       <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace" />
-      <recent name="$PROJECT_DIR$/packages/design-system/components/molecules/collspace/components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -220,6 +202,9 @@
       <workItem from="1703801975479" duration="1798000" />
       <workItem from="1704561878874" duration="10636000" />
       <workItem from="1704580100410" duration="6750000" />
+      <workItem from="1705481200389" duration="262000" />
+      <workItem from="1705602470780" duration="11023000" />
+      <workItem from="1705614682319" duration="2038000" />
     </task>
     <servers />
   </component>
