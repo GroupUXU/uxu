@@ -2,6 +2,7 @@ import { SiteConfig } from "../../types";
 import { NextPageContext } from 'next';
 import { DocumentContext } from "next/document";
 
-export function getThemeFromRequest( ctx: NextPageContext | DocumentContext): SiteConfig['site']['theme'] {
-  return ctx.req?.headers['theme'] === 'light' ? 'light' : 'dark';
+export function getRecIdFromRequest( ctx: NextPageContext | DocumentContext): { recid?: string | Array<string>, recidcookie?: string | Array<string> } {
+
+  return { recid: ctx.req?.headers['recid'], recidcookie: ctx.req?.headers['recidcookie'] }
 };

@@ -26,7 +26,7 @@ function CustomApp({ Component, pageProps, theme, clientLocale, osInfo, isMobile
 
   if(recidcookie === 'false' && recid as string){
     const cookie = new CookieManager();
-    cookie.setCookie('recid', recid)
+    cookie.setCookie('recid', recid as string)
   }
 
   return (

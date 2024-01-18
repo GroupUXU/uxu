@@ -1,16 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
-import { determinePlatform } from './determinePlatform';
-import { determineTheme } from './determineTheme';
+import { setPlatformHeader, setRecidHeader, setThemeHeader } from './set';
 
 export function middleware(req: NextRequest): NextResponse {
-  const platform = determinePlatform(req);
+  const platform = setPlatformHeader(req);
   let response = NextResponse.next();
 
   for (const [key, value] of Object.entries(platform)) {
     response.headers.set(`uxu-${key}`, String(value));
   }
 
-  response = determineTheme(req, response);
+  response = setThemeHeader(req, response);
+  response = setRecidHeader(req, response);
 
   return response;
 }
