@@ -34,7 +34,7 @@ export const siteConfig: SiteConfig = {
     shortBrand: "aua",
     defaultCover: 'https://aua.pl/defaultCover.png',
     canonicalUrl: `https://aua.pl`,
-    images: [{url: 'https://getReturn.pl/defaultCover.png'}],
+    images: [{url: 'https://aua.pl/defaultCover.png'}],
     title: 'Aua - Sankcja darmowego kredytu',
     shortname: 'aua',
     description: 'Aua',
@@ -65,17 +65,16 @@ export const siteConfig: SiteConfig = {
   },
   admin: {
     company: {
-      name: "Na3 Sp. z o.o.",
-      street: "Serwituty 25",
-      postCode: "02-233",
-      city: "Warszawa",
+      name: "UXU Group Sp. z o.o.",
+      street: "Święty Marcin 29/8",
+      postCode: "61-806",
+      city: "Poznań",
       tax: {
         pl: {
-          nip: '5223077290',
-          krs: '0000649985',
-          regon: '365979030',
-          shareCapitalInPLN: 5000,
-          accountsBank: [{bank: "Nest Bank", iban: "PL92 2530 0008 2047 1060 6663 0001"}]
+          nip: '7831894877',
+          krs: '0001079836',
+          regon: '527391780',
+          accountsBank: [{bank: "Nest Bank", iban: "PL69 2530 0008 2022 1080 2055 0001"}]
         }
       },
       contact: {
