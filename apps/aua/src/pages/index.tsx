@@ -34,7 +34,7 @@ function Index(): ReactElement {
             seo={seo}
         >
             <SectionMediaCoverage/>
-            <h4 className="headerSection">JAK TO DZIAŁA ?</h4>
+            <h4 className="headerSection">JAK TO DZIAŁA?</h4>
             <SectionWhatItWork />
             <h4 className="headerSection">SPRAWDŹ SWOJĄ UMOWĘ</h4>
             <SectionQuestionnaireContact />

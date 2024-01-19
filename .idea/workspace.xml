@@ -6,16 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/server/get/getRecIdFromRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/get/getRecIdFromRequest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/server/get/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/get/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/server/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/server/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/middleware.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/server/set/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/set/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/server/set/setRecidHeader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/server/set/setRecidHeader.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/types/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/types/server/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/types/server/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/types/server/requestCookie.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/types/server/requestCookie.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +36,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "reafactor/system-for-lead",
-    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/aua/src/gql",
+    "git-widget-placeholder": "refactor/content-aua",
+    "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/aua/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.stylelint": "true",
@@ -63,11 +54,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/aua/public" />
       <recent name="$PROJECT_DIR$/apps/aua/src/gql" />
       <recent name="$PROJECT_DIR$/packages/utils/server/get" />
       <recent name="$PROJECT_DIR$/packages/utils/server/set" />
       <recent name="$PROJECT_DIR$/apps/auth/frontend/src/pages/changepassword" />
-      <recent name="$PROJECT_DIR$/apps/auth/frontend/src/pages/singup" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/utils/server/set" />
