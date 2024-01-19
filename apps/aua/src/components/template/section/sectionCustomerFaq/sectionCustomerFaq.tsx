@@ -8,7 +8,7 @@ export function SectionCustomerFaq({ header, description, collapse }: SectionCus
     return (
         <div className={styles.wrapper}>
             <strong className={styles.header}>{header}</strong>
-            <p className={styles.description}>{description}</p>
+            <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }} />
             <span className={styles.headerFaq}>Częste pytania klientów na tym etapie:</span>
             <div style={{paddingTop: "3rem"}}>
                 <Collapse accordion>

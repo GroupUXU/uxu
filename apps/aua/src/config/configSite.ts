@@ -19,7 +19,7 @@ export const locale = 'pl';
 
 export const siteConfig: SiteConfig = {
   marketingToolsConfig: {
-    googleTagManagerId: 'GTM-MC3DNS7',
+    googleTagManagerId: 'GTM-PHDNXTHH',
     googleAdManagerId: '23023978625',
     adSlotsMap,
   },
@@ -44,7 +44,7 @@ export const siteConfig: SiteConfig = {
   },
   social: {
     facebook: {
-      pageId: '100091647886192'
+      pageId: 'auapoland'
     }
   },
   client: {

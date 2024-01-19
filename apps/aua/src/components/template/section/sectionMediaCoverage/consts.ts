@@ -1,12 +1,12 @@
 import {vectorBrandsPress} from "assets";
 import type {PressCoverageLinksType} from 'design-system/components/atoms/pressCoverageLinks';
 
-export const header: [string, string] | [string, string, string] = ['Masz kredyt,', 'a może już jest', 'spłacony ?'];
+export const header: [string, string] | [string, string, string] = ['Masz kredyt,', 'a może jest już', 'spłacony?'];
 
-export const description = 'Bank może być Ci winienen pieniądze !';
+export const description = 'Bank może być Ci winien pieniądze!';
 
 export const buttonLeft = 'Sprawdź umowę';
-export const buttonRight = 'Jak to działa ?';
+export const buttonRight = 'Jak to działa?';
 
 export const coverageLinks: PressCoverageLinksType = [
     {
