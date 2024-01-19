@@ -129,9 +129,9 @@ export function SectionQuestionnaireContact(): ReactElement {
                     </span>
                 </div>
                 <div className={styles.wrapperInfo}>
-                    <p><Coffee size={40} /> My się wszystkim zajmiemy</p>
-                    <p><Clock size={40} /> W ciągu 72h nasi prawnicy przeanalizują Twoją umowę</p>
-                    <p><DollarSign size={40} /> Analiza umowy jest w 100% darmowa</p>
+                    <p><Clock size={40}/> W ciągu 72h nasi prawnicy przeanalizują Twoją umowę</p>
+                    <p><DollarSign size={40}/> Analiza umowy jest w 100% darmowa</p>
+                    <p><Coffee size={40}/> Ciekawy, czy należy Ci się zwrot? Sprawdź :)</p>
                 </div>
             </div>
         </SectionWithCircle>
