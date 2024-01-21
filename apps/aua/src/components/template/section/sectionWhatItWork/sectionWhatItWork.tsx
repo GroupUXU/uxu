@@ -17,8 +17,8 @@ export function SectionWhatItWork(): ReactElement {
                         <PlayerAutoMuteReplay
                             width={315}
                             height={564}
-                            urlVideo="/video/videoForLeadLow.mp4"
-                            urlCover="/img/videoForLeadLow.png"
+                            urlVideo="/video/videoForLeadHig.mp4"
+                            urlCover="/img/videoForLeadHig.png"
                         />
                     </div>
                 </div>
