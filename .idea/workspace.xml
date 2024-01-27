@@ -52,17 +52,17 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.sourceCode.CSS",
-    "ts.external.directory.path": "/Users/pawelniedzwiecki/localhost/uxu/node_modules/typescript/lib",
+    "ts.external.directory.path": "/Users/uxu/localhost/uxu/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/aua" />
       <recent name="$PROJECT_DIR$/apps/aua/public" />
       <recent name="$PROJECT_DIR$/apps/aua/src/gql" />
       <recent name="$PROJECT_DIR$/packages/utils/server/get" />
       <recent name="$PROJECT_DIR$/packages/utils/server/set" />
-      <recent name="$PROJECT_DIR$/apps/auth/frontend/src/pages/changepassword" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/utils/server/set" />

@@ -42,7 +42,7 @@ export function PlayerAutoMuteReplay({ width, height, urlVideo, urlCover, autoPl
             </div>
             <ReactPlayer
                 ref={playerRef}
-                width={406}
+                width={404}
                 height={720}
                 url={urlVideo}
                 playing={isPlaying.autoPlay}
