@@ -28,7 +28,7 @@ export const siteConfig: SiteConfig = {
   site: {
     id: SiteIdEnums.WTRASIE,
     locale,
-    domain: 'wtrasie.pl',
+    domain: 'https://wtrasie.pl',
     slug: '/',
     brand: "wTrasie",
     shortBrand: "wTrasieShort",

@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2f25e092-9b0d-4384-afb1-766bd978c532" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/sectionQuestionnaireContact.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/consts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/components/template/section/sectionQuestionnaireContact/consts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/aua/src/config/configSite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/config/configSite.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/aua/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/aua/src/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/config/configSite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/config/configSite.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/wtrasie/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/wtrasie/src/pages/_app.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "refactor/content-aua",
+    "git-widget-placeholder": "hore/update-data-company",
     "last_opened_file_path": "/Users/pawelniedzwiecki/localhost/uxu/apps/aua/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -196,6 +200,9 @@
       <workItem from="1705481200389" duration="262000" />
       <workItem from="1705602470780" duration="11023000" />
       <workItem from="1705614682319" duration="2038000" />
+      <workItem from="1705843162860" duration="2009000" />
+      <workItem from="1706208319357" duration="207000" />
+      <workItem from="1706294485385" duration="2632000" />
     </task>
     <servers />
   </component>
