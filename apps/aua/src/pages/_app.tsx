@@ -16,8 +16,7 @@ function CustomApp({ Component, pageProps, theme, clientLocale, osInfo, isMobile
   const apolloClient = useApollo(pageProps.initialApolloState || null);
   const { asPath } = useRouter();
   config.site.slug = asPath;
-  config.site.canonicalUrl = `${config.site.domain}/${asPath}`;
-  config.site.canonicalUrl = `${config.site.domain}/${asPath}`;
+  config.site.canonicalUrl = `${config.site.domain}${asPath}`;
   config.site.theme = theme;
   config.client.locale = clientLocale;
   config.client.osInfo = osInfo;
