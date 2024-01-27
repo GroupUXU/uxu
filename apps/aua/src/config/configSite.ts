@@ -28,7 +28,7 @@ export const siteConfig: SiteConfig = {
   site: {
     id: SiteIdEnums.AUA,
     locale,
-    domain: 'aua.pl',
+    domain: 'https://aua.pl',
     slug: '/',
     brand: "aua",
     shortBrand: "aua",
@@ -79,8 +79,8 @@ export const siteConfig: SiteConfig = {
       },
       contact: {
         pl: {
-          email: [{type: "main", email: "hello@uxu.pl"}],
-          phone: [{type: "mobile", number: "888 333 885"}]
+          email: [{type: "main", email: "hello@aua.pl"}],
+          phone: [{type: "mobile", number: "787 908 753"}]
         }
       }
     }
