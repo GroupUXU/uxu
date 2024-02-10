@@ -1,0 +1,15 @@
+{
+    "collectionName": "components_content_parts_quotes",
+    "info": {
+        "displayName": "quote",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "quote": {
+            "type": "text",
+            "required": true,
+            "unique": false
+        }
+    }
+}

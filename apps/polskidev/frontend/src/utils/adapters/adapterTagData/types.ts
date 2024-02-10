@@ -1,0 +1,1 @@
+export type AdapterTagDataProps = { __typename?: 'TagEntity', id?: string | null, attributes?: { __typename?: 'Tag', title: string } | null }

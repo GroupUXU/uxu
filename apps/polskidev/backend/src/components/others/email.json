@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_others_emails",
+  "info": {
+    "displayName": "email",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": false
+    }
+  }
+}

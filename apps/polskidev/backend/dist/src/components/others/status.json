@@ -1,0 +1,22 @@
+{
+    "collectionName": "components_others_statuses",
+    "info": {
+        "displayName": "status",
+        "icon": "check"
+    },
+    "options": {},
+    "attributes": {
+        "typ": {
+            "type": "enumeration",
+            "enum": [
+                "odrzucony",
+                "zaakceptowany"
+            ],
+            "required": true
+        },
+        "wiadomosc": {
+            "type": "text",
+            "required": false
+        }
+    }
+}

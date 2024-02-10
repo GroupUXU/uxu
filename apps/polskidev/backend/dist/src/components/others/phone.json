@@ -1,0 +1,23 @@
+{
+    "collectionName": "components_others_phones",
+    "info": {
+        "displayName": "phone",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "phone": {
+            "type": "string",
+            "required": true,
+            "unique": false
+        },
+        "typ": {
+            "type": "enumeration",
+            "enum": [
+                "mobile",
+                "home",
+                "fax"
+            ]
+        }
+    }
+}
