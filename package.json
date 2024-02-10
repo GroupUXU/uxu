@@ -7,7 +7,8 @@
     "url": "https://github.com/GroupUXU/uxu"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=18",
+    "yarn": "1.22.19"
   },
   "browserslist": [
     "Chrome >= 83",
