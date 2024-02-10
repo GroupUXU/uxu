@@ -35,6 +35,7 @@
   "workspaces": [
     "apps/*",
     "packages/*",
-    "apps/auth/*"
+    "apps/auth/*",
+    "apps/polskidev/*"
   ]
 }
