@@ -6,8 +6,8 @@
     "url": "https://github.com/GroupUXU/uxu"
   },
   "engines": {
-    "node": "=18.19.0",
-    "yarn": "=1.22.21"
+    "node": "=18",
+    "yarn": "=1.22.*"
   },
   "browserslist": [
     "Chrome >= 83",
@@ -34,6 +34,6 @@
   "workspaces": [
     "apps/*",
     "packages/*",
-    "apps/auth/*"
+    "apps/polskidev/*"
   ]
 }
