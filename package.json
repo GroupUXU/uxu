@@ -22,14 +22,17 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "wtrasie": "npx turbo run dev --filter=wtrasie",
-    "getreturn": "npx turbo run dev --filter=getreturn"
+    "wtrasiedev": "npx turbo run dev --filter=wtrasie",
+    "auadev": "npx turbo run dev --filter=aua",
+    "auaprod": "npx turbo run start --filter=aua",
+    "polskidevbackendprod": "npx turbo run start --filter=polskidevbackend",
+    "heroku-postbuild": "if [ $APP_NAME_ENV = 'polskidevbackend' ]; then yarn run polskidevbackendprod; fi"
   },
   "devDependencies": {
-    "eslint": "^8.48.0",
-    "prettier": "^3.0.3",
+    "eslint": "8.48.0",
+    "prettier": "3.0.3",
     "tsconfig": "*",
-    "turbo": "^1.10.14"
+    "turbo": "1.12.3"
   },
   "workspaces": [
     "apps/*",
