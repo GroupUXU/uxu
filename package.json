@@ -26,7 +26,8 @@
     "auadev": "npx turbo run dev --filter=aua",
     "auaprod": "npx turbo run start --filter=aua",
     "polskidevbackendprod": "cd apps/polskidev/backend && yarn start",
-    "heroku-postbuild": "if [ $APP_NAME_ENV = 'polskidevbackend' ]; then yarn run polskidevbackendprod; fi"
+    "polskidevbackendbuild": "cd apps/polskidev/backend && yarn build",
+    "heroku-postbuild": "if [ $APP_NAME_ENV = 'polskidevbackend' ]; then yarn run polskidevbackendbuild; fi"
   },
   "devDependencies": {
     "eslint": "8.48.0",
