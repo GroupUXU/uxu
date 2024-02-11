@@ -25,7 +25,7 @@
     "wtrasiedev": "npx turbo run dev --filter=wtrasie",
     "auadev": "npx turbo run dev --filter=aua",
     "auaprod": "npx turbo run start --filter=aua",
-    "polskidevbackendprod": "npx turbo run start --filter=polskidevbackend",
+    "polskidevbackendprod": "cd apps/polskidev/backend && yarn start",
     "heroku-postbuild": "if [ $APP_NAME_ENV = 'polskidevbackend' ]; then yarn run polskidevbackendprod; fi"
   },
   "devDependencies": {
