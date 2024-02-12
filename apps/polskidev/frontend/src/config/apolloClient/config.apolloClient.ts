@@ -9,7 +9,7 @@ let apolloClient: ApolloClient<NormalizedCacheObject> | undefined;
 export function createApolloClient(): ApolloClient<NormalizedCacheObject> {
   return new ApolloClient({
     ssrMode: typeof window === 'undefined',
-    link: ApolloLink.from([ LINK_API_REST, LINK_API_GRAPHQL ]),
+    link: ApolloLink.from([LINK_API_REST, LINK_API_GRAPHQL]),
     cache: CACHE,
     defaultOptions: {
       query: {

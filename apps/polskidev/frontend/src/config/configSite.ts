@@ -19,25 +19,25 @@ export const locale = 'pl';
 
 export const siteConfig: SiteConfig = {
   marketingToolsConfig: {
-    googleTagManagerId: 'GTM-MC3DNS7',
+    googleTagManagerId: 'GTM-N2Z7W233',
     googleAdManagerId: '23023978625',
     adSlotsMap,
   },
   port: 3000,
-  projectName: 'wTrasie',
+  projectName: 'polskidev',
   site: {
-    id: SiteIdEnums.WTRASIE,
+    id: SiteIdEnums.POLSKIDEV,
     locale,
-    domain: 'https://wtrasie.pl',
+    domain: 'https://polski.dev',
     slug: '/',
-    brand: "wTrasie",
-    shortBrand: "wTrasieShort",
-    defaultCover: 'https://wtrasie.pl/defaultCover.png',
-    canonicalUrl: `https://wtrasie.pl`,
-    images: [{url: 'https://wtrasie.pl/ogWTrasie.png'}],
-    title: 'wTrasie - Wszystko co ważne w trasie',
-    shortname: 'wt',
-    description: 'wTrasie.pl - W Trasie, informacje prosto z trasy i ulic Twojego miasta. informacje na temat wypadków, wydarzeń oraz firm przydatnych w trasie',
+    brand: "polskidev",
+    shortBrand: "polskidev",
+    defaultCover: 'https://polski.dev/defaultCover.png',
+    canonicalUrl: `https://polski.dev`,
+    images: [{url: 'https://polski.dev/og.png'}],
+    title: 'Polski DEV - blog dla każdego programisty',
+    shortname: 'pldev',
+    description: 'Polski.dev - inspiracje, porady i trendy w IT dla programistów',
     authEnabled: false,
     switchTheme: true,
     theme: 'dark',
@@ -65,20 +65,21 @@ export const siteConfig: SiteConfig = {
   },
   admin: {
     company: {
-      name: "MSJ Michał Wojsław",
-      street: "al. Aleja Bohaterów Monte Cassino 10/41",
-      postCode: "42-217",
-      city: "Częstochowa",
+      name: "UXU Group",
+      street: "Święty Marcin 29 / 8",
+      postCode: "61-806",
+      city: "Poznań",
       tax: {
         pl: {
-          nip: '5732853839',
-          regon: '361022789',
+          nip: '7831894877',
+          regon: '527391780',
+          krs: '0001079836',
         }
       },
       contact: {
         pl: {
-          email: [{type: "main", email: "biuro.msj@gmail.com"}],
-          phone: [{type: "mobile", number: "536 000 005"}]
+          email: [{type: "main", email: "hello@uxu.pl"}],
+          phone: [{type: "mobile", number: "+48 888 333 885"}]
         }
       }
     }
