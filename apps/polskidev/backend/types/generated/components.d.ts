@@ -9,7 +9,6 @@ export interface ContentPartsLead extends Schema.Component {
   attributes: {
     lead: Attribute.Text &
       Attribute.Required &
-      Attribute.Unique &
       Attribute.SetMinMaxLength<{
         minLength: 160;
         maxLength: 300;
@@ -113,7 +112,7 @@ export interface OthersSeo extends Schema.Component {
   };
   attributes: {
     title: Attribute.String & Attribute.Unique;
-    description: Attribute.Text & Attribute.Unique;
+    description: Attribute.Text & Attribute.Required;
   };
 }
 

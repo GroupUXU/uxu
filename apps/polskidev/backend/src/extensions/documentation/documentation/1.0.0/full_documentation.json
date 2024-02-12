@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-02-11T21:36:08.146Z"
+    "x-generation-date": "2024-02-12T22:02:56.811Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -107,8 +107,7 @@
               "type": {
                 "type": "string",
                 "enum": [
-                  "article",
-                  "service"
+                  "article"
                 ]
               },
               "title": {
@@ -246,8 +245,7 @@
           "type": {
             "type": "string",
             "enum": [
-              "article",
-              "service"
+              "article"
             ]
           },
           "title": {
@@ -1123,8 +1121,7 @@
                                       "type": {
                                         "type": "string",
                                         "enum": [
-                                          "article",
-                                          "service"
+                                          "article"
                                         ]
                                       },
                                       "title": {
@@ -3632,8 +3629,7 @@
                         "type": {
                           "type": "string",
                           "enum": [
-                            "article",
-                            "service"
+                            "article"
                           ]
                         },
                         "title": {

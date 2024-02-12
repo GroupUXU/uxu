@@ -9,7 +9,7 @@
     "lead": {
       "type": "text",
       "required": true,
-      "unique": true,
+      "unique": false,
       "maxLength": 300,
       "minLength": 160
     }

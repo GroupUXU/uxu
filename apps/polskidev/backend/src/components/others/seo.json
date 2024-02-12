@@ -13,7 +13,8 @@
     },
     "description": {
       "type": "text",
-      "unique": true
+      "unique": false,
+      "required": true
     }
   }
 }

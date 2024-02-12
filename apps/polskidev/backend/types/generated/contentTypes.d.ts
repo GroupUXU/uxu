@@ -297,7 +297,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    type: Attribute.Enumeration<['article', 'service']> & Attribute.Required & Attribute.DefaultTo<'article'>;
+    type: Attribute.Enumeration<['article']> & Attribute.Required & Attribute.DefaultTo<'article'>;
     title: Attribute.String &
       Attribute.Required &
       Attribute.Unique &
