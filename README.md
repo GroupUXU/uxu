@@ -4,8 +4,9 @@ The platform by UXU GROUP is a collection of tools and features that enable rapi
 
 ## Demo Services
 
-- [WTrasie.pl](https://wtrasie.pl/)
-- [GetReturn.pl](https://www.getreturn.pl)
+- [wtrasie.pl](https://wtrasie.pl/)
+- [aua.pl](https://aua.pl)
+- [polski.dev](https://polski.dev)
 
 ## Requirements
 

@@ -1,14 +1,13 @@
 {
   "name": "uxu",
   "private": true,
-  "packageManager": "yarn@1.22.19",
   "repository": {
     "type": "git",
     "url": "https://github.com/GroupUXU/uxu"
   },
   "engines": {
-    "node": ">=18",
-    "yarn": "1.22.19"
+    "node": "=18",
+    "yarn": "=1.22.*"
   },
   "browserslist": [
     "Chrome >= 83",
@@ -23,19 +22,22 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "wtrasie": "npx turbo run dev --filter=wtrasie",
-    "getreturn": "npx turbo run dev --filter=getreturn"
+    "wtrasiedev": "npx turbo run dev --filter=wtrasie",
+    "auadev": "npx turbo run dev --filter=aua",
+    "auaprod": "npx turbo run start --filter=aua",
+    "polskidevbackendprod": "cd apps/polskidev/backend && yarn start",
+    "polskidevbackendbuild": "cd apps/polskidev/backend && yarn build",
+    "heroku-postbuild": "if [ $APP_NAME_ENV = 'polskidevbackend' ]; then yarn run polskidevbackendbuild; fi"
   },
   "devDependencies": {
-    "eslint": "^8.48.0",
-    "prettier": "^3.0.3",
+    "eslint": "8.48.0",
+    "prettier": "3.0.3",
     "tsconfig": "*",
-    "turbo": "^1.10.14"
+    "turbo": "1.12.3"
   },
   "workspaces": [
     "apps/*",
     "packages/*",
-    "apps/auth/*",
     "apps/polskidev/*"
   ]
 }
