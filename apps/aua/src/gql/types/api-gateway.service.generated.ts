@@ -16,7 +16,11 @@ export type Scalars = {
   Date: { input: any; output: any; }
   DateTime: { input: any; output: any; }
   JSON: { input: any; output: any; }
-  LeadLoansDynamicZoneInput: { input: any; output: any; }
+  KredytyDokumentyDlaKlientaDynamicZoneInput: { input: any; output: any; }
+  KredytyDokumentyKredytuDynamicZoneInput: { input: any; output: any; }
+  KredytyPozostaloDoSplaceniaDynamicZoneInput: { input: any; output: any; }
+  KredytySplaconeDoDniaDynamicZoneInput: { input: any; output: any; }
+  LeadPlanowanyKontaktDynamicZoneInput: { input: any; output: any; }
   TagContentpartsDynamicZoneInput: { input: any; output: any; }
   Upload: { input: any; output: any; }
 };
@@ -192,35 +196,23 @@ export type ComponentContentPartsYoutube = {
   url: Scalars['String']['output'];
 };
 
+export type ComponentOthersDokumenty = {
+  __typename?: 'ComponentOthersDokumenty';
+  dokumenty: UploadFileRelationResponseCollection;
+  id: Scalars['ID']['output'];
+};
+
+
+export type ComponentOthersDokumentyDokumentyArgs = {
+  filters?: InputMaybe<UploadFileFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
 export type ComponentOthersEmail = {
   __typename?: 'ComponentOthersEmail';
   email: Scalars['String']['output'];
   id: Scalars['ID']['output'];
-};
-
-export type ComponentOthersLoan = {
-  __typename?: 'ComponentOthersLoan';
-  amountDisbursedByBank: Scalars['Float']['output'];
-  documents: UploadFileRelationResponseCollection;
-  futureInstallmentSavings: Scalars['Float']['output'];
-  id: Scalars['ID']['output'];
-  interestOnLoanOrigination: Scalars['Float']['output'];
-  loanID: Scalars['String']['output'];
-  loanInsuranceCost: Scalars['Float']['output'];
-  loanOriginationFees: Scalars['Float']['output'];
-  loanStartDate: Scalars['Date']['output'];
-  loanType: Enum_Componentothersloan_Loantype;
-  numberOfInstallments: Scalars['Int']['output'];
-  otherLoanCosts: Scalars['Float']['output'];
-  ourCommissionForThisAgreement: Scalars['Float']['output'];
-  remainingLoanBalance: Scalars['Float']['output'];
-};
-
-
-export type ComponentOthersLoanDocumentsArgs = {
-  filters?: InputMaybe<UploadFileFiltersInput>;
-  pagination?: InputMaybe<PaginationArg>;
-  sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
 export type ComponentOthersPhone = {
@@ -228,6 +220,13 @@ export type ComponentOthersPhone = {
   id: Scalars['ID']['output'];
   phone: Scalars['String']['output'];
   typ?: Maybe<Enum_Componentothersphone_Typ>;
+};
+
+export type ComponentOthersPlanowanyKontakt = {
+  __typename?: 'ComponentOthersPlanowanyKontakt';
+  id: Scalars['ID']['output'];
+  kiedy: Scalars['DateTime']['output'];
+  uwagi?: Maybe<Scalars['String']['output']>;
 };
 
 export type ComponentOthersSeo = {
@@ -251,6 +250,26 @@ export type ComponentOthersSeoInput = {
   title?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type ComponentOthersSplacone = {
+  __typename?: 'ComponentOthersSplacone';
+  data: Scalars['Date']['output'];
+  id: Scalars['ID']['output'];
+  kwota: Scalars['String']['output'];
+};
+
+export type ComponentOthersStatus = {
+  __typename?: 'ComponentOthersStatus';
+  id: Scalars['ID']['output'];
+  typ: Enum_Componentothersstatus_Typ;
+  wiadomosc?: Maybe<Scalars['String']['output']>;
+};
+
+export type ComponentOthersTypPozyczki = {
+  __typename?: 'ComponentOthersTypPozyczki';
+  id: Scalars['ID']['output'];
+  typ?: Maybe<Enum_Componentotherstyppozyczki_Typ>;
+};
+
 export type ComponentStatsViews = {
   __typename?: 'ComponentStatsViews';
   id: Scalars['ID']['output'];
@@ -267,6 +286,107 @@ export type ComponentStatsViewsFiltersInput = {
 export type ComponentStatsViewsInput = {
   id?: InputMaybe<Scalars['ID']['input']>;
   views?: InputMaybe<Scalars['Int']['input']>;
+};
+
+export type ContentReleasesRelease = {
+  __typename?: 'ContentReleasesRelease';
+  actions?: Maybe<ContentReleasesReleaseActionRelationResponseCollection>;
+  createdAt?: Maybe<Scalars['DateTime']['output']>;
+  name: Scalars['String']['output'];
+  releasedAt?: Maybe<Scalars['DateTime']['output']>;
+  updatedAt?: Maybe<Scalars['DateTime']['output']>;
+};
+
+
+export type ContentReleasesReleaseActionsArgs = {
+  filters?: InputMaybe<ContentReleasesReleaseActionFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type ContentReleasesReleaseAction = {
+  __typename?: 'ContentReleasesReleaseAction';
+  contentType: Scalars['String']['output'];
+  createdAt?: Maybe<Scalars['DateTime']['output']>;
+  entry?: Maybe<GenericMorph>;
+  release?: Maybe<ContentReleasesReleaseEntityResponse>;
+  type: Enum_Contentreleasesreleaseaction_Type;
+  updatedAt?: Maybe<Scalars['DateTime']['output']>;
+};
+
+export type ContentReleasesReleaseActionEntity = {
+  __typename?: 'ContentReleasesReleaseActionEntity';
+  attributes?: Maybe<ContentReleasesReleaseAction>;
+  id?: Maybe<Scalars['ID']['output']>;
+};
+
+export type ContentReleasesReleaseActionEntityResponse = {
+  __typename?: 'ContentReleasesReleaseActionEntityResponse';
+  data?: Maybe<ContentReleasesReleaseActionEntity>;
+};
+
+export type ContentReleasesReleaseActionEntityResponseCollection = {
+  __typename?: 'ContentReleasesReleaseActionEntityResponseCollection';
+  data: Array<ContentReleasesReleaseActionEntity>;
+  meta: ResponseCollectionMeta;
+};
+
+export type ContentReleasesReleaseActionFiltersInput = {
+  and?: InputMaybe<Array<InputMaybe<ContentReleasesReleaseActionFiltersInput>>>;
+  contentType?: InputMaybe<StringFilterInput>;
+  createdAt?: InputMaybe<DateTimeFilterInput>;
+  id?: InputMaybe<IdFilterInput>;
+  not?: InputMaybe<ContentReleasesReleaseActionFiltersInput>;
+  or?: InputMaybe<Array<InputMaybe<ContentReleasesReleaseActionFiltersInput>>>;
+  release?: InputMaybe<ContentReleasesReleaseFiltersInput>;
+  type?: InputMaybe<StringFilterInput>;
+  updatedAt?: InputMaybe<DateTimeFilterInput>;
+};
+
+export type ContentReleasesReleaseActionInput = {
+  contentType?: InputMaybe<Scalars['String']['input']>;
+  release?: InputMaybe<Scalars['ID']['input']>;
+  type?: InputMaybe<Enum_Contentreleasesreleaseaction_Type>;
+};
+
+export type ContentReleasesReleaseActionRelationResponseCollection = {
+  __typename?: 'ContentReleasesReleaseActionRelationResponseCollection';
+  data: Array<ContentReleasesReleaseActionEntity>;
+};
+
+export type ContentReleasesReleaseEntity = {
+  __typename?: 'ContentReleasesReleaseEntity';
+  attributes?: Maybe<ContentReleasesRelease>;
+  id?: Maybe<Scalars['ID']['output']>;
+};
+
+export type ContentReleasesReleaseEntityResponse = {
+  __typename?: 'ContentReleasesReleaseEntityResponse';
+  data?: Maybe<ContentReleasesReleaseEntity>;
+};
+
+export type ContentReleasesReleaseEntityResponseCollection = {
+  __typename?: 'ContentReleasesReleaseEntityResponseCollection';
+  data: Array<ContentReleasesReleaseEntity>;
+  meta: ResponseCollectionMeta;
+};
+
+export type ContentReleasesReleaseFiltersInput = {
+  actions?: InputMaybe<ContentReleasesReleaseActionFiltersInput>;
+  and?: InputMaybe<Array<InputMaybe<ContentReleasesReleaseFiltersInput>>>;
+  createdAt?: InputMaybe<DateTimeFilterInput>;
+  id?: InputMaybe<IdFilterInput>;
+  name?: InputMaybe<StringFilterInput>;
+  not?: InputMaybe<ContentReleasesReleaseFiltersInput>;
+  or?: InputMaybe<Array<InputMaybe<ContentReleasesReleaseFiltersInput>>>;
+  releasedAt?: InputMaybe<DateTimeFilterInput>;
+  updatedAt?: InputMaybe<DateTimeFilterInput>;
+};
+
+export type ContentReleasesReleaseInput = {
+  actions?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  name?: InputMaybe<Scalars['String']['input']>;
+  releasedAt?: InputMaybe<Scalars['DateTime']['input']>;
 };
 
 export type CustomerMessage = {
@@ -322,6 +442,31 @@ export type CustomerMessageInput = {
   type?: InputMaybe<Enum_Customermessage_Type>;
 };
 
+export type DateFilterInput = {
+  and?: InputMaybe<Array<InputMaybe<Scalars['Date']['input']>>>;
+  between?: InputMaybe<Array<InputMaybe<Scalars['Date']['input']>>>;
+  contains?: InputMaybe<Scalars['Date']['input']>;
+  containsi?: InputMaybe<Scalars['Date']['input']>;
+  endsWith?: InputMaybe<Scalars['Date']['input']>;
+  eq?: InputMaybe<Scalars['Date']['input']>;
+  eqi?: InputMaybe<Scalars['Date']['input']>;
+  gt?: InputMaybe<Scalars['Date']['input']>;
+  gte?: InputMaybe<Scalars['Date']['input']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['Date']['input']>>>;
+  lt?: InputMaybe<Scalars['Date']['input']>;
+  lte?: InputMaybe<Scalars['Date']['input']>;
+  ne?: InputMaybe<Scalars['Date']['input']>;
+  nei?: InputMaybe<Scalars['Date']['input']>;
+  not?: InputMaybe<DateFilterInput>;
+  notContains?: InputMaybe<Scalars['Date']['input']>;
+  notContainsi?: InputMaybe<Scalars['Date']['input']>;
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['Date']['input']>>>;
+  notNull?: InputMaybe<Scalars['Boolean']['input']>;
+  null?: InputMaybe<Scalars['Boolean']['input']>;
+  or?: InputMaybe<Array<InputMaybe<Scalars['Date']['input']>>>;
+  startsWith?: InputMaybe<Scalars['Date']['input']>;
+};
+
 export type DateTimeFilterInput = {
   and?: InputMaybe<Array<InputMaybe<Scalars['DateTime']['input']>>>;
   between?: InputMaybe<Array<InputMaybe<Scalars['DateTime']['input']>>>;
@@ -352,15 +497,26 @@ export enum Enum_Article_Type {
   Service = 'service'
 }
 
-export enum Enum_Componentothersloan_Loantype {
-  Cash = 'cash',
-  Mortgage = 'mortgage'
-}
-
 export enum Enum_Componentothersphone_Typ {
   Fax = 'fax',
   Home = 'home',
   Mobile = 'mobile'
+}
+
+export enum Enum_Componentothersstatus_Typ {
+  Odrzucony = 'odrzucony',
+  Zaakceptowany = 'zaakceptowany'
+}
+
+export enum Enum_Componentotherstyppozyczki_Typ {
+  Hipoteka = 'hipoteka',
+  Kredyt = 'kredyt',
+  Pozyczka = 'pozyczka'
+}
+
+export enum Enum_Contentreleasesreleaseaction_Type {
+  Publish = 'publish',
+  Unpublish = 'unpublish'
 }
 
 export enum Enum_Customermessage_Rating {
@@ -381,16 +537,79 @@ export enum Enum_Customermessage_Type {
   Feedback = 'feedback'
 }
 
+export enum Enum_Kredyty_Bank {
+  AasaPolska = 'Aasa_Polska',
+  AliorBank = 'Alior_Bank',
+  BgzBnpParibas = 'BGZ_BNP_Paribas',
+  BnpParibasBankPolska = 'BNP_Paribas_Bank_Polska',
+  BankMillennium = 'Bank_Millennium',
+  BankOchronySrodowiska = 'Bank_Ochrony_Srodowiska',
+  BankPekaoSA = 'Bank_Pekao_S_A',
+  BankZachodniWbkSantander = 'Bank_Zachodni_WBK_Santander',
+  CitiHandlowy = 'Citi_Handlowy',
+  CitibankPolska = 'Citibank_Polska',
+  CreditAgricoleBankPolska = 'Credit_Agricole_Bank_Polska',
+  CreditAgricolePolska = 'Credit_Agricole_Polska',
+  DeutscheBankPolska = 'Deutsche_Bank_Polska',
+  EkspresKasa = 'Ekspres_Kasa',
+  Eurobank = 'Eurobank',
+  ExtraPortfel = 'Extra_Portfel',
+  Ferratum = 'Ferratum',
+  FerratumBank = 'Ferratum_Bank',
+  GetinBank = 'Getin_Bank',
+  IngBankSlaski = 'ING_Bank_Slaski',
+  IdeaBank = 'Idea_Bank',
+  Kredito24 = 'Kredito24',
+  KukiPl = 'Kuki_pl',
+  MoneyMan = 'MoneyMan',
+  NetCredit = 'NetCredit',
+  NobleBank = 'Noble_Bank',
+  PkoBankPolski = 'PKO_Bank_Polski',
+  PozyczkaPlus = 'Pozyczka_Plus',
+  ProfiCredit = 'Profi_Credit',
+  Provident = 'Provident',
+  RaiffeisenBankPolska = 'Raiffeisen_Bank_Polska',
+  SantanderBankPolska = 'Santander_Bank_Polska',
+  SmartPozyczka = 'Smart_Pozyczka',
+  SuperGrosz = 'Super_Grosz',
+  SzybkaGotowka = 'Szybka_Gotowka',
+  TaniKredyt = 'Tani_Kredyt',
+  ViaSms = 'ViaSMS',
+  Vivus = 'Vivus',
+  Wonga = 'Wonga',
+  Zaplo = 'Zaplo',
+  MBank = 'mBank'
+}
+
+export enum Enum_Kredyty_Oprocentowanietyp {
+  Stale = 'stale',
+  Zmienne = 'zmienne'
+}
+
+export enum Enum_Kredyty_Ratytyp {
+  Maljace = 'maljace',
+  Stale = 'stale'
+}
+
+export enum Enum_Kredyty_Typpozyczki {
+  GotowkowyKredyt = 'gotowkowyKredyt',
+  GotowkowyPozyczka = 'gotowkowyPozyczka',
+  HipotekaKredyt = 'hipotekaKredyt',
+  HipotekaPozyczka = 'hipotekaPozyczka',
+  KonsolidacjaKredyt = 'konsolidacjaKredyt',
+  KonsolidacjaPozyczka = 'konsolidacjaPozyczka',
+  SamochodwyKredyt = 'samochodwyKredyt',
+  SamochodwyPozyczka = 'samochodwyPozyczka'
+}
+
 export enum Enum_Lead_Status {
-  AtAnalysis = 'atAnalysis',
-  AtLawyer = 'atLawyer',
-  InCourt = 'inCourt',
-  LostInCourt = 'lostInCourt',
-  New = 'new',
-  Recontact = 'recontact',
-  Rejected = 'rejected',
-  WaitForContract = 'waitForContract',
-  WonInCourt = 'wonInCourt'
+  Analiza = 'analiza',
+  Dokumentacja = 'dokumentacja',
+  Nowy = 'nowy',
+  Odrzucony = 'odrzucony',
+  Prawnik = 'prawnik',
+  Umowa = 'umowa',
+  Zakonczony = 'zakonczony'
 }
 
 export enum Enum_Tag_Typ {
@@ -435,7 +654,7 @@ export type FloatFilterInput = {
   startsWith?: InputMaybe<Scalars['Float']['input']>;
 };
 
-export type GenericMorph = Article | ComponentContentPartsLead | ComponentContentPartsMaps | ComponentContentPartsMedia | ComponentContentPartsQuote | ComponentContentPartsTxt | ComponentContentPartsYouTube | ComponentContentPartsYoutube | ComponentOthersEmail | ComponentOthersLoan | ComponentOthersPhone | ComponentOthersSeo | ComponentStatsViews | CustomerMessage | I18NLocale | Lead | Tag | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
+export type GenericMorph = Article | ComponentContentPartsLead | ComponentContentPartsMaps | ComponentContentPartsMedia | ComponentContentPartsQuote | ComponentContentPartsTxt | ComponentContentPartsYouTube | ComponentContentPartsYoutube | ComponentOthersDokumenty | ComponentOthersEmail | ComponentOthersPhone | ComponentOthersPlanowanyKontakt | ComponentOthersSeo | ComponentOthersSplacone | ComponentOthersStatus | ComponentOthersTypPozyczki | ComponentStatsViews | ContentReleasesRelease | ContentReleasesReleaseAction | CustomerMessage | I18NLocale | Kredyty | Lead | Tag | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
 
 export type I18NLocale = {
   __typename?: 'I18NLocale';
@@ -548,18 +767,166 @@ export type JsonFilterInput = {
   startsWith?: InputMaybe<Scalars['JSON']['input']>;
 };
 
+export type Kredyty = {
+  __typename?: 'Kredyty';
+  bank?: Maybe<Enum_Kredyty_Bank>;
+  calkowitaKwotaDoZaplaty: Scalars['String']['output'];
+  calkowityKosztKredytu: Scalars['String']['output'];
+  createdAt?: Maybe<Scalars['DateTime']['output']>;
+  dataPierwszejRaty: Scalars['Date']['output'];
+  dataUmowyKredytowej: Scalars['Date']['output'];
+  dokumentyDlaKlienta: Array<Maybe<KredytyDokumentyDlaKlientaDynamicZone>>;
+  dokumentyKredytu?: Maybe<Array<Maybe<KredytyDokumentyKredytuDynamicZone>>>;
+  imie: Scalars['String']['output'];
+  inneKosztyKredytu: Scalars['String']['output'];
+  kodPocztowy?: Maybe<Scalars['String']['output']>;
+  kwotaWyplaconaPrzezBank: Scalars['String']['output'];
+  lead?: Maybe<LeadEntityResponse>;
+  miasto?: Maybe<Scalars['String']['output']>;
+  naszaProwizjaProcent: Scalars['String']['output'];
+  nazwisko: Scalars['String']['output'];
+  numerDomu?: Maybe<Scalars['String']['output']>;
+  numerMieszkania?: Maybe<Scalars['String']['output']>;
+  numerUmowyKredytowej: Scalars['String']['output'];
+  odsetkiDoZwrotuLacznie: Scalars['String']['output'];
+  odsetkiKredytu: Scalars['String']['output'];
+  okresKredytuWMiesiacach: Scalars['Int']['output'];
+  oprocentowanie: Scalars['String']['output'];
+  oprocentowanieTyp: Enum_Kredyty_Oprocentowanietyp;
+  oszczednoscNaPrzyszlychRatach: Scalars['String']['output'];
+  pozostaloDoSplacenia: Array<Maybe<KredytyPozostaloDoSplaceniaDynamicZone>>;
+  prowizjaKredytu: Scalars['String']['output'];
+  ratyTyp: Enum_Kredyty_Ratytyp;
+  rsso: Scalars['String']['output'];
+  splaconeDoDnia: Array<Maybe<KredytySplaconeDoDniaDynamicZone>>;
+  typPozyczki?: Maybe<Enum_Kredyty_Typpozyczki>;
+  ubezpieczenieKredytu: Scalars['String']['output'];
+  ulica?: Maybe<Scalars['String']['output']>;
+  updatedAt?: Maybe<Scalars['DateTime']['output']>;
+};
+
+export type KredytyDokumentyDlaKlientaDynamicZone = ComponentOthersDokumenty | Error;
+
+export type KredytyDokumentyKredytuDynamicZone = ComponentOthersDokumenty | Error;
+
+export type KredytyEntity = {
+  __typename?: 'KredytyEntity';
+  attributes?: Maybe<Kredyty>;
+  id?: Maybe<Scalars['ID']['output']>;
+};
+
+export type KredytyEntityResponse = {
+  __typename?: 'KredytyEntityResponse';
+  data?: Maybe<KredytyEntity>;
+};
+
+export type KredytyEntityResponseCollection = {
+  __typename?: 'KredytyEntityResponseCollection';
+  data: Array<KredytyEntity>;
+  meta: ResponseCollectionMeta;
+};
+
+export type KredytyFiltersInput = {
+  and?: InputMaybe<Array<InputMaybe<KredytyFiltersInput>>>;
+  bank?: InputMaybe<StringFilterInput>;
+  calkowitaKwotaDoZaplaty?: InputMaybe<StringFilterInput>;
+  calkowityKosztKredytu?: InputMaybe<StringFilterInput>;
+  createdAt?: InputMaybe<DateTimeFilterInput>;
+  dataPierwszejRaty?: InputMaybe<DateFilterInput>;
+  dataUmowyKredytowej?: InputMaybe<DateFilterInput>;
+  id?: InputMaybe<IdFilterInput>;
+  imie?: InputMaybe<StringFilterInput>;
+  inneKosztyKredytu?: InputMaybe<StringFilterInput>;
+  kodPocztowy?: InputMaybe<StringFilterInput>;
+  kwotaWyplaconaPrzezBank?: InputMaybe<StringFilterInput>;
+  lead?: InputMaybe<LeadFiltersInput>;
+  miasto?: InputMaybe<StringFilterInput>;
+  naszaProwizjaProcent?: InputMaybe<StringFilterInput>;
+  nazwisko?: InputMaybe<StringFilterInput>;
+  not?: InputMaybe<KredytyFiltersInput>;
+  numerDomu?: InputMaybe<StringFilterInput>;
+  numerMieszkania?: InputMaybe<StringFilterInput>;
+  numerUmowyKredytowej?: InputMaybe<StringFilterInput>;
+  odsetkiDoZwrotuLacznie?: InputMaybe<StringFilterInput>;
+  odsetkiKredytu?: InputMaybe<StringFilterInput>;
+  okresKredytuWMiesiacach?: InputMaybe<IntFilterInput>;
+  oprocentowanie?: InputMaybe<StringFilterInput>;
+  oprocentowanieTyp?: InputMaybe<StringFilterInput>;
+  or?: InputMaybe<Array<InputMaybe<KredytyFiltersInput>>>;
+  oszczednoscNaPrzyszlychRatach?: InputMaybe<StringFilterInput>;
+  prowizjaKredytu?: InputMaybe<StringFilterInput>;
+  ratyTyp?: InputMaybe<StringFilterInput>;
+  rsso?: InputMaybe<StringFilterInput>;
+  typPozyczki?: InputMaybe<StringFilterInput>;
+  ubezpieczenieKredytu?: InputMaybe<StringFilterInput>;
+  ulica?: InputMaybe<StringFilterInput>;
+  updatedAt?: InputMaybe<DateTimeFilterInput>;
+};
+
+export type KredytyInput = {
+  bank?: InputMaybe<Enum_Kredyty_Bank>;
+  calkowitaKwotaDoZaplaty?: InputMaybe<Scalars['String']['input']>;
+  calkowityKosztKredytu?: InputMaybe<Scalars['String']['input']>;
+  dataPierwszejRaty?: InputMaybe<Scalars['Date']['input']>;
+  dataUmowyKredytowej?: InputMaybe<Scalars['Date']['input']>;
+  dokumentyDlaKlienta?: InputMaybe<Array<Scalars['KredytyDokumentyDlaKlientaDynamicZoneInput']['input']>>;
+  dokumentyKredytu?: InputMaybe<Array<Scalars['KredytyDokumentyKredytuDynamicZoneInput']['input']>>;
+  imie?: InputMaybe<Scalars['String']['input']>;
+  inneKosztyKredytu?: InputMaybe<Scalars['String']['input']>;
+  kodPocztowy?: InputMaybe<Scalars['String']['input']>;
+  kwotaWyplaconaPrzezBank?: InputMaybe<Scalars['String']['input']>;
+  lead?: InputMaybe<Scalars['ID']['input']>;
+  miasto?: InputMaybe<Scalars['String']['input']>;
+  naszaProwizjaProcent?: InputMaybe<Scalars['String']['input']>;
+  nazwisko?: InputMaybe<Scalars['String']['input']>;
+  numerDomu?: InputMaybe<Scalars['String']['input']>;
+  numerMieszkania?: InputMaybe<Scalars['String']['input']>;
+  numerUmowyKredytowej?: InputMaybe<Scalars['String']['input']>;
+  odsetkiDoZwrotuLacznie?: InputMaybe<Scalars['String']['input']>;
+  odsetkiKredytu?: InputMaybe<Scalars['String']['input']>;
+  okresKredytuWMiesiacach?: InputMaybe<Scalars['Int']['input']>;
+  oprocentowanie?: InputMaybe<Scalars['String']['input']>;
+  oprocentowanieTyp?: InputMaybe<Enum_Kredyty_Oprocentowanietyp>;
+  oszczednoscNaPrzyszlychRatach?: InputMaybe<Scalars['String']['input']>;
+  pozostaloDoSplacenia?: InputMaybe<Array<Scalars['KredytyPozostaloDoSplaceniaDynamicZoneInput']['input']>>;
+  prowizjaKredytu?: InputMaybe<Scalars['String']['input']>;
+  ratyTyp?: InputMaybe<Enum_Kredyty_Ratytyp>;
+  rsso?: InputMaybe<Scalars['String']['input']>;
+  splaconeDoDnia?: InputMaybe<Array<Scalars['KredytySplaconeDoDniaDynamicZoneInput']['input']>>;
+  typPozyczki?: InputMaybe<Enum_Kredyty_Typpozyczki>;
+  ubezpieczenieKredytu?: InputMaybe<Scalars['String']['input']>;
+  ulica?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type KredytyPozostaloDoSplaceniaDynamicZone = ComponentOthersSplacone | Error;
+
+export type KredytyRelationResponseCollection = {
+  __typename?: 'KredytyRelationResponseCollection';
+  data: Array<KredytyEntity>;
+};
+
+export type KredytySplaconeDoDniaDynamicZone = ComponentOthersSplacone | Error;
+
 export type Lead = {
   __typename?: 'Lead';
   createdAt?: Maybe<Scalars['DateTime']['output']>;
   email: Scalars['String']['output'];
-  loans?: Maybe<Array<Maybe<LeadLoansDynamicZone>>>;
+  kredyty?: Maybe<KredytyRelationResponseCollection>;
   name: Scalars['String']['output'];
   pesel?: Maybe<Scalars['String']['output']>;
   phone: Scalars['String']['output'];
+  planowanyKontakt: Array<Maybe<LeadPlanowanyKontaktDynamicZone>>;
   recid?: Maybe<Scalars['String']['output']>;
   secondName: Scalars['String']['output'];
   status: Enum_Lead_Status;
   updatedAt?: Maybe<Scalars['DateTime']['output']>;
+};
+
+
+export type LeadKredytyArgs = {
+  filters?: InputMaybe<KredytyFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
 export type LeadEntity = {
@@ -584,6 +951,7 @@ export type LeadFiltersInput = {
   createdAt?: InputMaybe<DateTimeFilterInput>;
   email?: InputMaybe<StringFilterInput>;
   id?: InputMaybe<IdFilterInput>;
+  kredyty?: InputMaybe<KredytyFiltersInput>;
   name?: InputMaybe<StringFilterInput>;
   not?: InputMaybe<LeadFiltersInput>;
   or?: InputMaybe<Array<InputMaybe<LeadFiltersInput>>>;
@@ -597,23 +965,27 @@ export type LeadFiltersInput = {
 
 export type LeadInput = {
   email?: InputMaybe<Scalars['String']['input']>;
-  loans?: InputMaybe<Array<Scalars['LeadLoansDynamicZoneInput']['input']>>;
+  kredyty?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
   name?: InputMaybe<Scalars['String']['input']>;
   pesel?: InputMaybe<Scalars['String']['input']>;
   phone?: InputMaybe<Scalars['String']['input']>;
+  planowanyKontakt?: InputMaybe<Array<Scalars['LeadPlanowanyKontaktDynamicZoneInput']['input']>>;
   recid?: InputMaybe<Scalars['String']['input']>;
   secondName?: InputMaybe<Scalars['String']['input']>;
   status?: InputMaybe<Enum_Lead_Status>;
 };
 
-export type LeadLoansDynamicZone = ComponentOthersLoan | Error;
+export type LeadPlanowanyKontaktDynamicZone = ComponentOthersPlanowanyKontakt | Error;
 
 export type Mutation = {
   __typename?: 'Mutation';
   /** Change user password. Confirm with the current password. */
   changePassword?: Maybe<UsersPermissionsLoginPayload>;
   createArticle?: Maybe<ArticleEntityResponse>;
+  createContentReleasesRelease?: Maybe<ContentReleasesReleaseEntityResponse>;
+  createContentReleasesReleaseAction?: Maybe<ContentReleasesReleaseActionEntityResponse>;
   createCustomerMessage?: Maybe<CustomerMessageEntityResponse>;
+  createKredyty?: Maybe<KredytyEntityResponse>;
   createLead?: Maybe<LeadEntityResponse>;
   createTag?: Maybe<TagEntityResponse>;
   createUploadFile?: Maybe<UploadFileEntityResponse>;
@@ -623,7 +995,10 @@ export type Mutation = {
   /** Create a new user */
   createUsersPermissionsUser: UsersPermissionsUserEntityResponse;
   deleteArticle?: Maybe<ArticleEntityResponse>;
+  deleteContentReleasesRelease?: Maybe<ContentReleasesReleaseEntityResponse>;
+  deleteContentReleasesReleaseAction?: Maybe<ContentReleasesReleaseActionEntityResponse>;
   deleteCustomerMessage?: Maybe<CustomerMessageEntityResponse>;
+  deleteKredyty?: Maybe<KredytyEntityResponse>;
   deleteLead?: Maybe<LeadEntityResponse>;
   deleteTag?: Maybe<TagEntityResponse>;
   deleteUploadFile?: Maybe<UploadFileEntityResponse>;
@@ -644,8 +1019,11 @@ export type Mutation = {
   /** Reset user password. Confirm with a code (resetToken from forgotPassword) */
   resetPassword?: Maybe<UsersPermissionsLoginPayload>;
   updateArticle?: Maybe<ArticleEntityResponse>;
+  updateContentReleasesRelease?: Maybe<ContentReleasesReleaseEntityResponse>;
+  updateContentReleasesReleaseAction?: Maybe<ContentReleasesReleaseActionEntityResponse>;
   updateCustomerMessage?: Maybe<CustomerMessageEntityResponse>;
   updateFileInfo: UploadFileEntityResponse;
+  updateKredyty?: Maybe<KredytyEntityResponse>;
   updateLead?: Maybe<LeadEntityResponse>;
   updateTag?: Maybe<TagEntityResponse>;
   updateUploadFile?: Maybe<UploadFileEntityResponse>;
@@ -670,8 +1048,23 @@ export type MutationCreateArticleArgs = {
 };
 
 
+export type MutationCreateContentReleasesReleaseArgs = {
+  data: ContentReleasesReleaseInput;
+};
+
+
+export type MutationCreateContentReleasesReleaseActionArgs = {
+  data: ContentReleasesReleaseActionInput;
+};
+
+
 export type MutationCreateCustomerMessageArgs = {
   data: CustomerMessageInput;
+};
+
+
+export type MutationCreateKredytyArgs = {
+  data: KredytyInput;
 };
 
 
@@ -710,7 +1103,22 @@ export type MutationDeleteArticleArgs = {
 };
 
 
+export type MutationDeleteContentReleasesReleaseArgs = {
+  id: Scalars['ID']['input'];
+};
+
+
+export type MutationDeleteContentReleasesReleaseActionArgs = {
+  id: Scalars['ID']['input'];
+};
+
+
 export type MutationDeleteCustomerMessageArgs = {
+  id: Scalars['ID']['input'];
+};
+
+
+export type MutationDeleteKredytyArgs = {
   id: Scalars['ID']['input'];
 };
 
@@ -791,6 +1199,18 @@ export type MutationUpdateArticleArgs = {
 };
 
 
+export type MutationUpdateContentReleasesReleaseArgs = {
+  data: ContentReleasesReleaseInput;
+  id: Scalars['ID']['input'];
+};
+
+
+export type MutationUpdateContentReleasesReleaseActionArgs = {
+  data: ContentReleasesReleaseActionInput;
+  id: Scalars['ID']['input'];
+};
+
+
 export type MutationUpdateCustomerMessageArgs = {
   data: CustomerMessageInput;
   id: Scalars['ID']['input'];
@@ -800,6 +1220,12 @@ export type MutationUpdateCustomerMessageArgs = {
 export type MutationUpdateFileInfoArgs = {
   id: Scalars['ID']['input'];
   info?: InputMaybe<FileInfoInput>;
+};
+
+
+export type MutationUpdateKredytyArgs = {
+  data: KredytyInput;
+  id: Scalars['ID']['input'];
 };
 
 
@@ -871,10 +1297,16 @@ export type Query = {
   __typename?: 'Query';
   article?: Maybe<ArticleEntityResponse>;
   articles?: Maybe<ArticleEntityResponseCollection>;
+  contentReleasesRelease?: Maybe<ContentReleasesReleaseEntityResponse>;
+  contentReleasesReleaseAction?: Maybe<ContentReleasesReleaseActionEntityResponse>;
+  contentReleasesReleaseActions?: Maybe<ContentReleasesReleaseActionEntityResponseCollection>;
+  contentReleasesReleases?: Maybe<ContentReleasesReleaseEntityResponseCollection>;
   customerMessage?: Maybe<CustomerMessageEntityResponse>;
   customerMessages?: Maybe<CustomerMessageEntityResponseCollection>;
   i18NLocale?: Maybe<I18NLocaleEntityResponse>;
   i18NLocales?: Maybe<I18NLocaleEntityResponseCollection>;
+  kredyties?: Maybe<KredytyEntityResponseCollection>;
+  kredyty?: Maybe<KredytyEntityResponse>;
   lead?: Maybe<LeadEntityResponse>;
   leads?: Maybe<LeadEntityResponseCollection>;
   me?: Maybe<UsersPermissionsMe>;
@@ -904,6 +1336,30 @@ export type QueryArticlesArgs = {
 };
 
 
+export type QueryContentReleasesReleaseArgs = {
+  id?: InputMaybe<Scalars['ID']['input']>;
+};
+
+
+export type QueryContentReleasesReleaseActionArgs = {
+  id?: InputMaybe<Scalars['ID']['input']>;
+};
+
+
+export type QueryContentReleasesReleaseActionsArgs = {
+  filters?: InputMaybe<ContentReleasesReleaseActionFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+
+export type QueryContentReleasesReleasesArgs = {
+  filters?: InputMaybe<ContentReleasesReleaseFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+
 export type QueryCustomerMessageArgs = {
   id?: InputMaybe<Scalars['ID']['input']>;
 };
@@ -926,6 +1382,18 @@ export type QueryI18NLocalesArgs = {
   filters?: InputMaybe<I18NLocaleFiltersInput>;
   pagination?: InputMaybe<PaginationArg>;
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+
+export type QueryKredytiesArgs = {
+  filters?: InputMaybe<KredytyFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+
+export type QueryKredytyArgs = {
+  id?: InputMaybe<Scalars['ID']['input']>;
 };
 
 
