@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_content_parts_leads",
+  "info": {
+    "displayName": "lead",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "lead": {
+      "type": "text",
+      "required": true,
+      "unique": false,
+      "maxLength": 300,
+      "minLength": 160
+    }
+  }
+}

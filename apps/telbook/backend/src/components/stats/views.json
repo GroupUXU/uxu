@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_stats_views",
+  "info": {
+    "displayName": "views",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "views": {
+      "type": "integer",
+      "default": 1,
+      "required": true
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "kind": "collectionType",
+  "collectionName": "phones",
+  "info": {
+    "singularName": "phone",
+    "pluralName": "phones",
+    "displayName": "phone",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "phone": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "reputation": {
+      "type": "enumeration",
+      "enum": [
+        "negative",
+        "annoying",
+        "unknown",
+        "inert",
+        "positive"
+      ],
+      "default": "inert"
+    },
+    "lastviews": {
+      "type": "datetime"
+    },
+    "description": {
+      "type": "text"
+    },
+    "network": {
+      "type": "enumeration",
+      "enum": [
+        "CenterNet",
+        "Cyfrowy Polsat",
+        "FM Group Mobile",
+        "Heyah",
+        "Inea",
+        "Klucz Mobile",
+        "Lajt Mobile",
+        "Lycamobile",
+        "Multimedia Polska",
+        "NAU Mobile",
+        "Netia Mobile",
+        "Nju",
+        "Nordisk",
+        "Orange",
+        "Plus",
+        "Premium Mobile",
+        "Red Bull Mobile",
+        "Sat Film",
+        "T-Mobile",
+        "Tele25",
+        "TeleCube",
+        "Toya",
+        "TuBiedronka",
+        "UPC Polska",
+        "Vectone",
+        "Vectra",
+        "Virgin Mobile",
+        "W naszej Rodzinie",
+        "WRodzinie",
+        "White Mobile",
+        "iPlus"
+      ]
+    },
+    "views": {
+      "type": "dynamiczone",
+      "components": [
+        "stats.views"
+      ],
+      "required": true
+    },
+    "totalRatings": {
+      "type": "json"
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "phone"
+    }
+  }
+}

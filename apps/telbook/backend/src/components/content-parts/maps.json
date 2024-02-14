@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_content_parts_maps",
+  "info": {
+    "displayName": "GoogleMaps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    }
+  }
+}

@@ -27,7 +27,9 @@
     "auaprod": "npx turbo run start --filter=aua",
     "polskidevbackendprod": "cd apps/polskidev/backend && yarn start",
     "polskidevbackendbuild": "cd apps/polskidev/backend && yarn build",
-    "heroku-postbuild": "if [ $APP_NAME_ENV = 'polskidevbackend' ]; then yarn run polskidevbackendbuild; fi"
+    "telbookbackendprod": "cd apps/telbook/backend && yarn start",
+    "telbookbackendbuild": "cd apps/telbook/backend && yarn build",
+    "heroku-postbuild": "if [ $APP_NAME_ENV = 'polskidevbackend' ]; then yarn run polskidevbackendbuild; elif [ $APP_NAME_ENV = 'telbookbackend' ]; then yarn run telbookbackendbuild; fi"
   },
   "devDependencies": {
     "eslint": "8.48.0",
@@ -38,6 +40,7 @@
   "workspaces": [
     "apps/*",
     "packages/*",
-    "apps/polskidev/*"
+    "apps/polskidev/*",
+    "apps/telbook/*"
   ]
 }
