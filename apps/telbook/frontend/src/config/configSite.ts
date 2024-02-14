@@ -39,7 +39,7 @@ export const siteConfig: SiteConfig = {
         domain: 'https://telbook.info',
         slug: '/',
         brand: "telbook",
-        shortBrand: "telbook",
+        shortBrand: "telbookshort",
         defaultCover: 'https://telbook.info/defaultCover.png',
         canonicalUrl: `https://telbook.info`,
         images: [{url: 'https://telbook.info/og.png'}],

@@ -9,8 +9,13 @@ export const footerConfig: FooterProps = {
       links: [
         {
           id: `${generateUniqueId()}`,
-          title: "Blog",
+          title: "Home",
           linkPath: "/"
+        },
+        {
+          id: `${generateUniqueId()}`,
+          title: "Blog",
+          linkPath: "/b"
         },
         {
           id: `${generateUniqueId()}`,
