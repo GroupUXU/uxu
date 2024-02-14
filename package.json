@@ -29,7 +29,7 @@
     "polskidevbackendbuild": "cd apps/polskidev/backend && yarn build",
     "telbookbackendprod": "cd apps/telbook/backend && yarn start",
     "telbookbackendbuild": "cd apps/telbook/backend && yarn build",
-    "heroku-postbuild": "if [ $APP_NAME_ENV = 'polskidevbackend' ]; then yarn run polskidevbackendbuild; if [ $APP_NAME_ENV = 'telbookbackend' ]; then yarn run telbookbackendbuild; fi"
+    "heroku-postbuild": "if [ $APP_NAME_ENV = 'polskidevbackend' ]; then yarn run polskidevbackendbuild; elif [ $APP_NAME_ENV = 'telbookbackend' ]; then yarn run telbookbackendbuild; fi"
   },
   "devDependencies": {
     "eslint": "8.48.0",
