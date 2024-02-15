@@ -11,7 +11,7 @@ export type GetArticleQueryVariables = Types.Exact<{
 }>;
 
 
-export type GetArticleQuery = { __typename?: 'Query', article?: { __typename?: 'ArticleEntityResponse', data?: { __typename: 'ArticleEntity', id?: string | null, attributes?: { __typename?: 'Article', type: Types.Enum_Article_Type, title: string, createdAt?: any | null, seo: { __typename?: 'ComponentOthersSeo', id: string, title?: string | null, description?: string | null }, cover: { __typename: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', url: string, caption?: string | null, alternativeText?: string | null, formats?: any | null } | null } | null }, lead: { __typename: 'ComponentContentPartsLead', id: string, lead: string }, tags?: { __typename: 'TagRelationResponseCollection', data: Array<{ __typename?: 'TagEntity', id?: string | null, attributes?: { __typename?: 'Tag', title: string } | null }> } | null, authors?: { __typename?: 'UsersPermissionsUserRelationResponseCollection', data: Array<{ __typename?: 'UsersPermissionsUserEntity', id?: string | null, attributes?: { __typename?: 'UsersPermissionsUser', username: string, avatar?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', attributes?: { __typename?: 'UploadFile', url: string, caption?: string | null, alternativeText?: string | null, formats?: any | null } | null } | null } | null } | null }> } | null, views: { __typename: 'ComponentStatsViews', id: string, views: number }, contentparts: Array<{ __typename?: 'ComponentContentPartsMedia', id: string, media: { __typename: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', url: string, caption?: string | null, alternativeText?: string | null, formats?: any | null } | null } | null } } | { __typename: 'ComponentContentPartsQuote', id: string, quote: string } | { __typename: 'ComponentContentPartsTxt', id: string, txt: string } | { __typename: 'ComponentContentPartsYoutube', id: string, url: string } | { __typename?: 'Error' } | null> } | null } | null } | null };
+export type GetArticleQuery = { __typename?: 'Query', article?: { __typename?: 'ArticleEntityResponse', data?: { __typename: 'ArticleEntity', id?: string | null, attributes?: { __typename?: 'Article', type: Types.Enum_Article_Type, title: string, createdAt?: any | null, seo: { __typename?: 'ComponentOthersSeo', id: string, title: string, description: string }, cover: { __typename: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', url: string, caption?: string | null, alternativeText?: string | null, formats?: any | null } | null } | null }, lead: { __typename: 'ComponentContentPartsLead', id: string, lead: string }, tags?: { __typename: 'TagRelationResponseCollection', data: Array<{ __typename?: 'TagEntity', id?: string | null, attributes?: { __typename?: 'Tag', title: string } | null }> } | null, authors?: { __typename?: 'UsersPermissionsUserRelationResponseCollection', data: Array<{ __typename?: 'UsersPermissionsUserEntity', id?: string | null, attributes?: { __typename?: 'UsersPermissionsUser', username: string, avatar?: { __typename?: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', attributes?: { __typename?: 'UploadFile', url: string, caption?: string | null, alternativeText?: string | null, formats?: any | null } | null } | null } | null } | null }> } | null, views: { __typename: 'ComponentStatsViews', id: string, views: number }, contentparts: Array<{ __typename?: 'ComponentContentPartsMedia', id: string, media: { __typename: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', url: string, caption?: string | null, alternativeText?: string | null, formats?: any | null } | null } | null } } | { __typename: 'ComponentContentPartsQuote', id: string, quote: string } | { __typename: 'ComponentContentPartsTxt', id: string, txt: string } | { __typename: 'ComponentContentPartsYoutube', id: string, url: string } | { __typename?: 'Error' } | null> } | null } | null } | null };
 
 export type GetArticlesQueryVariables = Types.Exact<{
   pageSize: Types.Scalars['Int']['input'];
@@ -134,13 +134,8 @@ export function useGetArticleLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions
           const options = {...defaultOptions, ...baseOptions}
           return Apollo.useLazyQuery<GetArticleQuery, GetArticleQueryVariables>(GetArticleDocument, options);
         }
-export function useGetArticleSuspenseQuery(baseOptions?: Apollo.SuspenseQueryHookOptions<GetArticleQuery, GetArticleQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useSuspenseQuery<GetArticleQuery, GetArticleQueryVariables>(GetArticleDocument, options);
-        }
 export type GetArticleQueryHookResult = ReturnType<typeof useGetArticleQuery>;
 export type GetArticleLazyQueryHookResult = ReturnType<typeof useGetArticleLazyQuery>;
-export type GetArticleSuspenseQueryHookResult = ReturnType<typeof useGetArticleSuspenseQuery>;
 export type GetArticleQueryResult = Apollo.QueryResult<GetArticleQuery, GetArticleQueryVariables>;
 export const GetArticlesDocument = gql`
     query GetArticles($pageSize: Int!, $page: Int!, $type: [String]!) {
@@ -229,13 +224,8 @@ export function useGetArticlesLazyQuery(baseOptions?: Apollo.LazyQueryHookOption
           const options = {...defaultOptions, ...baseOptions}
           return Apollo.useLazyQuery<GetArticlesQuery, GetArticlesQueryVariables>(GetArticlesDocument, options);
         }
-export function useGetArticlesSuspenseQuery(baseOptions?: Apollo.SuspenseQueryHookOptions<GetArticlesQuery, GetArticlesQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useSuspenseQuery<GetArticlesQuery, GetArticlesQueryVariables>(GetArticlesDocument, options);
-        }
 export type GetArticlesQueryHookResult = ReturnType<typeof useGetArticlesQuery>;
 export type GetArticlesLazyQueryHookResult = ReturnType<typeof useGetArticlesLazyQuery>;
-export type GetArticlesSuspenseQueryHookResult = ReturnType<typeof useGetArticlesSuspenseQuery>;
 export type GetArticlesQueryResult = Apollo.QueryResult<GetArticlesQuery, GetArticlesQueryVariables>;
 export const GetArticlesWithTagDocument = gql`
     query GetArticlesWithTag($pageSize: Int!, $page: Int!, $type: [String]!, $tagID: ID) {
@@ -325,11 +315,6 @@ export function useGetArticlesWithTagLazyQuery(baseOptions?: Apollo.LazyQueryHoo
           const options = {...defaultOptions, ...baseOptions}
           return Apollo.useLazyQuery<GetArticlesWithTagQuery, GetArticlesWithTagQueryVariables>(GetArticlesWithTagDocument, options);
         }
-export function useGetArticlesWithTagSuspenseQuery(baseOptions?: Apollo.SuspenseQueryHookOptions<GetArticlesWithTagQuery, GetArticlesWithTagQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useSuspenseQuery<GetArticlesWithTagQuery, GetArticlesWithTagQueryVariables>(GetArticlesWithTagDocument, options);
-        }
 export type GetArticlesWithTagQueryHookResult = ReturnType<typeof useGetArticlesWithTagQuery>;
 export type GetArticlesWithTagLazyQueryHookResult = ReturnType<typeof useGetArticlesWithTagLazyQuery>;
-export type GetArticlesWithTagSuspenseQueryHookResult = ReturnType<typeof useGetArticlesWithTagSuspenseQuery>;
 export type GetArticlesWithTagQueryResult = Apollo.QueryResult<GetArticlesWithTagQuery, GetArticlesWithTagQueryVariables>;

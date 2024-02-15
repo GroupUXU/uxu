@@ -10,7 +10,7 @@ export type GetTagQueryVariables = Types.Exact<{
 }>;
 
 
-export type GetTagQuery = { __typename?: 'Query', tag?: { __typename: 'TagEntityResponse', data?: { __typename?: 'TagEntity', id?: string | null, attributes?: { __typename?: 'Tag', title: string, seo: { __typename: 'ComponentOthersSeo', id: string, title?: string | null, description?: string | null }, cover: { __typename: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', url: string, caption?: string | null, alternativeText?: string | null, formats?: any | null } | null } | null }, lead: { __typename: 'ComponentContentPartsLead', id: string, lead: string }, contentparts: Array<{ __typename: 'ComponentContentPartsTxt', id: string, txt: string } | { __typename?: 'Error' } | null> } | null } | null } | null };
+export type GetTagQuery = { __typename?: 'Query', tag?: { __typename: 'TagEntityResponse', data?: { __typename?: 'TagEntity', id?: string | null, attributes?: { __typename?: 'Tag', title: string, seo: { __typename: 'ComponentOthersSeo', id: string, title: string, description: string }, cover: { __typename: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', url: string, caption?: string | null, alternativeText?: string | null, formats?: any | null } | null } | null }, lead: { __typename: 'ComponentContentPartsLead', id: string, lead: string }, contentparts: Array<{ __typename: 'ComponentContentPartsTxt', id: string, txt: string } | { __typename?: 'Error' } | null> } | null } | null } | null };
 
 export type GetTagsListQueryVariables = Types.Exact<{
   page?: Types.InputMaybe<Types.Scalars['Int']['input']>;
@@ -84,13 +84,8 @@ export function useGetTagLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<Get
           const options = {...defaultOptions, ...baseOptions}
           return Apollo.useLazyQuery<GetTagQuery, GetTagQueryVariables>(GetTagDocument, options);
         }
-export function useGetTagSuspenseQuery(baseOptions?: Apollo.SuspenseQueryHookOptions<GetTagQuery, GetTagQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useSuspenseQuery<GetTagQuery, GetTagQueryVariables>(GetTagDocument, options);
-        }
 export type GetTagQueryHookResult = ReturnType<typeof useGetTagQuery>;
 export type GetTagLazyQueryHookResult = ReturnType<typeof useGetTagLazyQuery>;
-export type GetTagSuspenseQueryHookResult = ReturnType<typeof useGetTagSuspenseQuery>;
 export type GetTagQueryResult = Apollo.QueryResult<GetTagQuery, GetTagQueryVariables>;
 export const GetTagsListDocument = gql`
     query getTagsList($page: Int, $pageSize: Int) {
@@ -141,11 +136,6 @@ export function useGetTagsListLazyQuery(baseOptions?: Apollo.LazyQueryHookOption
           const options = {...defaultOptions, ...baseOptions}
           return Apollo.useLazyQuery<GetTagsListQuery, GetTagsListQueryVariables>(GetTagsListDocument, options);
         }
-export function useGetTagsListSuspenseQuery(baseOptions?: Apollo.SuspenseQueryHookOptions<GetTagsListQuery, GetTagsListQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useSuspenseQuery<GetTagsListQuery, GetTagsListQueryVariables>(GetTagsListDocument, options);
-        }
 export type GetTagsListQueryHookResult = ReturnType<typeof useGetTagsListQuery>;
 export type GetTagsListLazyQueryHookResult = ReturnType<typeof useGetTagsListLazyQuery>;
-export type GetTagsListSuspenseQueryHookResult = ReturnType<typeof useGetTagsListSuspenseQuery>;
 export type GetTagsListQueryResult = Apollo.QueryResult<GetTagsListQuery, GetTagsListQueryVariables>;
