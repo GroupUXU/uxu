@@ -111,7 +111,7 @@ export interface OthersSeo extends Schema.Component {
     description: '';
   };
   attributes: {
-    title: Attribute.String & Attribute.Unique;
+    title: Attribute.String & Attribute.Required;
     description: Attribute.Text & Attribute.Required;
   };
 }

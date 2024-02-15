@@ -1,17 +1,18 @@
 import type { ReactElement } from 'react';
-import type { PostShort } from "utils";
+import type { PostShort } from 'utils';
 import type { NormalizedCacheObject } from "@apollo/client";
+import { LayoutListingPost } from 'design-system/components/layout/layoutListingPost';
 import { SectionInfiniteScroll } from 'design-system/components/templates/section/sectionInfiniteScroll';
-import { LayoutListingPost } from 'design-system/components/layout/layoutListingPost/layoutListingPost';
 import { PostList } from 'design-system/components/organisms/postList';
-import { Tree, renderBranches } from 'design-system/components/molecules/tree';
 import { StickyWrapper } from 'design-system/components/atoms/stickyWrapper';
+import { Tree, renderBranches } from 'design-system/components/molecules/tree';
 import { CrumbleMenu } from 'design-system/components/molecules/crumbleMenu';
 import { useSeoConfig } from 'design-system/hooks/useSeoConfig';
 import { LeadPostWithList } from "design-system/components/templates/section/leadPostWithList";
-import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig } from '../../config';
-import { clientGetArticlesQuery, useGetArticlesQuery } from '../../gql';
+import { footerConfig, headerMenuConfig, searchEngineConfig, siteBarMenuConfig } from '../../config';
+import { useGetArticlesQuery, clientGetArticlesQuery } from '../../gql';
 import { adapterArticlesData } from '../../utils/adapters/adapterArticlesData';
+
 
 function Index(): ReactElement  {
   const seo = useSeoConfig({});
@@ -19,7 +20,7 @@ function Index(): ReactElement  {
     variables: {
       pageSize: 12,
       page: 1,
-      type: ['service']
+      type: ['article']
     },
     ssr: true
   });
@@ -30,7 +31,7 @@ function Index(): ReactElement  {
         variables: {
           pageSize: 12,
           page,
-          type: ['service']
+          type: ['article']
         }
       });
       return { page: page + 1 };
@@ -59,7 +60,7 @@ function Index(): ReactElement  {
     topElement={(
       <>
         <LeadPostWithList posts={leadPostWithListData}/>
-        <CrumbleMenu data={[{title: "home", href: "/"}, {title: "usługi", href: "/s"}]}/>
+        <CrumbleMenu data={[{title: "home", href: "/"}, {title: "blog", href: "/blog"}]}/>
       </>
     )}
   >
@@ -74,12 +75,11 @@ function Index(): ReactElement  {
   );
 };
 
-
 export async function getServerSideProps(): Promise<{props: { initialApolloState: NormalizedCacheObject }}> {
-  const { apolloClient } = await clientGetArticlesQuery({ variables: { pageSize: 12, page: 1, type: ['service'] }})
+  const { apolloClient } = await clientGetArticlesQuery({ variables: { pageSize: 12, page: 1 }})
   return {
     props: {
-      initialApolloState: apolloClient.extract(),
+      initialApolloState: apolloClient.extract()
     },
   };
 }

@@ -10,12 +10,9 @@ export const headerMenuConfig: HeaderMenuConfigTypes = [
 
 export const siteBarMenuConfig: Array<BranchProps> = [
   {
-    title: "Wzorce projektowe", href: "/t/wzorce-projektowe",
+    title: "Wiadomości", href: "/t/1/wiadomosci",
   },
   {
-    title: "Zagadki", href: "/t/zagadki",
-  },
-  {
-    title: "tutoriale", href: "/t/tutoriale",
+    title: "Poradniki", href: "/t/2/poradniki",
   },
 ]

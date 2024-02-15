@@ -8,8 +8,8 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": false,
-      "unique": true
+      "required": true,
+      "unique": false
     },
     "description": {
       "type": "text",
