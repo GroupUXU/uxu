@@ -6,3 +6,4 @@ export * from './regex';
 export * from './server';
 export * from './slugs';
 export * from './types';
+export * from './phones';

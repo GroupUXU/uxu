@@ -1,10 +1,12 @@
 import type { PropsWithChildren, ReactElement } from "react";
 
 
-export type PropsNote = PropsWithChildren<{
+export type NoteType = 'success' | 'error' | 'warning' | 'default';
+
+export type NoteProps = PropsWithChildren<{
   fill?: boolean;
   disabled?: boolean;
   className?: string;
   action?: ReactElement;
-  type?: 'success' | 'error' | 'warning' | 'default' ;
+  type?: NoteType;
 }>

@@ -1,0 +1,46 @@
+@import "design-system/style/mixins";
+
+.section {
+  width: 100%;
+  position: relative;
+  padding: var(--uxu-space-default) 0;
+
+
+  table {
+    width: 100%;
+    max-width: 100%;
+    padding: var(--uxu-space-large) 0;
+
+    thead {
+      background-color: var(--uxu-color-background-secound);
+    }
+
+    td {
+      padding: var(--uxu-space-default);
+      border: var(--uxu-border-default);
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    padding: var(--uxu-space-large) 0;
+  }
+
+  ol, ul {
+    display: block;
+    padding: var(--uxu-space-large) var(--uxu-space-default);
+
+    li {
+      position: relative;
+
+      ol, ul {
+        padding: var(--uxu-space-small) var(--uxu-space-default);
+      }
+    }
+  }
+
+
+  p {
+    padding-bottom: var(--uxu-space-default);
+  }
+
+}

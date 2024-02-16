@@ -1,0 +1,72 @@
+@import "design-system/style/mixins";
+
+.section {
+  width: 100%;
+  min-height: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--uxu-space-default);
+  padding: calc(var(--uxu-space-large) * 2) 0;
+
+  @include media('s') {
+    min-height: 60rem;
+  }
+
+  h1, h6 {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    color: transparent;
+    white-space: nowrap;
+
+    &::before {
+      opacity: 1;
+      display: block;
+      position: absolute;
+      content: attr(data-text);
+      -webkit-background-clip: text;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+      color: transparent;
+    }
+  }
+
+  h1 {
+    font-size: var(--uxu-font-size-default);
+
+    @include media('s') {
+      font-size: var(--uxu-font-size-h1);
+    }
+
+    &::before {
+
+      background-image: var(--uxu-gradient-blue-tell);
+    }
+  }
+
+  h6 {
+    font-size: var(--uxu-font-size-small);
+
+    @include media('s') {
+      font-size: var(--uxu-font-size-h6);
+    }
+
+    &::before {
+      background-image: var(--uxu-gradient-gray-gray);
+    }
+  }
+
+  .search {
+    width: 100%;
+    min-height: 4.5rem;
+    max-width: 90rem;
+    margin: 0 auto;
+
+    @include media('s') {
+      min-height: 6rem;
+    }
+  }
+}

@@ -2,7 +2,7 @@ import type { ReactElement } from 'react';
 import { AlertTriangle, CheckCircle, AlertOctagon, HelpCircle } from 'react-feather';
 import classNames from 'classnames';
 import styles from './note.module.scss';
-import type { PropsNote } from './types';
+import {NoteProps} from './types';
 
 const iconComponents = {
   success: <CheckCircle />,
@@ -11,7 +11,7 @@ const iconComponents = {
   default: <HelpCircle />,
 };
 
-export function Note({ children, className, type = 'default', fill, action, disabled }: PropsNote): ReactElement {
+export function Note({ children, className, type = 'default', fill, action, disabled }: NoteProps): ReactElement {
   const IconComponent = iconComponents[type];
   const wrapperClasses = classNames(styles.note, className, {
     [styles[type]]: !fill,

@@ -1,3 +1,5 @@
+@import "mixins";
+
 p,
 h1,
 h2,
@@ -67,6 +69,11 @@ h6 {
   display: block;
   text-align: center;
   font-weight: normal;
+  font-size: var(--uxu-font-size-h6);
   color: var(--uxu-color-text-default);
   margin-bottom: var(--uxu-space-large);
+
+  @include media('s') {
+    font-size: var(--uxu-font-size-h4);
+  }
 }
