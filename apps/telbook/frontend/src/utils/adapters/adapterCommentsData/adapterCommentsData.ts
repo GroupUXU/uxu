@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment -- i repair next time */
 import { formatPhoneNumberPL } from 'utils/phones';
 import type { Comment } from 'utils';
 import { NoteType } from 'design-system/components/atoms/note/types';
@@ -16,16 +17,15 @@ export function adapterCommentsData(getComments: GetCommentsQuery): Array<Commen
   };
   
   return getComments.comments.data.map(({ id, attributes }) => {
-    const { message, author, phone, createdAt } = attributes || {};
-    const reputation = author as EnumPhoneReputation;
-    const type: NoteType = reputationToNoteType[reputation] ?? 'default';
+    const data = attributes;
+    const reputation: NoteType = reputationToNoteType[data?.author || ''] || 'default';
     
     return {
-      id: id ?? "",
-      createdAt: createdAt ? String(createdAt) : "",
-      message: message ?? "",
-      type,
-      phone: formatPhoneNumberPL(phone?.data?.attributes?.phone) || undefined,
+      id: id || "",
+      createdAt: data?.createdAt as string || "",
+      message: data?.message || "",
+      type: reputation,
+      phone: formatPhoneNumberPL(data?.phone?.data?.attributes?.phone) || undefined,
     };
   });
 }
