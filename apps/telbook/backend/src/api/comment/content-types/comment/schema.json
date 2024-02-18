@@ -4,7 +4,8 @@
   "info": {
     "singularName": "comment",
     "pluralName": "comments",
-    "displayName": "comment"
+    "displayName": "comment",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,15 +15,23 @@
     "message": {
       "type": "text"
     },
-    "author": {
-      "type": "string",
-      "required": true
-    },
     "phone": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::phone.phone",
       "inversedBy": "comments"
+    },
+    "reputation": {
+      "type": "enumeration",
+      "enum": [
+        "success",
+        "default",
+        "warning",
+        "danger",
+        "error"
+      ],
+      "default": "annoying",
+      "required": true
     }
   }
 }

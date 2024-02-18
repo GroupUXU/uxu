@@ -16,7 +16,8 @@
       "type": "enumeration",
       "enum": [
         "other",
-        "city"
+        "city",
+        "phone"
       ],
       "default": "city",
       "required": true
@@ -64,6 +65,12 @@
       "repeatable": false,
       "required": true,
       "component": "others.seo"
+    },
+    "phone": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::phone.phone",
+      "inversedBy": "tags"
     }
   }
 }

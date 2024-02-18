@@ -8,7 +8,6 @@ import {footerConfig, headerMenuConfig, searchEngineConfig} from '../config';
 import {clientGetArticlesQuery, useGetArticlesQuery, clientGetCommentsQuery, useGetCommentsQuery} from "../gql";
 import {adapterArticlesData, adapterCommentsData} from "../utils/adapters";
 import {SectionSearch, SectionListCommentsPhones, SectionEmpty} from "../components";
-import type {NoteType} from "design-system/components/atoms/note/types";
 
 function Index(): ReactElement {
   const seo = useSeoConfig({});
@@ -33,7 +32,7 @@ function Index(): ReactElement {
   
   const articlesCopy: Array<PostShort> = getArticlesData?.articles?.data ? adapterArticlesData(getArticlesData, "medium") : [];
   const leadPostWithListData: Array<PostShort> = articlesCopy.slice(0, 5);
-  const comments: Array<Comment & { phone?: string; type: NoteType }> = getCommentsData?.comments?.data ? adapterCommentsData(getCommentsData) : [];
+  const comments: Array<Comment> = getCommentsData?.comments?.data ? adapterCommentsData(getCommentsData) : [];
   
   return (
      <LayoutFull

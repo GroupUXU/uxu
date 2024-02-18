@@ -1,0 +1,125 @@
+@import "../../../../../style/mixins";
+
+.article {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  background-color: transparent;
+  padding: var(--uxu-space-large) 0;
+}
+
+.wrapperLeadWithAd {
+  display: grid;
+  gap: var(--uxu-space-default);
+  grid-template-columns: auto;
+  position: relative;
+
+  @include media(m) {
+    grid-template-columns: 1fr 30rem;
+  }
+}
+
+
+.wrapperContentWithAd {
+  display: grid;
+  gap: var(--uxu-space-default);
+  width: 100%;
+  grid-template-columns: auto;
+  position: relative;
+
+  @include media(m) {
+    grid-template-columns: 16rem 1fr 30rem;
+  }
+}
+
+.header {
+  font-size: var(--uxu-font-size-h5);
+  color: var(--uxu-color-link-secound);
+  padding-bottom: var(--uxu-space-large);
+
+
+  @include media(m) {
+    font-size: var(--uxu-font-size-h1);
+    padding-bottom: var(--uxu-space-default);
+  }
+}
+
+
+.content {
+  width: 100%;
+  display: flex;
+  position: relative;
+  gap: var(--uxu-space-small);
+  flex-direction: column;
+  padding: var(--uxu-space-default) 0;
+
+  .lead {
+    display: block;
+    position: relative;
+    padding-bottom: var(--uxu-space-default);
+
+    @include media(m) {
+      font-size: var(--uxu-font-size-large);
+      padding-bottom: var(--uxu-space-default);
+    }
+  }
+
+  q {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-radius: 0.6rem;
+    justify-content: center;
+    padding: var(--uxu-space-large);
+    margin: var(--uxu-space-default) auto;
+    border: var(--uxu-border-default);
+    background-color: var(--uxu-color-background-secound);
+
+    &::before,
+    &::after {
+      line-height: 0;
+      font-size: 6rem;
+      font-weight: bold;
+      position: absolute;
+    }
+
+    &::before {
+      bottom: 4rem;
+      content: ',,';
+      left: var(--uxu-space-small);
+    }
+
+    &::after {
+      top: 3rem;
+      content: '"';
+      right: var(--uxu-space-small);
+    }
+  }
+}
+
+
+.wrapperAds {
+  width: 25rem;
+  position: relative;
+  padding-bottom: var(--uxu-space-default);
+
+  &.adsInPost {
+    display: none;
+
+    @include media(m) {
+      display: block;
+    }
+  }
+}
+
+.boxText {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 var(--uxu-space-default) calc(4.2rem + var(--uxu-space-default));
+}
+

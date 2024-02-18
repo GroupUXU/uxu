@@ -133,11 +133,11 @@ export type BooleanFilterInput = {
 
 export type Comment = {
   __typename?: 'Comment';
-  author: Scalars['String']['output'];
   createdAt?: Maybe<Scalars['DateTime']['output']>;
   message?: Maybe<Scalars['String']['output']>;
   phone?: Maybe<PhoneEntityResponse>;
   publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  reputation: Enum_Comment_Reputation;
   updatedAt?: Maybe<Scalars['DateTime']['output']>;
 };
 
@@ -160,7 +160,6 @@ export type CommentEntityResponseCollection = {
 
 export type CommentFiltersInput = {
   and?: InputMaybe<Array<InputMaybe<CommentFiltersInput>>>;
-  author?: InputMaybe<StringFilterInput>;
   createdAt?: InputMaybe<DateTimeFilterInput>;
   id?: InputMaybe<IdFilterInput>;
   message?: InputMaybe<StringFilterInput>;
@@ -168,14 +167,15 @@ export type CommentFiltersInput = {
   or?: InputMaybe<Array<InputMaybe<CommentFiltersInput>>>;
   phone?: InputMaybe<PhoneFiltersInput>;
   publishedAt?: InputMaybe<DateTimeFilterInput>;
+  reputation?: InputMaybe<StringFilterInput>;
   updatedAt?: InputMaybe<DateTimeFilterInput>;
 };
 
 export type CommentInput = {
-  author?: InputMaybe<Scalars['String']['input']>;
   message?: InputMaybe<Scalars['String']['input']>;
   phone?: InputMaybe<Scalars['ID']['input']>;
   publishedAt?: InputMaybe<Scalars['DateTime']['input']>;
+  reputation?: InputMaybe<Enum_Comment_Reputation>;
 };
 
 export type CommentRelationResponseCollection = {
@@ -507,6 +507,14 @@ export enum Enum_Article_Type {
   Article = 'article'
 }
 
+export enum Enum_Comment_Reputation {
+  Danger = 'danger',
+  Default = 'default',
+  Error = 'error',
+  Success = 'success',
+  Warning = 'warning'
+}
+
 export enum Enum_Componentothersphone_Typ {
   Fax = 'fax',
   Home = 'home',
@@ -570,17 +578,16 @@ export enum Enum_Phone_Network {
   IPlus = 'iPlus'
 }
 
-export enum Enum_Phone_Reputation {
-  Annoying = 'annoying',
-  Inert = 'inert',
-  Negative = 'negative',
-  Positive = 'positive',
-  Unknown = 'unknown'
+export enum Enum_Phone_Typ {
+  Mobile = 'mobile',
+  Premium = 'premium',
+  Stationary = 'stationary'
 }
 
 export enum Enum_Tag_Typ {
   City = 'city',
-  Other = 'other'
+  Other = 'other',
+  Phone = 'phone'
 }
 
 export type Error = {
@@ -1047,13 +1054,14 @@ export type PaginationArg = {
 export type Phone = {
   __typename?: 'Phone';
   comments?: Maybe<CommentRelationResponseCollection>;
+  cover: UploadFileEntityResponse;
   createdAt?: Maybe<Scalars['DateTime']['output']>;
-  description?: Maybe<Scalars['String']['output']>;
-  lastviews?: Maybe<Scalars['DateTime']['output']>;
+  lead: ComponentContentPartsLead;
   network?: Maybe<Enum_Phone_Network>;
   phone: Scalars['String']['output'];
-  reputation?: Maybe<Enum_Phone_Reputation>;
-  totalRatings?: Maybe<Scalars['JSON']['output']>;
+  ratings?: Maybe<Scalars['JSON']['output']>;
+  tags?: Maybe<TagRelationResponseCollection>;
+  typ?: Maybe<Enum_Phone_Typ>;
   updatedAt?: Maybe<Scalars['DateTime']['output']>;
   views: Array<Maybe<PhoneViewsDynamicZone>>;
 };
@@ -1061,6 +1069,14 @@ export type Phone = {
 
 export type PhoneCommentsArgs = {
   filters?: InputMaybe<CommentFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  publicationState?: InputMaybe<PublicationState>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+
+export type PhoneTagsArgs = {
+  filters?: InputMaybe<TagFiltersInput>;
   pagination?: InputMaybe<PaginationArg>;
   publicationState?: InputMaybe<PublicationState>;
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -1087,26 +1103,27 @@ export type PhoneFiltersInput = {
   and?: InputMaybe<Array<InputMaybe<PhoneFiltersInput>>>;
   comments?: InputMaybe<CommentFiltersInput>;
   createdAt?: InputMaybe<DateTimeFilterInput>;
-  description?: InputMaybe<StringFilterInput>;
   id?: InputMaybe<IdFilterInput>;
-  lastviews?: InputMaybe<DateTimeFilterInput>;
+  lead?: InputMaybe<ComponentContentPartsLeadFiltersInput>;
   network?: InputMaybe<StringFilterInput>;
   not?: InputMaybe<PhoneFiltersInput>;
   or?: InputMaybe<Array<InputMaybe<PhoneFiltersInput>>>;
   phone?: InputMaybe<StringFilterInput>;
-  reputation?: InputMaybe<StringFilterInput>;
-  totalRatings?: InputMaybe<JsonFilterInput>;
+  ratings?: InputMaybe<JsonFilterInput>;
+  tags?: InputMaybe<TagFiltersInput>;
+  typ?: InputMaybe<StringFilterInput>;
   updatedAt?: InputMaybe<DateTimeFilterInput>;
 };
 
 export type PhoneInput = {
   comments?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
-  description?: InputMaybe<Scalars['String']['input']>;
-  lastviews?: InputMaybe<Scalars['DateTime']['input']>;
+  cover?: InputMaybe<Scalars['ID']['input']>;
+  lead?: InputMaybe<ComponentContentPartsLeadInput>;
   network?: InputMaybe<Enum_Phone_Network>;
   phone?: InputMaybe<Scalars['String']['input']>;
-  reputation?: InputMaybe<Enum_Phone_Reputation>;
-  totalRatings?: InputMaybe<Scalars['JSON']['input']>;
+  ratings?: InputMaybe<Scalars['JSON']['input']>;
+  tags?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  typ?: InputMaybe<Enum_Phone_Typ>;
   views?: InputMaybe<Array<Scalars['PhoneViewsDynamicZoneInput']['input']>>;
 };
 
@@ -1331,6 +1348,7 @@ export type Tag = {
   cover: UploadFileEntityResponse;
   createdAt?: Maybe<Scalars['DateTime']['output']>;
   lead: ComponentContentPartsLead;
+  phone?: Maybe<PhoneEntityResponse>;
   publishedAt?: Maybe<Scalars['DateTime']['output']>;
   seo: ComponentOthersSeo;
   title: Scalars['String']['output'];
@@ -1374,6 +1392,7 @@ export type TagFiltersInput = {
   lead?: InputMaybe<ComponentContentPartsLeadFiltersInput>;
   not?: InputMaybe<TagFiltersInput>;
   or?: InputMaybe<Array<InputMaybe<TagFiltersInput>>>;
+  phone?: InputMaybe<PhoneFiltersInput>;
   publishedAt?: InputMaybe<DateTimeFilterInput>;
   seo?: InputMaybe<ComponentOthersSeoFiltersInput>;
   title?: InputMaybe<StringFilterInput>;
@@ -1387,6 +1406,7 @@ export type TagInput = {
   contentparts?: InputMaybe<Array<Scalars['TagContentpartsDynamicZoneInput']['input']>>;
   cover?: InputMaybe<Scalars['ID']['input']>;
   lead?: InputMaybe<ComponentContentPartsLeadInput>;
+  phone?: InputMaybe<Scalars['ID']['input']>;
   publishedAt?: InputMaybe<Scalars['DateTime']['input']>;
   seo?: InputMaybe<ComponentOthersSeoInput>;
   title?: InputMaybe<Scalars['String']['input']>;

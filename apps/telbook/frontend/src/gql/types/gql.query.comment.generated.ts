@@ -10,7 +10,7 @@ export type GetCommentsQueryVariables = Types.Exact<{
 }>;
 
 
-export type GetCommentsQuery = { __typename?: 'Query', comments?: { __typename?: 'CommentEntityResponseCollection', data: Array<{ __typename?: 'CommentEntity', id?: string | null, attributes?: { __typename?: 'Comment', createdAt?: any | null, author: string, message?: string | null, phone?: { __typename?: 'PhoneEntityResponse', data?: { __typename?: 'PhoneEntity', id?: string | null, attributes?: { __typename?: 'Phone', phone: string } | null } | null } | null } | null }>, meta: { __typename?: 'ResponseCollectionMeta', pagination: { __typename?: 'Pagination', total: number, page: number, pageSize: number, pageCount: number } } } | null };
+export type GetCommentsQuery = { __typename?: 'Query', comments?: { __typename?: 'CommentEntityResponseCollection', data: Array<{ __typename?: 'CommentEntity', id?: string | null, attributes?: { __typename?: 'Comment', message?: string | null, reputation: Types.Enum_Comment_Reputation, createdAt?: any | null, updatedAt?: any | null, phone?: { __typename?: 'PhoneEntityResponse', data?: { __typename?: 'PhoneEntity', id?: string | null, attributes?: { __typename?: 'Phone', phone: string } | null } | null } | null } | null }>, meta: { __typename?: 'ResponseCollectionMeta', pagination: { __typename?: 'Pagination', total: number, page: number, pageSize: number, pageCount: number } } } | null };
 
 
 export const GetCommentsDocument = gql`
@@ -23,9 +23,10 @@ export const GetCommentsDocument = gql`
     data {
       id
       attributes {
-        createdAt
-        author
         message
+        reputation
+        createdAt
+        updatedAt
         phone {
           data {
             id

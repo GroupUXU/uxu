@@ -54,11 +54,11 @@ export function Contact({ footer, headerMenu, defaultSuggestions, sendMessage }:
           </>
         );
       case requestStatus.failed:
-        return <Note type="error">Nie udało się wysłać wiadomości :(</Note>;
+        return <Note typ="error">Nie udało się wysłać wiadomości :(</Note>;
       case requestStatus.success:
-        return <Note type="success">Sukces! Twoja wiadomość została wysłana pomyślnie.</Note>;
+        return <Note typ="success">Sukces! Twoja wiadomość została wysłana pomyślnie.</Note>;
       case requestStatus.awaiting:
-        return <Note action={<LoadingDots size={1}/>} type="warning">Trwa wysyłanie wiadomości... Proszę czekać.</Note>;
+        return <Note action={<LoadingDots size={1}/>} typ="warning">Trwa wysyłanie wiadomości... Proszę czekać.</Note>;
       default:
         return null;
     }

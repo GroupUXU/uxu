@@ -17,23 +17,6 @@
       "required": true,
       "unique": true
     },
-    "reputation": {
-      "type": "enumeration",
-      "enum": [
-        "negative",
-        "annoying",
-        "unknown",
-        "inert",
-        "positive"
-      ],
-      "default": "inert"
-    },
-    "lastviews": {
-      "type": "datetime"
-    },
-    "description": {
-      "type": "text"
-    },
     "network": {
       "type": "enumeration",
       "enum": [
@@ -77,7 +60,7 @@
       ],
       "required": true
     },
-    "totalRatings": {
+    "ratings": {
       "type": "json"
     },
     "comments": {
@@ -85,6 +68,34 @@
       "relation": "oneToMany",
       "target": "api::comment.comment",
       "mappedBy": "phone"
+    },
+    "lead": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content-parts.lead",
+      "required": true
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "phone"
+    },
+    "typ": {
+      "type": "enumeration",
+      "enum": [
+        "mobile",
+        "stationary",
+        "premium"
+      ]
     }
   }
 }

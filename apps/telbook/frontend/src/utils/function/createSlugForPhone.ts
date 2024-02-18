@@ -1,3 +1,3 @@
-export const createSlugForPhone = (phone: string): string => {
- return `/p/${phone.replace(/\s+/g, '')}`
+export const createSlugForPhone = (phone: string, id: string): string => {
+ return `/p/${id}/${phone.replace(/\s+/g, '')}`
 };

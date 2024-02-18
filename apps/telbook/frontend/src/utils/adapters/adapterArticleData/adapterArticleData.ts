@@ -6,7 +6,7 @@ import { adapterTagData } from "../adapterTagData";
 import { adapterContentPart } from "../adapterContentPart";
 
 export function adapterArticleData(getArticleData: GetArticleQuery): PostFull {
-
+  
   if (!getArticleData.article?.data) return {
     id: "",
     lead: "",
@@ -19,7 +19,7 @@ export function adapterArticleData(getArticleData: GetArticleQuery): PostFull {
     stats: { ratings: 0, comments: 0, views: 0 },
     contentparts: [],
   };
-
+  
   const { id, attributes } = getArticleData.article.data;
   return {
     id: id ?? '',

@@ -5,3 +5,4 @@ export * from './adapterCommentsData';
 export * from './adapterImageData';
 export * from './adapterTagsTitleId';
 export * from './adapterAuthorData';
+export * from './adapterPhoneData';

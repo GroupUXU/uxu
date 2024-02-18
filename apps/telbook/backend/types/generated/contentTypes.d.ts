@@ -627,14 +627,17 @@ export interface ApiCommentComment extends Schema.CollectionType {
     singularName: 'comment';
     pluralName: 'comments';
     displayName: 'comment';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     message: Attribute.Text;
-    author: Attribute.String & Attribute.Required;
     phone: Attribute.Relation<'api::comment.comment', 'manyToOne', 'api::phone.phone'>;
+    reputation: Attribute.Enumeration<['success', 'default', 'warning', 'danger', 'error']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'annoying'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -682,10 +685,6 @@ export interface ApiPhonePhone extends Schema.CollectionType {
   };
   attributes: {
     phone: Attribute.String & Attribute.Required & Attribute.Unique;
-    reputation: Attribute.Enumeration<['negative', 'annoying', 'unknown', 'inert', 'positive']> &
-      Attribute.DefaultTo<'inert'>;
-    lastviews: Attribute.DateTime;
-    description: Attribute.Text;
     network: Attribute.Enumeration<
       [
         'CenterNet',
@@ -722,8 +721,12 @@ export interface ApiPhonePhone extends Schema.CollectionType {
       ]
     >;
     views: Attribute.DynamicZone<['stats.views']> & Attribute.Required;
-    totalRatings: Attribute.JSON;
+    ratings: Attribute.JSON;
     comments: Attribute.Relation<'api::phone.phone', 'oneToMany', 'api::comment.comment'>;
+    lead: Attribute.Component<'content-parts.lead'> & Attribute.Required;
+    cover: Attribute.Media & Attribute.Required;
+    tags: Attribute.Relation<'api::phone.phone', 'oneToMany', 'api::tag.tag'>;
+    typ: Attribute.Enumeration<['mobile', 'stationary', 'premium']>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::phone.phone', 'oneToOne', 'admin::user'> & Attribute.Private;
@@ -743,7 +746,7 @@ export interface ApiTagTag extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    typ: Attribute.Enumeration<['other', 'city']> & Attribute.Required & Attribute.DefaultTo<'city'>;
+    typ: Attribute.Enumeration<['other', 'city', 'phone']> & Attribute.Required & Attribute.DefaultTo<'city'>;
     title: Attribute.String &
       Attribute.Required &
       Attribute.Unique &
@@ -756,6 +759,7 @@ export interface ApiTagTag extends Schema.CollectionType {
     views: Attribute.Component<'stats.views'>;
     articles: Attribute.Relation<'api::tag.tag', 'manyToMany', 'api::article.article'>;
     seo: Attribute.Component<'others.seo'> & Attribute.Required;
+    phone: Attribute.Relation<'api::tag.tag', 'manyToOne', 'api::phone.phone'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

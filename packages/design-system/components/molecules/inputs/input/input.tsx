@@ -15,7 +15,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         ref={ref}
       />
       {errorMessage && (
-        <Note type='warning' fill>
+        <Note typ='warning' fill>
           <p className={classNames(styles.message, { [styles.error]: errorMessage })}>
             {errorMessage}
           </p>
