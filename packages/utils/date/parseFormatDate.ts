@@ -10,7 +10,7 @@ function isToday(date: dayjs.Dayjs): boolean {
   return date.isSame(today, 'day');
 }
 
-export function parseFormatDate(date: string | null): string {
+export function parseFormatDate(date?: string | null): string {
   const formattedDate = dayjs(date);
 
   if (isToday(formattedDate)) {

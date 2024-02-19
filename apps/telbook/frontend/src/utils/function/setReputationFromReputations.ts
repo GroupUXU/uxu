@@ -1,6 +1,6 @@
 import { InfoTyp } from 'utils';
 
-export function setReputation(data: Record<string, unknown> | null): InfoTyp {
+export function setReputationFromReputations(data: Record<string, unknown> | null): InfoTyp {
   if (!data) return 'default';
   
   const keys: Array<InfoTyp> = ['success', 'default', 'warning', 'danger', 'error'];
