@@ -14,7 +14,7 @@ import {
 import {ButtonsSocialShare} from '../../../../molecules/listButtonsSocialShare';
 import {TagList} from '../../../../molecules/tagList';
 import {useSiteConfig} from "../../../../../hooks/useSiteConfig";
-import {Cover, PhoneMetaWrapper} from "./components";
+import {Cover, PhoneMetaWrapper, Comments} from "./components";
 import styles from './phoneView.module.scss';
 import type {PhoneViewProps} from './types';
 
@@ -62,6 +62,7 @@ export function PhoneView({phoneFullData}: PhoneViewProps): ReactElement {
                 <div/>
                 <div className={styles.content}>
                     <ButtonsSocialShare/>
+                    <Comments />
                 </div>
                 <div/>
             </div>

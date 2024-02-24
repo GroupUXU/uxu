@@ -1,2 +1,3 @@
-export * from './phoneMetaWrapper'
-export * from './cover'
+export * from './phoneMetaWrapper';
+export * from './cover';
+export * from './comments';

@@ -1,7 +1,8 @@
 $borders: (
-  active: 0.1rem solid var(--uxu-color-border-active),
-  default: 0.1rem solid var(--uxu-color-border-default),
-  error: 0.1rem solid var(--uxu-color-border-error),
-  success: 0.1rem solid var(--uxu-color-border-success),
-  warning: 0.1rem solid var(--uxu-color-border-warning),
+    active: 0.1rem solid var(--uxu-color-border-active),
+    default: 0.1rem solid var(--uxu-color-border-default),
+    danger: 0.1rem solid var(--uxu-color-border-danger),
+    error: 0.1rem solid var(--uxu-color-border-error),
+    success: 0.1rem solid var(--uxu-color-border-success),
+    warning: 0.1rem solid var(--uxu-color-border-warning),
 );
