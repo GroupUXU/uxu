@@ -1,12 +1,13 @@
 .wrapper {
   width: 100%;
+  max-width: 100%;
   min-height: 50rem;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--uxu-space-large) 0;
+  padding: 0;
 }
 
 .wrapperPoint {

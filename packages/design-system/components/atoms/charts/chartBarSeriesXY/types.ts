@@ -7,5 +7,5 @@ export type ChartBarSeriesXYData = {
 export type SeriesData = Record<string, ChartBarSeriesXYData[]>;
 
 export type ChartBarSeriesXYProps = {
-		seriesData?: SeriesData
+		data?: SeriesData
 };

@@ -1,4 +1,4 @@
-import {type ReactElement, RefObject, useRef} from "react";
+import {type ReactElement, useRef} from "react";
 import { defaultStyles } from '@visx/tooltip';
 import {useResizeDivObserver} from "../../../../hooks/useResizeDivObserver";
 import { XYChart, Tooltip, AnimatedGrid, BarSeries } from '@visx/xychart';
@@ -7,19 +7,19 @@ import { AxisConfig } from "./components";
 import style from './chartBarSeriesXY.module.scss';
 
 
-export function ChartBarSeriesXY({ seriesData }: ChartBarSeriesXYProps): ReactElement | null {
+export function ChartBarSeriesXY({ data: seriesData }: ChartBarSeriesXYProps): ReactElement | null {
 		const wrapperRef = useRef<HTMLDivElement>(null);
 		const {width, height} = useResizeDivObserver(wrapperRef);
-		
+
 		if (!seriesData) return null;
-		
+
 
 		const accessors = {
 				xAccessor: (d: ChartBarSeriesXYData) => d.x,
 				yAccessor: (d: ChartBarSeriesXYData) => d.y,
 				fillAccessor: (d: ChartBarSeriesXYData) => d.color,
 		}
-		
+
 		return (
 					<div className={style.wrapper} ref={wrapperRef}>
 							<XYChart height={height} width={width} xScale={{ type: 'band', padding: 0.2 }} yScale={{ type: 'linear' }}>

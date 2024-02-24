@@ -1,12 +1,12 @@
-export type ChartBarLineXYData = {
+export type ChartBarLinesXYData = {
 		x: string | number;
 		y: string | number;
 }
 
-export type LinesData = Array<{ name: string, color: string, data: Array<ChartBarLineXYData> }>;
+export type LinesData = Array<{ name: string, color: string, data: Array<ChartBarLinesXYData> }>;
 
-export type ChartBarLineXYAccessor = (d: ChartBarLineXYData) => string | number;
+export type ChartBarLinesXYAccessor = (d: ChartBarLinesXYData) => string | number;
 
-export type ChartBarLineXYProps = {
-		linesData?: LinesData
+export type ChartBarLinesXYProps = {
+		data?: LinesData
 };

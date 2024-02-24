@@ -1,7 +1,12 @@
 import type { ReactElement } from 'react';
-import { ChartBarSeriesXY } from '../../../../atoms/charts';
-import type { ChartBarSeriesXYProps } from '../../../../atoms/charts/chartBarSeriesXY/types';
+import { ChartBarLinesXY } from '../../../../atoms/charts';
+import type { ChartBarLinesXYProps } from '../../../../atoms/charts/chartBarLinesXY/types';
+import style from './chartBarLinesXYChunk.module.scss';
 
-export function ChartBarLinesXYChunk({ seriesData }: ChartBarSeriesXYProps): ReactElement {
-  return <ChartBarSeriesXY seriesData={seriesData} />
+export function ChartBarLinesXYChunk({ data }: ChartBarLinesXYProps): ReactElement {
+  return (
+      <div className={style.wrapper}>
+        <ChartBarLinesXY data={data} />
+      </div>
+  )
 }

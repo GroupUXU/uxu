@@ -6,13 +6,13 @@ import classnames from "classnames";
 
 export function PhoneMetaWrapper({ reputation, createdAt }: PhoneMetaWrapperProps): ReactElement {
 		const reputationClass = classnames({
-				[styles.success]: reputation === 'positive',
-				[styles.default]: reputation === 'inert',
+				[styles.success]: reputation === 'success',
+				[styles.default]: reputation === 'default',
 				[styles.warning]: reputation === 'warning',
-				[styles.danger]: reputation === 'annoying',
-				[styles.error]: reputation === 'negative',
+				[styles.danger]: reputation === 'danger',
+				[styles.error]: reputation === 'error',
 		});
-		
+
 
 		return (
 					<div className={styles.wrapperPhoneMeta}>
