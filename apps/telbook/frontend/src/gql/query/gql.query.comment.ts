@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 export const GET_COMMENTS = gql`
-    query GetComments($phone: String!, $page: Int!, $pageSize: Int!) {
+    query GetComments($phone: String, $page: Int!, $pageSize: Int!) {
         comments(
             filters: { phone: { phone: { contains: $phone } } }
             sort: ["createdAt:asc"]
@@ -10,9 +10,9 @@ export const GET_COMMENTS = gql`
                 id
                 attributes {
                     message
-                    reputation
                     createdAt
                     updatedAt
+                    reputation
                     phone {
                         data {
                             id

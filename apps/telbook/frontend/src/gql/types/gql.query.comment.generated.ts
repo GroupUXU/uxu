@@ -4,17 +4,17 @@ import { gql } from '@apollo/client';
 import * as Apollo from '@apollo/client';
 const defaultOptions = {} as const;
 export type GetCommentsQueryVariables = Types.Exact<{
-  phone: Types.Scalars['String']['input'];
+  phone?: Types.InputMaybe<Types.Scalars['String']['input']>;
   page: Types.Scalars['Int']['input'];
   pageSize: Types.Scalars['Int']['input'];
 }>;
 
 
-export type GetCommentsQuery = { __typename?: 'Query', comments?: { __typename?: 'CommentEntityResponseCollection', data: Array<{ __typename?: 'CommentEntity', id?: string | null, attributes?: { __typename?: 'Comment', message?: string | null, reputation: Types.Enum_Comment_Reputation, createdAt?: any | null, updatedAt?: any | null, phone?: { __typename?: 'PhoneEntityResponse', data?: { __typename?: 'PhoneEntity', id?: string | null, attributes?: { __typename?: 'Phone', phone: string } | null } | null } | null } | null }>, meta: { __typename?: 'ResponseCollectionMeta', pagination: { __typename?: 'Pagination', total: number, page: number, pageSize: number, pageCount: number } } } | null };
+export type GetCommentsQuery = { __typename?: 'Query', comments?: { __typename?: 'CommentEntityResponseCollection', data: Array<{ __typename?: 'CommentEntity', id?: string | null, attributes?: { __typename?: 'Comment', message: string, createdAt?: any | null, updatedAt?: any | null, reputation: Types.Enum_Comment_Reputation, phone?: { __typename?: 'PhoneEntityResponse', data?: { __typename?: 'PhoneEntity', id?: string | null, attributes?: { __typename?: 'Phone', phone: string } | null } | null } | null } | null }>, meta: { __typename?: 'ResponseCollectionMeta', pagination: { __typename?: 'Pagination', total: number, page: number, pageSize: number, pageCount: number } } } | null };
 
 
 export const GetCommentsDocument = gql`
-    query GetComments($phone: String!, $page: Int!, $pageSize: Int!) {
+    query GetComments($phone: String, $page: Int!, $pageSize: Int!) {
   comments(
     filters: {phone: {phone: {contains: $phone}}}
     sort: ["createdAt:asc"]
@@ -24,9 +24,9 @@ export const GetCommentsDocument = gql`
       id
       attributes {
         message
-        reputation
         createdAt
         updatedAt
+        reputation
         phone {
           data {
             id

@@ -8,7 +8,7 @@ import {
 export const GET_PHONE = gql`
     ${FRAGMENT_DATA_VIEWS}
     ${FRAGMENT_DATA_LEAD}
-    query GetPhone($id: ID, $page: Int!, $pageSize: Int!) {
+    query GetPhone($id: ID) {
         phone(id: $id) {
             data {
                 id
@@ -19,50 +19,31 @@ export const GET_PHONE = gql`
                     updatedAt
                     createdAt
                     ratings
-                    tags {
-                        __typename
-                        data {
-                            id
-                            attributes {
-                                title
-                            }
-                        }
-                    }
-                    cover {
-                        __typename
-                        data {
-                            id
-                            attributes {
-                                url
-                                caption
-                                alternativeText
-                                formats
-                            }
-                        }
-                    }
                     lead {
                         ...FragmentDataLead
                     }
                     views {
                         ...FragmentDataViews
                     }
-                    comments(
-                        pagination: { page: $page, pageSize: $pageSize }
-                        sort: ["createdAt:asc"]
-                    ) {
-                        data {
+                    format {
+                        ... on ComponentOthersFormat {
                             id
-                            attributes {
-                                message
-                                reputation
-                                createdAt
-                                updatedAt
-                                phone {
-                                    data {
-                                        id
-                                        attributes {
-                                            phone
-                                        }
+                            format
+                        }
+                    }
+                    gallery {
+                        ... on ComponentOthersCover {
+                            id
+                            typ
+                            cover {
+                                __typename
+                                data {
+                                    id
+                                    attributes {
+                                        url
+                                        caption
+                                        alternativeText
+                                        formats
                                     }
                                 }
                             }

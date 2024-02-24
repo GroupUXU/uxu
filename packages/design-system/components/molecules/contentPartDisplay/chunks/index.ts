@@ -10,3 +10,5 @@ export * from './QuoteChunk';
 export * from './TableChunk';
 export * from './EmptyChunk';
 export * from './EmbedYouTubeChunk';
+export * from './ChartBarSeriesXYChunk';
+export * from './ChartBarLinesXYChunk';

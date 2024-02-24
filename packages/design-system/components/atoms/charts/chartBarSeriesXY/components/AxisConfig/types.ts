@@ -1,0 +1,1 @@
+export type AxisConfigProps = { orientation?: "left" | "right" | "bottom" | "top" }

@@ -1,22 +1,31 @@
-import {Image} from "./image";
-import {Tag} from "./tag";
+import {ChunkProps} from "design-system/components/molecules/contentPartDisplay"; // External imports first (assuming this is external)
 import {Comment} from "./comment";
+import {Image} from "./image";
 import {Pagination} from "./pagination";
-import {PhoneNetworkPL} from '../../enums'
-import {ReputationTyp} from '../../types'
-import {ChunkProps} from "design-system/components/molecules/contentPartDisplay";
+import {PhoneNetworkPL} from '../../enums';
+import {Status} from '../../types';
+import {Tag} from "./tag";
+
 
 export type PhoneFull = {
-  id: string;
-  phone: string;
-  typ: string;
+  comments: { data: Array<Comment>, pagination: Pagination } | null;
+  contentParts: Array<ChunkProps<Record<string, unknown>>>;
+  cover: Image | null;
+  createdAt: string | null;
+  format: Array<Tag>;
+  gallery: {
+    danger: Image;
+    default: Image;
+    error: Image;
+    success: Image;
+    warning: Image;
+  };
+  id: string | null;
   lead: string | null;
   network: PhoneNetworkPL | null;
-  reputation: ReputationTyp | null;
+  phone: string | null;
+  reputation: Status | null;
+  typ: string | null;
   updatedAt: string | null;
-  createdAt: string | null;
-  cover: Image;
-  tags: Array<Tag>;
-  contentparts: Array<ChunkProps<Record<string, unknown>>>;
-  comments: { data: Array<Comment>, pagination: Pagination } | null
+  views: Array<any>;
 };

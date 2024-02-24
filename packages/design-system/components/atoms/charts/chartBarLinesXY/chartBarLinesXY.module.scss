@@ -1,0 +1,26 @@
+.wrapper {
+  width: 100%;
+  min-height: 50rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--uxu-space-large) 0;
+}
+
+.wrapperPoint {
+  display: flex;
+  flex-direction: column;
+  gap: var(--uxu-space-default);
+  color: var(--uxu-color-text-default);
+
+  .header {
+    font-weight: bold;
+    color: var(--uxu-color-text-header);
+    font-size: var(--uxu-font-size-default);
+  }
+  p {
+    font-size: var(--uxu-font-size-small);
+  }
+}

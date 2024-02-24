@@ -12,26 +12,26 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "message": {
-      "type": "text"
-    },
-    "phone": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::phone.phone",
-      "inversedBy": "comments"
-    },
     "reputation": {
       "type": "enumeration",
       "enum": [
-        "success",
-        "default",
-        "warning",
         "danger",
-        "error"
+        "default",
+        "error",
+        "success",
+        "warning"
       ],
-      "default": "annoying",
+      "required": true,
+      "default": "default"
+    },
+    "message": {
+      "type": "text",
       "required": true
+    },
+    "phone": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::phone.phone"
     }
   }
 }

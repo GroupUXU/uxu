@@ -5,5 +5,4 @@ export * from './tag';
 export * from './toast';
 export * from './comment';
 export * from './phone';
-export * from './infoTyp';
-export * from './reputationTyp';
+export * from './status';

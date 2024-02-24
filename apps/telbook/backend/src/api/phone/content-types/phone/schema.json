@@ -12,11 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "phone": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
     "network": {
       "type": "enumeration",
       "enum": [
@@ -63,31 +58,11 @@
     "ratings": {
       "type": "json"
     },
-    "comments": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::comment.comment",
-      "mappedBy": "phone"
-    },
     "lead": {
       "type": "component",
       "repeatable": false,
       "component": "content-parts.lead",
       "required": true
-    },
-    "cover": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "tags": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::tag.tag",
-      "mappedBy": "phone"
     },
     "typ": {
       "type": "enumeration",
@@ -96,6 +71,28 @@
         "stationary",
         "premium"
       ]
+    },
+    "phone": {
+      "type": "uid",
+      "required": true
+    },
+    "format": {
+      "type": "dynamiczone",
+      "components": [
+        "others.format"
+      ],
+      "required": true
+    },
+    "owner": {
+      "type": "json",
+      "required": false
+    },
+    "gallery": {
+      "type": "dynamiczone",
+      "components": [
+        "others.cover"
+      ],
+      "required": true
     }
   }
 }

@@ -1,1 +1,0 @@
-export type ReputationTyp = 'positive' | 'inert' |  'warning' | 'annoying' | 'negative';

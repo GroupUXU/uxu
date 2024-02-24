@@ -15,7 +15,7 @@ export function Cover({ cover, title }: CoverProps ): ReactElement {
         {src ? (
           <Image alt={alt || title} layout="fill" objectFit="cover" src={src} />
         ) : (
-          <DummyImg height="30rem" width="100%" />
+          <DummyImg height="60rem" width="100%" />
         )}
       </div>
       {caption && <span>Źródło: {caption}</span>}

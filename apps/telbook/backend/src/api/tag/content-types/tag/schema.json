@@ -54,23 +54,17 @@
       "repeatable": false,
       "component": "stats.views"
     },
-    "articles": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::article.article",
-      "mappedBy": "tags"
-    },
     "seo": {
       "type": "component",
       "repeatable": false,
       "required": true,
       "component": "others.seo"
     },
-    "phone": {
+    "articles": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::phone.phone",
-      "inversedBy": "tags"
+      "relation": "manyToMany",
+      "target": "api::article.article",
+      "mappedBy": "tags"
     }
   }
 }

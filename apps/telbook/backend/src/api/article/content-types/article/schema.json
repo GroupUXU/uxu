@@ -27,14 +27,6 @@
       "maxLength": 160,
       "minLength": 1
     },
-    "cover": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "lead": {
       "type": "component",
       "repeatable": false,
@@ -57,12 +49,6 @@
       "component": "stats.views",
       "required": true
     },
-    "tags": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::tag.tag",
-      "inversedBy": "articles"
-    },
     "authors": {
       "type": "relation",
       "relation": "manyToMany",
@@ -74,6 +60,20 @@
       "repeatable": false,
       "required": true,
       "component": "others.seo"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "articles"
+    },
+    "cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
     }
   }
 }
