@@ -4,13 +4,13 @@ import styles from "./phoneMetaWrapper.module.scss";
 import type {PhoneMetaWrapperProps} from "./types";
 import classnames from "classnames";
 
-export function PhoneMetaWrapper({reputation, createdAt}: PhoneMetaWrapperProps): ReactElement {
+export function PhoneMetaWrapper({status, createdAt}: PhoneMetaWrapperProps): ReactElement {
     const reputationClass = classnames({
-        [styles.success]: reputation === 'success',
-        [styles.default]: reputation === 'default',
-        [styles.warning]: reputation === 'warning',
-        [styles.danger]: reputation === 'danger',
-        [styles.error]: reputation === 'error',
+        [styles.success]: status === 'success',
+        [styles.default]: status === 'default',
+        [styles.warning]: status === 'warning',
+        [styles.danger]: status === 'danger',
+        [styles.error]: status === 'error',
     });
 
 
@@ -19,7 +19,7 @@ export function PhoneMetaWrapper({reputation, createdAt}: PhoneMetaWrapperProps)
             <div className={classnames(styles.circle, reputationClass)}></div>
             <div className={styles.wrapperMeta}>
                 <div className={styles.reputation}>
-                    <span className={reputationClass}>{reputation}</span>
+                    <span className={reputationClass}>{status}</span>
                 </div>
                 {createdAt && (
                     <div className={styles.wrapperPublicationDate}>

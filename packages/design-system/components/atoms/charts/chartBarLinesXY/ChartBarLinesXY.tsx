@@ -62,7 +62,7 @@ export function ChartBarLinesXY({data: linesData}: ChartBarLinesXYProps): ReactE
                                         {tooltipData?.nearestDatum?.key}
                                     </div>
                                     <p style={{color: seriesColor}}>
-                                        {accessors.xAccessor(datum as ChartBarLineXYData)}, {accessors.yAccessor(datum as ChartBarLineXYData)}
+                                        {accessors.xAccessor(datum as ChartBarLinesXYData)}, {accessors.yAccessor(datum as ChartBarLinesXYData)}
                                     </p>
                                 </div>
                             </>

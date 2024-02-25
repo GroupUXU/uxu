@@ -3,18 +3,18 @@ import { AlertTriangle, CheckCircle, AlertOctagon, HelpCircle } from 'react-feat
 import classNames from 'classnames';
 import styles from './note.module.scss';
 import {NoteProps} from './types';
-import {InfoTyp} from 'utils';
+import {Status} from 'utils';
 
 type IconComponentsType = {
-  [key in InfoTyp]: ReactElement;
+  [key in Status]: ReactElement;
 };
 
 const iconComponents: IconComponentsType = {
   success: <CheckCircle />,
-  warning: <AlertTriangle />,
-  error: <AlertOctagon />,
   default: <HelpCircle />,
-  danger: <HelpCircle />,
+  warning: <AlertTriangle />,
+  danger: <AlertOctagon />,
+  error: <AlertOctagon />,
 };
 
 export function Note({ children, className, typ = 'default', fill, action, disabled }: NoteProps): ReactElement {

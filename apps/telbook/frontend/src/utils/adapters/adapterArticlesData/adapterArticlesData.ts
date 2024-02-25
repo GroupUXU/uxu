@@ -14,7 +14,7 @@ export function adapterArticlesData(getArticles: GetArticlesQuery, typeImg: Imag
       lead: art.attributes?.lead.lead || "",
       slug: `${createSlugForType ( art.attributes?.type || "" )}/${art.id}/${createSlug ( art.attributes?.title || "" )}`,
       createdAt: art.attributes?.createdAt ? new Date ( art.attributes.createdAt as string ) : new Date (),
-      authors: art.attributes?.authors?.data.map ( adapterAuthorData ) ?? [],
+      authors: art.attributes?.authors?.data.map(adapterAuthorData) || [],
       cover: adapterImageData ( {image: art.attributes?.cover.data?.attributes, typeImg} ),
       stats: {ratings: 0, comments: 0, views: 0},
     }));

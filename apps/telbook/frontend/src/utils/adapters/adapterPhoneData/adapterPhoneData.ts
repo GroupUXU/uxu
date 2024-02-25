@@ -1,4 +1,4 @@
-import {type PhoneFull, type Status, parseFormatDate, formatPhoneNumberPL, PhoneNetworkPL, Image} from 'utils';
+import {type PhoneFull, type Status, parseFormatDate, Image} from 'utils';
 import type {
     CommentEntityResponseCollection,
     GetPhoneQuery,
@@ -7,9 +7,9 @@ import type {
     ComponentStatsViews,
     ComponentOthersFormat
 } from '../../../gql';
-import {adapterImageData} from "../adapterImageData";
-import {adapterCommentsData} from "./utils";
+import {adapterImageData} from '../adapterImageData';
 import {setReputationFromReputations} from '../../function';
+import {adapterCommentsData} from './utils';
 
 type ViewsData = {
     data: Array<{ y: number; x: string }>;
@@ -17,15 +17,16 @@ type ViewsData = {
 };
 
 function adapterViews(viewsArray?: Array<ComponentStatsViews>): ViewsData {
-    return viewsArray?.reduce<ComponentStatsViews>(
+    return viewsArray?.reduce<ViewsData>(
         (acc, {views, date}) => {
-            acc.data.push({y: views, x: date});
+            acc.data.push({y: views, x: date as string || ''});
             acc.count += views;
             return acc;
         },
         {data: [], count: 0}
     ) ?? {data: [], count: 0};
 }
+
 
 function adapterGallery(gallery?: Array<ComponentOthersCover>): Record<Status, Image | null> {
     const result: Record<Status, Image | null> = {
@@ -57,7 +58,7 @@ export function adapterPhoneData(getPhoneData?: GetPhoneQuery, getCommentsData?:
             id: null,
             lead: null,
             phone: null,
-            reputation: null,
+            status: null,
             typ: null,
             updatedAt: null
         };
@@ -65,7 +66,7 @@ export function adapterPhoneData(getPhoneData?: GetPhoneQuery, getCommentsData?:
 
     const {id, attributes} = getPhoneData.phone.data;
     const ratings: Record<Status, number> | null = attributes?.ratings as Record<Status, number> | null || null;
-    const reputation: string | null = setReputationFromReputations(ratings);
+    const status: Status | null = setReputationFromReputations(ratings);
     const viewsData: ViewsData = adapterViews(attributes?.views as Array<ComponentStatsViews>);
     const gallery: Record<Status, Image | null> = adapterGallery(attributes?.gallery as Array<ComponentOthersCover>);
     const comments = getCommentsData?.comments
@@ -87,7 +88,7 @@ export function adapterPhoneData(getPhoneData?: GetPhoneQuery, getCommentsData?:
                 data: [
                     {
                         "info": {id: "reputation", value: "Reputacja numeru:"},
-                        "status": {id: "reputationValue", value: reputation}
+                        "status": {id: "reputationValue", value: status}
                     },
                     {
                         "info": {id: "searches", value: "Liczba wyszukań:"},
@@ -135,28 +136,30 @@ export function adapterPhoneData(getPhoneData?: GetPhoneQuery, getCommentsData?:
                 type: 13,
                 id: '5',
                 data: {
-                    default: [{color: 'var(--uxu-color-default-1)', x: 'Obojętny', y: ratings?.default as number || 0}],
+                    default: [{color: 'var(--uxu-color-default-1)', x: 'Obojętny', y: ratings?.default || 0}],
                     success: [{
                         color: 'var(--uxu-color-success-1)',
                         x: 'Pozytywny',
-                        y: ratings?.success as number || 0
+                        y: ratings?.success || 0
                     }],
-                    warning: [{color: 'var(--uxu-color-warning-1)', x: 'Nieznany', y: ratings?.warning as number || 0}],
-                    danger: [{color: 'var(--uxu-color-danger-1)', x: 'Irytujący', y: ratings?.danger as number || 0}],
-                    error: [{color: 'var(--uxu-color-error-1)', x: 'Niebezpieczny', y: ratings?.error as number || 0}],
+                    warning: [{color: 'var(--uxu-color-warning-1)', x: 'Nieznany', y: ratings?.warning || 0}],
+                    danger: [{color: 'var(--uxu-color-danger-1)', x: 'Irytujący', y: ratings?.danger || 0}],
+                    error: [{color: 'var(--uxu-color-error-1)', x: 'Niebezpieczny', y: ratings?.error || 0}],
                 }
             },
         ],
-        cover: gallery[reputation],
+        cover: gallery[status] || null,
         id: id ?? '',
-        phone: formatPhoneNumberPL(attributes?.phone) ?? "",
+        phone: attributes?.phone ?? "",
         typ: attributes?.typ ?? "mobile",
+        status,
         lead: attributes?.lead.lead ?? "",
         updatedAt: parseFormatDate(attributes?.updatedAt as string),
         createdAt: parseFormatDate(attributes?.createdAt as string),
         format: attributes?.format.map((formatPhone) => {
-            const {id, format: title} = formatPhone as ComponentOthersFormat
-            return {id, title}
-        }),
+            const format = formatPhone as ComponentOthersFormat;
+            return {id: format.id, title: format.format};
+        }) || [],
+
     };
 }

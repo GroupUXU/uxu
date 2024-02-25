@@ -8,7 +8,7 @@ export function setReputationFromReputations(data: Record<string, number> | null
     return 'default';
   }
 
-  const maxScore = Math.max(...keys.map(key => data[key] as number));
+  const maxScore = Math.max(...keys.map(key => data[key]));
   const candidates = keys.filter(key => data[key] === maxScore);
 
   if (candidates.length === 1) {

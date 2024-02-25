@@ -24,7 +24,7 @@ export function PhoneView({phoneFullData}: PhoneViewProps): ReactElement {
     const isMobile = client.platform.isMobile;
     const strategy = isMobile ? strategyForContentPartInPostMobile : strategyForContentPartInPostDesktop;
     const adSlots: Array<string> = isMobile ? ['2XMXAMIDTEXTX1', '2XMXAMIDTEXTX2', '2XMXAMIDTEXTX3'] : ['2XDXAMIDTEXTX1', '2XDXAMIDTEXTX2', '2XDXAMIDTEXTX3']
-    const {cover = null, phone, lead, format, createdAt, reputation, contentParts} = phoneFullData;
+    const {cover = null, phone, lead, format, createdAt, status, contentParts} = phoneFullData;
 
 
     return (
@@ -33,7 +33,7 @@ export function PhoneView({phoneFullData}: PhoneViewProps): ReactElement {
                 <div className={styles.content}>
                     {phone && <h1 className={styles.header}>{phone} czyj to numer telefonu ?</h1>}
                     {lead && <p className={styles.lead}>{lead}</p>}
-                    <PhoneMetaWrapper reputation={reputation} createdAt={createdAt}/>
+                    <PhoneMetaWrapper status={status} createdAt={createdAt}/>
                 </div>
                 <div className={classnames(styles.wrapperAds, styles.adsInPost)}>
                     {!isMobile && <AdsSlot slot="2XDXLEADX1" stickyOffset="9rem"/>}

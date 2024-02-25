@@ -15,7 +15,7 @@ export type PhoneFull = {
   id: string | null;
   lead: string | null;
   phone: string | null;
-  reputation: Status | null;
+  status: Status | null;
   typ: string | null;
   updatedAt: string | null;
 };

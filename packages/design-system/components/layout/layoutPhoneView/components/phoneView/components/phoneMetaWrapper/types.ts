@@ -1,3 +1,3 @@
-import type { ReputationTyp } from "utils";
+import type { Status } from "utils";
 
-export type PhoneMetaWrapperProps = { reputation: ReputationTyp | null, createdAt: string | null }
+export type PhoneMetaWrapperProps = { status: Status | null, createdAt: string | null }

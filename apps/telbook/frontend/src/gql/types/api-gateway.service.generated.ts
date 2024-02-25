@@ -27,7 +27,7 @@ export type Article = {
   __typename?: 'Article';
   authors?: Maybe<UsersPermissionsUserRelationResponseCollection>;
   contentparts: Array<Maybe<ArticleContentpartsDynamicZone>>;
-  cover: UploadFileRelationResponseCollection;
+  cover: UploadFileEntityResponse;
   createdAt?: Maybe<Scalars['DateTime']['output']>;
   lead: ComponentContentPartsLead;
   publishedAt?: Maybe<Scalars['DateTime']['output']>;
@@ -42,13 +42,6 @@ export type Article = {
 
 export type ArticleAuthorsArgs = {
   filters?: InputMaybe<UsersPermissionsUserFiltersInput>;
-  pagination?: InputMaybe<PaginationArg>;
-  sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-
-export type ArticleCoverArgs = {
-  filters?: InputMaybe<UploadFileFiltersInput>;
   pagination?: InputMaybe<PaginationArg>;
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
@@ -100,7 +93,7 @@ export type ArticleFiltersInput = {
 export type ArticleInput = {
   authors?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
   contentparts?: InputMaybe<Array<Scalars['ArticleContentpartsDynamicZoneInput']['input']>>;
-  cover?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
+  cover?: InputMaybe<Scalars['ID']['input']>;
   lead?: InputMaybe<ComponentContentPartsLeadInput>;
   publishedAt?: InputMaybe<Scalars['DateTime']['input']>;
   seo?: InputMaybe<ComponentOthersSeoInput>;

@@ -6,7 +6,7 @@ import { adapterTagData } from "../adapterTagData";
 import { adapterContentPart } from "../adapterContentPart";
 
 export function adapterArticleData(getArticleData: GetArticleQuery): PostFull {
-  
+
   if (!getArticleData.article?.data) return {
     id: "",
     lead: "",
@@ -19,13 +19,13 @@ export function adapterArticleData(getArticleData: GetArticleQuery): PostFull {
     stats: { ratings: 0, comments: 0, views: 0 },
     contentparts: [],
   };
-  
+
   const { id, attributes } = getArticleData.article.data;
   return {
     id: id ?? '',
-    type: attributes?.type ?? '',
-    title: attributes?.title ?? '',
-    lead: attributes?.lead.lead ?? '',
+    type: attributes?.type || '',
+    title: attributes?.title || '',
+    lead: attributes?.lead.lead || '',
     createdAt: attributes?.createdAt ? attributes.createdAt as string : null,
     cover: adapterImageData( { image: attributes?.cover.data?.attributes, typeImg: 'medium' }),
     authors: attributes?.authors?.data.map(adapterAuthorData) ?? [],
