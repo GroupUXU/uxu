@@ -1,7 +1,7 @@
-import type {ApolloQueryResult} from "@apollo/client";
-import { initializeApollo } from '../../config';
+import type {ApolloClient, ApolloQueryResult, NormalizedCacheObject} from "@apollo/client";
+import {initializeApollo} from '../../config';
 import {GET_PHONE} from '../query';
-import type {GetPhoneQuery} from '../types';
+import type {GetCommentsQuery, GetPhoneQuery} from '../types';
 
 type ClientGetPhoneQueryProps = {
   variables: {
@@ -11,7 +11,9 @@ type ClientGetPhoneQueryProps = {
   }
 }
 
-export async function clientGetPhoneQuery ({ variables: { id, pageSize = 12, page = 1 }}: ClientGetPhoneQueryProps): Promise<ApolloQueryResult<GetPhoneQuery>> {
+export async function clientGetPhoneQuery ({ variables: { id, pageSize = 12, page = 1 }}: ClientGetPhoneQueryProps): Promise<{ apolloClient:  ApolloClient<NormalizedCacheObject>, result: ApolloQueryResult<GetPhoneQuery> }> {
   const options = {query: GET_PHONE, variables: { id, pageSize, page }};
-  return initializeApollo().query<GetPhoneQuery>( options );
+  const apolloClient = initializeApollo();
+  const result = await apolloClient.query<GetCommentsQuery>(options)
+  return { apolloClient, result }
 }

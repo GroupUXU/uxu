@@ -11,7 +11,7 @@ import { PhoneView } from './components'
 import type { LayoutPhoneViewProps } from './types';
 import styles from './layoutPhoneView.module.scss';
 
-export function LayoutPhoneView({ footer, headerMenu, searchEngineConfig, seo, topElement, phoneFullData }: LayoutPhoneViewProps): ReactElement {
+export function LayoutPhoneView({ footer, headerMenu, searchEngineConfig, seo, topElement, phoneData, comments, addComment, loadMoreComments }: LayoutPhoneViewProps): ReactElement {
   const router = useRouter();
   const currentSlug = router.pathname || '/';
 
@@ -28,7 +28,7 @@ export function LayoutPhoneView({ footer, headerMenu, searchEngineConfig, seo, t
       <div className={styles.bg} />
       {topElement}
       <Container>
-        <PhoneView phoneFullData={phoneFullData} />
+        <PhoneView phoneData={phoneData} comments={comments} addComment={addComment} loadMoreComments={loadMoreComments} />
       </Container>
       <Footer {...footer} />
     </>

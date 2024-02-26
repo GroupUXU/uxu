@@ -7,7 +7,6 @@ import {Tag} from "./tag";
 
 
 export type PhoneFull = {
-  comments: { data: Array<Comment>, pagination: Pagination } | null;
   contentParts: Array<ChunkProps<Record<string, unknown>>>;
   cover: Image | null;
   createdAt: string | null;

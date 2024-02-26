@@ -4,7 +4,8 @@ import styles from "./phoneMetaWrapper.module.scss";
 import type {PhoneMetaWrapperProps} from "./types";
 import classnames from "classnames";
 
-export function PhoneMetaWrapper({status, createdAt}: PhoneMetaWrapperProps): ReactElement {
+export function PhoneMetaWrapper({status, createdAt}: PhoneMetaWrapperProps): ReactElement | null {
+    if (!status || !createdAt) return null
     const reputationClass = classnames({
         [styles.success]: status === 'success',
         [styles.default]: status === 'default',

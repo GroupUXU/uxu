@@ -14,19 +14,20 @@ import {
 import {ButtonsSocialShare} from '../../../../molecules/listButtonsSocialShare';
 import {TagList} from '../../../../molecules/tagList';
 import {useSiteConfig} from "../../../../../hooks/useSiteConfig";
-import {Cover, PhoneMetaWrapper, Comments} from "./components";
+import {Cover, PhoneMetaWrapper, Comments, CommentAdd} from "./components";
 import styles from './phoneView.module.scss';
 import type {PhoneViewProps} from './types';
+import {Note} from "../../../../atoms/note";
 
 
-export function PhoneView({phoneFullData}: PhoneViewProps): ReactElement {
+export function PhoneView({phoneData, comments, addComment, loadMoreComments}: PhoneViewProps): ReactElement {
     const {config: {client}} = useSiteConfig();
     const isMobile = client.platform.isMobile;
     const strategy = isMobile ? strategyForContentPartInPostMobile : strategyForContentPartInPostDesktop;
     const adSlots: Array<string> = isMobile ? ['2XMXAMIDTEXTX1', '2XMXAMIDTEXTX2', '2XMXAMIDTEXTX3'] : ['2XDXAMIDTEXTX1', '2XDXAMIDTEXTX2', '2XDXAMIDTEXTX3']
-    const {cover = null, phone, lead, format, createdAt, status, contentParts} = phoneFullData;
+    const {cover = null, phone, lead, format, createdAt, status, contentParts} = phoneData;
 
-
+    console.log(comments, 'comments')
     return (
         <article className={classnames(styles.article, 'article')}>
             <div className={styles.wrapperLeadWithAd}>
@@ -62,7 +63,17 @@ export function PhoneView({phoneFullData}: PhoneViewProps): ReactElement {
                 <div/>
                 <div className={styles.content}>
                     <ButtonsSocialShare/>
-                    <Comments />
+                    <div className={styles.wrapperComments}>
+                        <h3>Podziel się wiedzą z innymi</h3>
+                        <Note typ="warning" fill>
+                            Nie zachowuj informacji wyłącznie dla siebie. Podziel się swoimi spostrzeżeniami na temat
+                            tego rozmówcy,
+                            aby pomóc innym ustalić, czy numer telefonu jest uznawany za zaufany, czy też nie.
+                        </Note>
+                        <CommentAdd/>
+                        <h3>Komentarze</h3>
+                        <Comments comments={comments}/>
+                    </div>
                 </div>
                 <div/>
             </div>

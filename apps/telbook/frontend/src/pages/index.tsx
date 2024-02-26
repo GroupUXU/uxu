@@ -33,7 +33,8 @@ function Index(): ReactElement {
     const articlesCopy: Array<PostShort> = getArticlesData?.articles?.data ? adapterArticlesData(getArticlesData, "medium") : [];
     const leadPostWithListData: Array<PostShort> = articlesCopy.slice(0, 5);
     const comments: Array<Comment> = getCommentsData?.comments?.data ? adapterCommentsData(getCommentsData) : [];
-
+    console.log(getArticlesData, 'getArticlesData');
+    console.log(articlesCopy, 'articlesCopy');
     return (
         <LayoutFull
             footer={footerConfig}
@@ -43,7 +44,7 @@ function Index(): ReactElement {
         >
             <SectionSearch/>
             <h4 className="headerSection">OSTATNIO KOMENTOWANE</h4>
-            <SectionCommentsList data={comments} />
+            <SectionCommentsList data={comments}/>
             <h4 className="headerSection">OSTATNIO NA BLOGU</h4>
             <LeadPostWithList posts={leadPostWithListData}/>
             <h4 className="headerSection">CZYM JEST TELBOOK.INFO?</h4>

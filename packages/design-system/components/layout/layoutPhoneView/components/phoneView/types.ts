@@ -1,5 +1,8 @@
-import type { PhoneFull } from 'utils';
+import type { PhoneFull , Comment} from 'utils';
 
 export type PhoneViewProps = {
-  phoneFullData: PhoneFull;
+  phoneData: PhoneFull;
+  comments: Array<Comment>;
+  addComment?: () => void;
+  loadMoreComments?: () => void;
 };

@@ -1,6 +1,5 @@
 import {type PhoneFull, type Status, parseFormatDate, Image} from 'utils';
 import type {
-    CommentEntityResponseCollection,
     GetPhoneQuery,
     GetCommentsQuery,
     ComponentOthersCover,
@@ -9,7 +8,6 @@ import type {
 } from '../../../gql';
 import {adapterImageData} from '../adapterImageData';
 import {setReputationFromReputations} from '../../function';
-import {adapterCommentsData} from './utils';
 
 type ViewsData = {
     data: Array<{ y: number; x: string }>;
@@ -50,7 +48,6 @@ function adapterGallery(gallery?: Array<ComponentOthersCover>): Record<Status, I
 export function adapterPhoneData(getPhoneData?: GetPhoneQuery, getCommentsData?: GetCommentsQuery): PhoneFull {
     if (!getPhoneData?.phone?.data) {
         return {
-            comments: null,
             contentParts: [],
             cover: null,
             createdAt: null,
@@ -73,10 +70,6 @@ export function adapterPhoneData(getPhoneData?: GetPhoneQuery, getCommentsData?:
     const commentsTotal: number = comments?.meta.pagination.total || 0;
 
     return {
-        comments: comments ? {
-            data: adapterCommentsData(comments as CommentEntityResponseCollection),
-            pagination: {page: 1, pageSize: 12, pageCount: 1, total: commentsTotal},
-        } : null,
         contentParts: [
             {
                 type: 10,
