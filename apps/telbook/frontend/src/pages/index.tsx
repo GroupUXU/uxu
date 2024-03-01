@@ -11,7 +11,6 @@ import {SectionSearch, SectionEmpty, SectionCommentsList} from "../components";
 
 function Index(): ReactElement {
     const seo = useSeoConfig({});
-
     const {data: getArticlesData} = useGetArticlesQuery({
         variables: {
             pageSize: 12,
@@ -33,8 +32,7 @@ function Index(): ReactElement {
     const articlesCopy: Array<PostShort> = getArticlesData?.articles?.data ? adapterArticlesData(getArticlesData, "medium") : [];
     const leadPostWithListData: Array<PostShort> = articlesCopy.slice(0, 5);
     const comments: Array<Comment> = getCommentsData?.comments?.data ? adapterCommentsData(getCommentsData) : [];
-    console.log(getArticlesData, 'getArticlesData');
-    console.log(articlesCopy, 'articlesCopy');
+    
     return (
         <LayoutFull
             footer={footerConfig}
