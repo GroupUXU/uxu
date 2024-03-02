@@ -187,14 +187,14 @@
 }
 
 .btn.default {
-  border: var(--uxu-border-default);
-  color: var(--uxu-color-default-1);
-  background-color: rgba(var(--uxu-color-default-1-rgba), var(--uxu-alpha-min));
+  border: var(--uxu-border-active);
+  color: var(--uxu-color-text-active);
+  background-color: rgba(var(--uxu-color-background-foreground-rgba), var(--uxu-alpha-min));
 
   &:hover {
-    border: var(--uxu-border-active);
-    color: var(--uxu-color-text-active);
-    background-color: rgba(var(--uxu-color-background-foreground-rgba), var(--uxu-alpha-min));
+    border: var(--uxu-border-default);
+    color: var(--uxu-color-default-1);
+    background-color: rgba(var(--uxu-color-default-1-rgba), var(--uxu-alpha-min));
   }
 }
 

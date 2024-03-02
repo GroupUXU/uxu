@@ -14,7 +14,7 @@ export function SectionCommentsList({data}: SectionCommentsListProps): ReactElem
                 action: comment.author?.title ? (
                     <Link
                         className={`btn ${comment.status}`}
-                        href={createSlugForPhone(comment.author.title, comment.id || "")}
+                        href={createSlugForPhone(comment.author.title, comment.author.id || "")}
                         title={comment.author.title}
                     >
                         {comment.author.title}
