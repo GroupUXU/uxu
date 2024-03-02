@@ -63,15 +63,15 @@ export function PhoneView({phoneData, comments, onCommentAdd, infiniteScrollMore
                 <div className={styles.content}>
                     <ButtonsSocialShare/>
                     <div className={styles.wrapperComments}>
-                        <h3>Podziel się wiedzą z innymi</h3>
-                        <Note typ="warning" fill>
-                            Nie zachowuj informacji wyłącznie dla siebie. Podziel się swoimi spostrzeżeniami na temat
-                            tego rozmówcy,
-                            aby pomóc innym ustalić, czy numer telefonu jest uznawany za zaufany, czy też nie.
-                        </Note>
-                        <CommentAdd onCommentAdd={onCommentAdd}/>
-                        <h3>Komentarze</h3>
-                        <Comments infiniteScrollMoreComments={infiniteScrollMoreComments} comments={comments}/>
+                        {/*<h3>Podziel się wiedzą z innymi</h3>*/}
+                        {/*<Note typ="warning" fill>*/}
+                        {/*    Nie zachowuj informacji wyłącznie dla siebie. Podziel się swoimi spostrzeżeniami na temat*/}
+                        {/*    tego rozmówcy,*/}
+                        {/*    aby pomóc innym ustalić, czy numer telefonu jest uznawany za zaufany, czy też nie.*/}
+                        {/*</Note>*/}
+                        {/*<CommentAdd onCommentAdd={onCommentAdd}/>*/}
+                        {/*<h3>Komentarze</h3>*/}
+                        {/*<Comments infiniteScrollMoreComments={infiniteScrollMoreComments} comments={comments}/>*/}
                     </div>
                 </div>
                 <div/>

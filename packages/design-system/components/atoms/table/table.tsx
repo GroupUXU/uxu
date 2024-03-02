@@ -1,4 +1,3 @@
-import {Fragment} from 'react';
 import type {ReactElement} from 'react';
 import type {TableProps} from './types';
 import style from './table.module.scss';

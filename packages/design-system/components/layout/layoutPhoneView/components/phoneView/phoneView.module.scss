@@ -10,25 +10,27 @@
 }
 
 .wrapperLeadWithAd {
-  display: grid;
+  display: flex;
   gap: var(--uxu-space-default);
-  grid-template-columns: auto;
+  flex-direction: column;
   position: relative;
 
   @include media(m) {
+    display: grid;
     grid-template-columns: 1fr 30rem;
   }
 }
 
 
 .wrapperContentWithAd {
-  display: grid;
+  display: flex;
   gap: var(--uxu-space-default);
   width: 100%;
-  grid-template-columns: auto;
+  flex-direction: column;
   position: relative;
 
   @include media(m) {
+    display: grid;
     grid-template-columns: 16rem 1fr 30rem;
   }
 }
