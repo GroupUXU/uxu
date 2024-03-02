@@ -70,10 +70,10 @@ export function SectionQuestionnaireContact(): ReactElement {
         if (isSubmitting) {
             if (submitStatus.success !== undefined) {
                 return submitStatus.success
-                    ? <Note type="success">{submitStatus.message}</Note>
-                    : <Note type="error">{submitStatus.message}</Note>;
+                    ? <Note typ="success">{submitStatus.message}</Note>
+                    : <Note typ="error">{submitStatus.message}</Note>;
             } else {
-                return <Note type="warning" action={<LoadingWheel size={2} />}>Zapisuję...</Note>;
+                return <Note typ="warning" action={<LoadingWheel size={2} />}>Zapisuję...</Note>;
             }
         }
         return null;

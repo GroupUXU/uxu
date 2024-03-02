@@ -1,6 +1,6 @@
 overwrite: true
 schema: "http://0.0.0.0:1337/graphql"
-documents: [ "./src/gql/fragments/**/*.ts" ,"./src/gql/query/**/*.ts" ]
+documents: [ "./src/gql/fragments/**/*.ts", "./src/gql/mutation/**/*.ts" ,"./src/gql/query/**/*.ts" ]
 generates:
   ./src/gql/types/api-gateway.service.generated.ts:
     plugins:

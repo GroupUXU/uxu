@@ -1,0 +1,24 @@
+.wrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: var(--uxu-space-default);
+  border: var(--uxu-border-default);
+  border-radius: var(--uxu-radii-default);
+  background: var(--uxu-color-background-secound);
+}
+
+.wrapperInputRadio {
+  width: 100%;
+  display: grid;
+  flex-wrap: wrap;
+  padding: var(--uxu-space-default) 0;
+  gap: var(--uxu-space-default);
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.wrapperSubmit {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: var(--uxu-space-large);
+}

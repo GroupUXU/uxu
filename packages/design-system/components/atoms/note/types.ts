@@ -1,10 +1,11 @@
-import type { PropsWithChildren, ReactElement } from "react";
+import type {CSSProperties, PropsWithChildren, ReactElement} from "react";
+import { Status } from 'utils';
 
-
-export type PropsNote = PropsWithChildren<{
+export type NoteProps = PropsWithChildren<{
   fill?: boolean;
+  style?: CSSProperties;
   disabled?: boolean;
   className?: string;
-  action?: ReactElement;
-  type?: 'success' | 'error' | 'warning' | 'default' ;
+  action?: ReactElement | null;
+  typ: Status;
 }>

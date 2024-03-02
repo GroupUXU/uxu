@@ -16,7 +16,8 @@
       "type": "enumeration",
       "enum": [
         "other",
-        "city"
+        "city",
+        "phone"
       ],
       "default": "city",
       "required": true
@@ -53,17 +54,17 @@
       "repeatable": false,
       "component": "stats.views"
     },
-    "articles": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::article.article",
-      "mappedBy": "tags"
-    },
     "seo": {
       "type": "component",
       "repeatable": false,
       "required": true,
       "component": "others.seo"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::article.article",
+      "mappedBy": "tags"
     }
   }
 }

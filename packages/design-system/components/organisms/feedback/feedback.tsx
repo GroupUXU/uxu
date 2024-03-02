@@ -79,7 +79,7 @@ export function Feedback({ onFeedbackSubmit, activeUserEmail, switchModalButtonT
 
   const renderModalContent = () => {
     if (isSubmitting) {
-      return <Note type="warning" action={<LoadingWheel size={2} />}>Zapisuję...</Note>;
+      return <Note typ="warning" action={<LoadingWheel size={2} />}>Zapisuję...</Note>;
     }
 
     if (submitStatus.success === undefined) {
@@ -93,14 +93,14 @@ export function Feedback({ onFeedbackSubmit, activeUserEmail, switchModalButtonT
           <div className={styles.footerModalFeedback}>
             <FeedbackRatings feedbackRating={feedbackRating} handleFeedbackRatingChange={handleFeedbackRatingChange} register={register} />
             {switchModalButtonText && <button className={classNames("btn", styles.btnSubmitFeedback)} type="submit">Wyślij</button>}
-            {errors.feedbackRating?.message && <Note type="warning" className={styles.wrapperRatingNoteFeedback} fill>{errors.feedbackRating.message}</Note>}
+            {errors.feedbackRating?.message && <Note typ="warning" className={styles.wrapperRatingNoteFeedback} fill>{errors.feedbackRating.message}</Note>}
           </div>
         </form>
       );
     }
 
     const noteType = submitStatus.success ? "success" : "error";
-    return <Note type={noteType}>{submitStatus.message}</Note>;
+    return <Note typ={noteType}>{submitStatus.message}</Note>;
   };
 
   return (

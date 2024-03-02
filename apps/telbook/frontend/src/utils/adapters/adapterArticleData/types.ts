@@ -1,3 +1,3 @@
-import type { PostFull } from 'utils';
+import type { PhoneFull } from 'utils';
 
-export type GetAdapterArticleData = PostFull
+export type GetAdapterArticleData = PhoneFull

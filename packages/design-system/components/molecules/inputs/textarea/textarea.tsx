@@ -13,7 +13,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextAreaProps>(({ childr
           className={classNames(styles.textarea, { [styles.error]: errorMessage })}
           ref={ref}
         />
-    {errorMessage && <Note type='warning' fill><p className={classNames(styles.message, { [styles.error]: errorMessage })}>{errorMessage}</p></Note>}
+    {errorMessage && <Note typ='warning' fill><p className={classNames(styles.message, { [styles.error]: errorMessage })}>{errorMessage}</p></Note>}
     {children}
   </label>
 ));

@@ -16,6 +16,8 @@ export type Scalars = {
   Date: { input: any; output: any; }
   DateTime: { input: any; output: any; }
   JSON: { input: any; output: any; }
+  PhoneFormatDynamicZoneInput: { input: any; output: any; }
+  PhoneGalleryDynamicZoneInput: { input: any; output: any; }
   PhoneViewsDynamicZoneInput: { input: any; output: any; }
   TagContentpartsDynamicZoneInput: { input: any; output: any; }
   Upload: { input: any; output: any; }
@@ -133,11 +135,11 @@ export type BooleanFilterInput = {
 
 export type Comment = {
   __typename?: 'Comment';
-  author: Scalars['String']['output'];
   createdAt?: Maybe<Scalars['DateTime']['output']>;
-  message?: Maybe<Scalars['String']['output']>;
+  message: Scalars['String']['output'];
   phone?: Maybe<PhoneEntityResponse>;
   publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  reputation: Enum_Comment_Reputation;
   updatedAt?: Maybe<Scalars['DateTime']['output']>;
 };
 
@@ -160,7 +162,6 @@ export type CommentEntityResponseCollection = {
 
 export type CommentFiltersInput = {
   and?: InputMaybe<Array<InputMaybe<CommentFiltersInput>>>;
-  author?: InputMaybe<StringFilterInput>;
   createdAt?: InputMaybe<DateTimeFilterInput>;
   id?: InputMaybe<IdFilterInput>;
   message?: InputMaybe<StringFilterInput>;
@@ -168,19 +169,15 @@ export type CommentFiltersInput = {
   or?: InputMaybe<Array<InputMaybe<CommentFiltersInput>>>;
   phone?: InputMaybe<PhoneFiltersInput>;
   publishedAt?: InputMaybe<DateTimeFilterInput>;
+  reputation?: InputMaybe<StringFilterInput>;
   updatedAt?: InputMaybe<DateTimeFilterInput>;
 };
 
 export type CommentInput = {
-  author?: InputMaybe<Scalars['String']['input']>;
   message?: InputMaybe<Scalars['String']['input']>;
   phone?: InputMaybe<Scalars['ID']['input']>;
   publishedAt?: InputMaybe<Scalars['DateTime']['input']>;
-};
-
-export type CommentRelationResponseCollection = {
-  __typename?: 'CommentRelationResponseCollection';
-  data: Array<CommentEntity>;
+  reputation?: InputMaybe<Enum_Comment_Reputation>;
 };
 
 export type ComponentContentPartsLead = {
@@ -244,9 +241,22 @@ export type ComponentContentPartsYoutube = {
   url: Scalars['String']['output'];
 };
 
+export type ComponentOthersCover = {
+  __typename?: 'ComponentOthersCover';
+  cover?: Maybe<UploadFileEntityResponse>;
+  id: Scalars['ID']['output'];
+  typ?: Maybe<Enum_Componentotherscover_Typ>;
+};
+
 export type ComponentOthersEmail = {
   __typename?: 'ComponentOthersEmail';
   email: Scalars['String']['output'];
+  id: Scalars['ID']['output'];
+};
+
+export type ComponentOthersFormat = {
+  __typename?: 'ComponentOthersFormat';
+  format: Scalars['String']['output'];
   id: Scalars['ID']['output'];
 };
 
@@ -507,6 +517,22 @@ export enum Enum_Article_Type {
   Article = 'article'
 }
 
+export enum Enum_Comment_Reputation {
+  Danger = 'danger',
+  Default = 'default',
+  Error = 'error',
+  Success = 'success',
+  Warning = 'warning'
+}
+
+export enum Enum_Componentotherscover_Typ {
+  Danger = 'danger',
+  Default = 'default',
+  Error = 'error',
+  Success = 'success',
+  Warning = 'warning'
+}
+
 export enum Enum_Componentothersphone_Typ {
   Fax = 'fax',
   Home = 'home',
@@ -570,17 +596,16 @@ export enum Enum_Phone_Network {
   IPlus = 'iPlus'
 }
 
-export enum Enum_Phone_Reputation {
-  Annoying = 'annoying',
-  Inert = 'inert',
-  Negative = 'negative',
-  Positive = 'positive',
-  Unknown = 'unknown'
+export enum Enum_Phone_Typ {
+  Mobile = 'mobile',
+  Premium = 'premium',
+  Stationary = 'stationary'
 }
 
 export enum Enum_Tag_Typ {
   City = 'city',
-  Other = 'other'
+  Other = 'other',
+  Phone = 'phone'
 }
 
 export type Error = {
@@ -620,7 +645,7 @@ export type FloatFilterInput = {
   startsWith?: InputMaybe<Scalars['Float']['input']>;
 };
 
-export type GenericMorph = Article | Comment | ComponentContentPartsLead | ComponentContentPartsMaps | ComponentContentPartsMedia | ComponentContentPartsQuote | ComponentContentPartsTxt | ComponentContentPartsYouTube | ComponentContentPartsYoutube | ComponentOthersEmail | ComponentOthersPhone | ComponentOthersSeo | ComponentStatsViews | ContentReleasesRelease | ContentReleasesReleaseAction | CustomerMessage | I18NLocale | Phone | Tag | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
+export type GenericMorph = Article | Comment | ComponentContentPartsLead | ComponentContentPartsMaps | ComponentContentPartsMedia | ComponentContentPartsQuote | ComponentContentPartsTxt | ComponentContentPartsYouTube | ComponentContentPartsYoutube | ComponentOthersCover | ComponentOthersEmail | ComponentOthersFormat | ComponentOthersPhone | ComponentOthersSeo | ComponentStatsViews | ContentReleasesRelease | ContentReleasesReleaseAction | CustomerMessage | I18NLocale | Phone | Tag | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
 
 export type I18NLocale = {
   __typename?: 'I18NLocale';
@@ -1046,24 +1071,17 @@ export type PaginationArg = {
 
 export type Phone = {
   __typename?: 'Phone';
-  comments?: Maybe<CommentRelationResponseCollection>;
   createdAt?: Maybe<Scalars['DateTime']['output']>;
-  description?: Maybe<Scalars['String']['output']>;
-  lastviews?: Maybe<Scalars['DateTime']['output']>;
+  format: Array<Maybe<PhoneFormatDynamicZone>>;
+  gallery: Array<Maybe<PhoneGalleryDynamicZone>>;
+  lead: ComponentContentPartsLead;
   network?: Maybe<Enum_Phone_Network>;
+  owner?: Maybe<Scalars['JSON']['output']>;
   phone: Scalars['String']['output'];
-  reputation?: Maybe<Enum_Phone_Reputation>;
-  totalRatings?: Maybe<Scalars['JSON']['output']>;
+  ratings?: Maybe<Scalars['JSON']['output']>;
+  typ?: Maybe<Enum_Phone_Typ>;
   updatedAt?: Maybe<Scalars['DateTime']['output']>;
   views: Array<Maybe<PhoneViewsDynamicZone>>;
-};
-
-
-export type PhoneCommentsArgs = {
-  filters?: InputMaybe<CommentFiltersInput>;
-  pagination?: InputMaybe<PaginationArg>;
-  publicationState?: InputMaybe<PublicationState>;
-  sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
 export type PhoneEntity = {
@@ -1085,28 +1103,32 @@ export type PhoneEntityResponseCollection = {
 
 export type PhoneFiltersInput = {
   and?: InputMaybe<Array<InputMaybe<PhoneFiltersInput>>>;
-  comments?: InputMaybe<CommentFiltersInput>;
   createdAt?: InputMaybe<DateTimeFilterInput>;
-  description?: InputMaybe<StringFilterInput>;
   id?: InputMaybe<IdFilterInput>;
-  lastviews?: InputMaybe<DateTimeFilterInput>;
+  lead?: InputMaybe<ComponentContentPartsLeadFiltersInput>;
   network?: InputMaybe<StringFilterInput>;
   not?: InputMaybe<PhoneFiltersInput>;
   or?: InputMaybe<Array<InputMaybe<PhoneFiltersInput>>>;
+  owner?: InputMaybe<JsonFilterInput>;
   phone?: InputMaybe<StringFilterInput>;
-  reputation?: InputMaybe<StringFilterInput>;
-  totalRatings?: InputMaybe<JsonFilterInput>;
+  ratings?: InputMaybe<JsonFilterInput>;
+  typ?: InputMaybe<StringFilterInput>;
   updatedAt?: InputMaybe<DateTimeFilterInput>;
 };
 
+export type PhoneFormatDynamicZone = ComponentOthersFormat | Error;
+
+export type PhoneGalleryDynamicZone = ComponentOthersCover | Error;
+
 export type PhoneInput = {
-  comments?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
-  description?: InputMaybe<Scalars['String']['input']>;
-  lastviews?: InputMaybe<Scalars['DateTime']['input']>;
+  format?: InputMaybe<Array<Scalars['PhoneFormatDynamicZoneInput']['input']>>;
+  gallery?: InputMaybe<Array<Scalars['PhoneGalleryDynamicZoneInput']['input']>>;
+  lead?: InputMaybe<ComponentContentPartsLeadInput>;
   network?: InputMaybe<Enum_Phone_Network>;
+  owner?: InputMaybe<Scalars['JSON']['input']>;
   phone?: InputMaybe<Scalars['String']['input']>;
-  reputation?: InputMaybe<Enum_Phone_Reputation>;
-  totalRatings?: InputMaybe<Scalars['JSON']['input']>;
+  ratings?: InputMaybe<Scalars['JSON']['input']>;
+  typ?: InputMaybe<Enum_Phone_Typ>;
   views?: InputMaybe<Array<Scalars['PhoneViewsDynamicZoneInput']['input']>>;
 };
 

@@ -1,0 +1,86 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--uxu-space-default);
+
+  .comment {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: var(--uxu-space-default);
+    border: var(--uxu-border-default);
+    border-radius: var(--uxu-radii-default);
+    background-color: var(--uxu-color-background-secound);
+    padding: var(--uxu-space-default);
+
+    .info {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.wrapperData {
+  display: flex;
+  min-width: 20rem;
+  height: 100%;
+  align-items: center;
+  gap: var(--uxu-space-small);
+  border-right: var(--uxu-border-default);
+  padding-right: var(--uxu-space-small);
+
+  .circle {
+    width: 4rem;
+    height: 4rem;
+    border-radius: var(--uxu-radii-circle);
+    background-color: var(--uxu-color-default-1);
+  }
+
+  .data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .reputation, .date {
+      font-size: var(--uxu-font-size-small);
+      color: var(--uxu-color-text-default);
+    }
+
+    .date {
+      font-size: var(--uxu-font-size-micro);
+    }
+  }
+
+  &.success .circle {
+    background-color: var(--uxu-color-success-1);
+  }
+
+  &.warning .circle {
+    background-color: var(--uxu-color-warning-1);
+  }
+
+  &.danger .circle {
+    background-color: var(--uxu-color-danger-1);
+  }
+
+  &.error .circle {
+    background-color: var(--uxu-color-error-1);
+  }
+
+  &.success .reputation {
+    color: var(--uxu-color-success-1);
+  }
+
+  &.warning .reputation {
+    color: var(--uxu-color-warning-1);
+  }
+
+  &.danger .reputation {
+    color: var(--uxu-color-danger-1);
+  }
+
+  &.error .reputation {
+    color: var(--uxu-color-error-1);
+  }
+}

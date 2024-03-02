@@ -12,28 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "phone": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
-    "reputation": {
-      "type": "enumeration",
-      "enum": [
-        "negative",
-        "annoying",
-        "unknown",
-        "inert",
-        "positive"
-      ],
-      "default": "inert"
-    },
-    "lastviews": {
-      "type": "datetime"
-    },
-    "description": {
-      "type": "text"
-    },
     "network": {
       "type": "enumeration",
       "enum": [
@@ -77,14 +55,44 @@
       ],
       "required": true
     },
-    "totalRatings": {
+    "ratings": {
       "type": "json"
     },
-    "comments": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::comment.comment",
-      "mappedBy": "phone"
+    "lead": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content-parts.lead",
+      "required": true
+    },
+    "typ": {
+      "type": "enumeration",
+      "enum": [
+        "mobile",
+        "stationary",
+        "premium"
+      ]
+    },
+    "phone": {
+      "type": "uid",
+      "required": true
+    },
+    "format": {
+      "type": "dynamiczone",
+      "components": [
+        "others.format"
+      ],
+      "required": true
+    },
+    "owner": {
+      "type": "json",
+      "required": false
+    },
+    "gallery": {
+      "type": "dynamiczone",
+      "components": [
+        "others.cover"
+      ],
+      "required": true
     }
   }
 }

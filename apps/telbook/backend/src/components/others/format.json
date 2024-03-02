@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_others_formats",
+  "info": {
+    "displayName": "format",
+    "icon": "phone"
+  },
+  "options": {},
+  "attributes": {
+    "format": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

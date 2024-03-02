@@ -4,25 +4,34 @@
   "info": {
     "singularName": "comment",
     "pluralName": "comments",
-    "displayName": "comment"
+    "displayName": "comment",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "message": {
-      "type": "text"
+    "reputation": {
+      "type": "enumeration",
+      "enum": [
+        "danger",
+        "default",
+        "error",
+        "success",
+        "warning"
+      ],
+      "required": true,
+      "default": "default"
     },
-    "author": {
-      "type": "string",
+    "message": {
+      "type": "text",
       "required": true
     },
     "phone": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::phone.phone",
-      "inversedBy": "comments"
+      "relation": "oneToOne",
+      "target": "api::phone.phone"
     }
   }
 }

@@ -603,16 +603,16 @@ export interface ApiArticleArticle extends Schema.CollectionType {
         minLength: 1;
         maxLength: 160;
       }>;
-    cover: Attribute.Media & Attribute.Required;
     lead: Attribute.Component<'content-parts.lead'> & Attribute.Required;
     contentparts: Attribute.DynamicZone<
       ['content-parts.txt', 'content-parts.media', 'content-parts.quote', 'content-parts.youtube']
     > &
       Attribute.Required;
     views: Attribute.Component<'stats.views'> & Attribute.Required;
-    tags: Attribute.Relation<'api::article.article', 'manyToMany', 'api::tag.tag'>;
     authors: Attribute.Relation<'api::article.article', 'manyToMany', 'plugin::users-permissions.user'>;
     seo: Attribute.Component<'others.seo'> & Attribute.Required;
+    tags: Attribute.Relation<'api::article.article', 'manyToMany', 'api::tag.tag'>;
+    cover: Attribute.Media & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -627,14 +627,17 @@ export interface ApiCommentComment extends Schema.CollectionType {
     singularName: 'comment';
     pluralName: 'comments';
     displayName: 'comment';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    message: Attribute.Text;
-    author: Attribute.String & Attribute.Required;
-    phone: Attribute.Relation<'api::comment.comment', 'manyToOne', 'api::phone.phone'>;
+    reputation: Attribute.Enumeration<['danger', 'default', 'error', 'success', 'warning']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'default'>;
+    message: Attribute.Text & Attribute.Required;
+    phone: Attribute.Relation<'api::comment.comment', 'oneToOne', 'api::phone.phone'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -681,11 +684,6 @@ export interface ApiPhonePhone extends Schema.CollectionType {
     draftAndPublish: false;
   };
   attributes: {
-    phone: Attribute.String & Attribute.Required & Attribute.Unique;
-    reputation: Attribute.Enumeration<['negative', 'annoying', 'unknown', 'inert', 'positive']> &
-      Attribute.DefaultTo<'inert'>;
-    lastviews: Attribute.DateTime;
-    description: Attribute.Text;
     network: Attribute.Enumeration<
       [
         'CenterNet',
@@ -722,8 +720,13 @@ export interface ApiPhonePhone extends Schema.CollectionType {
       ]
     >;
     views: Attribute.DynamicZone<['stats.views']> & Attribute.Required;
-    totalRatings: Attribute.JSON;
-    comments: Attribute.Relation<'api::phone.phone', 'oneToMany', 'api::comment.comment'>;
+    ratings: Attribute.JSON;
+    lead: Attribute.Component<'content-parts.lead'> & Attribute.Required;
+    typ: Attribute.Enumeration<['mobile', 'stationary', 'premium']>;
+    phone: Attribute.UID & Attribute.Required;
+    format: Attribute.DynamicZone<['others.format']> & Attribute.Required;
+    owner: Attribute.JSON;
+    gallery: Attribute.DynamicZone<['others.cover']> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::phone.phone', 'oneToOne', 'admin::user'> & Attribute.Private;
@@ -743,7 +746,7 @@ export interface ApiTagTag extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    typ: Attribute.Enumeration<['other', 'city']> & Attribute.Required & Attribute.DefaultTo<'city'>;
+    typ: Attribute.Enumeration<['other', 'city', 'phone']> & Attribute.Required & Attribute.DefaultTo<'city'>;
     title: Attribute.String &
       Attribute.Required &
       Attribute.Unique &
@@ -754,8 +757,8 @@ export interface ApiTagTag extends Schema.CollectionType {
     lead: Attribute.Component<'content-parts.lead'> & Attribute.Required;
     contentparts: Attribute.DynamicZone<['content-parts.txt']> & Attribute.Required;
     views: Attribute.Component<'stats.views'>;
-    articles: Attribute.Relation<'api::tag.tag', 'manyToMany', 'api::article.article'>;
     seo: Attribute.Component<'others.seo'> & Attribute.Required;
+    articles: Attribute.Relation<'api::tag.tag', 'manyToMany', 'api::article.article'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

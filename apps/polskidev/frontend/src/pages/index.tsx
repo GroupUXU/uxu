@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
 import type { PostShort } from "utils";
 import type { NormalizedCacheObject } from "@apollo/client";
-import { SectionInfiniteScroll } from 'design-system/components/templates/section/sectionInfiniteScroll';
+import { InfiniteScroll } from 'design-system/components/molecules/infiniteScroll';
 import { LayoutListingPost } from 'design-system/components/layout/layoutListingPost/layoutListingPost';
 import { PostList } from 'design-system/components/organisms/postList';
 import { Tree, renderBranches } from 'design-system/components/molecules/tree';
@@ -70,13 +70,13 @@ function Index (): ReactElement {
         </>
       )}
     >
-      <SectionInfiniteScroll
+      <InfiniteScroll
         onScrollEnd={handleScrollEnd}
         page={data?.articles?.meta.pagination.page || 1}
         pageCount={data?.articles?.meta.pagination.pageCount || 1}
       >
         {postListData.map ( ( article ) => (<PostList {...article} key={article.id || 'fallback'}/>) )}
-      </SectionInfiniteScroll>
+      </InfiniteScroll>
     </LayoutListingPost>
   );
 };

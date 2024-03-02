@@ -5,10 +5,12 @@ import styles from './tagList.module.scss';
 
 export function TagList({ tags }: TagListProps): ReactElement {
   return (
-    <ul className={styles.list}>
-      {tags?.map((tag) => {
-        return <li key={tag.id}><Link href={tag.slug} title={tag.title}>{tag.title}</Link></li>
-      })}
-    </ul>
+     <ul className={styles.list}>
+       {tags?.map(({ id, slug, title }) => (
+          <li key={id}>
+            {slug ? <Link href={slug} title={title}>{title}</Link> : <p>{title}</p>}
+          </li>
+       ))}
+     </ul>
   );
 }

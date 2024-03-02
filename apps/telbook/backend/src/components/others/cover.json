@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_others_covers",
+  "info": {
+    "displayName": "cover",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "typ": {
+      "type": "enumeration",
+      "enum": [
+        "danger",
+        "default",
+        "error",
+        "success",
+        "warning"
+      ]
+    }
+  }
+}

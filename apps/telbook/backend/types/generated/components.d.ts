@@ -81,6 +81,18 @@ export interface ContentPartsYoutube extends Schema.Component {
   };
 }
 
+export interface OthersCover extends Schema.Component {
+  collectionName: 'components_others_covers';
+  info: {
+    displayName: 'cover';
+    description: '';
+  };
+  attributes: {
+    cover: Attribute.Media;
+    typ: Attribute.Enumeration<['danger', 'default', 'error', 'success', 'warning']>;
+  };
+}
+
 export interface OthersEmail extends Schema.Component {
   collectionName: 'components_others_emails';
   info: {
@@ -89,6 +101,17 @@ export interface OthersEmail extends Schema.Component {
   };
   attributes: {
     email: Attribute.Email & Attribute.Required;
+  };
+}
+
+export interface OthersFormat extends Schema.Component {
+  collectionName: 'components_others_formats';
+  info: {
+    displayName: 'format';
+    icon: 'phone';
+  };
+  attributes: {
+    format: Attribute.String & Attribute.Required & Attribute.Unique;
   };
 }
 
@@ -138,7 +161,9 @@ declare module '@strapi/types' {
       'content-parts.txt': ContentPartsTxt;
       'content-parts.you-tube': ContentPartsYouTube;
       'content-parts.youtube': ContentPartsYoutube;
+      'others.cover': OthersCover;
       'others.email': OthersEmail;
+      'others.format': OthersFormat;
       'others.phone': OthersPhone;
       'others.seo': OthersSeo;
       'stats.views': StatsViews;

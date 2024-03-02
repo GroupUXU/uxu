@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { CodeChunk, EmbedChunk, EmbedYouTubeChunk, GalleryChunk, HeaderChunk, IMGChunk, ListChunk, ParagraphChunk, QuoteChunk, TableChunk, AdChunk } from '../chunks';
+import { CodeChunk, EmbedChunk, EmbedYouTubeChunk, GalleryChunk, HeaderChunk, IMGChunk, ListChunk, ParagraphChunk, QuoteChunk, TableChunk, AdChunk, ChartBarSeriesXYChunk, ChartBarLinesXYChunk } from '../chunks';
 import { ContentPartEnum } from '../enums';
 
 export const chunksMap = new Map<ContentPartEnum, FC>([
@@ -14,4 +14,6 @@ export const chunksMap = new Map<ContentPartEnum, FC>([
   [ContentPartEnum.GALLERY, GalleryChunk],
   [ContentPartEnum.EMBEDYOUTUBE, EmbedYouTubeChunk],
   [ContentPartEnum.AD, AdChunk],
+  [ContentPartEnum.CHARTBARSERIESXY, ChartBarSeriesXYChunk],
+  [ContentPartEnum.CHARTBARLINESXY, ChartBarLinesXYChunk],
 ]);

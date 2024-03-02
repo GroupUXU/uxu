@@ -2,26 +2,32 @@ import type { ReactElement } from 'react';
 import { AlertTriangle, CheckCircle, AlertOctagon, HelpCircle } from 'react-feather';
 import classNames from 'classnames';
 import styles from './note.module.scss';
-import type { PropsNote } from './types';
+import {NoteProps} from './types';
+import {Status} from 'utils';
 
-const iconComponents = {
-  success: <CheckCircle />,
-  warning: <AlertTriangle />,
-  error: <AlertOctagon />,
-  default: <HelpCircle />,
+type IconComponentsType = {
+  [key in Status]: ReactElement;
 };
 
-export function Note({ children, className, type = 'default', fill, action, disabled }: PropsNote): ReactElement {
-  const IconComponent = iconComponents[type];
+const iconComponents: IconComponentsType = {
+  success: <CheckCircle />,
+  default: <HelpCircle />,
+  warning: <AlertTriangle />,
+  danger: <AlertOctagon />,
+  error: <AlertOctagon />,
+};
+
+export function Note({ children, className, typ = 'default', fill, action, style, disabled }: NoteProps): ReactElement {
+  const IconComponent: ReactElement = iconComponents[typ];
   const wrapperClasses = classNames(styles.note, className, {
-    [styles[type]]: !fill,
-    [styles[`${type}Fill`]]: fill,
+    [styles[typ]]: !fill,
+    [styles[`${typ}Fill`]]: fill,
     [styles.action]: Boolean(action),
     [styles.disabled]: disabled,
   });
 
   return (
-    <div className={wrapperClasses}>
+    <div className={wrapperClasses} style={style}>
       {IconComponent}
       {children}
       {action ? action : null}
