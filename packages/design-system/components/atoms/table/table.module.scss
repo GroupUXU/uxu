@@ -1,16 +1,17 @@
 .wrapperTable {
   width: 100%;
   display: block;
-  overflow-x: scroll;
+  overflow-x: auto;
   position: relative;
-  padding: var(--uxu-space-large) 0;
 }
 
 .table {
   width: 100%;
+  min-width: 100%;
   border-spacing: 0;
   position: relative;
   border-collapse: separate;
+  padding: var(--uxu-space-large) 0;
 
   thead {
     tr {

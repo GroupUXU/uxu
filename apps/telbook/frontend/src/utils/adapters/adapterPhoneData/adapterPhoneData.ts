@@ -102,12 +102,6 @@ export function adapterPhoneData(getPhoneData?: GetPhoneQuery, getCommentsData?:
                 ]
             },
             {
-                type: 3,
-                id: '2',
-                typ: 'h3',
-                value: 'Wyświetlenia'
-            },
-            {
                 type: 14,
                 id: '3',
                 data: [{
@@ -118,12 +112,6 @@ export function adapterPhoneData(getPhoneData?: GetPhoneQuery, getCommentsData?:
                         x: '2023-12-01'
                     }, {y: 0, x: '2024-01-01'}, ...viewsData.data]
                 }]
-            },
-            {
-                type: 3,
-                id: '4',
-                typ: 'h3',
-                value: 'Oceny'
             },
             {
                 type: 13,
