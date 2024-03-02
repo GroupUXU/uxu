@@ -1,3 +1,5 @@
+@import "../../../../../../../style/mixins";
+
 .wrapper {
   width: 100%;
   display: flex;
@@ -6,6 +8,7 @@
 
   .comment {
     display: flex;
+    flex-wrap: wrap;
     position: relative;
     align-items: center;
     gap: var(--uxu-space-default);
@@ -13,6 +16,10 @@
     border-radius: var(--uxu-radii-default);
     background-color: var(--uxu-color-background-secound);
     padding: var(--uxu-space-default);
+
+    @include media('m') {
+      flex-wrap: nowrap;
+    }
 
     .info {
       width: 100%;

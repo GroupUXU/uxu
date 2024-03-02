@@ -33,8 +33,7 @@ export function CommentAdd({onCommentAdd}: CommentAddProps): ReactElement {
 								}, 8000);
 						}
 						reset();
-				} catch (error) {
-						console.error(error); // Log any errors
+				} catch {
 						toggleStatus("error");
 				}
 		};
