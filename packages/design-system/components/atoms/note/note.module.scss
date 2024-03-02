@@ -1,3 +1,5 @@
+@import "../../../style/mixins";
+
 .note {
   width: 100%;
   max-width: 100%;
@@ -10,7 +12,16 @@
 }
 
 .action {
-  grid-template-columns: 2.4rem 1fr auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  p {
+    margin-right: auto;
+  }
+
+  @include media('m') {
+    grid-template-columns: 2.4rem 1fr auto;
+  }
 }
 
 .default, .success, .warning, .error, .danger {
