@@ -17,7 +17,7 @@ const iconComponents: IconComponentsType = {
   error: <AlertOctagon />,
 };
 
-export function Note({ children, className, typ = 'default', fill, action, disabled }: NoteProps): ReactElement {
+export function Note({ children, className, typ = 'default', fill, action, style, disabled }: NoteProps): ReactElement {
   const IconComponent: ReactElement = iconComponents[typ];
   const wrapperClasses = classNames(styles.note, className, {
     [styles[typ]]: !fill,
@@ -27,7 +27,7 @@ export function Note({ children, className, typ = 'default', fill, action, disab
   });
 
   return (
-    <div className={wrapperClasses}>
+    <div className={wrapperClasses} style={style}>
       {IconComponent}
       {children}
       {action ? action : null}

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call -- Disabling TypeScript 'any' type check warnings due to the data structure received from the backend. */
 import { InMemoryCache } from '@apollo/client';
-import type { GetArticlesQuery } from "../../gql";
+import type { GetArticlesQuery, GetCommentsQuery } from "../../gql";
 
 
  export  const CACHE: InMemoryCache = new InMemoryCache({
@@ -27,6 +27,33 @@ import type { GetArticlesQuery } from "../../gql";
                 meta = incoming.meta;
               }
 
+              return {
+                data,
+                meta,
+                __typename: incoming?.__typename || "",
+              };
+            },
+          },
+          comments: {
+            keyArgs: ["page", "pageSize", "phone"],
+            merge(existing, incoming) {
+              // @ts-expect-error -- it is ok
+              let data:  NonNullable<GetCommentsQuery['comments']['data']> = [];
+              // @ts-expect-error -- it is ok
+              let meta: NonNullable<GetCommentsQuery['comments']['meta']> = {};
+              
+              if (existing?.data) {
+                data = data.concat(existing.data);
+              }
+              
+              if (incoming?.data) {
+                data = data.concat(incoming.data);
+              }
+              
+              if (incoming?.meta) {
+                meta = incoming.meta;
+              }
+              
               return {
                 data,
                 meta,

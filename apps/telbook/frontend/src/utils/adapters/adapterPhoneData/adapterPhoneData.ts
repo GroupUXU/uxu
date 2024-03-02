@@ -1,4 +1,4 @@
-import {type PhoneFull, type Status, parseFormatDate, Image} from 'utils';
+import {type PhoneFull, type Status, parseFormatDate, Image, statusMapToPL} from 'utils';
 import type {
     GetPhoneQuery,
     GetCommentsQuery,
@@ -81,7 +81,7 @@ export function adapterPhoneData(getPhoneData?: GetPhoneQuery, getCommentsData?:
                 data: [
                     {
                         "info": {id: "reputation", value: "Reputacja numeru:"},
-                        "status": {id: "reputationValue", value: status}
+                        "status": {id: "reputationValue", value: statusMapToPL(status)}
                     },
                     {
                         "info": {id: "searches", value: "Liczba wyszukań:"},

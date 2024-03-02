@@ -1,8 +1,8 @@
-import type { PhoneFull , Comment} from 'utils';
+import type { PhoneFull , Comment, InfiniteScroll} from 'utils';
 
 export type PhoneViewProps = {
   phoneData: PhoneFull;
   comments: Array<Comment>;
-  addComment?: () => void;
-  loadMoreComments?: () => void;
+  onCommentAdd: (data: Partial<Comment>) => Promise<boolean>;
+  infiniteScrollMoreComments: InfiniteScroll;
 };

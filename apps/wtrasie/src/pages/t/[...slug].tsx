@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react';
 import type { GetServerSidePropsContext, GetServerSidePropsResult } from 'next';
-import { SectionInfiniteScroll } from 'design-system/components/templates/section/sectionInfiniteScroll';
+import { InfiniteScroll } from 'design-system/components/molecules/infiniteScroll';
 import { LayoutListingPost } from 'design-system/components/layout/layoutListingPost/layoutListingPost';
 import { PostList } from 'design-system/components/organisms/postList';
 import { Tree, renderBranches } from 'design-system/components/molecules/tree';
@@ -64,7 +64,7 @@ export default function Tag({ tagID , tagName }: TagProps ): ReactElement {
         <CrumbleMenu data={[{title: "home", href: "/"}, {title: tagName, href: `/t/${tagID}/${tagName}`}]}/>
       }
     >
-      <SectionInfiniteScroll
+      <InfiniteScroll
         onScrollEnd={handleScrollEnd}
         page={1}
         pageCount={data?.articles?.meta.pagination.pageCount || 1}
@@ -74,7 +74,7 @@ export default function Tag({ tagID , tagName }: TagProps ): ReactElement {
             <PostList {...article} key={article.id || index} />
           )
         }) : null}
-      </SectionInfiniteScroll>
+      </InfiniteScroll>
     </LayoutListingPost>
   );
 }

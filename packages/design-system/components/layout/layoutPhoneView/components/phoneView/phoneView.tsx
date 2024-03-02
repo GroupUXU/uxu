@@ -20,14 +20,13 @@ import type {PhoneViewProps} from './types';
 import {Note} from "../../../../atoms/note";
 
 
-export function PhoneView({phoneData, comments, addComment, loadMoreComments}: PhoneViewProps): ReactElement {
+export function PhoneView({phoneData, comments, onCommentAdd, infiniteScrollMoreComments}: PhoneViewProps): ReactElement {
     const {config: {client}} = useSiteConfig();
     const isMobile = client.platform.isMobile;
     const strategy = isMobile ? strategyForContentPartInPostMobile : strategyForContentPartInPostDesktop;
     const adSlots: Array<string> = isMobile ? ['2XMXAMIDTEXTX1', '2XMXAMIDTEXTX2', '2XMXAMIDTEXTX3'] : ['2XDXAMIDTEXTX1', '2XDXAMIDTEXTX2', '2XDXAMIDTEXTX3']
     const {cover = null, phone, lead, format, createdAt, status, contentParts} = phoneData;
-
-    console.log(comments, 'comments')
+    
     return (
         <article className={classnames(styles.article, 'article')}>
             <div className={styles.wrapperLeadWithAd}>
@@ -70,9 +69,9 @@ export function PhoneView({phoneData, comments, addComment, loadMoreComments}: P
                             tego rozmówcy,
                             aby pomóc innym ustalić, czy numer telefonu jest uznawany za zaufany, czy też nie.
                         </Note>
-                        <CommentAdd/>
+                        <CommentAdd onCommentAdd={onCommentAdd}/>
                         <h3>Komentarze</h3>
-                        <Comments comments={comments}/>
+                        <Comments infiniteScrollMoreComments={infiniteScrollMoreComments} comments={comments}/>
                     </div>
                 </div>
                 <div/>

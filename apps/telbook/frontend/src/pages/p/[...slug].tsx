@@ -1,7 +1,8 @@
+/* eslint-disable camelcase -- I need off camelcase  */
 import type {ReactElement} from 'react';
 import type {GetStaticPropsContext} from 'next';
 import {adapterPhoneData, adapterCommentsData} from '../../utils/adapters';
-import {clientGetPhoneQuery, clientGetCommentsQuery, useGetCommentsQuery, useGetPhoneQuery, useAddCommentMutation, Enum_Comment_Reputation} from '../../gql';
+import {clientGetPhoneQuery, clientGetCommentsQuery, useGetCommentsQuery, useGetPhoneQuery, useAddCommentMutation, type InputMaybe, Enum_Comment_Reputation} from '../../gql';
 import {LayoutPhoneView} from 'design-system/components/layout/layoutPhoneView'
 import {footerConfig, headerMenuConfig, searchEngineConfig} from "../../config";
 import {CrumbleMenu} from "design-system/components/molecules/crumbleMenu";
@@ -18,27 +19,20 @@ type PhoneProps = {
 
 export default function Phone({slug, phone, id}: PhoneProps): ReactElement {
 		const [addCommentMutation] = useAddCommentMutation();
-		const {data: getPhoneData} = useGetPhoneQuery({
-				variables: {id},
-				ssr: true
+		const { data: getPhoneQuery } = useGetPhoneQuery({ variables: { id }, ssr: true });
+		const { data: getCommentsQuery, fetchMore: fetchMoreComments } = useGetCommentsQuery({
+				variables: { pageSize: 12, page: 0, phone },
+				ssr: true,
 		});
 		
-		const {data: getCommentsData} = useGetCommentsQuery({
-				variables: {
-						pageSize: 12,
-						page: 1,
-						phone: ""
-				},
-				ssr: true
-		});
+		const phoneData = adapterPhoneData(getPhoneQuery, getCommentsQuery);
+		const comments = adapterCommentsData(getCommentsQuery);
 		
-		const comments = getCommentsData ? adapterCommentsData(getCommentsData) : [];
-		const phoneData = adapterPhoneData(getPhoneData, getCommentsData);
 		
 		const seo = useSeoConfig({
 				title: `${phone} czyj to numer telefonu ?`,
 				description: phoneData.lead || undefined,
-				url: phoneData.cover?.src || undefined
+				url: phoneData.cover?.src || undefined,
 		});
 		
 		
@@ -48,22 +42,30 @@ export default function Phone({slug, phone, id}: PhoneProps): ReactElement {
 								await addCommentMutation({
 										variables: {
 												data: {
-														reputation: comment.status as Enum_Comment_Reputation || 'default',
+														reputation: comment.status as InputMaybe<Enum_Comment_Reputation>,
 														message: comment.message,
-														phone: id
-												}
-										}
-								})
-								
+														phone: id,
+												},
+										},
+								});
 								return true;
 						} catch {
-								return false
+								return false;
 						}
 				}
-				
-				return false
-		}
+				return false;
+		};
 		
+		const onScrollEnd = async (page: number): Promise<{ page?: number }> => {
+				try {
+						await fetchMoreComments({
+								variables: { pageSize: 12, page, phone },
+						});
+						return { page: page + 1 };
+				} catch (error) {
+						return { page };
+				}
+		};
 		return (
 					<LayoutPhoneView
 								seo={seo}
@@ -71,16 +73,23 @@ export default function Phone({slug, phone, id}: PhoneProps): ReactElement {
 								headerMenu={headerMenuConfig}
 								onCommentAdd={onCommentAdd}
 								comments={comments}
+								infiniteScrollMoreComments={{
+										page: 0,
+										pageCount: getCommentsQuery?.comments?.meta.pagination.pageCount || 0,
+										onScrollEnd
+								}}
 								searchEngineConfig={searchEngineConfig}
 								phoneData={phoneData}
 								topElement={
 										<CrumbleMenu data={[{title: "home", href: "/"}, {title: phoneData.phone || "", href: slug || "/"}]}/>
 								}
 					/>
-		);
+		)
+					;
 }
 
-export async function getServerSideProps(context: GetStaticPropsContext): Promise<{ notFound: boolean } | { props: PhoneProps }> {
+export async function getServerSideProps(context: GetStaticPropsContext
+): Promise<{ notFound: boolean } | { props: PhoneProps }> {
 		const {params} = context;
 		
 		if (!params || !Array.isArray(params.slug) || params.slug.length === 0) {

@@ -1,7 +1,7 @@
 import type { Comment, Status } from 'utils';
 import type { GetCommentsQuery } from '../../../gql';
 
-export function adapterCommentsData(getComments: GetCommentsQuery | null): Array<Comment> {
+export function adapterCommentsData(getComments?: GetCommentsQuery | null): Array<Comment> {
   if (!getComments?.comments?.data.length) return [];
 
   return getComments.comments.data.reduce((acc: Comment[], { id, attributes }) => {
