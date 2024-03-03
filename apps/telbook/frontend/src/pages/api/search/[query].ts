@@ -5,6 +5,7 @@ import { searchEngineConfig } from '../../../config/configSearchEngine';
 type Handler = (req: NextApiRequest, res: NextApiResponse) => Promise<void>;
 
 const handler: Handler = async (req, res) => {
+
   if (req.method !== 'GET') {
     res.status(405).end();
     return;
