@@ -3,25 +3,22 @@
 .note {
   width: 100%;
   max-width: 100%;
-  display: grid;
+  display: flex;
   align-items: center;
   gap: var(--uxu-space-default);
-  grid-template-columns: 2.4rem 1fr;
+  flex-direction: column;
   border-radius: var(--uxu-radii-default);
   padding: var(--uxu-space-small) var(--uxu-space-default);
+
+  @include media('m') {
+    display: grid;
+    grid-template-columns: 2.4rem 1fr;
+  }
+
 }
 
 .action {
-  display: flex;
-  flex-wrap: wrap;
-
-  p {
-    margin-right: auto;
-  }
-
-  @include media('m') {
-    grid-template-columns: 2.4rem 1fr auto;
-  }
+  grid-template-columns: 2.4rem 1fr auto;
 }
 
 .default, .success, .warning, .error, .danger {

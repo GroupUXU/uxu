@@ -39,7 +39,7 @@ export const siteConfig: SiteConfig = {
         domain: 'https://polski.dev',
         slug: '/',
         brand: "polskidev",
-        shortBrand: "polskidev",
+        shortBrand: "polskidevshort",
         defaultCover: 'https://polski.dev/defaultCover.png',
         canonicalUrl: `https://polski.dev`,
         images: [{url: 'https://polski.dev/og.png'}],

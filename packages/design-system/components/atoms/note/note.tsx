@@ -29,7 +29,7 @@ export function Note({ children, className, typ = 'default', fill, action, style
   return (
     <div className={wrapperClasses} style={style}>
       {IconComponent}
-      <p>{children}</p>
+      {children}
       {action ? action : null}
     </div>
   );
