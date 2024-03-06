@@ -1,3 +1,1 @@
-export * from './nodeCreateMapOperatorFromNDSI';
-export * from './phoneNumberRangeMap';
-export * from './phoneOperatorMap';
+const nodeCreateMapOperatorFromNDSI = require('./createMapOperatorFromUKE');

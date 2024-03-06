@@ -1,4 +1,4 @@
-export const phoneNumberRangeMapData = new Map<number, {
+export type NumberRange = {
     operatorId: number,
     operatorName: string,
     numberingRange: number,
@@ -6,4 +6,6 @@ export const phoneNumberRangeMapData = new Map<number, {
     createdAt: string,
     zone?: number,
     zoneName?: string
-}>([]);
+}
+
+export type PhoneOperator = { operatorId: number; operatorName: string }
