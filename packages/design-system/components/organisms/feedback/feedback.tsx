@@ -116,7 +116,7 @@ export function Feedback({ onFeedbackSubmit, activeUserEmail, switchModalButtonT
           {renderModalContent()}
         </Modal>
       </div>
-      {switchModalButtonText ? <button className="btn" onClick={toggleModal}>{switchModalButtonText}</button> : <FeedbackRatings feedbackRating={feedbackRating} handleFeedbackRatingChange={handleFeedbackRatingChange} register={register} />}
+      {switchModalButtonText ? <button className="btn" aria-label={switchModalButtonText} onClick={toggleModal}>{switchModalButtonText}</button> : <FeedbackRatings feedbackRating={feedbackRating} handleFeedbackRatingChange={handleFeedbackRatingChange} register={register} />}
     </div>
   );
 }

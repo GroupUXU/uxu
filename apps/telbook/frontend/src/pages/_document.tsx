@@ -16,7 +16,7 @@ export default class CustomDocument extends Document<DocumentProps & { theme: Si
   render (): ReactElement {
     siteConfig.site.theme = this.props.theme;
     return (
-      <RenderDocumentStructure siteConfig={siteConfig} />
+        <RenderDocumentStructure siteConfig={siteConfig} />
     );
   }
 }

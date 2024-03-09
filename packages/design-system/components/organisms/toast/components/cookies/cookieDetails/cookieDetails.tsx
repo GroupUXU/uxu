@@ -24,6 +24,7 @@ export function CookieDetails({siteConfig, ToastChunksContext}: CookieDetailsPro
     return (
         <>
             <button
+                aria-label="szczegóły"
                 className="btn secondary"
                 onClick={() => {
                     setOpen(true)
@@ -50,16 +51,23 @@ export function CookieDetails({siteConfig, ToastChunksContext}: CookieDetailsPro
                         <p>Używamy plików cookie, aby poprawić komfort korzystania z witryny. Do
                             działania {siteConfig.projectName} wymagane są pliki cookie.</p>
                         <Collapse className={styles.collapse} accordion>
-                            <Panel key={'cookie'} header="Pliki cookie niezbędne do działania strony" type="default" classNameWrapper={styles.panel} >
-                                <p>Pliki cookie niezbędne do działania strony umożliwiają zapamiętanie Twoich preferencji, takich jak akceptacja cookies czy wybór stylu. Są kluczowe dla prawidłowego i spersonalizowanego funkcjonowania witryny.</p>
+                            <Panel key={'cookie'} header="Pliki cookie niezbędne do działania strony" type="default"
+                                   classNameWrapper={styles.panel}>
+                                <p>Pliki cookie niezbędne do działania strony umożliwiają zapamiętanie Twoich
+                                    preferencji, takich jak akceptacja cookies czy wybór stylu. Są kluczowe dla
+                                    prawidłowego i spersonalizowanego funkcjonowania witryny.</p>
                             </Panel>
-                            <Panel key={'analityc'} header="Analiza/Analityka" type="default" classNameWrapper={styles.panel}>
-                                <p>Używamy plików cookie do zbierania danych o tym, jak korzystasz z naszej strony. Pomaga nam to w optymalizacji treści, zrozumieniu preferencji użytkowników i ulepszaniu funkcjonalności. Twoja prywatność jest dla nas ważna, a dane są anonimowe.</p>
+                            <Panel key={'analityc'} header="Analiza/Analityka" type="default"
+                                   classNameWrapper={styles.panel}>
+                                <p>Używamy plików cookie do zbierania danych o tym, jak korzystasz z naszej strony.
+                                    Pomaga nam to w optymalizacji treści, zrozumieniu preferencji użytkowników i
+                                    ulepszaniu funkcjonalności. Twoja prywatność jest dla nas ważna, a dane są
+                                    anonimowe.</p>
                             </Panel>
                         </Collapse>
                     </div>
                     <div className={styles.modalFooter}>
-                        <button className="btn primary" onClick={acceptCookies} type="button">
+                        <button aria-label="akceptuję" className="btn primary" onClick={acceptCookies} type="button">
                             Akceptuję
                         </button>
                     </div>

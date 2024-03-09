@@ -16,6 +16,7 @@ export function PostList({ authors = [], cover, slug, title }: PostListProps): R
               <Img
                 alt={cover.alt || title}
                 fill
+                sizes="(max-width: 600px) 100vw, 50vw"
                 src={cover.src}
               />
             ) : (

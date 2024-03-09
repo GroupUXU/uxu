@@ -14,7 +14,7 @@ type WrapperProvidersProps = PropsWithChildren<{
 export function WrapperProviders({ children, siteConfig, apolloClient }: WrapperProvidersProps): ReactElement {
   const toastChunks = toastChunksInitial([
     {
-      shouldBeIncluded: !siteConfig.cookieConsentSettings.analytics,
+      shouldBeIncluded: Boolean(!siteConfig.cookieConsentSettings.analytics),
       id: 'cookieInfoDefault',
       props: {
         actions: [

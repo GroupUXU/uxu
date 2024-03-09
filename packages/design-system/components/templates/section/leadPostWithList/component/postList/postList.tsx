@@ -18,7 +18,7 @@ export function PostList ( {posts}: PostListProps ): ReactElement | null {
               <article className={styles.article}>
                 {post.cover?.src ? (
                   <div className={styles.cover}>
-                    <Image alt={post.cover.caption || post.title} layout="fill" objectFit="cover" src={post.cover.src}  />
+                    <Image alt={post.cover.caption || post.title} fill priority sizes="(max-width: 600px) 100vw, 50vw" src={post.cover.src}  />
                   </div>
                 ) : null}
                 <div className={styles.conent}>

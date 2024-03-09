@@ -11,7 +11,7 @@ export function Hamburger({ className, onClick, open }: HamburgerProps): ReactEl
   );
 
   return (
-    <button className={hamburgerClass} onClick={onClick} type="button">
+    <button aria-label="hamburger" className={hamburgerClass} onClick={onClick} type="button">
       <span />
       <span />
     </button>
