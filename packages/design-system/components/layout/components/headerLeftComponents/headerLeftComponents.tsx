@@ -27,9 +27,9 @@ const { config: { site } } = useSiteConfig();
       <Link className={classnames(styles.logoDesktop, styles.logo)} href="/" title={site.brand}>
         <Logo brand={site.brand} className={styles.logo}/>
       </Link>
-        <nav className={styles.nav}>
+        <ul className={styles.nav}>
           {headerMenu.map(({ href, title }) => createNavLink(href, title))}
-        </nav>
+        </ul>
       <SearchEngineInModal
         className={styles.wrapperSearch}
         searchEngineConfig={searchEngineConfig}

@@ -7,13 +7,15 @@
 
   .wrapperImg {
     width: 100%;
-    height: 18rem;
-    display: block;
+    height: 20rem;
+    display: flex;
     overflow: hidden;
     position: relative;
+    align-items: center;
+    justify-content: center;
 
-    @include media(s) {
-      height: 60rem;
+    @include media('s') {
+      height: 30rem;
     }
   }
 
