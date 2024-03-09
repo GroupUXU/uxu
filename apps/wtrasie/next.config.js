@@ -3,6 +3,13 @@ module.exports = {
   productionBrowserSourceMaps: true,
   transpilePackages: ["design-system"],
   images: {
-    domains: ['wtrasiepl.s3.eu-west-1.amazonaws.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.amazonaws.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
 };

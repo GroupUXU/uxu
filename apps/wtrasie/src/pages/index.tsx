@@ -13,7 +13,7 @@ import { useSeoConfig } from 'design-system/hooks/useSeoConfig';
 import { useSiteConfig } from "design-system/hooks/useSiteConfig";
 import { footerConfig, headerMenuConfig, siteBarMenuConfig, searchEngineConfig } from '../config';
 import { useGetArticlesQuery, clientGetArticlesQuery } from '../gql';
-import { adapterArticlesData } from '../utils/adapters/adapterArticlesData';
+import { adapterArticlesData } from '../utils/adapters';
 
 function Index (): ReactElement {
   const { config } = useSiteConfig();
@@ -75,7 +75,7 @@ function Index (): ReactElement {
         page={data?.articles?.meta.pagination.page || 1}
         pageCount={data?.articles?.meta.pagination.pageCount || 1}
       >
-        {postListData.map ( ( article ) => (<PostList {...article} key={article.id || 'fallback'}/>) )}
+        {postListData.map ( ( article ) => (<PostList {...article} key={`post-list-${article.id}`}/>) )}
       </InfiniteScroll>
     </LayoutListingPost>
   );
