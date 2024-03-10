@@ -20,7 +20,6 @@ export const locale = 'pl';
 export const siteConfig: SiteConfig = {
   marketingToolsConfig: {
     googleTagManagerId: 'GTM-PHDNXTHH',
-    googleAdManagerId: '23023978625',
     adSlotsMap,
   },
   port: 3000,

@@ -14,7 +14,7 @@ export function LeadPostWithList ({ posts }: LeadPostWithListProps ): ReactEleme
     <section className={styles.wrapper}>
       {leadPostData[0]?.cover?.src ? (
         <div className={styles.wrapperImage}>
-          <Image alt={leadPostData[0].cover.caption || leadPostData[0].title} layout="fill" objectFit="cover" src={leadPostData[0].cover.src} />
+          <Image alt={leadPostData[0].cover.caption || leadPostData[0].title} fill priority sizes="(max-width: 600px) 100vw, 50vw"  src={leadPostData[0].cover.src} />
         </div>
       ) : null}
       <Container className={styles.content}>

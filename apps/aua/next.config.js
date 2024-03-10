@@ -1,7 +1,15 @@
 module.exports = {
   reactStrictMode: true,
+  productionBrowserSourceMaps: true,
   transpilePackages: ["design-system"],
   images: {
-    domains: ['getreturn.s3.eu-central-1.amazonaws.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.amazonaws.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
 };
