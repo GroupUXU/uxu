@@ -1,4 +1,4 @@
-export const networkOperatorsPLByID = {
+export const networkOperatorsPLByID: Record<string, { name: string, createdAt: string, checkedManually: boolean }> = {
   "1": {
     "name": "Orange Polska S.A.",
     "createdAt": "2024-03-12T18:13:39.138Z",

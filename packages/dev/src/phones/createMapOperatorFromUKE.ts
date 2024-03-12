@@ -114,9 +114,8 @@ async function createOperatorsByID(fileName: string): Promise<void> {
 		});
 }
 
-function saveMapData<Type>(filePath: string, obj: Type, objName: string, typeName: string) {
-		let typeImportStatement = `import { ${typeName} } from "./types";\n\n`;
-		let content = `export const ${objName} = ${JSON.stringify(obj, null, 2)};\n`;
+function saveMapData<Type>(filePath: string, obj: Type, objName: string, typeInString: string) {
+		let content = `export const ${objName}: ${typeInString} = ${JSON.stringify(obj, null, 2)};\n`;
 		
 		fs.writeFileSync(filePath, content, {encoding: 'utf-8'});
 		console.log(`${filePath} has been saved!`);
@@ -133,10 +132,10 @@ async function run(): Promise<void> {
 				await createOperatorNumbersRange(fileName);
 		}
 		
-		saveMapData(path.join(__dirname, '..', '..', 'src', 'phones', 'networkOperatorsPLByID.ts'), networkOperatorsByID, 'networkOperatorsPLByID', 'NetworkOperatorsByID');
-		saveMapData(path.join(__dirname, '..', '..', '..', 'utils', 'phones', 'networkOperatorsPLByID.ts'), networkOperatorsByID, 'networkOperatorsPLByID', 'NetworkOperatorsByID');
-		saveMapData(path.join(__dirname, '..', '..', '..', 'utils', 'phones', 'networkOperatorsPLByName.ts'), networkOperatorsByName, 'networkOperatorsPLByName', 'NetworkOperatorsByName');
-		saveMapData(path.join(__dirname, '..', '..', '..', 'utils', 'phones', 'operatorPLNumbersRange.ts'), operatorNumbersRange, 'operatorPLNumbersRange', 'OperatorNumbersRange');
+		saveMapData(path.join(__dirname, '..', '..', 'src', 'phones', 'networkOperatorsPLByID.ts'), networkOperatorsByID, 'networkOperatorsPLByID', `Record<string, { name: string, createdAt: string, checkedManually: boolean }>`);
+		saveMapData(path.join(__dirname, '..', '..', '..', 'utils', 'phones', 'networkOperatorsPLByID.ts'), networkOperatorsByID, 'networkOperatorsPLByID', `Record<string, { name: string, createdAt: string, checkedManually: boolean }>`);
+		saveMapData(path.join(__dirname, '..', '..', '..', 'utils', 'phones', 'networkOperatorsPLByName.ts'), networkOperatorsByName, 'networkOperatorsPLByName', 'Record<string, { id: string, createdAt: string, }>');
+		saveMapData(path.join(__dirname, '..', '..', '..', 'utils', 'phones', 'operatorPLNumbersRange.ts'), operatorNumbersRange, 'operatorPLNumbersRange', 'Record<string, { operatorId: string, operatorName: string, range: number, typ: \'stationary\' | \'mobile\' | \'premium\', createdAt: string, zone?: number | null, zoneName?: string | null }>');
 }
 
 run().then(r => console.log('######### finish #########'));
