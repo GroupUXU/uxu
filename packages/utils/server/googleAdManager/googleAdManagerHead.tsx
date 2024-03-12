@@ -7,7 +7,7 @@ export function GoogleAdManagerHead(): null {
     script.async = true;
 
     const onScriptLoad = () => console.log('The Google Ad Manager script has completed successfully');
-    const onScriptError = (error) => console.error('Google Ad Manager script failed to load:', error);
+    const onScriptError = (error: unknown) => console.error('Google Ad Manager script failed to load:', error);
 
     script.addEventListener('load', onScriptLoad);
     script.addEventListener('error', onScriptError);

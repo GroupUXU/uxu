@@ -1,17 +1,17 @@
-import { premiumPhonePrefixesMapPL } from './premiumPhonePrefixesMapPL';
+
 
 export function formatPhoneNumberPL(phone?: string): string | null {
   if (!phone) return null;
   let cleaned = phone.replace(/\D/g, '');
   
   let operatorName: string | null = null;
-  for (let [prefix, operator] of premiumPhonePrefixesMapPL) {
-    if (cleaned.startsWith(prefix)) {
-      operatorName = operator; // Save the operator name if a match is found
-      break;
-    }
-  }
-  
+  // for (let [prefix, operator] of premiumPhonePrefixesMapPL) {
+  //   if (cleaned.startsWith(prefix)) {
+  //     operatorName = operator; // Save the operator name if a match is found
+  //     break;
+  //   }
+  // }
+  //
   if (operatorName) {
     console.log(`Operator: ${operatorName}`);
     return phone;
