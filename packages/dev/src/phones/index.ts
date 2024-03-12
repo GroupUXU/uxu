@@ -1,1 +1,0 @@
-const nodeCreateMapOperatorFromNDSI = require('./createMapOperatorFromUKE');
