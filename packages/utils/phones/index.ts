@@ -1,2 +1,4 @@
 export * from './formatPhoneNumberPL';
-export * from './premiumPhonePrefixesMapPL';
+export * from './networkOperatorsPLByID';
+export * from './networkOperatorsPLByName';
+export * from './operatorPLNumbersRange';

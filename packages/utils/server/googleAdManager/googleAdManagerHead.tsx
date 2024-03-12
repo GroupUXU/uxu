@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export function GoogleAdManagerHead() {
+export function GoogleAdManagerHead(): null {
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://securepubads.g.doubleclick.net/tag/js/gpt.js';
