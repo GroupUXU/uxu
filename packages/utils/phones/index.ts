@@ -1,1 +1,1 @@
-export * from './formatPhoneNumberPL';
+export * from './parserPhoneNumberPL';

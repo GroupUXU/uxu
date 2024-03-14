@@ -1,4 +1,4 @@
-import { formatPhoneNumberPL } from 'utils';
+import { parserPhoneNumberPL } from 'utils';
 import type { Comment , Status} from 'utils';
 import type { CommentEntityResponseCollection } from '../../../../gql';
 
@@ -6,7 +6,7 @@ export function adapterCommentsData(getComments?: CommentEntityResponseCollectio
   if (!getComments?.data.length) return [];
 
   return getComments.data.reduce((acc: Comment[], { id, attributes }) => {
-    const phone = formatPhoneNumberPL(attributes?.phone?.data?.attributes?.phone);
+    const phone = parserPhoneNumberPL(attributes?.phone?.data?.attributes?.phone);
     if (!phone) return acc;
     const status = attributes?.reputation as Status | 'default';
 

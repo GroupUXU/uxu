@@ -6,3 +6,4 @@ export * from './adapterImageData';
 export * from './adapterTagsTitleId';
 export * from './adapterAuthorData';
 export * from './adapterPhoneData';
+export * from './adapterSearchPhoneData';

@@ -18,6 +18,7 @@ export const useSearchResults = (): { isWaitingForQuery: boolean, setSearchQuery
     setIsWaitingForQuery(true);
     try {
       const { data} = await refetch({ query: searchQuery });
+      console.log(data)
       setSearchResults(adapterSearchData(data));
     } catch (error) { /* empty */ } finally  { setIsWaitingForQuery(false); }
   }, [searchQuery, refetch]);
