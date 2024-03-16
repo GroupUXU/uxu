@@ -8,7 +8,7 @@ export type GetSearchQueryVariables = Types.Exact<{
 }>;
 
 
-export type GetSearchQuery = { __typename?: 'Query', searchResults: { __typename?: 'SearchResults', hits?: Array<{ __typename?: 'Article', id?: string | null, type: Types.Enum_Article_Type, title: string, lead: { __typename?: 'ComponentContentPartsLead', lead: string } } | null> | null } };
+export type GetSearchQuery = { __typename?: 'Query', searchResults: { __typename?: 'SearchResults', hits?: Array<{ __typename?: 'Search', id?: string | null, type: Types.Enum_Type, title: string, lead?: string | null } | null> | null } };
 
 
 export const GetSearchDocument = gql`
@@ -18,9 +18,7 @@ export const GetSearchDocument = gql`
       id
       type
       title
-      lead {
-        lead
-      }
+      lead
     }
   }
 }

@@ -12,6 +12,8 @@ export function SearchSuggestionsModal({ defaultSuggestions, isAwaitingApiRespon
   const showSearchResults = typeof searchQuery === 'string' && searchQuery.length > 1 && !isAwaitingApiResponse;
   const showDefaultSuggestions = !(isLoading || showSearchResults);
 
+  
+  console.log(currentHoveredSuggestionIndex)
 
   let content = <span className={styles.info}>Aby rozpocząć wyszukiwanie, wpisz więcej niż 2 znaki</span>;
 

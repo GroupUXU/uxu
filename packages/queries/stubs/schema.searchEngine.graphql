@@ -8,26 +8,22 @@ scalar DateTime
 scalar Upload
 
 
-type ComponentContentPartsLead {
-  id: ID!
-  lead: String!
-}
-
-enum ENUM_ARTICLE_TYPE {
+enum ENUM_TYPE {
   article
   service
+  phone
 }
 
-type Article {
+type Search {
   id: String
-  type: ENUM_ARTICLE_TYPE!
+  type: ENUM_TYPE!
   title: String!
-  lead: ComponentContentPartsLead!
+  lead: String
   createdAt: DateTime
 }
 
 type SearchResults {
-  hits: [Article]
+  hits: [Search]
 }
 
 type Query {

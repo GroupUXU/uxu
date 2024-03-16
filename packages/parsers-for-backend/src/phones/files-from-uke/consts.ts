@@ -1,0 +1,1 @@
+export const filesListToParse: Array<string> = ['PLMN.csv', 'PSTN.csv'];
