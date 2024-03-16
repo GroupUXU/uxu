@@ -4,3 +4,4 @@ export * from './adapterArticlesSlugData';
 export * from './adapterImageData';
 export * from './adapterTagsTitleId';
 export * from './adapterAuthorData';
+export * from './adapterSearchPhoneData';

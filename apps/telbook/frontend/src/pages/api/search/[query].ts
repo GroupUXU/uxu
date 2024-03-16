@@ -29,7 +29,6 @@ const handler: Handler = async (req, res) => {
     const searchResponse = await fetch(`http://0.0.0.0:1337/api/phones?filters[phone][$eq]=${phone}`, options);
     const data: unknown = await searchResponse.json();
     const returnData = adapterSearchPhoneData(data);
-    console.log(returnData, 'dwdwdw')
     res.status(200).json(returnData);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch data' });
