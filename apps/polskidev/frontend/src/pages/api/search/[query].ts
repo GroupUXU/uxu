@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { searchEngineConfig } from '../../../config/configSearchEngine';
+import { searchEngineConfig } from '../../../config';
 
 type Handler = (req: NextApiRequest, res: NextApiResponse) => Promise<void>;
 
@@ -23,7 +23,6 @@ const handler: Handler = async (req, res) => {
   try {
     const meiliSearchResponse = await fetch(`${searchEngineConfig.searchClientData.api.url}/indexes/${searchEngineConfig.searchClientData.indexName}/search?sort="createdAt:desc"&limit=20&q=${encodedQuery}`, options);
     const data = await meiliSearchResponse.json();
-    console.log(data)
     res.status(200).json(data);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch data' });

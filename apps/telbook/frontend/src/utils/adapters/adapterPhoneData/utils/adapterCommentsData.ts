@@ -6,7 +6,7 @@ export function adapterCommentsData(getComments?: CommentEntityResponseCollectio
   if (!getComments?.data.length) return [];
 
   return getComments.data.reduce((acc: Comment[], { id, attributes }) => {
-    const phone = parserPhoneNumberPL(attributes?.phone?.data?.attributes?.phone);
+    const phone = attributes?.phone?.data?.attributes?.phone ? parserPhoneNumberPL(attributes.phone.data.attributes.phone) : null;
     if (!phone) return acc;
     const status = attributes?.reputation as Status | 'default';
 
