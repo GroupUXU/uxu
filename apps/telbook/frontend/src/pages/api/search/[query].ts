@@ -1,5 +1,6 @@
 import fetch from 'node-fetch';
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { searchEngineConfig } from '../../../config';
 import { adapterSearchPhoneData } from '../../../utils/adapters';
 import { parserPhoneNumberPL } from 'utils';
 
@@ -26,7 +27,7 @@ const handler: Handler = async (req, res) => {
   };
 
   try {
-    const searchResponse = await fetch(`http://0.0.0.0:1337/api/phones?filters[phone][$eq]=${phone}`, options);
+    const searchResponse = await fetch(`${searchEngineConfig.searchClientData.api.url}/phones?filters[phone][$eq]=${phone}`, options);
     const data: unknown = await searchResponse.json();
     const returnData = adapterSearchPhoneData(data);
     res.status(200).json(returnData);
