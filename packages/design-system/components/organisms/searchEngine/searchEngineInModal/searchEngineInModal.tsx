@@ -30,7 +30,6 @@ export function SearchEngineInModal({ className, searchEngineConfig }: SearchSug
   const searchQuery: string = watch('search');
   const {setSearchQuery, searchResults, isWaitingForQuery} = useSearchResults();
   
-  console.log(searchResults, 'searchResults')
 
   const toggleModal = useCallback((): void => {
     setIsOpenModal(prevState => !prevState);

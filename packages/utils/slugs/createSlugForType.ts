@@ -6,6 +6,8 @@ export const createSlugForType = (type: string): string => {
       return '/t';
     case 'service':
       return '/s';
+    case 'phone':
+      return '/p';
     default:
       return '';
   }

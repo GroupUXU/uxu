@@ -17,23 +17,9 @@ export type Scalars = {
   Upload: { input: any; output: any; }
 };
 
-export type Article = {
-  __typename?: 'Article';
-  createdAt?: Maybe<Scalars['DateTime']['output']>;
-  id?: Maybe<Scalars['String']['output']>;
-  lead: ComponentContentPartsLead;
-  title: Scalars['String']['output'];
-  type: Enum_Article_Type;
-};
-
-export type ComponentContentPartsLead = {
-  __typename?: 'ComponentContentPartsLead';
-  id: Scalars['ID']['output'];
-  lead: Scalars['String']['output'];
-};
-
-export enum Enum_Article_Type {
+export enum Enum_Type {
   Article = 'article',
+  Phone = 'phone',
   Service = 'service'
 }
 
@@ -47,7 +33,16 @@ export type QuerySearchResultsArgs = {
   query: Scalars['String']['input'];
 };
 
+export type Search = {
+  __typename?: 'Search';
+  createdAt?: Maybe<Scalars['DateTime']['output']>;
+  id?: Maybe<Scalars['String']['output']>;
+  lead?: Maybe<Scalars['String']['output']>;
+  title: Scalars['String']['output'];
+  type: Enum_Type;
+};
+
 export type SearchResults = {
   __typename?: 'SearchResults';
-  hits?: Maybe<Array<Maybe<Article>>>;
+  hits?: Maybe<Array<Maybe<Search>>>;
 };

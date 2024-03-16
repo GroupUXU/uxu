@@ -26,12 +26,3 @@ export type AdapterSearchPhoneDataProps = {
 				}
 		}
 };
-
-export type AdapterSearchPhoneData = Array<{
-		id: number,
-		type: string,
-		title: string,
-		lead: {
-				lead: string
-		}
-}>;

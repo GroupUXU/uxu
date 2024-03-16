@@ -8,9 +8,7 @@ export const GET_SEARCH = gql`
         id
         type
         title
-        lead {
-          lead
-        }
+        lead
       }
     }
   }

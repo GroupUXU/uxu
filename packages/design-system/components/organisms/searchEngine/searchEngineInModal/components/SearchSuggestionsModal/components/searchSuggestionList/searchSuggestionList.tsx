@@ -1,43 +1,37 @@
-/* eslint-disable react/jsx-no-leaked-render, jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/click-events-have-key-events -- I don't have time for this fix */
-import React, { useCallback } from 'react';
-import type { ReactElement, CSSProperties } from 'react';
-import { BookOpen, FileText } from 'react-feather';
+/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions -- I need this */
+import {useMemo, type ReactElement, type CSSProperties} from 'react';
+import {BookOpen, FileText, Phone} from 'react-feather';
 import classnames from 'classnames';
-import { Link } from '../../../../../../../atoms/link';
+import {Link} from '../../../../../../../atoms/link';
 import styles from './searchSuggestionList.module.scss';
-import type { SuggestionListProps } from "./types";
+import type {SuggestionListProps} from "./types";
 
-export function SearchSuggestionList ({ suggestions, listType, onMouseEnter, currentHoveredSuggestionIndex, setIsOpenModal }: SuggestionListProps): ReactElement {
-
-  const handleMouseEnter = useCallback((index: number) => {
-    onMouseEnter(index);
-  }, [onMouseEnter]);
-
-  const handleClick = useCallback(() => {
-    setIsOpenModal(false);
-  }, [setIsOpenModal]);
-
-  const afterStyle: CSSProperties = {
-    top: `${currentHoveredSuggestionIndex * 6}rem`
-  };
-
-  return (
-    <ul className={classnames(styles.searchResultList, 'searchResultList')} style={{ '--uxu-searchResultList': afterStyle.top } as CSSProperties}>
-      {suggestions.map(({ title, slug, type, lead }, index: number) => (
-        <li
-          key={slug}
-          onClick={handleClick}
-          onMouseEnter={() => { handleMouseEnter ( index ) }}
-        >
-          <Link href={slug} title={title}>
-            {type === 'post' ? <BookOpen /> : <FileText />}
-            <div className={styles.content}>
-              <p className={styles.title}>{title}</p>
-              {listType === 'searchResults' && lead && <span className={styles.lead}>{lead}</span>}
-            </div>
-          </Link>
-        </li>
-      ))}
-    </ul>
-  );
+export function SearchSuggestionList({suggestions, listType, onMouseEnter, currentHoveredSuggestionIndex, setIsOpenModal}: SuggestionListProps): ReactElement {
+		const afterStyle: CSSProperties = useMemo(() => ({top: `${currentHoveredSuggestionIndex * 6}rem`}), [currentHoveredSuggestionIndex]);
+		
+		const icon = useMemo(() => ({
+				phone: <Phone/>,
+				post: <BookOpen/>,
+				default: <FileText/>,
+		}), []);
+		
+		return (
+					<ul className={classnames(styles.searchResultList, 'searchResultList')} style={{'--uxu-searchResultList': afterStyle.top} as CSSProperties}>
+							{suggestions.map(({title, slug, type, lead}, index) => (
+										<li
+													key={slug}
+													onClick={() => {setIsOpenModal(false)}}
+													onMouseEnter={() => {onMouseEnter(index)}}
+										>
+												<Link href={slug} title={title}>
+														{icon[type] || icon.default}
+														<div className={styles.content}>
+																<p className={styles.title}>{title}</p>
+																{listType === 'searchResults' && lead ? <span className={styles.lead}>{lead}</span> : null}
+														</div>
+												</Link>
+										</li>
+							))}
+					</ul>
+		);
 }
