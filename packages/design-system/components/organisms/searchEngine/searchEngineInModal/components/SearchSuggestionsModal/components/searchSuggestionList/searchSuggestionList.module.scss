@@ -12,9 +12,11 @@
     display: block;
     position: absolute;
     z-index: 0;
+    top: var(--uxu-searchResultList);
     left: 0;
     right: 0;
     height: 6rem;
+    width: calc(100% - calc(var(--uxu-space-small) * 2));
     background-color: var(--uxu-color-background-default);
     transition: top var(--uxu-motion-fast) ease;
     border-radius: var(--uxu-radii-default);

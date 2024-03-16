@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions -- I need this */
-import {useMemo, type ReactElement, type CSSProperties} from 'react';
+import {useMemo, useCallback, type ReactElement, type CSSProperties} from 'react';
 import {BookOpen, FileText, Phone} from 'react-feather';
 import classnames from 'classnames';
 import {Link} from '../../../../../../../atoms/link';
@@ -7,7 +7,7 @@ import styles from './searchSuggestionList.module.scss';
 import type {SuggestionListProps} from "./types";
 
 export function SearchSuggestionList({suggestions, listType, onMouseEnter, currentHoveredSuggestionIndex, setIsOpenModal}: SuggestionListProps): ReactElement {
-		const afterStyle: CSSProperties = useMemo(() => ({top: `${currentHoveredSuggestionIndex * 6}rem`}), [currentHoveredSuggestionIndex]);
+		const afterStyle: CSSProperties = ({top: `${currentHoveredSuggestionIndex * 6}rem`});
 		
 		const icon = useMemo(() => ({
 				phone: <Phone/>,
