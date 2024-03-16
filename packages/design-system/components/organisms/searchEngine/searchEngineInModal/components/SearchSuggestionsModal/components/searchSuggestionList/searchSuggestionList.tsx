@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions -- I need this */
-import {useMemo, useCallback, type ReactElement, type CSSProperties} from 'react';
+import {useMemo, type ReactElement, type CSSProperties} from 'react';
 import {BookOpen, FileText, Phone} from 'react-feather';
 import classnames from 'classnames';
 import {Link} from '../../../../../../../atoms/link';
