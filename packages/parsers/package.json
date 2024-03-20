@@ -12,9 +12,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@types/node": "^20.11.26",
+    "@types/node": "20.11.26",
     "csv-parser": "3.0.0",
     "iconv-lite": "0.6.3",
     "tsconfig": "*"
+  },
+  "dependencies": {
+    "canvas": "2.11.2",
+    "sharp": "0.33.2"
   }
 }
