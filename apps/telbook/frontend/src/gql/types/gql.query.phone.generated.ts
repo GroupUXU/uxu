@@ -10,7 +10,7 @@ export type GetPhoneQueryVariables = Types.Exact<{
 }>;
 
 
-export type GetPhoneQuery = { __typename?: 'Query', phone?: { __typename?: 'PhoneEntityResponse', data?: { __typename?: 'PhoneEntity', id?: string | null, attributes?: { __typename?: 'Phone', phone: string, network?: Types.Enum_Phone_Network | null, typ?: Types.Enum_Phone_Typ | null, updatedAt?: any | null, createdAt?: any | null, ratings?: any | null, lead: { __typename: 'ComponentContentPartsLead', id: string, lead: string }, views: Array<{ __typename: 'ComponentStatsViews', id: string, views: number, date?: any | null } | { __typename?: 'Error' } | null>, format: Array<{ __typename?: 'ComponentOthersFormat', id: string, format: string } | { __typename?: 'Error' } | null>, gallery: Array<{ __typename?: 'ComponentOthersCover', id: string, typ?: Types.Enum_Componentotherscover_Typ | null, cover?: { __typename: 'UploadFileEntityResponse', data?: { __typename?: 'UploadFileEntity', id?: string | null, attributes?: { __typename?: 'UploadFile', url: string, caption?: string | null, alternativeText?: string | null, formats?: any | null } | null } | null } | null } | { __typename?: 'Error' } | null> } | null } | null } | null };
+export type GetPhoneQuery = { __typename?: 'Query', phone?: { __typename?: 'PhoneEntityResponse', data?: { __typename?: 'PhoneEntity', id?: string | null, attributes?: { __typename?: 'Phone', phone: string, network?: Types.Enum_Phone_Network | null, typ?: Types.Enum_Phone_Typ | null, updatedAt?: any | null, createdAt?: any | null, ratings?: any | null, lead: { __typename: 'ComponentContentPartsLead', id: string, lead: string }, views: Array<{ __typename: 'ComponentStatsViews', id: string, views: number, date?: any | null } | { __typename?: 'Error' } | null>, format: Array<{ __typename?: 'ComponentOthersFormat', id: string, format: string } | { __typename?: 'Error' } | null> } | null } | null } | null };
 
 
 export const GetPhoneDocument = gql`
@@ -35,24 +35,6 @@ export const GetPhoneDocument = gql`
           ... on ComponentOthersFormat {
             id
             format
-          }
-        }
-        gallery {
-          ... on ComponentOthersCover {
-            id
-            typ
-            cover {
-              __typename
-              data {
-                id
-                attributes {
-                  url
-                  caption
-                  alternativeText
-                  formats
-                }
-              }
-            }
           }
         }
       }

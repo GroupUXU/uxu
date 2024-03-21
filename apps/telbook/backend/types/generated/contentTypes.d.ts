@@ -726,7 +726,6 @@ export interface ApiPhonePhone extends Schema.CollectionType {
     phone: Attribute.UID & Attribute.Required;
     format: Attribute.DynamicZone<['others.format']> & Attribute.Required;
     owner: Attribute.JSON;
-    gallery: Attribute.DynamicZone<['others.cover']> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::phone.phone', 'oneToOne', 'admin::user'> & Attribute.Private;

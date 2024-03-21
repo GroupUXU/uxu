@@ -86,13 +86,6 @@
     "owner": {
       "type": "json",
       "required": false
-    },
-    "gallery": {
-      "type": "dynamiczone",
-      "components": [
-        "others.cover"
-      ],
-      "required": true
     }
   }
 }

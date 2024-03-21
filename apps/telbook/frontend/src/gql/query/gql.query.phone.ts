@@ -1,8 +1,8 @@
 /* @typescript-eslint/no-unsafe-assignment -- I don't know why i have problem */
 import {gql} from '@apollo/client';
 import {
-  FRAGMENT_DATA_VIEWS,
-  FRAGMENT_DATA_LEAD
+		FRAGMENT_DATA_VIEWS,
+		FRAGMENT_DATA_LEAD
 } from '../fragments';
 
 export const GET_PHONE = gql`
@@ -29,24 +29,6 @@ export const GET_PHONE = gql`
                         ... on ComponentOthersFormat {
                             id
                             format
-                        }
-                    }
-                    gallery {
-                        ... on ComponentOthersCover {
-                            id
-                            typ
-                            cover {
-                                __typename
-                                data {
-                                    id
-                                    attributes {
-                                        url
-                                        caption
-                                        alternativeText
-                                        formats
-                                    }
-                                }
-                            }
                         }
                     }
                 }

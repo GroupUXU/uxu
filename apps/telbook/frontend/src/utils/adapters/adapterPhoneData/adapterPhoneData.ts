@@ -2,11 +2,9 @@ import {type PhoneFull, type Status, parseFormatDate, Image, statusMapToPL} from
 import type {
     GetPhoneQuery,
     GetCommentsQuery,
-    ComponentOthersCover,
     ComponentStatsViews,
     ComponentOthersFormat
 } from '../../../gql';
-import {adapterImageData} from '../adapterImageData';
 import {setReputationFromReputations} from '../../function';
 
 type ViewsData = {
@@ -23,26 +21,6 @@ function adapterViews(viewsArray?: Array<ComponentStatsViews>): ViewsData {
         },
         {data: [], count: 0}
     ) ?? {data: [], count: 0};
-}
-
-
-function adapterGallery(gallery?: Array<ComponentOthersCover>): Record<Status, Image | null> {
-    const result: Record<Status, Image | null> = {
-        danger: null,
-        default: null,
-        error: null,
-        success: null,
-        warning: null
-    };
-    gallery?.forEach((image) => {
-        if (image.typ) {
-            result[image.typ] = adapterImageData({
-                image: image.cover?.data?.attributes,
-                typeImg: 'medium',
-            });
-        }
-    });
-    return result;
 }
 
 export function adapterPhoneData(getPhoneData?: GetPhoneQuery, getCommentsData?: GetCommentsQuery): PhoneFull {
@@ -65,7 +43,6 @@ export function adapterPhoneData(getPhoneData?: GetPhoneQuery, getCommentsData?:
     const ratings: Record<Status, number> | null = attributes?.ratings as Record<Status, number> | null || null;
     const status: Status | null = setReputationFromReputations(ratings);
     const viewsData: ViewsData = adapterViews(attributes?.views as Array<ComponentStatsViews>);
-    const gallery: Record<Status, Image | null> = adapterGallery(attributes?.gallery as Array<ComponentOthersCover>);
     const comments = getCommentsData?.comments
     const commentsTotal: number = comments?.meta.pagination.total || 0;
 
@@ -129,7 +106,11 @@ export function adapterPhoneData(getPhoneData?: GetPhoneQuery, getCommentsData?:
                 }
             },
         ],
-        cover: gallery[status] || null,
+        cover: {
+            src: `https://telbook.s3.eu-central-1.amazonaws.com/${attributes?.phone}-${status}.jpg`,
+            "caption": 'tellbook.info',
+            "alt": `${attributes?.phone}`
+        },
         id: id ?? '',
         phone: attributes?.phone ?? "",
         typ: attributes?.typ ?? "mobile",

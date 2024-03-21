@@ -28,7 +28,7 @@ export default function Phone({slug, phone, id}: PhoneProps): ReactElement {
 		const phoneData = adapterPhoneData(getPhoneQuery, getCommentsQuery);
 		const comments = adapterCommentsData(getCommentsQuery);
 		
-		
+		console.log(phoneData, 'phoneData')
 		const seo = useSeoConfig({
 				title: `${phone} czyj to numer telefonu ?`,
 				description: phoneData.lead || undefined,

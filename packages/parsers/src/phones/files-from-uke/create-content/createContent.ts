@@ -22,6 +22,11 @@ async function createContent(): Promise<boolean> {
 				
 				// created image
 				generatePhoneNumberStatusImage({phone: `+48${createPhoneNow}`});
+				generatePhoneNumberStatusImage({phone: `+48${phoneNumbersGenerator.next().value}`});
+				generatePhoneNumberStatusImage({phone: `+48${phoneNumbersGenerator.next().value}`});
+				generatePhoneNumberStatusImage({phone: `+48${phoneNumbersGenerator.next().value}`});
+				generatePhoneNumberStatusImage({phone: `+48${phoneNumbersGenerator.next().value}`});
+				generatePhoneNumberStatusImage({phone: `+48${phoneNumbersGenerator.next().value}`});
 				console.log(createPhoneNow)
 				return true;
 				

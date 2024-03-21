@@ -17,7 +17,6 @@ export type Scalars = {
   DateTime: { input: any; output: any; }
   JSON: { input: any; output: any; }
   PhoneFormatDynamicZoneInput: { input: any; output: any; }
-  PhoneGalleryDynamicZoneInput: { input: any; output: any; }
   PhoneViewsDynamicZoneInput: { input: any; output: any; }
   TagContentpartsDynamicZoneInput: { input: any; output: any; }
   Upload: { input: any; output: any; }
@@ -1073,7 +1072,6 @@ export type Phone = {
   __typename?: 'Phone';
   createdAt?: Maybe<Scalars['DateTime']['output']>;
   format: Array<Maybe<PhoneFormatDynamicZone>>;
-  gallery: Array<Maybe<PhoneGalleryDynamicZone>>;
   lead: ComponentContentPartsLead;
   network?: Maybe<Enum_Phone_Network>;
   owner?: Maybe<Scalars['JSON']['output']>;
@@ -1118,11 +1116,8 @@ export type PhoneFiltersInput = {
 
 export type PhoneFormatDynamicZone = ComponentOthersFormat | Error;
 
-export type PhoneGalleryDynamicZone = ComponentOthersCover | Error;
-
 export type PhoneInput = {
   format?: InputMaybe<Array<Scalars['PhoneFormatDynamicZoneInput']['input']>>;
-  gallery?: InputMaybe<Array<Scalars['PhoneGalleryDynamicZoneInput']['input']>>;
   lead?: InputMaybe<ComponentContentPartsLeadInput>;
   network?: InputMaybe<Enum_Phone_Network>;
   owner?: InputMaybe<Scalars['JSON']['input']>;

@@ -31,10 +31,10 @@ export function generatePhoneNumberStatusImage({ phone, status = 'nieznany' }: C
 		
 
 		ctx.font = 'bold 40px Montserrat';
-		ctx.fillText(status, width / 2, height / 2 + 30);
+		ctx.fillText(status?.toUpperCase(), width / 2, height / 2 + 30);
 		
 		sharp(canvas.toBuffer())
-					.jpeg({ quality: 80 })
+					.jpeg({ quality: 15 })
 					.toFile(path.join(__dirname, '..', 'img', `${phone.replace(/\D/g, "")}.jpg`))
 					.then(() => console.log('The image has been created.'))
 					.catch(err => console.error('An error occured:', err));
